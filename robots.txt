@@ -1,0 +1,26 @@
+User-agent: *
+Crawl-delay: 2
+
+# Allow key public assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /img/
+Allow: /assets/
+Allow: /fonts/
+
+# Disallow private or system areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /backend/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /api/
+
+# Disallow dynamic/search pages to avoid duplicate content
+Disallow: /search/
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+
+Sitemap: https://nplcricketleague.com/sitemap.xml

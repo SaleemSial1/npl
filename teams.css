@@ -1,0 +1,372 @@
+/* === FONT (Required by this page) === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* === BODY (Required by this page) === */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #111827, #1e3a8a);
+    color: #D1D5DB;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+/* === CONTAINER (Required by this page) === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* === MAIN LAYOUT === */
+.main-layout-container {
+    padding-top: 3rem;      /* py-12 */
+    padding-bottom: 3rem;
+}
+@media (min-width: 1024px) {
+    .main-layout-container {
+        padding-top: 4rem;      /* lg:py-16 */
+        padding-bottom: 4rem;
+    }
+    .main-layout-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem; /* gap-8 */
+    }
+}
+
+/* Main Content (Left Column) */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* space-y-12 */
+}
+@media (min-width: 1024px) {
+    .main-content {
+        grid-column: span 2 / span 2;
+    }
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 4rem;
+}
+@media (min-width:px) {
+    .main-content {
+        padding-top: 5rem;
+    }
+}
+/* Sidebar (Right Column) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* space-y-8 */
+    margin-top: 3rem; /* mt-12 */
+}
+@media (min-width: 1024px) {
+    .sidebar {
+        grid-column: span 1 / span 1;
+        position: sticky;
+        top: 6rem; /* lg:top-24 */
+        margin-top: 0; /* lg:mt-0 */
+        align-self: start; /* Ensures it sticks to the top */
+    }
+}
+
+/* === SHARED STYLES === */
+.sidebar-card {
+    background: linear-gradient(to bottom right, #1e3a8a, #111827);
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    border: 1px solid #1e40af;
+}
+.intro-card {
+    background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800/50 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* ring-1 ring-white/10 */
+}
+.section-title {
+    font-size: 1.875rem; /* text-3xl */
+    line-height: 2.25rem;
+    font-weight: 700; /* font-bold */
+    color: #FFFFFF; /* text-white */
+    margin: 0;
+}
+.title-underline {
+    width: 5rem; /* w-20 */
+    height: 0.25rem; /* h-1 */
+    background-color: #06b6d4; /* bg-cyan-400 */
+    border-radius: 9999px; /* rounded-full */
+    margin-top: 0.5rem; /* Original had spacing */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* === INTRO SECTION === */
+.intro-card p {
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.75rem; /* leading-7 */
+    color: #D1D5DB; /* text-gray-300 */
+    margin: 0;
+}
+.intro-card p + p {
+    margin-top: 1rem;  
+}
+
+/* === SQUAD SECTION === */
+.back-btn {
+    display: inline-flex; /* Use flex for easy alignment */
+    align-items: center;
+    color: #06b6d4; /* text-cyan-500 from original */
+    text-decoration: none;
+    font-size: 1rem;  
+    font-weight: 500; /* font-medium */
+    margin-bottom: 1.5rem; /* mb-6 */
+    transition: color 0.3s;
+}
+.back-btn:hover {
+    color: #FFFFFF; /* hover:text-white */
+}
+.back-btn svg {
+    margin-right: 0.5rem; /* mr-2 */
+    width: 20px;
+    height: 20px;
+}
+
+.squad-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem; /* gap-6 */
+}
+@media (min-width: 640px) {
+    .squad-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 768px) {
+    .squad-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* NOTE: This .player-card is specific to the team page */
+.player-card {
+    background: linear-gradient(to bottom right, #1e3a8a, #111827);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 1px solid #1e40af;
+}
+.player-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+    border-color: #06b6d4;
+}
+
+.player-card-image-wrapper {
+    position: relative;
+}
+.player-card-image-wrapper img {
+    aspect-ratio: 4 / 5; /* Specific to this page */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Badges for team page */
+.role-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.role-badge.captain { background-color: #facc15; }
+.role-badge.batsman { background-color: #10b981; }
+.role-badge.bowler { background-color: #10b981; }
+.role-badge.all-rounder { background-color: #10b981; }
+.role-badge.wicket-keeper { background-color: #06b6d4; }
+
+.badge-intl {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: #06B6D4;
+    color: #111827;
+}
+
+.player-card-info {
+    padding: 1rem;
+}
+.player-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+.btn-bio {
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: #0891B2;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.btn-bio:hover {
+    background-color: #0E7490;
+}
+
+/* === SCHEDULE SECTION === */
+#schedule p {
+    font-size: 1.125rem;
+    color: #D1D5DB;
+    margin-bottom: 1.5rem;
+}
+.table-container {
+    background: linear-gradient(to bottom right, #111827, #1e3a8a);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+.schedule-table {
+    width: 100%;
+    min-width: 600px;
+    text-align: left;
+    border-collapse: collapse;
+}
+.schedule-table thead {
+    background-color: rgba(55, 65, 81, 0.5);
+}
+.schedule-table th {
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #06b6d4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.schedule-table tbody {
+    border-top: 1px solid #374151;
+}
+.schedule-table tr {
+    border-bottom: 1px solid #374151;
+    transition: background-color 0.3s;
+}
+.schedule-table tr:last-child {
+    border-bottom: none;
+}
+.schedule-table tr:hover {
+    background-color: rgba(30, 58, 138, 0.3);
+}
+.schedule-table td {
+    padding: 1rem;
+    white-space: nowrap;
+}
+.schedule-table td:nth-child(2) {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+/* === FAQ SECTION === */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.faq-item {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.faq-question {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #06b6d4;
+}
+.faq-answer {
+    margin-top: 0.5rem;
+    color: #D1D5DB;
+    line-height: 1.6;
+}
+.faq-answer p {
+    margin: 0;
+}
+
+/* === SIDEBAR: QUICK FACTS === */
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.fact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #374151;
+}
+.fact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #374151;
+}
+.fact-item:last-child {
+    border-bottom: none;
+}
+.fact-label {
+    color: #9CA3AF;
+}
+.fact-value {
+    font-weight: 600;
+    color: #FACC15;
+    text-align: right;
+}
+
+/* === SIDEBAR: COACHING STAFF === */
+.coach-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.coach-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #06b6d4;
+}
+.coach-title {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+.coach-bio {
+    color: #D1D5DB;
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}

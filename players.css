@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #1caf77;
+    color: #ffffff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+/* Header Styles */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(33, 161, 97, 0.95);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.3s;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+    }
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .header-left {
+        gap: 2rem;
+    }
+}
+.main-nav {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+@media (min-width: 1024px) {
+    .main-nav {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+.main-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(33, 161, 97, 0.95);
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 999;
+}
+.nav-link {
+    color: #010813;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #06b6d4;
+}
+.btn-primary {
+    background: linear-gradient(to right, #9333ea, #2563eb);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+.btn-primary:hover {
+    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+/* Main Content */
+.main-content {
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .main-content {
+        padding-top: 5rem;
+    }
+}
+/* Players Section */
+.players-section {
+    padding: 2rem 0;
+    min-height: 100vh;
+}
+@media (min-width: 768px) {
+    .players-section {
+        padding: 4rem 0;
+    }
+}
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border: 1px solid #06b6d4;
+    border-radius: 8px;
+}
+.back-btn:hover {
+    background-color: #06b6d4;
+    color: white;
+}
+.section-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #10b981;
+}
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.25rem;
+    }
+}
+.team-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(to bottom right, #1e3a8a, #111827);
+    border-radius: 1rem;
+    border: 1px solid #1e40af;
+}
+.team-logo-large {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.team-logo-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-details h2 {
+    color: #facc15;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+.team-details p {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+.title-underline {
+    width: 4rem;
+    height: 4px;
+    background-color: #10b981;
+    margin-top: 0.5rem;
+}
+/* Players Grid */
+.players-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+@media (min-width: 640px) {
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .players-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1280px) {
+    .players-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* Player Card */
+.player-card {
+    background: linear-gradient(to bottom right, #1e3a8a, #111827);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #1e40af;
+    transition: all 0.3s;
+    position: relative;
+}
+.player-card:hover {
+    border-color: #06b6d4;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+}
+.player-image-container {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(to bottom, #1f2937, #111827);
+    overflow: hidden;
+}
+.player-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.player-card:hover .player-image {
+    transform: scale(1.05);
+}
+.role-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #10b981;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.role-badge.captain {
+    background-color: #facc15;
+    color: #1f2937;
+}
+.role-badge.wicket-keeper {
+    background-color: #06b6d4;
+}
+.team-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #9333ea;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.player-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+.player-name {
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+.player-card:hover .player-name {
+    color: #06b6d4;
+}
+.player-role {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+/* No Players Message */
+.no-players {
+    text-align: center;
+    padding: 3rem;
+    color: #9ca3af;
+    grid-column: 1 / -1;
+}
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+.pagination-btn {
+    background: linear-gradient(to right, #9333ea, #2563eb);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.3s, opacity 0.3s;
+    font-size: 0.875rem;
+}
+.pagination-btn:disabled {
+    background: #4b5563;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.pagination-btn:hover:not(:disabled) {
+    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
+}
+.pagination-info {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.biography-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #10b981, #059669);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.biography-btn:hover {
+    background: linear-gradient(to right, #059669, #047857);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players - Nepal Premier League</title>
+    <meta name="description" content="Explore NPL 2026 player squads, roles, and biographies for all Nepal Premier League teams.">
+    <link rel="canonical" href="https://nplcricketleague.com/players">
+    <link rel="icon" type="image/png" href="/NPL Logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #1caf77;
+            color: #ffffff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        /* Header Styles */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(33, 161, 97, 0.95);
+            backdrop-filter: blur(8px);
+            transition: box-shadow 0.3s;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            gap: 1rem;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            .header-left {
+                gap: 2rem;
+            }
+        }
+        .main-nav {
+            display: none;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        @media (min-width: 1024px) {
+            .main-nav {
+                display: flex;
+                gap: 1.5rem;
+            }
+        }
+        .main-nav.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: rgba(33, 161, 97, 0.95);
+            padding: 1rem;
+            gap: 1rem;
+            z-index: 999;
+        }
+        .nav-link {
+            color: #010813;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            color: #06b6d4;
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #9333ea, #2563eb);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: block;
+        }
+        @media (min-width: 1024px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        /* Main Content */
+        .main-content {
+            padding-top: 4rem;
+        }
+        @media (min-width: 768px) {
+            .main-content {
+                padding-top: 5rem;
+            }
+        }
+        /* Players Section */
+        .players-section {
+            padding: 2rem 0;
+            background: linear-gradient(to bottom, #111827, #1e3a8a);
+            min-height: 100vh;
+        }
+        @media (min-width: 768px) {
+            .players-section {
+                padding: 4rem 0;
+            }
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #06b6d4;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border: 1px solid #06b6d4;
+            border-radius: 8px;
+        }
+        .back-btn:hover {
+            background-color: #06b6d4;
+            color: white;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #10b981;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+        .team-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(to bottom right, #1e3a8a, #111827);
+            border-radius: 1rem;
+            border: 1px solid #1e40af;
+        }
+        .team-logo-large {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .team-logo-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .team-details h2 {
+            color: #facc15;
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .team-details p {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        .title-underline {
+            width: 4rem;
+            height: 4px;
+            background-color: #10b981;
+            margin-top: 0.5rem;
+        }
+        /* Players Grid */
+        .players-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .players-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .players-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 1280px) {
+            .players-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        /* Player Card */
+        .player-card {
+            background: linear-gradient(to bottom right, #1e3a8a, #111827);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #1e40af;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .player-card:hover {
+            border-color: #06b6d4;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+        .player-image-container {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            background: linear-gradient(to bottom, #1f2937, #111827);
+            overflow: hidden;
+        }
+        .player-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .player-card:hover .player-image {
+            transform: scale(1.05);
+        }
+        .role-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: #10b981;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .role-badge.captain {
+            background-color: #facc15;
+            color: #1f2937;
+        }
+        .role-badge.wicket-keeper {
+            background-color: #06b6d4;
+        }
+        .team-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: #9333ea;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .player-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .player-name {
+            color: white;
+            font-weight: bold;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+        .player-card:hover .player-name {
+            color: #06b6d4;
+        }
+        .player-role {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        /* No Players Message */
+        .no-players {
+            text-align: center;
+            padding: 3rem;
+            color: #9ca3af;
+            grid-column: 1 / -1;
+        }
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem 0;
+        }
+        .pagination-btn {
+            background: linear-gradient(to right, #9333ea, #2563eb);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: box-shadow 0.3s, opacity 0.3s;
+            font-size: 0.875rem;
+        }
+        .pagination-btn:disabled {
+            background: #4b5563;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        .pagination-btn:hover:not(:disabled) {
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
+        }
+        .pagination-info {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .biography-btn {
+            display: inline-block;
+            margin-top: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(to right, #10b981, #059669);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .biography-btn:hover {
+            background: linear-gradient(to right, #059669, #047857);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7796101891291700"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <!-- Header -->
+<header id="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="header-left">
+                <div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+                    <a href="/" style="display:inline-block;">
+                        <img src="/NPL Logo.png" alt="NPL Logo" 
+                             style="width:100px; height:auto; object-fit:contain; display:block;">
+                    </a>
+                </div>
+                <nav class="main-nav" id="mainNav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/matches" class="nav-link">Matches</a>
+                    <a href="/teams" class="nav-link">Teams</a>
+                    <a href="/players" class="nav-link">Players</a>                       
+                    <a href="/news" class="nav-link">NEWS</a>
+                    <a href="/schedule" class="nav-link">Schedule</a>
+                    <a href="/points-table" class="nav-link">Points Table</a>            
+                    <a href="/tickets" class="nav-link">Tickets</a>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search" class="search-input" aria-label="Search players">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-controls="mainNav" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+   
+    <main class="main-content">
+<section class="players-section">
+            <div class="container">
+                <div class="section-header">
+                    <a href="teams.html" class="back-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Back to Teams
+                    </a>
+                </div>
+                <h1 class="section-title" id="sectionTitle">All Players</h1>
+                <div class="title-underline"></div>
+                <div class="team-info" id="teamInfo" style="display: none;">
+                    <div class="team-logo-large">
+                        <img src="/NPL Logo.png" alt="Team Logo" id="teamLogoImg">
+                    </div>
+                    <div class="team-details">
+                        <h2 id="teamName">Team Squad</h2>
+                        <p id="teamPlayerCount">0 Players</p>
+                    </div>
+                </div>
+                <div class="players-grid" id="playersGrid">
+                    <!-- Biratnagar Kings -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/players/sandeep-lamichhane.webp" alt="Sandeep Lamichhane" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESandeep Lamichhane%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sandeep Lamichhane</h3>
+                            <p class="player-role">Captain</p>
+                            <a href="players/sandeep-lamichhane.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="George Munsey" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EGeorge Munsey%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">George Munsey</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players/george-munsey.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Lokesh Bam" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ELokesh Bam%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Lokesh Bam</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Shankar Rana" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EShankar Rana%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Shankar Rana</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sahil Patel" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESahil Patel%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sahil Patel</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sam Heazlett" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESam Heazlett%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sam Heazlett</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Basir Ahamad" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBasir Ahamad%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Basir Ahamad</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Narayan Joshi" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ENarayan Joshi%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Narayan Joshi</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Shubham Ranjane" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EShubham Ranjane%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Shubham Ranjane</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Naren Bhatta" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ENaren Bhatta%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Naren Bhatta</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Pratish GC" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EPratish GC%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Pratish GC</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Shrawan Kisku" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EShrawan Kisku%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Shrawan Kisku</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Surya Tamang" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESurya Tamang%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Surya Tamang</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Subash Bhandari" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESubash Bhandari%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Biratnagar Kings</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Subash Bhandari</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+
+                    <!-- Chitwan Rhinos -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Kushal Malla" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKushal Malla%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Kushal Malla</h3>
+                            <p class="player-role">Captain</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dawid Malan" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDawid Malan%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dawid Malan</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Arjun Saud" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EArjun Saud%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Arjun Saud</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dev Khanal" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDev Khanal%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dev Khanal</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Deepak Bohara" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDeepak Bohara%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Deepak Bohara</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bipin Rawal" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBipin Rawal%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bipin Rawal</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Ravi Bopara" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERavi Bopara%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Ravi Bopara</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bipin Acharya" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBipin Acharya%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bipin Acharya</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Amar Rautela" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAmar Rautela%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Amar Rautela</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sohail Tanvir" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESohail Tanvir%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sohail Tanvir</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Rijan Dhakal" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERijan Dhakal%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Rijan Dhakal</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Kamal Singh Airee" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKamal Singh Airee%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Kamal Singh Airee</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Gautam KC" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EGautam KC%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Gautam KC</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Ranjeet Kumar" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERanjeet Kumar%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Chitwan Rhinos</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Ranjeet Kumar</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+
+                    <!-- Janakpur Bolts -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Anil Sah" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAnil Sah%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain, Wicket-Keeper</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Anil Sah</h3>
+                            <p class="player-role">Captain, Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Aasif Sheikh" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAasif Sheikh%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Aasif Sheikh</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Mayan Yadav" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EMayan Yadav%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Mayan Yadav</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Shubh Kansakar" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EShubh Kansakar%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Shubh Kansakar</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Lahiru Milantha" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ELahiru Milantha%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Lahiru Milantha</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Rupesh Singh" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERupesh Singh%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Rupesh Singh</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Aaditya Mahata" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAaditya Mahata%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Aaditya Mahata</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Wayne Parnell" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EWayne Parnell%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Wayne Parnell</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Kishore Mahato" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKishore Mahato%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Kishore Mahato</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bikash Aagri" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBikash Aagri%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bikash Aagri</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Lalit Rajbanshi" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ELalit Rajbanshi%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Lalit Rajbanshi</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sachin Bhatta" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESachin Bhatta%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sachin Bhatta</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Tul Thapa" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ETul Thapa%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Janakpur Bolts</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Tul Thapa</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+
+                    <!-- Karnali Yaks -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sompal Kami" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESompal Kami%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sompal Kami</h3>
+                            <p class="player-role">Captain</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Deepak Dumre" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDeepak Dumre%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Deepak Dumre</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Max O'Dowd" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EMax O&apos;Dowd%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Max O'Dowd</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Imran Sheikh" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImran Sheikh%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Imran Sheikh</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Will Bosisto" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EWill Bosisto%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Will Bosisto</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Pawan Sarraf" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EPawan Sarraf%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Pawan Sarraf</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Gulshan Jha" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EGulshan Jha%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Gulshan Jha</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Arjun Gharti" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EArjun Gharti%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Arjun Gharti</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dipendra Rawat" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDipendra Rawat%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dipendra Rawat</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Nandan Yadav" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ENandan Yadav%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Nandan Yadav</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Mark Watt" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EMark Watt%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Mark Watt</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Yuvraj Khatri" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EYuvraj Khatri%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Yuvraj Khatri</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bipin Sharma" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBipin Sharma%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bipin Sharma</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Unish Thakuri" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EUnish Thakuri%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Karnali Yaks</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Unish Thakuri</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+
+                    <!-- Kathmandu Gurkhas -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Karan KC" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKaran KC%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Karan KC</h3>
+                            <p class="player-role">Captain</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Gerhard Erasmus" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EGerhard Erasmus%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Gerhard Erasmus</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Pratik Shrestha" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EPratik Shrestha%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Pratik Shrestha</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Ricardo Vasconcelos" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERicardo Vasconcelos%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Ricardo Vasconcelos</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Uttam Magar" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EUttam Magar%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Uttam Magar</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bhim Sharki" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBhim Sharki%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bhim Sharki</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Aakash Tripathi" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAakash Tripathi%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Aakash Tripathi</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Rashid Khan" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERashid Khan%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Rashid Khan</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Mohammad Aadil Alam" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EMohammad Aadil Alam%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Mohammad Aadil Alam</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Santosh Yadav" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESantosh Yadav%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Santosh Yadav</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Shahab Alam" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EShahab Alam%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Shahab Alam</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dipesh Kandel" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDipesh Kandel%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dipesh Kandel</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Tul B Thapa" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ETul B Thapa%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Kathmandu Gurkhas</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Tul B Thapa</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+
+                    <!-- Lumbini Lions -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Rohit Paudel" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERohit Paudel%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Rohit Paudel</h3>
+                            <p class="player-role">Captain</p>
+                            <a href="players/rohit-paudel.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="D'Arcy Short" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ED&apos;Arcy Short%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">D'Arcy Short</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dilip Nath" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDilip Nath%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dilip Nath</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Aadil Khan" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAadil Khan%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Aadil Khan</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sundeep Jora" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESundeep Jora%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sundeep Jora</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bibek Yadav" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBibek Yadav%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bibek Yadav</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bishal Patel" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBishal Patel%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bishal Patel</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dinesh Adhikari" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDinesh Adhikari%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dinesh Adhikari</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Durgesh Gupta" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDurgesh Gupta%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Durgesh Gupta</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Thomas Draca" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EThomas Draca%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Thomas Draca</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sher Malla" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESher Malla%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sher Malla</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Tilak Bhandari" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ETilak Bhandari%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Tilak Bhandari</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Abhishesh Gautam" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAbhishesh Gautam%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Lumbini Lions</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Abhishesh Gautam</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+
+                    <!-- Pokhara Avengers -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Kushal Bhurtel" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKushal Bhurtel%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Kushal Bhurtel</h3>
+                            <p class="player-role">Captain</p>
+                            <a href="players/kushal-bhurtel.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dinesh Kharel" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDinesh Kharel%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dinesh Kharel</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players/dinesh-kharel.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Arjun Kumal" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EArjun Kumal%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Arjun Kumal</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Kiran Thagunna" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKiran Thagunna%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Kiran Thagunna</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Trit Raj Das" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ETrit Raj Das%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Trit Raj Das</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Adam Rossington" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAdam Rossington%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Adam Rossington</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players/adam-rossington.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Bipin Khatri" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBipin Khatri%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Bipin Khatri</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sandeep Chhetri" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESandeep Chhetri%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sandeep Chhetri</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Abhisekh Tiwari" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAbhisekh Tiwari%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Abhisekh Tiwari</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Aakash Chand" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EAakash Chand%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Aakash Chand</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Sagar Dhakal" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESagar Dhakal%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Sagar Dhakal</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Krishna Poudel" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKrishna Poudel%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Pokhara Avengers</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Krishna Poudel</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+
+                    <!-- Sudurpaschim Royals -->
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dipendra Singh Airee" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDipendra Singh Airee%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge captain">Captain</div>
+                            <div class="team-badge">Sudurpaschim Royals</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dipendra Singh Airee</h3>
+                            <p class="player-role">Captain</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Binod Bhandari" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBinod Bhandari%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Sudurpaschim Royals</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Binod Bhandari</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Chris Lynn" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EChris Lynn%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Sudurpaschim Royals</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Chris Lynn</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Dipak Bohara" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDipak Bohara%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge wicket-keeper">Wicket-Keeper</div>
+                            <div class="team-badge">Sudurpaschim Royals</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Dipak Bohara</h3>
+                            <p class="player-role">Wicket-Keeper</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/images/Player.png" alt="Josh Brown" class="player-image"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDipak Bohara%3C/text%3E%3C/svg%3E'">
+                            <div class="role-badge">Player</div>
+                            <div class="team-badge">Sudurpaschim Royals</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Josh Brown</h3>
+                            <p class="player-role">Player</p>
+                            <a href="players.html" class="biography-btn">View Biography</a>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Naren Saud" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ENaren Saud%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Naren Saud</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Basant Karki" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBasant Karki%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Basant Karki</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Kiran Kumar Thagunna" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKiran Kumar Thagunna%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Kiran Kumar Thagunna</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Narayan Joshi" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ENarayan Joshi%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Narayan Joshi</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Bhojraj Bhatta" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBhojraj Bhatta%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Bhojraj Bhatta</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Basant Raj Joshi" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBasant Raj Joshi%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Basant Raj Joshi</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Hemant Dhami" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EHemant Dhami%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Hemant Dhami</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <div class="player-image-container">
+                                        <img src="/images/Player.png" alt="Saurav Khanal" class="player-image"
+                                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect fill=%22%231f2937%22 width=%22400%22 height=%22500%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESaurav Khanal%3C/text%3E%3C/svg%3E'">
+                                        <div class="role-badge">Player</div>
+                                        <div class="team-badge">Sudurpaschim Royals</div>
+                                    </div>
+                                    <div class="player-info">
+                                        <h3 class="player-name">Saurav Khanal</h3>
+                                        <p class="player-role">Player</p>
+                                        <a href="players.html" class="biography-btn">View Biography</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+</section>
+    </main>
+
+       <!-- Footer -->
+   <footer id="footer">
+    <div class="container">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="/NPL Logo.png" alt="NPL Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="league-name">Nepal Premier League</span>
+                        <span class="league-tagline">Season 3</span>
+                    </div>
+                </div>
+                <p class="footer-description">
+                    The biggest T20 cricket tournament in Nepal, where 8 top teams compete for the 2026 Crown.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-column">
+                    <h3 class="column-title">Tournament</h3>
+                    <ul class="link-list">
+                        <li><a href="/schedule" class="footer-link">Schedule</a></li>
+                        <li><a href="/points-table" class="footer-link">Points Table</a></li>
+                        <li><a href="/teams" class="footer-link">Teams</a></li>
+                        <li><a href="/players" class="footer-link">Players</a></li>
+                        <li><a href="/venues" class="footer-link">Venue</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h3 class="column-title">Media</h3>
+                    <ul class="link-list">
+                        <li><a href="/news" class="footer-link">News</a></li>
+                        <li><a href="/videos" class="footer-link">Videos</a></li>
+                        <li><a href="/auction" class="footer-link">Auction</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h3 class="column-title">Fan Zone</h3>
+                    <ul class="link-list">
+                        <li><a href="/tickets" class="footer-link">Buy Tickets</a></li>
+                        <li><a href="/fan-guide" class="footer-link">Fan Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h3 class="column-title">Information</h3>
+                    <ul class="link-list">
+                        <li><a href="/about" class="footer-link">About NPL</a></li>
+                        <li><a href="/contact" class="footer-link">Contact Us</a></li>
+                        <li><a href="/partners" class="footer-link">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 class="column-title">Stay Updated</h3>
+                <p class="newsletter-text">Get the latest news and updates delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Nepal Premier League. All rights reserved.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="/privacy-policy" class="legal-link">Privacy Policy</a>
+                <a href="/terms-of-service" class="legal-link">Terms of Service</a>
+                <a href="/sitemap.xml" class="legal-link">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script>
+// -----------------------------------------------------------------------------
+// players.html – Updated JavaScript with Clean URL Support (team slugs)
+// -----------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const teamFilter = document.getElementById('teamFilter');
+    const playerCards = document.querySelectorAll('.player-card');
+
+    if (teamFilter) {
+        teamFilter.addEventListener('change', function() {
+            const selectedTeam = this.value;
+
+            playerCards.forEach(card => {
+                const teamBadge = card.querySelector('.team-badge').textContent.trim().toLowerCase().replace(/\s+/g, '-');
+
+                if (selectedTeam === 'all' || teamBadge === selectedTeam) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
+});
+    // JavaScript to handle menu toggle for mobile view
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+        });
+    }
+</script>
+</body>
+</html>

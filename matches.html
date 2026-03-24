@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/NPL Logo.png">
+    
+    <!-- SEO Meta Tags -->
+    <title>NPL Matches – Live Scores, Results & Upcoming Fixtures | Nepal Premier League 2026</title>
+    <meta name="description" content="Follow all NPL 2026 matches with live scores, results, and upcoming fixtures. Get match details, team lineups, and tournament updates from Nepal Premier League.">
+    <meta name="keywords" content="NPL matches, Nepal Premier League fixtures, cricket scores Nepal, NPL 2026 schedule, T20 cricket matches">
+    <meta name="author" content="Nepal Premier League">
+    <meta name="google-site-verification" content="FcI0XnWsjvW-He8lPMA0I-pgbndhVjvFJDxlKS7I6uI" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="NPL Matches – Live Scores, Results & Upcoming Fixtures">
+    <meta property="og:description" content="Follow all NPL 2026 matches with live scores, results, and upcoming fixtures. Get match details, team lineups, and tournament updates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nplcricketleague.com/matches">
+    <meta property="og:image" content="https://nplcricketleague.com/images/NPL.webp">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NPL Matches – Live Scores, Results & Upcoming Fixtures">
+    <meta name="twitter:description" content="Follow all NPL 2026 matches with live scores, results, and upcoming fixtures. Get match details, team lineups, and tournament updates.">
+    <meta name="twitter:image" content="https://nplcricketleague.com/images/NPL.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nplcricketleague.com/matches">
+    
+    <!-- Structured Data for Sports Event -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "Nepal Premier League 2026 Matches",
+      "startDate": "2026-11-17",
+      "endDate": "2026-12-15",
+      "eventStatus": "EventScheduled",
+      "eventAttendanceMode": "MixedEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Tribhuvan University International Cricket Ground",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kirtipur",
+          "addressRegion": "Kathmandu",
+          "addressCountry": "NP"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Nepal Premier League",
+        "url": "https://nplcricketleague.com"
+      },
+      "description": "Nepal Premier League 2026 cricket matches with live scores, results, and fixtures"
+    }
+    </script>
+<link rel="stylesheet" href="styles.css">
+    <style>
+        /* Matches Hero Section */
+        .matches-hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #111827, #1e3a8a);
+        }
+        
+        .matches-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem 1rem;
+        }
+        
+        .matches-hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #facc15;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        @media (min-width: 768px) {
+            .matches-hero-title {
+                font-size: 3.5rem;
+            }
+        }
+        
+        .matches-hero-subtitle {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        @media (min-width: 768px) {
+            .matches-hero-subtitle {
+                font-size: 1.75rem;
+            }
+        }
+        
+        .matches-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('/images/NPL.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            filter: blur(8px);
+            transform: scale(1.05);
+        }
+        
+        .gradient-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.3;
+        }
+        
+        .blob-1 {
+            width: 300px;
+            height: 300px;
+            background: #facc15;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .blob-2 {
+            width: 200px;
+            height: 200px;
+            background: #06b6d4;
+            top: 60%;
+            right: 10%;
+        }
+        
+        .blob-3 {
+            width: 250px;
+            height: 250px;
+            background: #9333ea;
+            bottom: 10%;
+            left: 20%;
+        }
+        
+        .blob-4 {
+            width: 180px;
+            height: 180px;
+            background: #10b981;
+            top: 20%;
+            right: 20%;
+        }
+        
+        .blob-5 {
+            width: 220px;
+            height: 220px;
+            background: #ef4444;
+            bottom: 30%;
+            right: 30%;
+        }
+        
+        .blob-6 {
+            width: 150px;
+            height: 150px;
+            background: #3b82f6;
+            top: 40%;
+            left: 5%;
+        }
+        
+        /* Consistent section styling */
+        .content-section {
+            padding: 3rem 0;
+            background: linear-gradient(to bottom, #1e3a8a, #111827);
+        }
+        
+        @media (min-width: 768px) {
+            .content-section {
+                padding: 4rem 0;
+            }
+        }
+        
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .intro-text {
+            color: #d1d5db;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding-top: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .main-content {
+                padding-top: 5rem;
+            }
+        }
+
+        /* Matches Filter Section */
+        .matches-filter-section {
+            padding: 2rem 0;
+            background: linear-gradient(to bottom, #1e3a8a, #111827);
+        }
+
+        @media (min-width: 768px) {
+            .matches-filter-section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Matches Grid Section */
+        .matches-grid-section {
+            padding: 3rem 0;
+            background: linear-gradient(to bottom, #111827, #1e3a8a);
+        }
+
+        @media (min-width: 768px) {
+            .matches-grid-section {
+                padding: 4rem 0;
+            }
+        }
+
+        /* Section Header */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-header {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        .section-title.yellow {
+            color: #facc15;
+        }
+
+        .section-title.cyan {
+            color: #06b6d4;
+        }
+
+        .section-intro {
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        @media (min-width: 768px) {
+            .section-intro {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .title-underline {
+            width: 4rem;
+            height: 4px;
+            background-color: #facc15;
+            margin-top: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .title-underline {
+                width: 6rem;
+            }
+        }
+
+        /* Filter Container */
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #06b6d4;
+            color: white;
+        }
+        
+        .search-box {
+            position: relative;
+            max-width: 150px;
+            width: 100%;
+        }
+        
+        .search-input {
+            background-color: #1f2937;
+            color: white;
+            padding: 0.5rem 2.5rem 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #374151;
+            outline: none;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: #06b6d4;
+            box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+        }
+
+        /* Matches Grid */
+        .matches-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .matches-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .matches-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .match-card {
+            background: linear-gradient(to bottom right, #1e3a8a, #111827);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #1e40af;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .match-card:hover {
+            border-color: #06b6d4;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+        
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .match-label {
+            background-color: #10b981;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .match-status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .status-upcoming {
+            background-color: #eab308;
+            color: #1f2937;
+        }
+        
+        .status-live {
+            background-color: #ef4444;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-completed {
+            background-color: #6b7280;
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .match-teams {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 0;
+            gap: 1rem;
+        }
+        
+        .team {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+        }
+        
+        .team-right {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+        
+        .team-logo {
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .team-logo {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        
+        .team-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-name {
+            font-weight: bold;
+            font-size: 0.875rem;
+            color: white;
+            word-break: break-word;
+        }
+        
+        @media (min-width: 768px) {
+            .team-name {
+                font-size: 1rem;
+            }
+        }
+        
+        .vs {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #06b6d4;
+            padding: 0 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .vs {
+                font-size: 1.25rem;
+                padding: 0 1rem;
+            }
+        }
+        
+        .match-score {
+            text-align: center;
+            margin: 0.5rem 0;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        
+        .match-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            color: #9ca3af;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+        }
+        
+        .match-time {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .match-date {
+            margin-left: 0.5rem;
+        }
+        
+        .match-venue-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .match-venue {
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            word-break: break-word;
+        }
+        
+        .match-result {
+            background-color: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .result-text {
+            color: #10b981;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        .match-action-btn {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: #06b6d4;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        
+        .match-action-btn:hover {
+            background-color: #0891b2;
+            transform: scale(1.1);
+        }
+        
+        .no-matches {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            color: #9ca3af;
+        }
+        
+        /* Live Match Highlight */
+        .live-match {
+            border-color: #ef4444;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+        }
+        
+        .live-match:hover {
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.5);
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .page-btn {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .page-btn:hover, .page-btn.active {
+            background-color: #06b6d4;
+            color: white;
+        }
+        
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Tournament Stats Section */
+        .stats-section {
+            padding: 3rem 0;
+            background: linear-gradient(to bottom, #1e3a8a, #111827);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .stat-card {
+            background: linear-gradient(to bottom right, #1e3a8a, #111827);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #1e40af;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .stat-card:hover {
+            border-color: #06b6d4;
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #facc15;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7796101891291700"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+   
+   <!-- Header -->
+<header id="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="header-left">
+                <div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+                    <a href="/" style="display:inline-block;">
+                        <img src="/NPL Logo.png" alt="NPL Logo" 
+                             style="width:100px; height:auto; object-fit:contain; display:block;">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/matches" class="nav-link">Matches</a>
+                    <a href="/teams" class="nav-link">Teams</a>
+                    <a href="/players" class="nav-link">Players</a>                       
+                    <a href="/news" class="nav-link">NEWS</a>
+                    <a href="/schedule" class="nav-link">Schedule</a>
+                    <a href="/points-table" class="nav-link">Points Table</a>            
+                    <a href="/tickets" class="nav-link">Tickets</a>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search" class="search-input">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+<!-- Matches Hero Section -->
+        <section class="matches-hero">
+            <!-- Background Image -->
+            <div class="matches-hero-bg"></div>
+                
+            <!-- Gradient Overlay and Blobs -->
+            <div class="gradient-overlay">
+                <div class="gradient-blob blob-1"></div>
+                <div class="gradient-blob blob-2"></div>
+                <div class="gradient-blob blob-3"></div>
+                <div class="gradient-blob blob-4"></div>
+                <div class="gradient-blob blob-5"></div>
+                <div class="gradient-blob blob-6"></div>
+            </div>
+            
+            <!-- Content -->
+            <div class="matches-hero-content">
+                <h1 class="matches-hero-title">NPL Matches</h1>
+                <p class="matches-hero-subtitle">Live Scores, Results & Upcoming Fixtures</p>
+            </div>
+        </section>
+        
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="container">
+<div class="content-container">
+                    <p class="intro-text">
+                        Follow all the thrilling action from the Nepal Premier League 2026 season. Get live scores, detailed match results, and upcoming fixtures for all 32 matches featuring the eight competitive teams battling for the championship.
+                    </p>
+                    <p>The <strong>Nepal Premier League 2026</strong> promises exciting cricket action from November 17 to December 13. With matches being played on Tribhuvan University Cricket Ground - fans can expect high-intensity T20 cricket at its best.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tournament Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title yellow">Tournament Stats</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                </div>
+                <div class="section-intro">
+                    <p>Key statistics and numbers from the Nepal Premier League 2026 season.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">32</div>
+                        <div class="stat-label">Total Matches</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Teams</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Venues</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">Match Days</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Filter Section -->
+        <section class="matches-filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all">All Matches</button>
+                        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                        <button class="filter-btn" data-filter="live">Live</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" placeholder="Search matches..." class="search-input" id="matchSearch" aria-label="Search matches">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Grid Section -->
+        <section class="matches-grid-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title cyan">NPL 2026 Matches</h2>
+                        <div class="title-underline" style="background-color: #06b6d4;"></div>
+                    </div>
+                </div>
+                <div class="section-intro">
+                    <p>Follow all the action from the Nepal Premier League 2026 season with live scores, results, and upcoming fixtures.</p>
+                </div>
+
+                <div class="matches-grid" id="matchesGrid">
+                    <div class="no-matches" id="noMatches" style="display:none;">
+                        <h3>No matches found</h3>
+                        <p>Try adjusting your filters or search terms</p>
+                    </div>
+
+                    <!-- Match cards will be inserted here by JavaScript -->
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/NPL Logo.png" alt="NPL Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="league-name">Nepal Premier League</span>
+                            <span class="league-tagline">Cricket Redefined</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        The biggest T20 cricket tournament in Nepal, featuring 8 elite teams battling for glory in the 2026 season.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/nplcricketnepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/nplcricketnepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/nplcricketnepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3 class="column-title">Tournament</h3>
+                        <ul class="link-list">
+                            <li><a href="schedule" class="footer-link">Schedule</a></li>
+                            <li><a href="points-table" class="footer-link">Points Table</a></li>
+                            <li><a href="teams" class="footer-link">Teams</a></li>
+                            <li><a href="players" class="footer-link">Players</a></li>
+                            <li><a href="points-table" class="footer-link">Statistics</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-column">
+                        <h3 class="column-title">Media</h3>
+                        <ul class="link-list">
+                            <li><a href="news" class="footer-link">News</a></li>
+                            <li><a href="videos" class="footer-link">Videos</a></li>
+                            <li><a href="videos" class="footer-link">Interviews</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-column">
+                        <h3 class="column-title">Fan Zone</h3>
+                        <ul class="link-list">
+                            <li><a href="tickets" class="footer-link">Buy Tickets</a></li>
+                            <li><a href="fan-guide" class="footer-link">Contests</a></li>
+                            <li><a href="fan-guide" class="footer-link">Fan Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-column">
+                        <h3 class="column-title">Information</h3>
+                        <ul class="link-list">
+                            <li><a href="about" class="footer-link">About NPL</a></li>
+                            <li><a href="contact" class="footer-link">Contact Us</a></li>
+                            <li><a href="partners" class="footer-link">Partners</a></li>
+                            <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3 class="column-title">Stay Updated</h3>
+                    <p class="newsletter-text">Get the latest news and updates delivered to your inbox</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Nepal Premier League. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy" class="legal-link">Privacy Policy</a>
+                    <a href="terms-of-service" class="legal-link">Terms of Service</a>
+                    <a href="privacy-policy" class="legal-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+// Updated Matches Data
+const matchesData = [
+    {
+        id: 1,
+        label: "Match 1",
+        status: "completed",
+        team1: { name: "Janakpur Bolts", logo: "/images/teams/Janakpur-Bolts.png" },
+        team2: { name: "Kathmandu Gurkhas", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        time: "04:00 PM",
+        date: "Nov 17",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: "Kathmandu won by 5 wickets (with 12 balls remaining)"
+    },
+    {
+        id: 2,
+        label: "Match 2",
+        status: "completed",
+        team1: { name: "Chitwan Rhinos", logo: "/images/teams/Chitwan-Rhinos.png" },
+        team2: { name: "Karnali Yaks", logo: "/images/teams/Karnali-Yaks.png" },
+        time: "11:45 AM",
+        date: "Nov 18",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: "Chitwan won by 4 wickets (with 5 balls remaining)"
+    },
+    {
+        id: 3,
+        label: "Match 3",
+        status: "completed",
+        team1: { name: "Biratnagar Kings", logo: "/images/teams/Biratnagar-Kings.png" },
+        team2: { name: "Pokhara Avengers", logo: "/images/teams/Pokhara-Avengers.png" },
+        time: "04:00 PM",
+        date: "Nov 18",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: "Biratnagar won by 53 runs"
+    },
+    {
+        id: 4,
+        label: "Match 4",
+        status: "completed",
+        team1: { name: "Kathmandu Gurkhas", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        team2: { name: "Sudurpaschim Royals", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        time: "04:00 PM",
+        date: "Nov 19",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: "Sudur Paschim Royals won by 29 runs"
+    },
+    {
+        id: 5,
+        label: "Match 5",
+        status: "completed",
+        team1: { name: "Lumbini Lions", logo: "/images/teams/Lumbini-Lions.png" },
+        team2: { name: "Chitwan Rhinos", logo: "/images/teams/Chitwan-Rhinos.png" },
+        time: "04:00 PM",
+        date: "Nov 20",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: "Lumbini Lions won by 6 wkts"
+    },
+    {
+        id: 6,
+        label: "Match 6",
+        status: "completed",
+        team1: { name: "Pokhara Avengers", logo: "/images/teams/Pokhara-Avengers.png" },
+        team2: { name: "Sudurpaschim Royals", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        time: "04:00 PM",
+        date: "Nov 21",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: "Sudur Paschim Royals won by 18 runs"
+    },
+    {
+        id: 7,
+        label: "Match 7",
+        status: "upcoming",
+        team1: { name: "Karnali Yaks", logo: "/images/teams/Karnali-Yaks.png" },
+        team2: { name: "Lumbini Lions", logo: "/images/teams/Lumbini-Lions.png" },
+        time: "11:15 AM",
+        date: "Nov 22",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 8,
+        label: "Match 8",
+        status: "upcoming",
+        team1: { name: "Kathmandu Gurkhas", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        team2: { name: "Biratnagar Kings", logo: "/images/teams/Biratnagar-Kings.png" },
+        time: "03:30 PM",
+        date: "Nov 22",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 9,
+        label: "Match 9",
+        status: "upcoming",
+        team1: { name: "Janakpur Bolts", logo: "/images/teams/Janakpur-Bolts.png" },
+        team2: { name: "Biratnagar Kings", logo: "/images/teams/Biratnagar-Kings.png" },
+        time: "11:45 AM",
+        date: "Nov 24",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 10,
+        label: "Match 10",
+        status: "upcoming",
+        team1: { name: "Sudurpaschim Royals", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        team2: { name: "Karnali Yaks", logo: "/images/teams/Karnali-Yaks.png" },
+        time: "04:00 PM",
+        date: "Nov 24",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 11,
+        label: "Match 11",
+        status: "upcoming",
+        team1: { name: "Kathmandu Gurkhas", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        team2: { name: "Lumbini Lions", logo: "/images/teams/Lumbini-Lions.png" },
+        time: "04:00 PM",
+        date: "Nov 25",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 12,
+        label: "Match 12",
+        status: "upcoming",
+        team1: { name: "Biratnagar Kings", logo: "/images/teams/Biratnagar-Kings.png" },
+        team2: { name: "Chitwan Rhinos", logo: "/images/teams/Chitwan-Rhinos.png" },
+        time: "04:00 PM",
+        date: "Nov 26",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 13,
+        label: "Match 13",
+        status: "upcoming",
+        team1: { name: "Lumbini Lions", logo: "/images/teams/Lumbini-Lions.png" },
+        team2: { name: "Sudurpaschim Royals", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        time: "11:45 AM",
+        date: "Nov 27",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 14,
+        label: "Match 14",
+        status: "upcoming",
+        team1: { name: "Janakpur Bolts", logo: "/images/teams/Janakpur-Bolts.png" },
+        team2: { name: "Pokhara Avengers", logo: "/images/teams/Pokhara-Avengers.png" },
+        time: "04:00 PM",
+        date: "Nov 27",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 15,
+        label: "Match 15",
+        status: "upcoming",
+        team1: { name: "Chitwan Rhinos", logo: "/images/teams/Chitwan-Rhinos.png" },
+        team2: { name: "Kathmandu Gurkhas", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        time: "11:45 AM",
+        date: "Nov 28",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 16,
+        label: "Match 16",
+        status: "upcoming",
+        team1: { name: "Karnali Yaks", logo: "/images/teams/Karnali-Yaks.png" },
+        team2: { name: "Biratnagar Kings", logo: "/images/teams/Biratnagar-Kings.png" },
+        time: "04:00 PM",
+        date: "Nov 28",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 17,
+        label: "Match 17",
+        status: "upcoming",
+        team1: { name: "Pokhara Avengers", logo: "/images/teams/Pokhara-Avengers.png" },
+        team2: { name: "Lumbini Lions", logo: "/images/teams/Lumbini-Lions.png" },
+        time: "11:15 AM",
+        date: "Nov 29",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 18,
+        label: "Match 18",
+        status: "upcoming",
+        team1: { name: "Sudurpaschim Royals", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        team2: { name: "Janakpur Bolts", logo: "/images/teams/Janakpur-Bolts.png" },
+        time: "03:30 PM",
+        date: "Nov 29",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 19,
+        label: "Match 19",
+        status: "upcoming",
+        team1: { name: "Karnali Yaks", logo: "/images/teams/Karnali-Yaks.png" },
+        team2: { name: "Kathmandu Gurkhas", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        time: "03:30 PM",
+        date: "Nov 30",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 20,
+        label: "Match 20",
+        status: "upcoming",
+        team1: { name: "Janakpur Bolts", logo: "/images/teams/Janakpur-Bolts.png" },
+        team2: { name: "Chitwan Rhinos", logo: "/images/teams/Chitwan-Rhinos.png" },
+        time: "11:45 AM",
+        date: "Dec 2",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 21,
+        label: "Match 21",
+        status: "upcoming",
+        team1: { name: "Pokhara Avengers", logo: "/images/teams/Pokhara-Avengers.png" },
+        team2: { name: "Karnali Yaks", logo: "/images/teams/Karnali-Yaks.png" },
+        time: "04:00 PM",
+        date: "Dec 2",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 22,
+        label: "Match 22",
+        status: "upcoming",
+        team1: { name: "Biratnagar Kings", logo: "/images/teams/Biratnagar-Kings.png" },
+        team2: { name: "Lumbini Lions", logo: "/images/teams/Lumbini-Lions.png" },
+        time: "04:00 PM",
+        date: "Dec 3",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 23,
+        label: "Match 23",
+        status: "upcoming",
+        team1: { name: "Pokhara Avengers", logo: "/images/teams/Pokhara-Avengers.png" },
+        team2: { name: "Kathmandu Gurkhas", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        time: "11:45 AM",
+        date: "Dec 4",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 24,
+        label: "Match 24",
+        status: "upcoming",
+        team1: { name: "Sudurpaschim Royals", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        team2: { name: "Chitwan Rhinos", logo: "/images/teams/Chitwan-Rhinos.png" },
+        time: "04:00 PM",
+        date: "Dec 4",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 25,
+        label: "Match 25",
+        status: "upcoming",
+        team1: { name: "Lumbini Lions", logo: "/images/teams/Lumbini-Lions.png" },
+        team2: { name: "Janakpur Bolts", logo: "/images/teams/Janakpur-Bolts.png" },
+        time: "04:00 PM",
+        date: "Dec 5",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 26,
+        label: "Match 26",
+        status: "upcoming",
+        team1: { name: "Sudurpaschim Royals", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        team2: { name: "Biratnagar Kings", logo: "/images/teams/Biratnagar-Kings.png" },
+        time: "11:15 AM",
+        date: "Dec 6",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 27,
+        label: "Match 27",
+        status: "upcoming",
+        team1: { name: "Chitwan Rhinos", logo: "/images/teams/Chitwan-Rhinos.png" },
+        team2: { name: "Pokhara Avengers", logo: "/images/teams/Pokhara-Avengers.png" },
+        time: "03:30 PM",
+        date: "Dec 6",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 28,
+        label: "Match 28",
+        status: "upcoming",
+        team1: { name: "Karnali Yaks", logo: "/images/teams/Karnali-Yaks.png" },
+        team2: { name: "Janakpur Bolts", logo: "/images/teams/Janakpur-Bolts.png" },
+        time: "03:30 PM",
+        date: "Dec 7",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 29,
+        label: "Qualifier 1",
+        status: "upcoming",
+        team1: { name: "1st Place Team", logo: "/images/teams/Pokhara-Avengers.png" },
+        team2: { name: "2nd Place Team", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        time: "04:00 PM",
+        date: "Dec 9",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 30,
+        label: "Eliminator",
+        status: "upcoming",
+        team1: { name: "3rd Place Team", logo: "/images/teams/Janakpur-Bolts.png" },
+        team2: { name: "4th Place Team", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        time: "04:00 PM",
+        date: "Dec 10",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 31,
+        label: "Qualifier 2",
+        status: "upcoming",
+        team1: { name: "Loser of Qualifier 1", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        team2: { name: "Winner of Eliminator", logo: "/images/teams/Sudurpaschim-Royals.png" },
+        time: "04:00 PM",
+        date: "Dec 11",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    },
+    {
+        id: 32,
+        label: "Final",
+        status: "upcoming",
+        team1: { name: "Winner of Qualifier 1", logo: "/images/teams/Pokhara-Avengers.png" },
+        team2: { name: "Winner of Qualifier 2", logo: "/images/teams/Kathmandu-Gurkhas.png" },
+        time: "03:30 PM",
+        date: "Dec 13",
+        venue: "Tribhuvan University Cricket Ground, Kirtipur",
+        result: ""
+    }
+];
+
+
+        // Initialize Matches Grid
+        function initMatchesGrid() {
+            const matchesGrid = document.getElementById('matchesGrid');
+            const cardsHtml = matchesData
+                .map(
+                    (match) => `
+                        <div class="match-card ${match.status === 'live' ? 'live-match' : ''}" data-status="${match.status}">
+                            <div class="match-header">
+                                <div class="match-label">${match.label}</div>
+                                <div class="match-status status-${match.status}">${match.status.toUpperCase()}</div>
+                            </div>
+                            
+                            <div class="match-teams">
+                                <div class="team">
+                                    <div class="team-logo">
+                                        <img src="${match.team1.logo}" alt="${match.team1.name}" loading="lazy">
+                                    </div>
+                                    <span class="team-name">${match.team1.name}</span>
+                                </div>
+                                
+                                <div class="vs">VS</div>
+                                
+                                <div class="team team-right">
+                                    <span class="team-name">${match.team2.name}</span>
+                                    <div class="team-logo">
+                                        <img src="${match.team2.logo}" alt="${match.team2.name}" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="match-info">
+                                <div class="match-time">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    <span>${match.time}</span>
+                                    <span class="match-date">${match.date}</span>
+                                </div>
+                                <div class="match-venue-label">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Venue</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-venue">
+                                ${match.venue}
+                            </div>
+                            
+                            ${match.result ? `
+                            <div class="match-result">
+                                <div class="result-text">Coming Soon</div>
+                            </div>
+                            ` : ''}                            
+                            
+
+                        </div>
+                    `,
+                )
+                .join('');
+
+            matchesGrid.innerHTML = `
+                ${cardsHtml}
+                <div class="no-matches" id="noMatches" style="display:none;">
+                    <h3>No matches found</h3>
+                    <p>Try adjusting your filters or search terms</p>
+                </div>
+            `;
+        }
+
+function applyFilters() {
+    const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter || "all";
+    const searchInput = document.getElementById("matchSearch");
+    const searchValue = (searchInput?.value || "").toLowerCase();
+
+    const allCards = document.querySelectorAll(".match-card");
+    let visibleCount = 0;
+
+    allCards.forEach(card => {
+        const status = card.dataset.status;
+        const teamNames = card.innerText.toLowerCase();
+
+        const statusMatch = (activeFilter === "all") || (status === activeFilter);
+        const searchMatch = teamNames.includes(searchValue);
+
+        if (statusMatch && searchMatch) {
+            card.style.display = "block";
+            visibleCount++;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    const noMatchesEl = document.getElementById("noMatches");
+    if (noMatchesEl) {
+        noMatchesEl.style.display = visibleCount === 0 ? "block" : "none";
+    }
+}
+
+// FILTER BUTTON CLICK EVENT
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("filter-btn")) {
+
+        document.querySelectorAll(".filter-btn").forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        e.target.classList.add("active");
+
+        applyFilters();
+    }
+});
+
+// SEARCH INPUT EVENT
+document.getElementById("matchSearch")?.addEventListener("input", applyFilters);
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        menuToggle?.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Initialize matches grid
+        document.addEventListener('DOMContentLoaded', () => {
+            initMatchesGrid();
+            applyFilters();
+
+        });
+    </script>
+</body>
+</html>

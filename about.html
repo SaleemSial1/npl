@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/NPL Logo.png">
+    <meta name="robots" content="index, follow">
+    <!-- SEO Meta Tags -->
+    <title>About Nepal Premier League</title>
+    <meta name="description" content="Learn about Nepal Premier League (NPL) - Nepal's top T20 cricket tournament featuring 8 teams, international stars, and exciting matches since 2024.">
+    <meta name="keywords" content="Nepal Premier League about, NPL cricket tournament, Nepal T20 league, NPL teams, cricket Nepal">
+    <meta name="author" content="Nepal Premier League">
+    <meta name="google-site-verification" content="FcI0XnWsjvW-He8lPMA0I-pgbndhVjvFJDxlKS7I6uI" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Nepal Premier League - NPL 2026 Official Cricket Tournament">
+    <meta property="og:description" content="Learn about Nepal Premier League (NPL) - Nepal's top T20 cricket tournament featuring 8 teams and international stars.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nplcricketleague.com/about">
+    <meta property="og:image" content="https://nplcricketleague.com/images/NPL About.webp">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Nepal Premier League - NPL 2026 Official Cricket Tournament">
+    <meta name="twitter:description" content="Learn about Nepal Premier League (NPL) - Nepal's top T20 cricket tournament featuring 8 teams and international stars.">
+    <meta name="twitter:image" content="https://nplcricketleague.com/images/NPL.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nplcricketleague.com/about">
+    
+    <!-- Structured Data for Sports Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "Nepal Premier League",
+      "url": "https://nplcricketleague.com",
+      "logo": "https://nplcricketleague.com/NPL Logo.png",
+      "description": "Nepal Premier League (NPL) is the top T20 cricket tournament in Nepal, organized by the Cricket Association of Nepal.",
+      "foundingDate": "2024",
+      "sport": "Cricket",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NP"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* About-specific styles */
+        .about-hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #111827, #1e3a8a);
+        }
+        
+        .about-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem 1rem;
+        }
+        
+        .about-hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #06b6d4;
+            margin-bottom: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .about-hero-title {
+                font-size: 3.5rem;
+            }
+        }
+        
+        .about-hero-subtitle {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .about-hero-subtitle {
+                font-size: 1.75rem;
+            }
+        }
+        
+        .about-section {
+            padding: 4rem 0;
+            background: linear-gradient(to bottom, #111827, #1e293b);
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .established-badge {
+            background: linear-gradient(to right, #1e3a8a, #111827);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #facc15;
+            display: inline-block;
+        }
+        
+        .established-badge strong {
+            color: #facc15;
+        }
+        
+        .about-intro {
+            color: #d1d5db;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: rgba(6, 182, 212, 0.05);
+            border-radius: 0.5rem;
+            border-left: 4px solid #10b981;
+        }
+        
+        .about-content {
+            color: #d1d5db;
+            line-height: 1.7;
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: rgba(6, 182, 212, 0.03);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(6, 182, 212, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #06b6d4;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: #10b981;
+        }
+        
+        .content-list {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        
+        .content-list li {
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+        
+        .content-list li::before {
+            content: "•";
+            color: #facc15;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .highlight-text {
+            color: #facc15;
+            font-weight: 600;
+        }
+        
+        .teams-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .teams-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .teams-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .team-card {
+            background: linear-gradient(to bottom right, #111827, #1e293b);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
+            border-color: #06b6d4;
+        }
+        
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #06b6d4;
+        }
+        
+        .team-region {
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-description {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .stats-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .stat-card {
+            background: linear-gradient(to bottom right, #111827, #1e293b);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #06b6d4;
+        }
+        
+        .stat-player {
+            color: #facc15;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-details {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .contact-info {
+            background: linear-gradient(to right, #1e3a8a, #111827);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-left: 4px solid #facc15;
+        }
+        
+        .contact-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #06b6d4;
+        }
+        
+        .contact-list {
+            margin-left: 1rem;
+        }
+        
+        .contact-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('/images/NPL.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            filter: blur(8px);
+            transform: scale(1.05);
+        }
+        
+        .gradient-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.3;
+        }
+        
+        .blob-1 {
+            width: 300px;
+            height: 300px;
+            background: #06b6d4;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .blob-2 {
+            width: 200px;
+            height: 200px;
+            background: #facc15;
+            top: 60%;
+            right: 10%;
+        }
+        
+        .blob-3 {
+            width: 250px;
+            height: 250px;
+            background: #9333ea;
+            bottom: 10%;
+            left: 20%;
+        }
+        
+        .blob-4 {
+            width: 180px;
+            height: 180px;
+            background: #10b981;
+            top: 20%;
+            right: 20%;
+        }
+        
+        .blob-5 {
+            width: 220px;
+            height: 220px;
+            background: #ef4444;
+            bottom: 30%;
+            right: 30%;
+        }
+        
+        .blob-6 {
+            width: 150px;
+            height: 150px;
+            background: #3b82f6;
+            top: 40%;
+            left: 5%;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #06b6d4;
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #0891b2;
+            transform: translateY(-2px);
+        }
+        
+        .cta-section {
+            background: linear-gradient(to right, #1e3a8a, #111827);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        
+        .cta-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #06b6d4;
+        }
+        
+        .cta-description {
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            background: #06b6d4;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: #0891b2;
+            transform: translateY(-2px);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 1px solid #06b6d4;
+            color: #06b6d4;
+        }
+        
+        .cta-button.secondary:hover {
+            background: rgba(6, 182, 212, 0.1);
+        }
+    </style>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXJZYNV100"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WXJZYNV100');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7796101891291700"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                   <div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+                      <a href="/" style="display:inline-block;">
+                        <img src="/NPL Logo.png" alt="NPL Logo" 
+                             style="width:100px; height:auto; object-fit:contain; display:block;" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                      </a>
+                    </div>
+
+                    <nav class="main-nav">
+                        <a href="/" class="nav-link ">Home</a>
+                        <a href="/matches" class="nav-link">Matches</a>
+                        <a href="/teams" class="nav-link">Teams</a>
+                        <a href="/players" class="nav-link ">Players</a>                       
+                        <a href="/news" class="nav-link">NEWS</a>
+                        <a href="/schedule" class="nav-link">Schedule</a>
+                        <a href="/points-table" class="nav-link">Points Table</a>            
+                        <a href="/tickets" class="nav-link">Tickets</a>
+                    </nav>
+                </div>
+
+                <div class="header-right">
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" placeholder="Search" class="search-input" aria-label="Search">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+<!-- About Hero Section -->
+        <section class="about-hero">
+            <!-- Background Image -->
+            <div class="about-hero-bg"></div>
+            
+            <!-- Gradient Overlay and Blobs -->
+            <div class="gradient-overlay">
+                <div class="gradient-blob blob-1"></div>
+                <div class="gradient-blob blob-2"></div>
+                <div class="gradient-blob blob-3"></div>
+                <div class="gradient-blob blob-4"></div>
+                <div class="gradient-blob blob-5"></div>
+                <div class="gradient-blob blob-6"></div>
+            </div>
+            
+            <!-- Content -->
+            <div class="about-hero-content">
+                <h1 class="about-hero-title">About NPL</h1>
+                <p class="about-hero-subtitle">Nepal Premier League - Season 3</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+<div class="about-container">
+                    <!-- Established Badge -->
+                    <div class="established-badge">
+                        <p><strong>Established:</strong> 2024</p>
+                    </div>
+
+                    <!-- Introduction -->
+                    <div class="about-intro">
+                        <p>The Nepal Premier League (NPL) is the top T20 cricket tournament in Nepal. It is organized by the Cricket Association of Nepal (CAN). Started in 2024, the NPL brings together the best Nepali and international players in fast, exciting matches. It is the biggest cricket event in Nepal and helps promote the game, develop young players, and give new talent a chance to shine on a big stage.</p>
+                    </div>
+
+                    <!-- About Content -->
+                    <div class="about-content">
+                        <!-- History and Vision -->
+                        <div class="content-section">
+                            <h2 class="section-title">History and Vision</h2>
+                            <p>The NPL was created to make cricket more professional in Nepal and to build a strong cricket system for players and fans. The first season in 2024 was a big success, with huge crowds and great viewership. The 2026 season will be even bigger, with more coverage and tough competition.</p>
+                            <p>Our goal is to make NPL a world-class league that inspires young cricketers and brings people together through sports and teamwork across Nepal.</p>
+                        </div>
+
+                        <!-- Tournament Format -->
+                        <div class="content-section">
+                            <h2 class="section-title">Tournament Format</h2>
+                            <ul class="content-list">
+                                <li><span class="highlight-text">Format:</span> T20 cricket — short, exciting matches full of action.</li>
+                                <li><span class="highlight-text">Structure:</span> Teams play in a round-robin stage, then the top teams move to the playoffs and final.</li>
+                                <li><span class="highlight-text">Season Details (2026):</span> 8 teams will play 29 matches across 3 venues in Nepal from November 17 to December 15, 2026.</li>
+                                <li><span class="highlight-text">Player Auction:</span> Players are chosen through an auction system with different categories. In 2026, 150 players took part, forming well-balanced teams.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Participating Teams -->
+                        <div class="content-section">
+                            <h2 class="section-title">Participating Teams</h2>
+                            <p>The NPL has 8 teams, each representing a major region of Nepal:</p>
+                            
+                            <div class="teams-grid">
+                                <div class="team-card">
+                                    <h3 class="team-name">Pokhara Avengers</h3>
+                                    <p class="team-region">Pokhara Region</p>
+                                    <p class="team-description">Strong players from the lakeside city known for their aggressive gameplay.</p>
+                                </div>
+                                
+                                <div class="team-card">
+                                    <h3 class="team-name">Kathmandu Gurkhas</h3>
+                                    <p class="team-region">Kathmandu Valley</p>
+                                    <p class="team-description">Brave and skilled players from the capital with strategic gameplay.</p>
+                                </div>
+                                
+                                <div class="team-card">
+                                    <h3 class="team-name">Sudurpaschim Royals</h3>
+                                    <p class="team-region">Far Western Region</p>
+                                    <p class="team-description">Smart and tactical team from the far west known for their precision.</p>
+                                </div>
+                                
+                                <div class="team-card">
+                                    <h3 class="team-name">Janakpur Bolts</h3>
+                                    <p class="team-region">Madhesh Region</p>
+                                    <p class="team-description">Fast and energetic players from the plains with explosive batting.</p>
+                                </div>
+                                
+                                <div class="team-card">
+                                    <h3 class="team-name">Lumbini Lions</h3>
+                                    <p class="team-region">Lumbini Region</p>
+                                    <p class="team-description">Proud team from Buddha's birthplace with balanced gameplay.</p>
+                                </div>
+                                
+                                <div class="team-card">
+                                    <h3 class="team-name">Chitwan Rhinos</h3>
+                                    <p class="team-region">Chitwan Region</p>
+                                    <p class="team-description">Powerful team from the jungle region known for their strength.</p>
+                                </div>
+                                
+                                <div class="team-card">
+                                    <h3 class="team-name">Biratnagar Kings</h3>
+                                    <p class="team-region">Eastern Region</p>
+                                    <p class="team-description">Strong side from the eastern city with all-round capabilities.</p>
+                                </div>
+                                
+                                <div class="team-card">
+                                    <h3 class="team-name">Karnali Yaks</h3>
+                                    <p class="team-region">Karnali Region</p>
+                                    <p class="team-description">Tough players from the mountain areas known for their resilience.</p>
+                                </div>
+                            </div>
+                            
+                            <p>Each team is owned by well-known business groups and includes local, international, and young players.</p>
+                        </div>
+
+                        <!-- Broadcast and Reach -->
+                        <div class="content-section">
+                            <h2 class="section-title">Broadcast and Reach</h2>
+                            <p>NPL matches are broadcast live in 15 countries across Asia and Europe. Fans can watch live games and get updates through our official website, social media, and TV partners.</p>
+                        </div>
+
+                        <!-- Top Performers and Records -->
+                        <div class="content-section">
+                            <h2 class="section-title">Top Performers and Records</h2>
+                            <p>The 2026 season is coming soon, but here are some top players from past editions:</p>
+                            
+                            <div class="stats-container">
+                                <div class="stat-card">
+                                    <h3 class="stat-title">MVP</h3>
+                                    <p class="stat-player">Kushal Bhurtel</p>
+                                    <p class="stat-details">Kathmandu Gurkhas<br>245 runs, average 61.25<br>Strike rate 156.8</p>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <h3 class="stat-title">Top Run Scorers</h3>
+                                    <p class="stat-player">Kushal Bhurtel (245)</p>
+                                    <p class="stat-player">Dipendra Singh (198)</p>
+                                    <p class="stat-player">Aarif Sheikh (187)</p>
+                                </div>
+                                
+                                <div class="stat-card">
+                                    <h3 class="stat-title">Top Wicket Takers</h3>
+                                    <p class="stat-player">Sandeep Lamichhane (12)</p>
+                                    <p class="stat-player">Karan KC (10)</p>
+                                    <p class="stat-player">Sompal Kami (9)</p>
+                                </div>
+                            </div>
+                            
+                            <p>Check our website for updated stats, points tables, and live scores.</p>
+                        </div>
+
+                        <!-- Commitment to Cricket Development -->
+                        <div class="content-section">
+                            <h2 class="section-title">Commitment to Cricket Development</h2>
+                            <p>The NPL also supports the growth of cricket in Nepal. We work with CAN to run youth programs, training camps, and community projects. We also help build cricket grounds and scout new talent to ensure a strong future for the sport.</p>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section">
+                            <h3 class="cta-title">Join the NPL Community</h3>
+                            <p class="cta-description">Be part of Nepal's cricket journey! Follow the excitement, cheer for your favorite teams, and experience world-class T20 cricket right here in Nepal.</p>
+                            <div class="cta-buttons">
+                                <a href="schedule" class="cta-button">View Schedule</a>
+                                <a href="tickets" class="cta-button secondary">Buy Tickets</a>
+                                <a href="teams" class="cta-button secondary">Explore Teams</a>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="content-section">
+                            <h2 class="section-title">Contact Us</h2>
+                            <div class="contact-info">
+                                <h3 class="contact-title">Get In Touch</h3>
+                                <ul class="contact-list">
+                                    <li>Email: <a href="mailto:Saleemsial1432@gmail.com" class="highlight-text">Saleemsial1432@gmail.com</a></li>
+                                    <li>Address: Nepal Premier League Office, National Sports Council Building, Tripureshwor, Kathmandu, Nepal</li>
+                                </ul>
+                            </div>
+                            <p style="text-align: center; margin-top: 1.5rem; font-style: italic;">Thank you for supporting the Nepal Premier League!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+   <footer id="footer">
+    <div class="container">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="/NPL Logo.png" alt="NPL Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="league-name">Nepal Premier League</span>
+                        <span class="league-tagline">Season 3</span>
+                    </div>
+                </div>
+                <p class="footer-description">
+                    The biggest T20 cricket tournament in Nepal, where 8 top teams compete for the 2026 Crown.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-column">
+                    <h3 class="column-title">Tournament</h3>
+                    <ul class="link-list">
+                        <li><a href="/schedule" class="footer-link">Schedule</a></li>
+                        <li><a href="/points-table" class="footer-link">Points Table</a></li>
+                        <li><a href="/teams" class="footer-link">Teams</a></li>
+                        <li><a href="/players" class="footer-link">Players</a></li>
+                        <li><a href="/venues" class="footer-link">Venue</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h3 class="column-title">Media</h3>
+                    <ul class="link-list">
+                        <li><a href="/news" class="footer-link">News</a></li>
+                        <li><a href="/videos" class="footer-link">Videos</a></li>
+                        <li><a href="/auction" class="footer-link">Auction</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h3 class="column-title">Fan Zone</h3>
+                    <ul class="link-list">
+                        <li><a href="/tickets" class="footer-link">Buy Tickets</a></li>
+                        <li><a href="/fan-guide" class="footer-link">Fan Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h3 class="column-title">Information</h3>
+                    <ul class="link-list">
+                        <li><a href="/about" class="footer-link">About NPL</a></li>
+                        <li><a href="/contact" class="footer-link">Contact Us</a></li>
+                        <li><a href="/partners" class="footer-link">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 class="column-title">Stay Updated</h3>
+                <p class="newsletter-text">Get the latest news and updates delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Nepal Premier League. All rights reserved.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="/privacy-policy" class="legal-link">Privacy Policy</a>
+                <a href="/terms-of-service" class="legal-link">Terms of Service</a>
+                <a href="/sitemap.xml" class="legal-link">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const mainNav = document.querySelector(".main-nav");
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener("click", () => {
+                mainNav.classList.toggle("active");
+            });
+        }
+
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener("scroll", () => {
+            const header = document.getElementById("header");
+            if (!header) return;
+            
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.3)";
+            } else {
+                header.style.boxShadow = "none";
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById("backToTop");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add("visible");
+            } else {
+                backToTopButton.classList.remove("visible");
+            }
+        });
+        
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>
