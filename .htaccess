@@ -1,0 +1,26 @@
+Options -MultiViews
+Options -Indexes
+
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Force HTTPS and the canonical host.
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.nplcricketleague\.com$ [NC]
+RewriteRule ^ https://nplcricketleague.com%{REQUEST_URI} [R=301,L]
+
+# Keep the home page clean.
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Redirect direct .html requests to clean URLs.
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Root section pages that share names with real directories.
+RewriteRule ^teams/?$ /teams.html [L]
+RewriteRule ^players/?$ /players.html [L]
+
+# Serve clean URLs for files that actually exist as .html.
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
