@@ -160,12 +160,16 @@ test('homepage hero keeps the old schedule call-to-action button', () => {
   const fs = require('node:fs');
   const path = require('node:path');
   const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
-  const heroText = homepage.match(/<div class="hero-text">[\s\S]*?<\/div>\s*<\/div>\s*<div class="hero-cards">/);
+  const heroText = homepage.match(/<div class="hero-text">[\s\S]*?<\/div>\s*<div class="hero-cards">/);
 
   assert.ok(heroText, 'homepage must include hero text');
   assert.ok(heroText[0].includes('href="https://nplcricketleague.com/schedule" class="btn-primary">Schedule</a>'), 'hero must keep the old Schedule button');
   assert.ok(!heroText[0].includes('Auction Tracker</a>'), 'hero must not show the replacement Auction Tracker button');
   assert.ok(!heroText[0].includes('Latest News</a>'), 'hero must not show the replacement Latest News button');
+  assert.ok(!heroText[0].includes('hero-facts'), 'hero must not show the auction stats block');
+  assert.ok(!heroText[0].includes('shortlisted players'), 'hero must not show shortlisted players copy');
+  assert.ok(!heroText[0].includes('auction slots'), 'hero must not show auction slots copy');
+  assert.ok(!heroText[0].includes('franchises'), 'hero must not show franchises copy');
 });
 
 test('homepage matches section shows the next four match cards', () => {
@@ -188,6 +192,10 @@ test('homepage matches section shows the next four match cards', () => {
   assert.ok(styles.includes('.match-card:nth-child(n+5)'), 'homepage must hide matches after the first four');
   assert.ok(!styles.includes('.match-card:nth-child(n+3)'), 'homepage must not hide Match 3 and Match 4');
   assert.ok(styles.includes('.matches-grid {\n  display: grid;'), 'homepage matches must render as a grid so all four cards are visible');
+  assert.ok(
+    /@media \(min-width: 1180px\)\s*{\s*\.matches-grid\s*{\s*grid-template-columns: repeat\(4, minmax\(0, 1fr\)\);/m.test(styles),
+    'wide desktop must show four match cards in one row'
+  );
   assert.ok(homepage.includes('const visibleMatchCards = document.querySelectorAll(\'.match-card:not([hidden])\');'), 'matches carousel must count only visible homepage match cards');
 });
 
