@@ -19,7 +19,8 @@ function run() {
   const archivePath = path.join(ROOT_DIR, 'news.html');
   assert(fs.existsSync(archivePath), 'news.html was not generated');
   const archive = fs.readFileSync(archivePath, 'utf8');
-  assert(archive.includes('NPL-only Newsroom'), 'news.html must declare the NPL-only newsroom');
+  assert(archive.includes('<section id="news" class="news-section">'), 'news.html must use the shared news section layout');
+  assert(archive.includes('Latest News'), 'news.html must declare latest news');
   assert(!archive.includes('Premier League clubs'), 'news.html contains non-NPL football copy');
 
   for (const item of items) {

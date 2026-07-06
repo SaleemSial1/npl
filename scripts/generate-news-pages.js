@@ -14,7 +14,76 @@ function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
-function pageShell({ title, description, canonical, body, base = '' }) {
+function siteHeader() {
+  return `<header id="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="header-left">
+                <div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+                    <a href="/" style="display:inline-block;">
+                        <img src="/NPL Logo.png" alt="NPL Logo" style="width:100px; height:auto; object-fit:contain; display:block;">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/matches" class="nav-link">Matches</a>
+                    <a href="/teams" class="nav-link">Teams</a>
+                    <a href="/players" class="nav-link">Players</a>
+                    <a href="/news" class="nav-link active">NEWS</a>
+                    <a href="/schedule" class="nav-link">Schedule</a>
+                    <a href="/points-table" class="nav-link">Points Table</a>
+                    <a href="/tickets" class="nav-link">Tickets</a>
+                    <a href="/auction" class="nav-link">Auction</a>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="social-links">
+                    <a href="https://facebook.com/nplcricketnepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="https://twitter.com/nplcricketnepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+                    <a href="https://instagram.com/nplcricketnepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://youtube.com/@nplcricketnepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search" class="search-input">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </div>
+</header>`;
+}
+
+function siteFooter() {
+  const indexPath = path.join(ROOT_DIR, 'index.html');
+  if (fs.existsSync(indexPath)) {
+    const html = fs.readFileSync(indexPath, 'utf8');
+    const match = html.match(/<footer id="footer">[\s\S]*?<\/footer>/);
+    if (match) return match[0];
+  }
+  return `<footer id="footer"><div class="container"><div class="footer-bottom"><div class="footer-copyright"><p>&copy; 2026 NPL Cricket League. Independent fan guide.</p></div></div></div></footer>`;
+}
+
+function pageScript() {
+  return `<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.querySelector('.main-nav');
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function () {
+      mainNav.classList.toggle('active');
+    });
+  }
+});
+</script>`;
+}
+
+function pageShell({ title, description, canonical, body }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,47 +106,25 @@ function pageShell({ title, description, canonical, body, base = '' }) {
 <meta name="twitter:image" content="${SITE_URL}/images/NPL.webp">
 
 <link rel="canonical" href="${escapeHtml(canonical)}">
-<link rel="icon" type="image/png" href="${base}NPL Logo.png">
+<link rel="icon" type="image/png" href="/NPL Logo.png">
 
-<link rel="stylesheet" href="${base}styles.css">
+<link rel="stylesheet" href="/styles.css">
 <style>
-  body{background:#0f172a;color:#e5e7eb}
-  .generated-header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.96);border-bottom:1px solid rgba(6,182,212,.25)}
-  .generated-header__inner{max-width:1180px;margin:0 auto;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-  .generated-brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;font-weight:800}
-  .generated-brand img{width:52px;height:auto}
-  .generated-nav{display:flex;gap:1rem;flex-wrap:wrap}
-  .generated-nav a{color:#d1d5db;text-decoration:none;font-weight:700;font-size:.92rem}
-  .generated-nav a:hover{color:#06b6d4}
-  .generated-footer{background:#020617;border-top:1px solid rgba(6,182,212,.22);padding:2rem 1rem;color:#9ca3af}
-  .generated-footer__inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-  .page-hero{background:linear-gradient(135deg,#111827,#1e3a8a);padding:4rem 1rem 3rem}
-  .page-hero__inner,.section,.news-article__layout{max-width:1180px;margin:0 auto}
+  .main-content{padding-top:4rem}
+  @media(min-width:768px){.main-content{padding-top:5rem}}
+  .news-archive-meta{color:#d1d5db;font-size:1rem;margin-top:.5rem}
+  .news-filter-bar{display:flex;gap:.65rem;flex-wrap:wrap;margin:0 0 1.5rem}
+  .news-filter-bar a{border:1px solid rgba(6,182,212,.35);border-radius:8px;color:#e0f2fe;text-decoration:none;font-weight:700;padding:.55rem .75rem;background:rgba(17,24,39,.6)}
+  .news-filter-bar a:hover{border-color:#06b6d4;color:#06b6d4}
+  .news-article__hero{background:linear-gradient(to bottom right,#111827,#1e3a8a);padding:3rem 1rem;color:#fff}
+  .news-article__hero>*{max-width:980px;margin-left:auto;margin-right:auto}
+  .news-article__hero h1{color:#06b6d4;font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:.5rem auto 1rem}
+  .news-article__hero p{color:#d1d5db;line-height:1.65}
+  .section__kicker{display:inline-block;color:#facc15;font-weight:800;text-transform:uppercase;margin-bottom:.5rem}
   .crumbs ol{list-style:none;display:flex;gap:.45rem;padding:0;margin:0 0 1rem;color:#93c5fd;flex-wrap:wrap}
   .crumbs a{color:#93c5fd;text-decoration:none}
-  .section__kicker{display:inline-block;color:#facc15;font-weight:800;text-transform:uppercase;letter-spacing:0;margin-bottom:.75rem}
-  .page-hero__title,.news-article__hero h1{color:#fff;font-size:clamp(2rem,5vw,4rem);line-height:1.08;margin:.25rem 0 1rem}
-  .page-hero__sub,.section__sub,.news-article__hero p{color:#d1d5db;line-height:1.65;max-width:820px}
-  .page-hero__meta{display:flex;gap:1rem;flex-wrap:wrap;color:#bfdbfe;font-weight:700}
-  .ul-gold,.ul-teal{color:#facc15}
-  .section{padding:3rem 1rem}
-  .section__title{font-size:clamp(1.6rem,3vw,2.5rem);color:#fff;margin:.2rem 0 .75rem}
-  .news{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
-  .news-card{background:linear-gradient(145deg,#1e3a8a,#111827);border:1px solid rgba(6,182,212,.28);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
-  .news-card--featured{grid-column:span 2}
-  .news-card__img{height:210px;background:linear-gradient(135deg,var(--g1),var(--g2));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-  .news-card__teamlogo{width:100%;height:100%;object-fit:cover;display:block}
-  .news-card__tag{position:absolute;top:.8rem;right:.8rem;background:#06b6d4;color:#fff;border-radius:8px;padding:.35rem .65rem;font-size:.78rem;font-weight:800}
-  .news-card__tag--gold{background:#facc15;color:#111827}
-  .news-card__body{padding:1.25rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
-  .news-card__body time{color:#34d399;font-weight:700}
-  .news-card__body h3{color:#fff;font-size:1.12rem;line-height:1.35;margin:0}
-  .news-card__body p{color:#cbd5e1;line-height:1.55;margin:0}
-  .news-card__more,.btn{color:#06b6d4;font-weight:800;text-decoration:none;margin-top:auto}
-  .news-article__hero{background:linear-gradient(135deg,var(--g1),var(--g2));padding:4rem 1rem;color:#fff}
-  .news-article__hero>*{max-width:980px;margin-left:auto;margin-right:auto}
   .news-article__meta{display:flex;gap:.75rem;flex-wrap:wrap;color:#e0f2fe;font-weight:800}
-  .news-article__layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2rem;padding:3rem 1rem}
+  .news-article__layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2rem;padding:3rem 1rem;max-width:1180px;margin:0 auto}
   .news-article__body{background:#111827;border:1px solid rgba(6,182,212,.22);border-radius:8px;padding:2rem}
   .news-article__body p{color:#e5e7eb;line-height:1.75;font-size:1.05rem}
   .news-article__sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(6,182,212,.22)}
@@ -89,32 +136,15 @@ function pageShell({ title, description, canonical, body, base = '' }) {
   .news-article__aside img{width:100%;max-width:100%;border-radius:8px;display:block;margin:0 auto 1rem}
   .news-article__aside h2{font-size:1.2rem;color:#fff}
   .news-article__aside a{color:#93c5fd}
-  @media(max-width:760px){.generated-header__inner,.generated-footer__inner{align-items:flex-start;flex-direction:column}.news-card--featured{grid-column:auto}.news-article__layout{grid-template-columns:1fr}.generated-nav{gap:.65rem}.generated-nav a{font-size:.86rem}}
+  @media(max-width:760px){.news-article__layout{grid-template-columns:1fr}.news-filter-bar a{flex:1 1 auto;text-align:center}}
 </style>
 </head>
 <body>
 
-<header class="generated-header">
-  <div class="generated-header__inner">
-    <a class="generated-brand" href="${base}index.html"><img src="${base}NPL Logo.png" alt="NPL Logo"><span>Nepal Premier League</span></a>
-    <nav class="generated-nav" aria-label="Main navigation">
-      <a href="${base}index.html">Home</a>
-      <a href="${base}matches.html">Matches</a>
-      <a href="${base}teams.html">Teams</a>
-      <a href="${base}players.html">Players</a>
-      <a href="${base}news.html">News</a>
-      <a href="${base}schedule.html">Schedule</a>
-      <a href="${base}points-table.html">Points Table</a>
-    </nav>
-  </div>
-</header>
+${siteHeader()}
 ${body}
-<footer class="generated-footer">
-  <div class="generated-footer__inner">
-    <span>&copy; 2026 Nepal Premier League. All rights reserved.</span>
-    <span>NPL-only news, filtered for Nepal Premier League coverage.</span>
-  </div>
-</footer>
+${siteFooter()}
+${pageScript()}
 </body>
 </html>
 `;
@@ -129,48 +159,126 @@ function newsArtwork(item, base = '') {
       </div>`;
 }
 
-function renderCard(item, index) {
-  return `    <article class="news-card${index === 0 ? ' news-card--featured' : ''}">
-      ${newsArtwork(item)}
-      <div class="news-card__body">
-        <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}</time>
-        <h3>${escapeHtml(item.title)}</h3>
+function renderCard(item, index, anchor = '') {
+  const id = anchor ? ` id="${escapeHtml(anchor)}"` : '';
+  const category = normalizeAnchor(item.category || 'news') || 'news';
+  const image = item.image || 'images/NPL.webp';
+  return `                <a href="/news/${escapeHtml(item.slug)}.html" class="news-card-link"${id}>
+                    <div class="news-card" data-category="${escapeHtml(category)}">
+                        <div class="news-image-container">
+                            <img src="/${escapeHtml(image)}" alt="${escapeHtml(item.title)}" class="news-image" loading="lazy" decoding="async">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">${escapeHtml(formatDate(item.date))}</div>
+                            <h3 class="news-title">${escapeHtml(item.title)}</h3>
+                            <p class="news-description">${escapeHtml(item.excerpt)}</p>
+                            <span class="read-more">Read More -&gt;</span>
+                        </div>
+                    </div>
+                </a>`;
+}
+
+function renderHomepageCard(item) {
+  const category = normalizeAnchor(item.category || 'news') || 'news';
+  const image = item.image ? `/${item.image}` : '/images/NPL.webp';
+  return `                <a href="/news/${escapeHtml(item.slug)}.html" class="news-card-link">
+                    <div class="news-card" data-category="${escapeHtml(category)}">
+                        <div class="news-image-container">
+                            <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" class="news-image" loading="lazy" decoding="async">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">${escapeHtml(formatDate(item.date))}</div>
+                            <h3 class="news-title">${escapeHtml(item.title)}</h3>
+                            <p class="news-description">${escapeHtml(item.excerpt)}</p>
+                            <span class="read-more">Read More -&gt;</span>
+                        </div>
+                    </div>
+                </a>`;
+}
+
+function renderFeature(item) {
+  if (!item) return '';
+  const image = item.image || 'images/NPL.webp';
+  return `<article class="news-hero__feature" aria-label="Featured NPL story">
+      <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}">
+      <div class="news-hero__feature-body">
+        <span class="news-hero__label">Latest Auction Tracker</span>
+        <h2>${escapeHtml(item.title)}</h2>
         <p>${escapeHtml(item.excerpt)}</p>
-        <a class="news-card__more" href="news/${escapeHtml(item.slug)}.html">Read more -&gt;</a>
+        <div class="news-hero__meta">
+          <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}</time>
+          <span>${escapeHtml(item.category)}</span>
+        </div>
+        <a class="news-card__more" href="news/${escapeHtml(item.slug)}.html">Open lead story -&gt;</a>
       </div>
     </article>`;
 }
 
-function archivePage(items) {
-  const cards = items.map(renderCard).join('\n\n');
-  const latest = items[0];
-  const body = `
-<main>
-<section class="page-hero" data-screen-label="News Hero">
-  <div class="page-hero__inner">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <ol>
-    <li><a href="index.html">Home</a></li>
-        <li class="crumbs__sep" aria-hidden="true">›</li>
-        <li aria-current="page">News</li>
-      </ol>
-    </nav>
-    <span class="section__kicker">NPL-only Newsroom</span>
-    <h1 class="page-hero__title">NPL 2026 <span class="ul-gold">Latest News</span></h1>
-    <p class="page-hero__sub">Only NPL 2026 and Nepal Premier League updates: teams, schedule, venues, draft, squads and tournament build-up.</p>
-    <p class="page-hero__meta"><span>Latest: <strong>${escapeHtml(latest ? formatDate(latest.date) : 'No posts yet')}</strong></span><span>${items.length} NPL stories</span></p>
-  </div>
-</section>
+function updateHomepageNewsSection(items) {
+  const homepagePath = path.join(ROOT_DIR, 'index.html');
+  if (!fs.existsSync(homepagePath)) return;
 
-<section class="section" id="news" data-screen-label="News Grid">
-  <header class="section__head">
-    <span class="section__kicker">Updates</span>
-    <h2 class="section__title">Nepal Premier League <span class="ul-teal">Headlines</span></h2>
-    <p class="section__sub">This feed is intentionally filtered to NPL and Nepal Premier League stories only.</p>
-  </header>
+  const html = fs.readFileSync(homepagePath, 'utf8');
+  const startMarker = '            <div class="news-grid" id="newsGrid">';
+  const endMarker = '\n\n            <div class="news-cta">';
+  const start = html.indexOf(startMarker);
+  const end = html.indexOf(endMarker, start);
+  if (start === -1 || end === -1) {
+    throw new Error('Unable to locate homepage news grid in index.html');
+  }
 
-  <div class="news">
+  const cards = items.slice(0, 4).map(renderHomepageCard).join('\n\n');
+  const replacement = `${startMarker}
+                <!-- Generated by scripts/generate-news-pages.js from data/news.json -->
 ${cards}
+            </div>`;
+  fs.writeFileSync(homepagePath, `${html.slice(0, start)}${replacement}${html.slice(end)}`);
+}
+
+function categoryFilters(items) {
+  const categories = ['All', ...new Set(items.map((item) => item.category).filter(Boolean))];
+  return categories
+    .map((category) => {
+      const href = category === 'All' ? '#news' : `#${normalizeAnchor(category)}-news`;
+      return `<a href="${href}">${escapeHtml(category)}</a>`;
+    })
+    .join('\n    ');
+}
+
+function normalizeAnchor(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function archivePage(items) {
+  const anchoredCategories = new Set();
+  const cards = items.map((item, index) => {
+    const category = normalizeAnchor(item.category);
+    const anchor = category && !anchoredCategories.has(category) ? `${category}-news` : '';
+    if (category) anchoredCategories.add(category);
+    return renderCard(item, index, anchor);
+  }).join('\n\n');
+  const latest = items[0];
+  const filters = categoryFilters(items);
+  const latestLabel = latest ? formatDate(latest.date) : 'No posts yet';
+  const body = `
+<main class="main-content">
+<section id="news" class="news-section">
+  <div class="container">
+    <div class="section-intro">
+      <h1 class="section-title green">Latest News</h1>
+      <p class="news-archive-meta">Latest: <strong>${escapeHtml(latestLabel)}</strong> | ${items.length} NPL stories</p>
+    </div>
+
+    <nav class="news-filter-bar" aria-label="News categories">
+      ${filters}
+    </nav>
+
+    <div class="news-grid" id="newsGrid">
+${cards}
+    </div>
   </div>
 </section>
 </main>`;
@@ -313,6 +421,7 @@ function run() {
   const items = loadNews();
   ensureDir(NEWS_DIR);
   fs.writeFileSync(path.join(ROOT_DIR, 'news.html'), archivePage(items));
+  updateHomepageNewsSection(items);
   for (const item of items) {
     fs.writeFileSync(path.join(NEWS_DIR, `${item.slug}.html`), articlePage(item, items));
   }
