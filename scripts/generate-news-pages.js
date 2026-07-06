@@ -320,19 +320,28 @@ ${cards}
 }
 
 function articleJsonLd(item) {
+  const publishedAt = `${item.date}T00:00:00+05:45`;
+  const modifiedAt = item.modifiedAt || `${item.date}T00:01:00+05:45`;
+  const alternativeHeadline = item.alternativeHeadline || `${item.category} update for Nepal Premier League Season 3`;
   return `<script type="application/ld+json">
 ${JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
     headline: item.title,
+    alternativeHeadline,
     description: item.excerpt,
-    datePublished: item.date,
-    dateModified: item.date,
-    author: { '@type': 'Organization', name: 'NPL 2026 Fan Hub' },
+    datePublished: publishedAt,
+    dateModified: modifiedAt,
+    author: { '@type': 'Organization', name: 'NPL Cricket League' },
     publisher: {
       '@type': 'Organization',
-      name: 'NPL 2026',
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/NPL.webp` },
+      name: 'NPL Cricket League',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/NPL.webp`,
+        width: 1024,
+        height: 1024,
+      },
     },
     mainEntityOfPage: `${SITE_URL}/news/${item.slug}`,
     about: ['NPL 2026', 'Nepal Premier League'],

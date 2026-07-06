@@ -8,6 +8,46 @@ const {
   validateNewsItem,
 } = require('../scripts/news-utils');
 
+const DEEP_RESEARCH_SLUGS = [
+  'nepal-premier-league-category-c-17-players-signed-in-auction',
+  'nepal-premier-league-player-auction-begins-season-3',
+  'nepal-premier-league-2026-auction-live-streaming-guide',
+];
+
+const BANNED_NEWS_PATTERNS = [
+  /\bhowever\b/i,
+  /\bfurthermore\b/i,
+  /\badditionally\b/i,
+  /\btherefore\b/i,
+  /\bmeanwhile\b/i,
+  /\bnotably\b/i,
+  /according to sources/i,
+  /according to reports/i,
+  /as reported by/i,
+  /\bthis page\b/i,
+  /\bthis article\b/i,
+  /the table below shows/i,
+  /the following table/i,
+  /here is a summary/i,
+  /in a recent development/i,
+  /things are heating up/i,
+  /the countdown is on/i,
+  /there is growing excitement/i,
+  /with just weeks to go/i,
+];
+
+const SOURCE_NAME_PATTERNS = [
+  /\bRatopati\b/i,
+  /\bCricnepal\b/i,
+  /\bSportsdunia\b/i,
+  /\bKathmandu Post\b/i,
+  /\bHimalPress\b/i,
+];
+
+function articleWords(item) {
+  return item.body.join(' ').trim().split(/\s+/).filter(Boolean).length;
+}
+
 test('NPL filter accepts Nepal Premier League cricket stories only', () => {
   assert.equal(
     isNplNewsCandidate({
@@ -65,7 +105,7 @@ test('latest NPL auction research article has web image and source links', () =>
   assert.ok(/^https?:\/\//.test(latest.imageSource.url), 'latest article must keep the original web image URL');
   assert.ok(Array.isArray(latest.sources), 'latest article must include research sources');
   assert.ok(latest.sources.length >= 3, 'latest article must include at least three research sources');
-  assert.ok(latest.body.join(' ').includes('17 Category C players'));
+  assert.ok(latest.body.join(' ').includes('Seventeen Category C players'));
 });
 
 test('news images use Google sources for new articles and restored site assets for old articles', () => {
@@ -202,20 +242,63 @@ test('homepage matches section shows the next four match cards', () => {
 test('latest published auction batch has 900 plus words and deep sourcing', () => {
   const path = require('node:path');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);
-  const slugs = [
-    'nepal-premier-league-category-c-17-players-signed-in-auction',
-    'nepal-premier-league-player-auction-begins-season-3',
-    'nepal-premier-league-2026-auction-live-streaming-guide',
-  ];
 
-  for (const slug of slugs) {
+  for (const slug of DEEP_RESEARCH_SLUGS) {
     const item = items.find((entry) => entry.slug === slug);
     assert.ok(item, `${slug} must be published`);
-    const wordCount = item.body.join(' ').trim().split(/\s+/).filter(Boolean).length;
+    const wordCount = articleWords(item);
     assert.ok(wordCount >= 900, `${slug} must have 900+ words, got ${wordCount}`);
     assert.ok(Array.isArray(item.sources) && item.sources.length >= 3, `${slug} must have at least three research sources`);
     assert.ok(item.imageSource && item.imageSource.discovery === 'google-search', `${slug} must use a searched web image`);
     assert.ok(item.body.join(' ').includes('Nepal Premier League'), `${slug} must stay NPL-focused`);
+  }
+});
+
+test('NPL news writing rules are copied into this repo', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const rules = fs.readFileSync(path.join(__dirname, '..', 'AGENTS.md'), 'utf8');
+
+  assert.ok(rules.includes('New NPL news articles must be at least 900 words'), 'rules must lock 900+ word NPL news depth');
+  assert.ok(rules.includes('Use Google News or search only as a discovery layer'), 'rules must require original source verification');
+  assert.ok(rules.includes('Do not write source names inside normal article body prose'), 'rules must hide source names from article body prose');
+  assert.ok(rules.includes('`dateModified` must differ from `datePublished`'), 'rules must lock schema date separation');
+  assert.ok(rules.includes('Do not use AI-generated news images'), 'rules must keep image sourcing lock');
+});
+
+test('latest deep-research articles follow NPL news writing rules', () => {
+  const path = require('node:path');
+  const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);
+
+  for (const slug of DEEP_RESEARCH_SLUGS) {
+    const item = items.find((entry) => entry.slug === slug);
+    assert.ok(item, `${slug} must exist`);
+    const body = item.body.join('\n');
+    const banned = BANNED_NEWS_PATTERNS.filter((pattern) => pattern.test(body)).map((pattern) => pattern.source);
+    const sourceNames = SOURCE_NAME_PATTERNS.filter((pattern) => pattern.test(body)).map((pattern) => pattern.source);
+
+    assert.deepEqual(banned, [], `${slug} must not contain banned news-writing language`);
+    assert.deepEqual(sourceNames, [], `${slug} must keep source names out of body prose`);
+    assert.ok(articleWords(item) >= 900, `${slug} must stay 900+ words after editorial cleanup`);
+  }
+});
+
+test('generated article schema follows NPL news writing rules', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+
+  for (const slug of DEEP_RESEARCH_SLUGS) {
+    const html = fs.readFileSync(path.join(__dirname, '..', 'news', `${slug}.html`), 'utf8');
+    const jsonMatch = html.match(/<script type="application\/ld\+json">\n([\s\S]*?)\n<\/script>/);
+    assert.ok(jsonMatch, `${slug} must include JSON-LD`);
+    const schema = JSON.parse(jsonMatch[1]);
+
+    assert.equal(schema['@type'], 'NewsArticle');
+    assert.notEqual(schema.datePublished, schema.dateModified, `${slug} dateModified must differ from datePublished`);
+    assert.notEqual(schema.alternativeHeadline, schema.headline, `${slug} alternativeHeadline must differ from headline`);
+    assert.equal(schema.publisher.logo.width, 1024, `${slug} publisher logo width must be set`);
+    assert.equal(schema.publisher.logo.height, 1024, `${slug} publisher logo height must be set`);
+    assert.ok(!html.includes('"@type": "FAQPage"'), `${slug} must not include FAQPage schema without visible FAQ support`);
   }
 });
 
