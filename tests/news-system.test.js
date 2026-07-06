@@ -156,6 +156,18 @@ test('homepage hero carousel shows the latest generated NPL news', () => {
   assert.ok(!heroCarousel[0].includes('Kathmandu Gurkhas vs Sudurpaschim Royals Live Streaming'), 'hero carousel must not keep stale match cards');
 });
 
+test('homepage hero keeps the old schedule call-to-action button', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+  const heroText = homepage.match(/<div class="hero-text">[\s\S]*?<\/div>\s*<\/div>\s*<div class="hero-cards">/);
+
+  assert.ok(heroText, 'homepage must include hero text');
+  assert.ok(heroText[0].includes('href="https://nplcricketleague.com/schedule" class="btn-primary">Schedule</a>'), 'hero must keep the old Schedule button');
+  assert.ok(!heroText[0].includes('Auction Tracker</a>'), 'hero must not show the replacement Auction Tracker button');
+  assert.ok(!heroText[0].includes('Latest News</a>'), 'hero must not show the replacement Latest News button');
+});
+
 test('latest published auction batch has 900 plus words and deep sourcing', () => {
   const path = require('node:path');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);
