@@ -371,74 +371,6 @@
         margin-top: 0.6rem;
     }
 
-    .live-feed__panel {
-        background: #101827;
-        color: #fff;
-        border-radius: 8px;
-        padding: clamp(1rem, 2.4vw, 1.45rem);
-        box-shadow: 0 14px 34px rgba(16, 24, 39, 0.16);
-    }
-
-    .live-feed__status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.42rem;
-        background: rgba(20, 131, 91, 0.18);
-        color: #9bf0c7;
-        border: 1px solid rgba(155, 240, 199, 0.28);
-        border-radius: 999px;
-        padding: 0.36rem 0.62rem;
-        font-size: 0.85rem;
-        font-weight: 900;
-    }
-
-    .live-feed__status::before {
-        content: "";
-        width: 0.44rem;
-        height: 0.44rem;
-        border-radius: 999px;
-        background: #24d38a;
-        box-shadow: 0 0 0 6px rgba(36, 211, 138, 0.16);
-    }
-
-    .live-feed__panel h2 {
-        color: #fff;
-        font-size: clamp(1.55rem, 3.2vw, 2.5rem);
-        line-height: 1.08;
-        margin: 0.8rem 0 0.55rem;
-    }
-
-    .live-feed__panel p {
-        color: #c9d3e3;
-        font-size: clamp(0.95rem, 1.8vw, 1.08rem);
-        line-height: 1.55;
-        margin: 0;
-        max-width: 820px;
-    }
-
-    .live-feed__meta {
-        display: grid;
-        gap: 0;
-        margin-top: 0.95rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.14);
-    }
-
-    .live-feed__meta-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-        padding: 0.65rem 0;
-        color: #c9d3e3;
-        font-size: 0.95rem;
-        font-weight: 800;
-    }
-
-    .live-feed__meta-row strong {
-        color: #fff;
-        text-align: right;
-    }
-
     .live-timeline {
         background: var(--auction-card);
         border: 1px solid var(--auction-line);
@@ -1125,15 +1057,6 @@
 </div>
 </div>
 <div class="live-feed" data-live-auction-feed="/data/npl-auction-live.json">
-<aside class="live-feed__panel">
-<span class="live-feed__status" id="liveFeedStatus">Live feed ready</span>
-<h2>Latest from auction day</h2>
-<p>Get the latest NPL Auction Season 3 tracker with category updates, registered-player pool details, team purse status and confirmed bidding news as the auction unfolds.</p>
-<div class="live-feed__meta">
-<div class="live-feed__meta-row"><span>Updates</span><strong id="liveFeedCount">0</strong></div>
-<div class="live-feed__meta-row"><span>Last updated</span><strong id="liveFeedUpdated">Checking...</strong></div>
-</div>
-</aside>
 <div class="live-timeline">
 <div class="live-timeline__top">
 <h3>Timeline</h3>
@@ -1612,10 +1535,10 @@
 
     function renderLiveUpdates(feed) {
         const updates = Array.isArray(feed.updates) ? feed.updates : [];
-        liveFeedCount.textContent = String(updates.length);
-        liveFeedUpdated.textContent = feed.updatedAtLabel || formatLiveDate(feed.updatedAt);
-        liveFeedOrder.textContent = feed.orderLabel || 'Newest first';
-        liveFeedStatus.textContent = feed.status || 'Live feed ready';
+        if (liveFeedCount) liveFeedCount.textContent = String(updates.length);
+        if (liveFeedUpdated) liveFeedUpdated.textContent = feed.updatedAtLabel || formatLiveDate(feed.updatedAt);
+        if (liveFeedOrder) liveFeedOrder.textContent = feed.orderLabel || 'Newest first';
+        if (liveFeedStatus) liveFeedStatus.textContent = feed.status || 'Live feed ready';
 
         if (!updates.length) {
             liveTimelineList.innerHTML = '<div class="empty-state"><div><span class="empty-state__mark">0</span><h3>No live updates yet</h3><p>Add updates to the live feed JSON and they will appear here automatically.</p></div></div>';
@@ -1663,7 +1586,7 @@
             if (!response.ok) throw new Error(`Feed returned ${response.status}`);
             renderLiveUpdates(await response.json());
         } catch (error) {
-            liveFeedStatus.textContent = 'Feed unavailable';
+            if (liveFeedStatus) liveFeedStatus.textContent = 'Feed unavailable';
             liveTimelineList.innerHTML = '<div class="empty-state"><div><span class="empty-state__mark">!</span><h3>Live feed unavailable</h3><p>The page is still usable. Check the data feed path or update it before the next deploy.</p></div></div>';
         }
     }
