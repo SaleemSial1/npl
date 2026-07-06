@@ -139,6 +139,23 @@ test('homepage news section shows the latest generated NPL articles', () => {
   assert.ok(!section[0].includes('November 09, 2026'), 'homepage news must not show stale future-dated player/team placeholders');
 });
 
+test('homepage hero carousel shows the latest generated NPL news', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+  const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), [])
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4);
+  const heroCarousel = homepage.match(/<div class="hero-carousel-container" id="heroCarousel">[\s\S]*?<\/div>\s*<\/div>\s*<div class="carousel-controls">/);
+
+  assert.ok(heroCarousel, 'homepage must include the hero carousel');
+  for (const item of items) {
+    assert.ok(heroCarousel[0].includes(item.title), `hero carousel must include ${item.slug}`);
+    assert.ok(heroCarousel[0].includes(`/news/${item.slug}.html`), `hero carousel must link to generated article ${item.slug}`);
+  }
+  assert.ok(!heroCarousel[0].includes('Kathmandu Gurkhas vs Sudurpaschim Royals Live Streaming'), 'hero carousel must not keep stale match cards');
+});
+
 test('latest published auction batch has 900 plus words and deep sourcing', () => {
   const path = require('node:path');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);

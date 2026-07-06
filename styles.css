@@ -477,6 +477,7 @@ body {
     gap: 1.5rem;
     align-items: center;
     padding: 1.5rem 0;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -502,6 +503,7 @@ body {
 
 .hero-text {
     text-align: center;
+    min-width: 0;
     padding: 0 1rem;
 }
 
@@ -516,6 +518,15 @@ body {
     .hero-text {
         padding: 0 0.5rem;
     }
+}
+
+.hero-kicker {
+    color: #facc15;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
 }
 
 .hero-title {
@@ -577,6 +588,7 @@ body {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    overflow-wrap: anywhere;
 }
 
 @media (min-width: 768px) {
@@ -637,7 +649,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(to right, #9333ea, #2563eb);
+    background: linear-gradient(to right, #059669, #0ea5e9);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -657,7 +669,7 @@ body {
 }
 
 .btn-primary:hover {
-    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.35);
 }
 
 @media (max-width: 320px) {
@@ -667,13 +679,131 @@ body {
     }
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.hero-actions a {
+    min-width: 0;
+}
+
+@media (min-width: 1024px) {
+    .hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+.btn-outline {
+    border: 1px solid rgba(250, 204, 21, 0.65);
+    border-radius: 8px;
+    color: #fef3c7;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem 1.35rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-outline:hover {
+    background: rgba(250, 204, 21, 0.12);
+    border-color: #facc15;
+    color: #ffffff;
+}
+
+.hero-facts {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 auto;
+    max-width: 34rem;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .hero-facts {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.hero-fact {
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    border-radius: 8px;
+    padding: 0.75rem 0.5rem;
+}
+
+.hero-fact span {
+    color: #ffffff;
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hero-fact small {
+    color: #cbd5e1;
+    display: block;
+    font-size: 0.72rem;
+    line-height: 1.25;
+    margin-top: 0.35rem;
+}
+
+@media (max-width: 420px) {
+    .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-facts {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 0 4rem;
+    }
+
+    .hero-text {
+        padding: 0;
+    }
+
+    .hero-description {
+        padding: 0;
+    }
+
+    .hero-fact {
+        padding: 0.65rem 0.35rem;
+    }
+
+    .hero-fact span {
+        font-size: 1.15rem;
+    }
+
+    .hero-fact small {
+        font-size: 0.66rem;
+    }
+}
+
 .hero-cards {
+    min-width: 0;
     width: 100%;
 }
 
 .hero-carousel-wrapper {
     overflow: hidden;
     border-radius: 1rem;
+    min-width: 0;
+    width: 100%;
 }
 
 .hero-carousel-container {
@@ -693,6 +823,10 @@ body {
     padding: 0.75rem;
     border: 1px solid #374151;
     transition: all 0.3s;
+}
+
+.hero-card--news {
+    border-color: rgba(250, 204, 21, 0.28);
 }
 
 @media (min-width: 768px) {
@@ -743,6 +877,7 @@ body {
     line-height: 1.4;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    min-width: 0;
 }
 
 @media (min-width: 768px) {
@@ -1357,7 +1492,14 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   border: 1px solid #1e40af;
+  height: 100%;
   transition: all 0.3s;
+}
+
+@media (min-width: 1180px) {
+  .news-section .news-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .news-card:hover {
