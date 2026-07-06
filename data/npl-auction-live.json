@@ -1,9 +1,73 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 51 updates - Newest first",
-  "updatedAt": "2026-07-06T20:59:00+05:45",
-  "updatedAtLabel": "6 Jul, 8:59 pm",
+  "orderLabel": "Timeline - 59 updates - Newest first",
+  "updatedAt": "2026-07-06T21:35:00+05:45",
+  "updatedAtLabel": "6 Jul, 9:35 pm",
   "updates": [
+    {
+      "id": "6-jul-9-35-pm-sachin-sharma-unsold",
+      "title": "Sachin Sharma unsold",
+      "displayTime": "6 Jul, 9:35 pm",
+      "isoTime": "2026-07-06T21:35:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Sachin Sharma unsold."
+    },
+    {
+      "id": "6-jul-9-34-pm-tek-rawat-unsold",
+      "title": "Tek Rawat unsold",
+      "displayTime": "6 Jul, 9:34 pm",
+      "isoTime": "2026-07-06T21:34:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Tek Rawat unsold."
+    },
+    {
+      "id": "6-jul-9-34-pm-milan-bohara-unsold",
+      "title": "Milan Bohara unsold",
+      "displayTime": "6 Jul, 9:34 pm",
+      "isoTime": "2026-07-06T21:34:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Milan Bohara unsold."
+    },
+    {
+      "id": "6-jul-9-32-pm-imran-shekh-unsold",
+      "title": "Imran Shekh unsold",
+      "displayTime": "6 Jul, 9:32 pm",
+      "isoTime": "2026-07-06T21:32:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Imran Shekh unsold."
+    },
+    {
+      "id": "6-jul-9-31-pm-ajay-chauhan-unsold",
+      "title": "Ajay Chauhan unsold",
+      "displayTime": "6 Jul, 9:31 pm",
+      "isoTime": "2026-07-06T21:31:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Ajay Chauhan unsold."
+    },
+    {
+      "id": "6-jul-9-30-pm-amar-singh-routela-sold-to-janakpur-bolts-5-lakh",
+      "title": "Amar Singh Routela sold to Janakpur Bolts, 5 lakh",
+      "displayTime": "6 Jul, 9:30 pm",
+      "isoTime": "2026-07-06T21:30:00+05:45",
+      "tag": "Sold",
+      "summary": "Amar Singh Routela sold to Janakpur Bolts, 5 lakh in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-9-29-pm-amar-singh-rautela-unsold",
+      "title": "Amar Singh Rautela unsold",
+      "displayTime": "6 Jul, 9:29 pm",
+      "isoTime": "2026-07-06T21:29:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Amar Singh Rautela unsold."
+    },
+    {
+      "id": "6-jul-9-28-pm-37-players-sold-118-went-unsold",
+      "title": "37 players sold, 118 went unsold",
+      "displayTime": "6 Jul, 9:28 pm",
+      "isoTime": "2026-07-06T21:28:00+05:45",
+      "tag": "Mixed update",
+      "summary": "37 players sold, 118 went unsold."
+    },
     {
       "id": "6-jul-8-59-pm-dipak-bohara-two-team-neck-and-neck-sold-to-sudurpashim-ro",
       "title": "Dipak Bohara, two team neck and neck, sold to Sudurpashim Royals, 10 lakh",
