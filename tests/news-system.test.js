@@ -4,6 +4,7 @@ const assert = require('node:assert/strict');
 const {
   isNplNewsCandidate,
   normalizeSlug,
+  readJson,
   validateNewsItem,
 } = require('../scripts/news-utils');
 
@@ -51,6 +52,18 @@ test('news item validation reads local excerpt and body fields', () => {
       body: ['All eight Nepal Premier League franchises will use the NPL auction to complete key cricket roles.'],
     })
   );
+});
+
+test('latest NPL auction research article has image and source links', () => {
+  const items = readJson(require('node:path').join(__dirname, '..', 'data', 'news.json'), []);
+  const latest = items.find((item) => item.slug === 'npl-auction-season-3-live-updates-155-players-shortlisted');
+
+  assert.ok(latest, 'latest NPL auction article must exist');
+  assert.equal(latest.date, '2026-07-06');
+  assert.equal(latest.image, 'images/npl-season-3-mega-auction.webp');
+  assert.ok(Array.isArray(latest.sources), 'latest article must include research sources');
+  assert.ok(latest.sources.length >= 3, 'latest article must include at least three research sources');
+  assert.ok(latest.body.join(' ').includes('155 made the shortlist'));
 });
 
 test('news item validation rejects non-NPL content', () => {

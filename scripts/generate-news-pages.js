@@ -80,6 +80,11 @@ function pageShell({ title, description, canonical, body, base = '' }) {
   .news-article__layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2rem;padding:3rem 1rem}
   .news-article__body{background:#111827;border:1px solid rgba(6,182,212,.22);border-radius:8px;padding:2rem}
   .news-article__body p{color:#e5e7eb;line-height:1.75;font-size:1.05rem}
+  .news-article__sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(6,182,212,.22)}
+  .news-article__sources h2{font-size:1.15rem;color:#facc15;margin:0 0 .75rem}
+  .news-article__sources ul{margin:0;padding-left:1.2rem}
+  .news-article__sources li{margin:.45rem 0;color:#cbd5e1}
+  .news-article__sources a{color:#93c5fd}
   .news-article__aside{background:#0f172a;border:1px solid rgba(250,204,21,.25);border-radius:8px;padding:1.25rem;height:max-content}
   .news-article__aside img{max-width:120px;display:block;margin:0 auto 1rem}
   .news-article__aside h2{font-size:1.2rem;color:#fff}
@@ -195,6 +200,7 @@ ${JSON.stringify({
     },
     mainEntityOfPage: `${SITE_URL}/news/${item.slug}`,
     about: ['NPL 2026', 'Nepal Premier League'],
+    citation: Array.isArray(item.sources) ? item.sources.map((source) => source.url) : undefined,
   }, null, 2)}
 </script>`;
 }
@@ -205,6 +211,16 @@ function relatedList(current, items) {
     .slice(0, 3)
     .map((item) => `<li><a href="${escapeHtml(item.slug)}.html">${escapeHtml(item.title)}</a></li>`)
     .join('\n');
+}
+
+function sourceList(item) {
+  if (!Array.isArray(item.sources) || !item.sources.length) return '';
+  return `<section class="news-article__sources">
+      <h2>Research Sources</h2>
+      <ul>
+${item.sources.map((source) => `        <li><a href="${escapeHtml(source.url)}" rel="nofollow noopener" target="_blank">${escapeHtml(source.name || source.url)}</a></li>`).join('\n')}
+      </ul>
+    </section>`;
 }
 
 function articlePage(item, items) {
@@ -235,6 +251,7 @@ function articlePage(item, items) {
   <div class="news-article__layout">
     <div class="news-article__body">
       ${paragraphs}
+      ${sourceList(item)}
     </div>
     <aside class="news-article__aside">
       <div class="news-article__logo">
