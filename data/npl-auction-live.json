@@ -1,9 +1,25 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 63 updates - Newest first",
-  "updatedAt": "2026-07-06T21:38:00+05:45",
-  "updatedAtLabel": "6 Jul, 9:38 pm",
+  "orderLabel": "Timeline - 65 updates - Newest first",
+  "updatedAt": "2026-07-06T21:42:00+05:45",
+  "updatedAtLabel": "6 Jul, 9:42 pm",
   "updates": [
+    {
+      "id": "6-jul-9-42-pm-dilsad-ali-sold-to-biratnagar-kings-npr-5-lakh",
+      "title": "Dilsad Ali sold to Biratnagar Kings — NPR 5 lakh",
+      "displayTime": "6 Jul, 9:42 pm",
+      "isoTime": "2026-07-06T21:42:00+05:45",
+      "tag": "Sold",
+      "summary": "Dilsad Ali sold to Biratnagar Kings — NPR 5 lakh in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-9-41-pm-dilsad-ali-unsold",
+      "title": "Dilsad Ali unsold",
+      "displayTime": "6 Jul, 9:41 pm",
+      "isoTime": "2026-07-06T21:41:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Dilsad Ali unsold."
+    },
     {
       "id": "6-jul-9-38-pm-suryanshu-koirala-unsold",
       "title": "Suryanshu Koirala unsold",
