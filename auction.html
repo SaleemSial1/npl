@@ -319,6 +319,38 @@
         margin: 0;
     }
 
+    .section-title-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .live-title-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.42rem;
+        min-height: 34px;
+        border-radius: 999px;
+        background: var(--auction-green);
+        color: #fff;
+        padding: 0.45rem 0.78rem;
+        font-size: 0.78rem;
+        font-weight: 950;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        box-shadow: 0 10px 22px rgba(20, 131, 91, 0.22);
+    }
+
+    .live-title-button::before {
+        content: "";
+        width: 0.52rem;
+        height: 0.52rem;
+        border-radius: 999px;
+        background: #caffdf;
+        box-shadow: 0 0 0 5px rgba(202, 255, 223, 0.18);
+    }
+
     .section-note {
         color: var(--auction-muted);
         margin: 0.45rem 0 0;
@@ -955,7 +987,10 @@
 <div class="section-head">
 <div>
 <div class="section-eyebrow">Live coverage</div>
+<div class="section-title-row">
 <h2 class="section-title" id="live-updates-title">NPL Auction Season 3 live updates</h2>
+<span class="live-title-button">Live</span>
+</div>
 <p class="section-note">Newest auction notes appear first. This section reads from the site feed and refreshes automatically while the page is open.</p>
 </div>
 </div>
