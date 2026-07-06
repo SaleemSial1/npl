@@ -1,9 +1,17 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 50 updates - Newest first",
-  "updatedAt": "2026-07-06T21:30:00+05:45",
-  "updatedAtLabel": "6 Jul, 9:30 pm",
+  "orderLabel": "Timeline - 51 updates - Newest first",
+  "updatedAt": "2026-07-06T22:30:00+05:45",
+  "updatedAtLabel": "6 Jul, 10:30 pm",
   "updates": [
+    {
+      "id": "6-jul-10-30-pm-thank-you-for-staying-with-us-during-the-mini-auction-of-",
+      "title": "Thank you for staying with us during the Mini Auction of NPL Season 3",
+      "displayTime": "6 Jul, 10:30 pm",
+      "isoTime": "2026-07-06T22:30:00+05:45",
+      "tag": "Auction live",
+      "summary": "Thank you for staying with us during the Mini Auction of NPL Season 3."
+    },
     {
       "id": "6-jul-9-30-pm-amar-singh-routela-sold-to-janakpur-bolts-5-lakh",
       "title": "Amar Singh Routela sold to Janakpur Bolts, 5 lakh",
