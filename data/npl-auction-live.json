@@ -1,9 +1,89 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 41 updates - Newest first",
-  "updatedAt": "2026-07-06T19:57:00+05:45",
-  "updatedAtLabel": "6 Jul, 7:57 pm",
+  "orderLabel": "Timeline - 51 updates - Newest first",
+  "updatedAt": "2026-07-06T20:59:00+05:45",
+  "updatedAtLabel": "6 Jul, 8:59 pm",
   "updates": [
+    {
+      "id": "6-jul-8-59-pm-dipak-bohara-two-team-neck-and-neck-sold-to-sudurpashim-ro",
+      "title": "Dipak Bohara, two team neck and neck, sold to Sudurpashim Royals, 10 lakh",
+      "displayTime": "6 Jul, 8:59 pm",
+      "isoTime": "2026-07-06T20:59:00+05:45",
+      "tag": "Sold",
+      "summary": "Dipak Bohara, two team neck and neck, sold to Sudurpashim Royals, 10 lakh in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-53-pm-rupesh-kumar-singh-4-teams-bid-goes-to-kings-after-lucky-d",
+      "title": "Rupesh Kumar Singh, 4 teams bid, goes to Kings after lucky draw",
+      "displayTime": "6 Jul, 8:53 pm",
+      "isoTime": "2026-07-06T20:53:00+05:45",
+      "tag": "Sold",
+      "summary": "Rupesh Kumar Singh, 4 teams bid, goes to Kings after lucky draw in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-44-pm-the-big-fish-aasif-sheikh-sold-to-lumbini-lions",
+      "title": "The Big fish! Aasif Sheikh sold to Lumbini Lions",
+      "displayTime": "6 Jul, 8:44 pm",
+      "isoTime": "2026-07-06T20:44:00+05:45",
+      "tag": "Sold",
+      "summary": "The Big fish! Aasif Sheikh sold to Lumbini Lions in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-44-pm-aasif-sheikh-sold-to-lumbini-lions-npr-20-lakh",
+      "title": "Aasif Sheikh sold to Lumbini Lions — NPR 20 lakh",
+      "displayTime": "6 Jul, 8:44 pm",
+      "isoTime": "2026-07-06T20:44:00+05:45",
+      "tag": "Sold",
+      "summary": "Aasif Sheikh sold to Lumbini Lions — NPR 20 lakh in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-40-pm-aakash-tripathi-sold-to-lumbini-lions-npr-5-lakh",
+      "title": "Aakash Tripathi sold to Lumbini Lions — NPR 5 lakh",
+      "displayTime": "6 Jul, 8:40 pm",
+      "isoTime": "2026-07-06T20:40:00+05:45",
+      "tag": "Sold",
+      "summary": "Aakash Tripathi sold to Lumbini Lions — NPR 5 lakh in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-38-pm-arjun-gharti-goes-to-avengers-15-lakhs",
+      "title": "Arjun Gharti goes to Avengers, 15 lakhs",
+      "displayTime": "6 Jul, 8:38 pm",
+      "isoTime": "2026-07-06T20:38:00+05:45",
+      "tag": "Sold",
+      "summary": "Arjun Gharti goes to Avengers, 15 lakhs in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-37-pm-shubh-kansakar-sold-to-karnali-10-lakhs",
+      "title": "Shubh Kansakar sold to Karnali, 10 lakhs",
+      "displayTime": "6 Jul, 8:37 pm",
+      "isoTime": "2026-07-06T20:37:00+05:45",
+      "tag": "Sold",
+      "summary": "Shubh Kansakar sold to Karnali, 10 lakhs in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-24-pm-sunam-gautam-dilsad-ali-goes-unsold",
+      "title": "Sunam Gautam, Dilsad Ali goes unsold",
+      "displayTime": "6 Jul, 8:24 pm",
+      "isoTime": "2026-07-06T20:24:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Sunam Gautam, Dilsad Ali goes unsold."
+    },
+    {
+      "id": "6-jul-8-17-pm-durgesh-gupta-sold-to-lumbini-lions-npr-5-lakh",
+      "title": "Durgesh Gupta sold to Lumbini Lions — NPR 5 lakh",
+      "displayTime": "6 Jul, 8:17 pm",
+      "isoTime": "2026-07-06T20:17:00+05:45",
+      "tag": "Sold",
+      "summary": "Durgesh Gupta sold to Lumbini Lions — NPR 5 lakh in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-8-14-pm-bibek-kumar-yadav-sold-to-chitwan-rhinos-15-lakh",
+      "title": "Bibek Kumar Yadav sold to Chitwan Rhinos, 15 lakh",
+      "displayTime": "6 Jul, 8:14 pm",
+      "isoTime": "2026-07-06T20:14:00+05:45",
+      "tag": "Sold",
+      "summary": "Bibek Kumar Yadav sold to Chitwan Rhinos, 15 lakh in the latest NPL Auction Season 3 update."
+    },
     {
       "id": "6-jul-7-57-pm-bishal-kumar-patel-sold-to-bolts-5-lakh",
       "title": "Bishal Kumar Patel sold to Bolts, 5 lakh",
