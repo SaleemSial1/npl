@@ -1,6 +1,6 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 39 updates - Newest first",
+  "orderLabel": "Timeline - 40 updates - Newest first",
   "updatedAt": "2026-07-06T19:39:00+05:45",
   "updatedAtLabel": "6 Jul, 7:39 pm",
   "updates": [
@@ -283,6 +283,14 @@
       "isoTime": "2026-07-06T16:09:00+05:45",
       "tag": "Team arrival",
       "summary": "Janakpur Bolts and Chitwan Rhinos arrives."
+    },
+    {
+      "id": "6-jul-4-07-pm-watch-it-here",
+      "title": "Watch it here",
+      "displayTime": "6 Jul, 4:07 pm",
+      "isoTime": "2026-07-06T16:07:00+05:45",
+      "tag": "Live update",
+      "summary": "Watch it here."
     },
     {
       "id": "6-jul-3-47-pm-we-re-live-the-npl-auction-season-3-begins",

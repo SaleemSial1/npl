@@ -427,15 +427,15 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
 
   html = replaceOrThrow(
     html,
-    /<p class="section-note">(Latest synced snapshot from auction day:|Auto-synced latest snapshot:)[\s\S]*?<\/p>/,
-    `<p class="section-note">Auto-synced latest snapshot: ${counts.sold} sold, ${counts.unsold} unsold and ${counts.total} players in the NPL Season 3 auction pool.</p>`,
+    /<p class="section-note">(Latest synced snapshot from auction day:|Latest snapshot:)[\s\S]*?<\/p>/,
+    `<p class="section-note">Latest snapshot: ${counts.sold} sold, ${counts.unsold} unsold and ${counts.total} players in the NPL Season 3 auction pool.</p>`,
     'team purse note',
   );
 
   html = replaceOrThrow(
     html,
     /<div class="team-grid">[\s\S]*?<\/article>\n<\/div>\n<p class="source-note">[\s\S]*?<\/p>/,
-    `<div class="team-grid">\n${renderTeamCards(teams)}\n</div>\n<p class="source-note">Purse and player-pool figures are auto-synced from the auction tracker. Latest timeline update: ${escapeHtml(latestTitle)} (${escapeHtml(latestTime)}).</p>`,
+    `<div class="team-grid">\n${renderTeamCards(teams)}\n</div>\n<p class="source-note">Purse and player-pool figures follow the auction tracker. Latest timeline update: ${escapeHtml(latestTitle)} (${escapeHtml(latestTime)}).</p>`,
     'team grid',
   );
 
@@ -474,13 +474,13 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
   html = replaceOrThrow(
     html,
     /<p class="section-note">Confirmed sold players,[\s\S]*?<\/p>/,
-    `<p class="section-note">Confirmed sold players, winning franchises and auction prices from the auto-synced NPL Season 3 live auction tracker.</p>`,
+    `<p class="section-note">Confirmed sold players, winning franchises and auction prices from the NPL Season 3 live auction tracker.</p>`,
     'sold section note',
   );
   html = replaceOrThrow(
     html,
     /<p class="result-summary">The Season 3 auction is tracking[\s\S]*?<\/p>/,
-    `<p class="result-summary">The Season 3 auction is tracking a ${counts.total}-player shortlist from the wider 347-player registration pool. This table is auto-synced from the auction tracker.</p>`,
+    `<p class="result-summary">The Season 3 auction is tracking a ${counts.total}-player shortlist from the wider 347-player registration pool. This table follows the latest auction tracker updates.</p>`,
     'sold section summary',
   );
   html = replaceOrThrow(
@@ -499,7 +499,7 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
   html = replaceOrThrow(
     html,
     /<p class="result-summary">The live auction tracker (lists|currently lists)[\s\S]*?<\/p>/,
-    `<p class="result-summary">The live auction tracker currently lists ${counts.unsold} unsold players. Names below are auto-synced from the public auction table.</p>`,
+    `<p class="result-summary">The live auction tracker currently lists ${counts.unsold} unsold players. Names below follow the public auction table.</p>`,
     'unsold summary',
   );
   html = replaceOrThrow(
@@ -511,8 +511,8 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
 
   html = replaceOrThrow(
     html,
-    /<p class="result-summary">All eight franchises (are being updated|are auto-synced)[\s\S]*?<\/p>/,
-    `<p class="result-summary">All eight franchises are auto-synced with current auction buys, spending and remaining purse from the tracker.</p>`,
+    /<p class="result-summary">All eight franchises (are being updated|show current auction buys)[\s\S]*?<\/p>/,
+    `<p class="result-summary">All eight franchises show current auction buys, spending and remaining purse from the tracker.</p>`,
     'team squad summary',
   );
   html = replaceOrThrow(
@@ -523,7 +523,7 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
       `${team.squad} / 16`,
       teamBuys(team.name, soldRows),
       displayAmount(team.left),
-      'Auto-synced',
+      'Live',
     ])).join('\n')}$2`,
     'team squad table',
   );
