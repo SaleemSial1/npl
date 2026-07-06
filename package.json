@@ -4,6 +4,7 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
+    "auction:sync": "node scripts/sync-auction-live.js",
     "news:fetch": "node scripts/fetch-npl-news.js",
     "news:generate": "node scripts/generate-news-pages.js",
     "news:validate": "node scripts/validate-news-system.js",

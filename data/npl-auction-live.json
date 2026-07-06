@@ -1,296 +1,320 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 36 updates - Newest first",
-  "updatedAt": "2026-07-06T19:22:00+05:45",
-  "updatedAtLabel": "6 Jul, 7:22 pm",
+  "orderLabel": "Timeline - 39 updates - Newest first",
+  "updatedAt": "2026-07-06T19:39:00+05:45",
+  "updatedAtLabel": "6 Jul, 7:39 pm",
   "updates": [
     {
-      "id": "krishna-paudel-kathmandu-gorkhas",
-      "title": "Krishna Paudel sold to Kathmandu Gorkhas",
+      "id": "6-jul-7-39-pm-anil-kharel-sold-to-sudurpaschim-royals-5-lakh",
+      "title": "Anil Kharel sold to Sudurpaschim Royals, 5 lakh",
+      "displayTime": "6 Jul, 7:39 pm",
+      "isoTime": "2026-07-06T19:39:00+05:45",
+      "tag": "Sold",
+      "summary": "Anil Kharel sold to Sudurpaschim Royals, 5 lakh in the latest NPL Auction Season 3 update."
+    },
+    {
+      "id": "6-jul-7-35-pm-category-b-amar-singh-routela-unsold-abhishek-tiwari-sold-",
+      "title": "Category (B): Amar Singh Routela unsold, Abhishek Tiwari sold to Bolts, 5 lakh",
+      "displayTime": "6 Jul, 7:35 pm",
+      "isoTime": "2026-07-06T19:35:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Category (B): Amar Singh Routela unsold, Abhishek Tiwari sold to Bolts, 5 lakh."
+    },
+    {
+      "id": "6-jul-7-32-pm-category-b-sahil-patel-unsold-bipin-prasad-sharma-sold-to-",
+      "title": "Category (B) Sahil Patel unsold, Bipin Prasad Sharma sold to Karnali Yaks, 5 lakh",
+      "displayTime": "6 Jul, 7:32 pm",
+      "isoTime": "2026-07-06T19:32:00+05:45",
+      "tag": "Mixed update",
+      "summary": "Category (B) Sahil Patel unsold, Bipin Prasad Sharma sold to Karnali Yaks, 5 lakh."
+    },
+    {
+      "id": "6-jul-7-22-pm-krishna-paudel-sold-for-2-lakh-to-kathmandu-gorkhas",
+      "title": "Krishna Paudel sold for 2 lakh to Kathmandu Gorkhas",
       "displayTime": "6 Jul, 7:22 pm",
       "isoTime": "2026-07-06T19:22:00+05:45",
       "tag": "Sold",
-      "summary": "Krishna Paudel went to Kathmandu Gorkhas for NPR 2 lakh, giving Gorkhas another base-price buy."
+      "summary": "Krishna Paudel sold for 2 lakh to Kathmandu Gorkhas in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "bishal-susling-rai-janakpur-bolts",
-      "title": "Bishal Susling Rai sold to Janakpur Bolts",
+      "id": "6-jul-7-20-pm-bishal-susling-rai-sold-to-janakpur-bolts-2-lakh",
+      "title": "Bishal Susling Rai sold to Janakpur Bolts, 2 lakh",
       "displayTime": "6 Jul, 7:20 pm",
       "isoTime": "2026-07-06T19:20:00+05:45",
       "tag": "Sold",
-      "summary": "Bishal Susling Rai was picked by Janakpur Bolts at the NPR 2 lakh base price."
+      "summary": "Bishal Susling Rai sold to Janakpur Bolts, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "gautam-kc-chitwan-rhinos",
-      "title": "Gautam KC sold to Chitwan Rhinos",
+      "id": "6-jul-7-14-pm-gautam-kc-sold-to-rhinos-2-lakh",
+      "title": "Gautam KC sold to Rhinos, 2 lakh",
       "displayTime": "6 Jul, 7:14 pm",
       "isoTime": "2026-07-06T19:14:00+05:45",
       "tag": "Sold",
-      "summary": "Gautam KC joined Chitwan Rhinos for NPR 2 lakh."
+      "summary": "Gautam KC sold to Rhinos, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "pratik-shrestha-biratnagar-kings",
-      "title": "Pratik Shrestha sold to Biratnagar Kings",
+      "id": "6-jul-7-10-pm-pratik-shrestha-sold-to-kings-2-lakh",
+      "title": "Pratik Shrestha sold to Kings, 2 lakh",
       "displayTime": "6 Jul, 7:10 pm",
       "isoTime": "2026-07-06T19:10:00+05:45",
       "tag": "Sold",
-      "summary": "Biratnagar Kings bought Pratik Shrestha for NPR 2 lakh."
+      "summary": "Pratik Shrestha sold to Kings, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "amit-shrestha-anuj-kumar-chanara-unsold",
-      "title": "Amit Shrestha and Anuj Kumar Chanara went unsold",
+      "id": "6-jul-7-10-pm-amit-shrestha-anuj-kumar-chanara-went-unsold",
+      "title": "Amit Shrestha, Anuj Kumar Chanara went unsold",
       "displayTime": "6 Jul, 7:10 pm",
       "isoTime": "2026-07-06T19:10:00+05:45",
-      "tag": "Unsold",
-      "summary": "Amit Shrestha and Anuj Kumar Chanara were listed as unsold in the live auction round."
+      "tag": "Mixed update",
+      "summary": "Amit Shrestha, Anuj Kumar Chanara went unsold."
     },
     {
-      "id": "auction-second-session-resumes",
-      "title": "Auction resumes after break",
+      "id": "6-jul-6-55-pm-welcome-back-after-the-break",
+      "title": "Welcome back after the break",
       "displayTime": "6 Jul, 6:55 pm",
       "isoTime": "2026-07-06T18:55:00+05:45",
-      "tag": "Session update",
-      "summary": "The second session resumed with 18 players sold and 76 unsold at that stage of the auction."
+      "tag": "Break",
+      "summary": "Welcome back after the break."
     },
     {
-      "id": "auction-break-note",
-      "title": "Auction paused for a 30-minute break",
+      "id": "6-jul-6-18-pm-we-are-going-for-30-minutes-break",
+      "title": "We are going for 30 minutes break!",
       "displayTime": "6 Jul, 6:18 pm",
       "isoTime": "2026-07-06T18:18:00+05:45",
       "tag": "Break",
-      "summary": "The auction went into a short break after early headline buys including Rit Gautam, Sujan Thapaliya, Mausam Dhakal, Santosh Karki and Sudip Aryal."
+      "summary": "We are going for 30 minutes break!."
     },
     {
-      "id": "aashutosh-pandey-janakpur-bolts",
-      "title": "Aashutosh Pandey sold to Janakpur Bolts",
+      "id": "6-jul-6-15-pm-aashutosh-pandey-to-janakpur-bolts-2-lakh",
+      "title": "Aashutosh Pandey to Janakpur Bolts, 2 lakh",
       "displayTime": "6 Jul, 6:15 pm",
       "isoTime": "2026-07-06T18:15:00+05:45",
       "tag": "Sold",
-      "summary": "Aashutosh Pandey joined Janakpur Bolts for NPR 2 lakh."
+      "summary": "Aashutosh Pandey to Janakpur Bolts, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "sonu-devkota-kathmandu-gorkhas",
-      "title": "Sonu Devkota sold to Kathmandu Gorkhas",
+      "id": "6-jul-5-57-pm-sonu-devkota-sold-to-gorkhas-2-lakh",
+      "title": "Sonu Devkota sold to Gorkhas, 2 lakh",
       "displayTime": "6 Jul, 5:57 pm",
       "isoTime": "2026-07-06T17:57:00+05:45",
       "tag": "Sold",
-      "summary": "Kathmandu Gorkhas bought mystery spinner Sonu Devkota for NPR 2 lakh."
+      "summary": "Sonu Devkota sold to Gorkhas, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "mausam-dhakal-chitwan-rhinos",
-      "title": "Mausam Dhakal sold to Chitwan Rhinos",
+      "id": "6-jul-5-47-pm-mausam-dhakal-sold-to-chitwan-rhinos-3-lakh",
+      "title": "Mausam Dhakal sold to Chitwan Rhinos, 3 lakh",
       "displayTime": "6 Jul, 5:47 pm",
       "isoTime": "2026-07-06T17:47:00+05:45",
       "tag": "Sold",
-      "summary": "Chitwan Rhinos secured Mausam Dhakal for NPR 3 lakh."
+      "summary": "Mausam Dhakal sold to Chitwan Rhinos, 3 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "rit-gautam-janakpur-bolts",
-      "title": "Rit Gautam sold to Janakpur Bolts",
+      "id": "6-jul-5-44-pm-rit-gautam-sold-to-janakpur-bolts-4-25-lakh",
+      "title": "Rit Gautam sold to Janakpur Bolts, 4.25 lakh",
       "displayTime": "6 Jul, 5:44 pm",
       "isoTime": "2026-07-06T17:44:00+05:45",
-      "tag": "Top buy",
-      "summary": "Rit Gautam moved to Janakpur Bolts for NPR 4.25 lakh after competitive bidding."
+      "tag": "Sold",
+      "summary": "Rit Gautam sold to Janakpur Bolts, 4.25 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "dayanand-mandal-kathmandu-gorkhas",
-      "title": "Dayanand Mandal sold to Kathmandu Gorkhas",
+      "id": "6-jul-5-40-pm-dayandand-mandal-sold-to-kathmandu-gorkhas-2-lakh",
+      "title": "Dayandand Mandal sold to Kathmandu Gorkhas, 2 lakh",
       "displayTime": "6 Jul, 5:40 pm",
       "isoTime": "2026-07-06T17:40:00+05:45",
       "tag": "Sold",
-      "summary": "Kathmandu Gorkhas bought Dayanand Mandal for NPR 2 lakh."
+      "summary": "Dayandand Mandal sold to Kathmandu Gorkhas, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "prashiddha-jaishi-kathmandu-gorkhas",
-      "title": "Prashiddha Jaishi sold to Kathmandu Gorkhas",
+      "id": "6-jul-5-38-pm-prashiddha-jaishi-to-kathmandu-gorkhas-for-2-lakh-rupees",
+      "title": "Prashiddha Jaishi to Kathmandu Gorkhas for 2 Lakh rupees",
       "displayTime": "6 Jul, 5:38 pm",
       "isoTime": "2026-07-06T17:38:00+05:45",
       "tag": "Sold",
-      "summary": "Prashiddha Jaishi opened Kathmandu Gorkhas' buying account at NPR 2 lakh."
+      "summary": "Prashiddha Jaishi to Kathmandu Gorkhas for 2 Lakh rupees in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "dipesh-kandel-unsold",
-      "title": "Dipesh Kandel went unsold",
+      "id": "6-jul-5-31-pm-dipesh-kandel-unsold",
+      "title": "Dipesh Kandel unsold",
       "displayTime": "6 Jul, 5:31 pm",
       "isoTime": "2026-07-06T17:31:00+05:45",
-      "tag": "Unsold",
-      "summary": "Former Nepal U19 player Dipesh Kandel was listed as unsold in Category C."
+      "tag": "Mixed update",
+      "summary": "Dipesh Kandel unsold."
     },
     {
-      "id": "bipin-rawal-chitwan-rhinos",
-      "title": "Bipin Rawal sold to Chitwan Rhinos",
+      "id": "6-jul-5-23-pm-bipin-rawal-sold-to-chitwan-rhinos-2-lakh",
+      "title": "Bipin Rawal sold to Chitwan Rhinos, 2 lakh",
       "displayTime": "6 Jul, 5:23 pm",
       "isoTime": "2026-07-06T17:23:00+05:45",
       "tag": "Sold",
-      "summary": "Bipin Rawal returned to Chitwan Rhinos for NPR 2 lakh."
+      "summary": "Bipin Rawal sold to Chitwan Rhinos, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "aprajit-paudel-biratnagar-kings",
-      "title": "Aprajit Paudel sold to Biratnagar Kings",
+      "id": "6-jul-5-22-pm-aprajit-paudel-sold-to-biratnagar-kings-2-lakh",
+      "title": "Aprajit Paudel sold to Biratnagar Kings, 2 lakh",
       "displayTime": "6 Jul, 5:22 pm",
       "isoTime": "2026-07-06T17:22:00+05:45",
       "tag": "Sold",
-      "summary": "Biratnagar Kings bought Aprajit Paudel for NPR 2 lakh."
+      "summary": "Aprajit Paudel sold to Biratnagar Kings, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "surya-tamang-karnali-yaks",
-      "title": "Surya Tamang sold to Karnali Yaks",
+      "id": "6-jul-5-17-pm-surya-tamang-sold-to-karnali-yaks-2-lakh",
+      "title": "Surya Tamang sold to Karnali Yaks, 2 lakh",
       "displayTime": "6 Jul, 5:17 pm",
       "isoTime": "2026-07-06T17:17:00+05:45",
       "tag": "Sold",
-      "summary": "Surya Tamang was picked by Karnali Yaks for NPR 2 lakh."
+      "summary": "Surya Tamang sold to Karnali Yaks, 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "santosh-karki-janakpur-bolts",
-      "title": "Santosh Karki sold to Janakpur Bolts",
+      "id": "6-jul-5-14-pm-santosh-karki-sold-to-janakpur-bolts-3-lakh",
+      "title": "Santosh Karki sold to Janakpur Bolts, 3 lakh",
       "displayTime": "6 Jul, 5:14 pm",
       "isoTime": "2026-07-06T17:14:00+05:45",
-      "tag": "Top buy",
-      "summary": "Janakpur Bolts bought wicketkeeper Santosh Karki for NPR 3 lakh."
+      "tag": "Sold",
+      "summary": "Santosh Karki sold to Janakpur Bolts, 3 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "ashok-dhami-chitwan-rhinos",
-      "title": "Ashok Dhami sold to Chitwan Rhinos",
+      "id": "6-jul-5-10-pm-ashok-dhami-sold-to-rhinos-npr-2-lakh",
+      "title": "Ashok Dhami sold to Rhinos, NPR 2 lakh",
       "displayTime": "6 Jul, 5:10 pm",
       "isoTime": "2026-07-06T17:10:00+05:45",
       "tag": "Sold",
-      "summary": "Chitwan Rhinos added Ashok Dhami for NPR 2 lakh."
+      "summary": "Ashok Dhami sold to Rhinos, NPR 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "sujan-thapaliya-biratnagar-kings",
-      "title": "Sujan Thapaliya sold to Biratnagar Kings",
+      "id": "6-jul-5-09-pm-sujan-thapaliya-sold-to-biratnagar-kings-npr-4-25",
+      "title": "Sujan Thapaliya sold to Biratnagar Kings - NPR 4.25",
       "displayTime": "6 Jul, 5:09 pm",
       "isoTime": "2026-07-06T17:09:00+05:45",
-      "tag": "Top buy",
-      "summary": "Sujan Thapaliya was sold to Biratnagar Kings for NPR 4.25 lakh."
+      "tag": "Sold",
+      "summary": "Sujan Thapaliya sold to Biratnagar Kings - NPR 4.25 in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "ayub-chand-arniko-prasad-yadav",
-      "title": "Ayub Chand and Arniko Prasad Yadav sold",
+      "id": "6-jul-5-02-pm-ayub-chand-sold-to-royals-arniko-sold-to-lumbini",
+      "title": "Ayub Chand sold to Royals, Arniko sold to Lumbini",
       "displayTime": "6 Jul, 5:02 pm",
       "isoTime": "2026-07-06T17:02:00+05:45",
       "tag": "Sold",
-      "summary": "Sudurpaschim Royals picked Ayub Chand, while Lumbini Lions bought Arniko Prasad Yadav."
+      "summary": "Ayub Chand sold to Royals, Arniko sold to Lumbini in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "sudip-aryal-pokhara-avengers",
-      "title": "Sudip Aryal sold to Pokhara Avengers",
+      "id": "6-jul-4-59-pm-sudip-aryal-sold-to-pokhara-avengers-npr-3-lakh",
+      "title": "Sudip Aryal sold to Pokhara Avengers - NPR 3 lakh",
       "displayTime": "6 Jul, 4:59 pm",
       "isoTime": "2026-07-06T16:59:00+05:45",
-      "tag": "Top buy",
-      "summary": "Pokhara Avengers bought Sudip Aryal for NPR 3 lakh."
+      "tag": "Sold",
+      "summary": "Sudip Aryal sold to Pokhara Avengers - NPR 3 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "bibek-rana-magar-pokhara-avengers",
-      "title": "Bibek Kumar Rana Magar sold to Pokhara Avengers",
+      "id": "6-jul-4-56-pm-bibek-kumar-rana-magar-sold-to-pokhara-avengers-2-75-lakh",
+      "title": "Bibek Kumar Rana Magar sold to Pokhara Avengers - 2.75 lakh",
       "displayTime": "6 Jul, 4:56 pm",
       "isoTime": "2026-07-06T16:56:00+05:45",
       "tag": "Sold",
-      "summary": "Bibek Kumar Rana Magar went to Pokhara Avengers for NPR 2.75 lakh."
+      "summary": "Bibek Kumar Rana Magar sold to Pokhara Avengers - 2.75 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "sunny-bk-pokhara-avengers",
-      "title": "Sunny BK sold to Pokhara Avengers",
+      "id": "6-jul-4-54-pm-sunny-bk-sold-to-pokhara-avengers-2-lakh",
+      "title": "Sunny BK sold to Pokhara Avengers - 2 lakh",
       "displayTime": "6 Jul, 4:54 pm",
       "isoTime": "2026-07-06T16:54:00+05:45",
       "tag": "Sold",
-      "summary": "Sunny BK was bought by Pokhara Avengers for NPR 2 lakh."
+      "summary": "Sunny BK sold to Pokhara Avengers - 2 lakh in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "sachin-bhatta-sudurpaschim-royals",
-      "title": "Sachin Bhatta becomes first sold player",
+      "id": "6-jul-4-48-pm-sachin-bhatta-sold-for-sudurpaschim-royals",
+      "title": "Sachin Bhatta sold for Sudurpaschim Royals",
       "displayTime": "6 Jul, 4:48 pm",
       "isoTime": "2026-07-06T16:48:00+05:45",
       "tag": "Sold",
-      "summary": "Sudurpaschim Royals bought Sachin Bhatta for NPR 2 lakh, the first confirmed sale of NPL Season 3."
+      "summary": "Sachin Bhatta sold for Sudurpaschim Royals in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "auction-team-slots-note",
-      "title": "Teams start filling auction slots",
+      "id": "6-jul-4-36-pm-players-to-be-bought-for-teams-from-auction-today",
+      "title": "Players to be bought for teams from Auction today",
       "displayTime": "6 Jul, 4:36 pm",
       "isoTime": "2026-07-06T16:36:00+05:45",
-      "tag": "Squad slots",
-      "summary": "The auction moved into squad-building mode with franchises working toward their available player slots."
+      "tag": "Sold",
+      "summary": "Players to be bought for teams from Auction today in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "devendra-subedi-auctioneer",
-      "title": "Devendra Subedi named auctioneer",
+      "id": "6-jul-4-26-pm-devendra-subedi-auctioneer-for-season-3",
+      "title": "Devendra Subedi: Auctioneer for Season 3",
       "displayTime": "6 Jul, 4:26 pm",
       "isoTime": "2026-07-06T16:26:00+05:45",
-      "tag": "Auction desk",
-      "summary": "Devendra Subedi is handling the Season 3 auctioneer role."
+      "tag": "Auction live",
+      "summary": "Devendra Subedi: Auctioneer for Season 3."
     },
     {
-      "id": "biratnagar-kings-representatives",
-      "title": "Biratnagar Kings representatives arrive",
+      "id": "6-jul-4-20-pm-lamichhane-and-bam-representing-biratnagar-kings",
+      "title": "Lamichhane and Bam representing Biratnagar Kings",
       "displayTime": "6 Jul, 4:20 pm",
       "isoTime": "2026-07-06T16:20:00+05:45",
-      "tag": "Team arrival",
-      "summary": "Sandeep Lamichhane and Lokesh Bam are representing Biratnagar Kings at the auction."
+      "tag": "Live update",
+      "summary": "Lamichhane and Bam representing Biratnagar Kings."
     },
     {
-      "id": "lumbini-lions-arrive",
-      "title": "Lumbini Lions arrive at the auction",
+      "id": "6-jul-4-15-pm-last-one-to-go-is-the-lumbini-lions",
+      "title": "Last one to go is the Lumbini Lions",
       "displayTime": "6 Jul, 4:15 pm",
       "isoTime": "2026-07-06T16:15:00+05:45",
-      "tag": "Team arrival",
-      "summary": "Rohit Paudel and Lumbini Lions arrived as the final franchise delegation."
+      "tag": "Sold",
+      "summary": "Last one to go is the Lumbini Lions in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "kathmandu-sudurpaschim-arrive",
-      "title": "Kathmandu Gorkhas and Sudurpaschim Royals arrive",
+      "id": "6-jul-4-13-pm-kathmandu-gorkhas-and-sudurpaschim-royals-team-also-arrive",
+      "title": "Kathmandu Gorkhas and Sudurpaschim Royals team also arrives",
       "displayTime": "6 Jul, 4:13 pm",
       "isoTime": "2026-07-06T16:13:00+05:45",
       "tag": "Team arrival",
-      "summary": "Kathmandu Gorkhas and Sudurpaschim Royals joined the auction room."
+      "summary": "Kathmandu Gorkhas and Sudurpaschim Royals team also arrives."
     },
     {
-      "id": "karnali-pokhara-arrive",
-      "title": "Karnali Yaks and Pokhara Avengers arrive",
+      "id": "6-jul-4-11-pm-karnali-yaks-and-pokhara-also-arrives-in-the-auction",
+      "title": "Karnali Yaks and Pokhara also arrives in the auction",
       "displayTime": "6 Jul, 4:11 pm",
       "isoTime": "2026-07-06T16:11:00+05:45",
       "tag": "Team arrival",
-      "summary": "Karnali Yaks and Pokhara Avengers arrived with their marquee players."
+      "summary": "Karnali Yaks and Pokhara also arrives in the auction."
     },
     {
-      "id": "janakpur-chitwan-arrive",
-      "title": "Janakpur Bolts and Chitwan Rhinos arrive",
+      "id": "6-jul-4-09-pm-janakpur-bolts-and-chitwan-rhinos-arrives",
+      "title": "Janakpur Bolts and Chitwan Rhinos arrives",
       "displayTime": "6 Jul, 4:09 pm",
       "isoTime": "2026-07-06T16:09:00+05:45",
       "tag": "Team arrival",
-      "summary": "Janakpur Bolts and Chitwan Rhinos were among the early franchise arrivals."
+      "summary": "Janakpur Bolts and Chitwan Rhinos arrives."
     },
     {
-      "id": "auction-season-3-begins",
-      "title": "NPL Auction Season 3 begins",
+      "id": "6-jul-3-47-pm-we-re-live-the-npl-auction-season-3-begins",
+      "title": "We're live — the NPL Auction Season 3 begins!",
       "displayTime": "6 Jul, 3:47 pm",
       "isoTime": "2026-07-06T15:47:00+05:45",
       "tag": "Auction live",
-      "summary": "The auction started in Kathmandu with eight franchises, 155 shortlisted players and team squads beginning to take shape."
+      "summary": "We're live — the NPL Auction Season 3 begins!."
     },
     {
-      "id": "category-a-names-to-watch",
-      "title": "Five Category A names to watch",
+      "id": "6-jul-11-02-am-five-names-to-watch-category-a",
+      "title": "Five names to watch — Category A",
       "displayTime": "6 Jul, 11:02 am",
       "isoTime": "2026-07-06T11:02:00+05:45",
-      "tag": "Category A",
-      "summary": "Category A has a 10 lakh NPR base and includes Arjun Gharti, Bibek Kumar Yadav, Aasif Sheikh, Rupesh Kumar Singh and Trit Raj Das."
+      "tag": "Category update",
+      "summary": "Five names to watch — Category A in the latest NPL Auction Season 3 update."
     },
     {
-      "id": "auction-format-and-purses",
-      "title": "How the auction works today",
+      "id": "6-jul-11-01-am-how-today-works",
+      "title": "How today works",
       "displayTime": "6 Jul, 11:01 am",
       "isoTime": "2026-07-06T11:01:00+05:45",
-      "tag": "Auction format",
-      "summary": "The player shortlist is split into 5 Category A players, 27 Category B players and 123 Category C players, with franchises building toward 16-player squads."
+      "tag": "Live update",
+      "summary": "How today works."
     },
     {
-      "id": "auction-live-coverage-start",
-      "title": "NPL Season 3 auction coverage begins",
+      "id": "6-jul-8-20-am-welcome-to-npl-auction-season-3-live-coverage",
+      "title": "Welcome to NPL Auction Season 3 — live coverage",
       "displayTime": "6 Jul, 8:20 am",
       "isoTime": "2026-07-06T08:20:00+05:45",
-      "tag": "Opening note",
-      "summary": "The Season 3 auction opened with 347 registered players narrowed to a 155-player auction shortlist."
+      "tag": "Sold",
+      "summary": "Welcome to NPL Auction Season 3 — live coverage in the latest NPL Auction Season 3 update."
     }
   ]
 }
