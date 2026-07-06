@@ -260,16 +260,13 @@ function archivePage(items) {
     if (category) anchoredCategories.add(category);
     return renderCard(item, index, anchor);
   }).join('\n\n');
-  const latest = items[0];
   const filters = categoryFilters(items);
-  const latestLabel = latest ? formatDate(latest.date) : 'No posts yet';
   const body = `
 <main class="main-content">
 <section id="news" class="news-section">
   <div class="container">
     <div class="section-intro">
       <h1 class="section-title green">Latest News</h1>
-      <p class="news-archive-meta">Latest: <strong>${escapeHtml(latestLabel)}</strong> | ${items.length} NPL stories</p>
     </div>
 
     <nav class="news-filter-bar" aria-label="News categories">
