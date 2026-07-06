@@ -168,6 +168,29 @@ test('homepage hero keeps the old schedule call-to-action button', () => {
   assert.ok(!heroText[0].includes('Latest News</a>'), 'hero must not show the replacement Latest News button');
 });
 
+test('homepage matches section shows the next four match cards', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+  const styles = fs.readFileSync(path.join(__dirname, '..', 'styles.css'), 'utf8');
+  const matchesSection = homepage.match(/<section id="matches" class="matches-section">[\s\S]*?<\/section>/);
+
+  assert.ok(matchesSection, 'homepage must include matches section');
+  for (let matchNumber = 1; matchNumber <= 4; matchNumber += 1) {
+    assert.ok(matchesSection[0].includes(`<div class="match-label">Match ${matchNumber}</div>`), `homepage must include Match ${matchNumber}`);
+    const start = matchesSection[0].indexOf(`<!-- Match ${matchNumber} -->`);
+    const end = matchNumber < 4 ? matchesSection[0].indexOf(`<!-- Match ${matchNumber + 1} -->`, start) : matchesSection[0].indexOf(`<!-- Match 5 -->`, start);
+    const cardHtml = matchesSection[0].slice(start, end);
+    const openingDivs = (cardHtml.match(/<div\b/g) || []).length;
+    const closingDivs = (cardHtml.match(/<\/div>/g) || []).length;
+    assert.equal(openingDivs, closingDivs, `Match ${matchNumber} card markup must be balanced`);
+  }
+  assert.ok(styles.includes('.match-card:nth-child(n+5)'), 'homepage must hide matches after the first four');
+  assert.ok(!styles.includes('.match-card:nth-child(n+3)'), 'homepage must not hide Match 3 and Match 4');
+  assert.ok(styles.includes('.matches-grid {\n  display: grid;'), 'homepage matches must render as a grid so all four cards are visible');
+  assert.ok(homepage.includes('const visibleMatchCards = document.querySelectorAll(\'.match-card:not([hidden])\');'), 'matches carousel must count only visible homepage match cards');
+});
+
 test('latest published auction batch has 900 plus words and deep sourcing', () => {
   const path = require('node:path');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);
