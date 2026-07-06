@@ -795,6 +795,62 @@
         padding-bottom: 3rem;
     }
 
+    .registered-section {
+        margin-top: 1rem;
+        background: var(--auction-card);
+        border: 1px solid var(--auction-line);
+        border-radius: 8px;
+        box-shadow: var(--auction-shadow);
+        padding: 1.15rem;
+    }
+
+    .registered-section h2 {
+        color: var(--auction-ink);
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+        line-height: 1.15;
+    }
+
+    .registered-section p {
+        color: var(--auction-muted);
+        line-height: 1.7;
+        margin: 0 0 1rem;
+        max-width: 880px;
+    }
+
+    .registered-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .registered-card {
+        border: 1px solid #e7edf5;
+        border-radius: 8px;
+        background: #fbfdff;
+        padding: 1rem;
+    }
+
+    .registered-card h3 {
+        color: var(--auction-green-dark);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        margin: 0 0 0.65rem;
+        text-transform: uppercase;
+    }
+
+    .registered-card ul {
+        margin: 0;
+        padding-left: 1.1rem;
+    }
+
+    .registered-card li {
+        color: var(--auction-ink);
+        font-weight: 750;
+        line-height: 1.55;
+        margin: 0.3rem 0;
+    }
+
     .faq-card {
         padding: 1rem;
     }
@@ -856,7 +912,8 @@
         }
 
         .team-grid,
-        .faq-grid {
+        .faq-grid,
+        .registered-grid {
             grid-template-columns: 1fr;
         }
 
@@ -1153,6 +1210,58 @@
 <li><span>Status:</span> Auction upcoming</li>
 </ul>
 </aside>
+</section>
+<section class="registered-section" aria-labelledby="registered-players-title">
+<div class="section-eyebrow">Player pool</div>
+<h2 id="registered-players-title">NPL Season 3 347 registered players list status</h2>
+<p>A total of <strong>347 registered players</strong> entered the NPL Season 3 auction pool, but the full official 347-player registration list has not been made public yet. The confirmed public auction pool currently shows <strong>155 shortlisted players</strong>: 5 in Category A, 27 in Category B and 123 in Category C.</p>
+<div class="registered-grid">
+<article class="registered-card">
+<h3>Category A confirmed names</h3>
+<ul>
+<li>Arjun Gharti</li>
+<li>Bibek Kumar Yadav</li>
+<li>Aasif Sheikh</li>
+<li>Rupesh Kumar Singh</li>
+<li>Trit Raj Das</li>
+</ul>
+</article>
+<article class="registered-card">
+<h3>Category B names reported so far</h3>
+<ul>
+<li>Aakash Tripathi</li>
+<li>Amar Singh Rautela</li>
+<li>Bhuwan Karki</li>
+<li>Dipendra Rawat</li>
+<li>Dipak Bohara</li>
+<li>Naren Bhatta</li>
+<li>Prakash Jaisi</li>
+<li>Sahil Patel</li>
+<li>Shankar Rana</li>
+<li>Shubh Kansakar</li>
+<li>Sunil Dhamala</li>
+</ul>
+</article>
+<article class="registered-card">
+<h3>Category C names reported so far</h3>
+<ul>
+<li>Aadil Khan</li>
+<li>Aarif Khan</li>
+<li>Arniko Prasad Yadav</li>
+<li>Bipin Acharya</li>
+<li>Bipin Rawal</li>
+<li>Cibrin Shrestha</li>
+<li>Gautam KC</li>
+<li>Nitesh Patel</li>
+<li>Pratik Pokharel</li>
+<li>Ringzin Lama</li>
+<li>Shivam Tiwari</li>
+<li>Sonu Devkota</li>
+<li>Sudip Aryal</li>
+<li>Vansh Chhetri</li>
+</ul>
+</article>
+</div>
 </section>
 <section aria-labelledby="faq-title">
 <div class="section-head">
