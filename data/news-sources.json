@@ -1,0 +1,24 @@
+{
+  "coverageMode": "npl-only",
+  "description": "Only Nepal Premier League and NPL 2026 cricket stories are valid. Ambiguous NPL, other premier leagues, football, IPL, PSL, CPL, LPL and unrelated cricket stories must be rejected.",
+  "queries": [
+    "\"Nepal Premier League\"",
+    "\"NPL 2026\" cricket Nepal",
+    "\"Nepal Premier League\" auction",
+    "\"Cricket Association of Nepal\" \"Nepal Premier League\"",
+    "\"Janakpur Bolts\" \"Nepal Premier League\"",
+    "\"Sudurpaschim Royals\" \"Nepal Premier League\"",
+    "\"Chitwan Rhinos\" \"Nepal Premier League\"",
+    "\"Karnali Yaks\" \"Nepal Premier League\""
+  ],
+  "rss": [
+    {
+      "name": "Google News - Nepal Premier League",
+      "url": "https://news.google.com/rss/search?q=%22Nepal%20Premier%20League%22%20OR%20%22NPL%202026%22%20cricket%20Nepal&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Google News - NPL Teams",
+      "url": "https://news.google.com/rss/search?q=%22Janakpur%20Bolts%22%20OR%20%22Sudurpaschim%20Royals%22%20OR%20%22Chitwan%20Rhinos%22%20%22Nepal%20Premier%20League%22&hl=en-US&gl=US&ceid=US:en"
+    }
+  ]
+}

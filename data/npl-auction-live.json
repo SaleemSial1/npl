@@ -1,0 +1,33 @@
+{
+  "status": "Live updates",
+  "orderLabel": "Timeline - 3 updates - Newest first",
+  "updatedAt": "2026-07-06T11:02:00+05:45",
+  "updatedAtLabel": "6 Jul, 11:02 am",
+  "sourceUrl": "https://www.cricnepal.com/npl-auction-season-3-live",
+  "updates": [
+    {
+      "id": "category-a-names-to-watch",
+      "title": "Five Category A names to watch",
+      "displayTime": "6 Jul, 11:02 am",
+      "isoTime": "2026-07-06T11:02:00+05:45",
+      "tag": "Category A",
+      "summary": "Category A has a 10 lakh NPR base and includes Arjun Gharti, Bibek Kumar Yadav, Aasif Sheikh, Rupesh Kumar Singh and Trit Raj Das. Aasif Sheikh is one of the biggest names entering the auction pool."
+    },
+    {
+      "id": "auction-format-and-purses",
+      "title": "How the auction works today",
+      "displayTime": "6 Jul, 11:01 am",
+      "isoTime": "2026-07-06T11:01:00+05:45",
+      "tag": "Auction format",
+      "summary": "The player shortlist is split into 5 Category A players, 27 Category B players and 123 Category C players. Teams are building toward 16-player squads around retained cores, with Janakpur holding the deepest purse and Kathmandu the tightest."
+    },
+    {
+      "id": "auction-live-coverage-start",
+      "title": "NPL Season 3 auction coverage begins",
+      "displayTime": "6 Jul, 8:20 am",
+      "isoTime": "2026-07-06T08:20:00+05:45",
+      "tag": "Opening note",
+      "summary": "The Season 3 auction is set in Kathmandu with 347 registered players narrowed to 155 shortlisted names. The auction stream is expected on the NPL YouTube channel from 3:45 PM."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "npl-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "news:fetch": "node scripts/fetch-npl-news.js",
+    "news:generate": "node scripts/generate-news-pages.js",
+    "news:validate": "node scripts/validate-news-system.js",
+    "test": "node --test",
+    "test:all": "node --test"
+  }
+}
