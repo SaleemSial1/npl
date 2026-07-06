@@ -1,9 +1,17 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 68 updates - Newest first",
-  "updatedAt": "2026-07-06T21:45:00+05:45",
-  "updatedAtLabel": "6 Jul, 9:45 pm",
+  "orderLabel": "Timeline - 69 updates - Newest first",
+  "updatedAt": "2026-07-06T21:52:00+05:45",
+  "updatedAtLabel": "6 Jul, 9:52 pm",
   "updates": [
+    {
+      "id": "6-jul-9-52-pm-salahuddin-khan-sold-to-chitwan-rhinos-npr-2-lakh",
+      "title": "Salahuddin Khan sold to Chitwan Rhinos — NPR 2 lakh",
+      "displayTime": "6 Jul, 9:52 pm",
+      "isoTime": "2026-07-06T21:52:00+05:45",
+      "tag": "Sold",
+      "summary": "Salahuddin Khan sold to Chitwan Rhinos — NPR 2 lakh in the latest NPL Auction Season 3 update."
+    },
     {
       "id": "6-jul-9-45-pm-prajwal-thapa-unsold",
       "title": "Prajwal Thapa unsold",
