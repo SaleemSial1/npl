@@ -1,9 +1,17 @@
 {
   "status": "Live auction updates",
-  "orderLabel": "Timeline - 40 updates - Newest first",
-  "updatedAt": "2026-07-06T19:39:00+05:45",
-  "updatedAtLabel": "6 Jul, 7:39 pm",
+  "orderLabel": "Timeline - 41 updates - Newest first",
+  "updatedAt": "2026-07-06T19:57:00+05:45",
+  "updatedAtLabel": "6 Jul, 7:57 pm",
   "updates": [
+    {
+      "id": "6-jul-7-57-pm-bishal-kumar-patel-sold-to-bolts-5-lakh",
+      "title": "Bishal Kumar Patel sold to Bolts, 5 lakh",
+      "displayTime": "6 Jul, 7:57 pm",
+      "isoTime": "2026-07-06T19:57:00+05:45",
+      "tag": "Sold",
+      "summary": "Bishal Kumar Patel sold to Bolts, 5 lakh in the latest NPL Auction Season 3 update."
+    },
     {
       "id": "6-jul-7-39-pm-anil-kharel-sold-to-sudurpaschim-royals-5-lakh",
       "title": "Anil Kharel sold to Sudurpaschim Royals, 5 lakh",
