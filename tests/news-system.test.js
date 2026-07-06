@@ -60,10 +60,25 @@ test('latest NPL auction research article has image and source links', () => {
 
   assert.ok(latest, 'latest NPL auction article must exist');
   assert.equal(latest.date, '2026-07-06');
-  assert.equal(latest.image, 'images/npl-season-3-mega-auction.webp');
+  assert.equal(latest.image, 'images/news/npl-auction-season-3-live-updates.webp');
   assert.ok(Array.isArray(latest.sources), 'latest article must include research sources');
   assert.ok(latest.sources.length >= 3, 'latest article must include at least three research sources');
   assert.ok(latest.body.join(' ').includes('155 made the shortlist'));
+});
+
+test('each news article uses a unique generated image', () => {
+  const items = readJson(require('node:path').join(__dirname, '..', 'data', 'news.json'), []);
+  const imageToSlugs = new Map();
+
+  for (const item of items) {
+    assert.ok(item.image.startsWith('images/news/'), `${item.slug} must use a generated news image`);
+    const slugs = imageToSlugs.get(item.image) || [];
+    slugs.push(item.slug);
+    imageToSlugs.set(item.image, slugs);
+  }
+
+  const duplicates = [...imageToSlugs.entries()].filter(([, slugs]) => slugs.length > 1);
+  assert.deepEqual(duplicates, [], 'no image can be reused by multiple news articles');
 });
 
 test('news item validation rejects non-NPL content', () => {

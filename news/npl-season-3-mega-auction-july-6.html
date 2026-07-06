@@ -48,8 +48,8 @@
   .news{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
   .news-card{background:linear-gradient(145deg,#1e3a8a,#111827);border:1px solid rgba(6,182,212,.28);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
   .news-card--featured{grid-column:span 2}
-  .news-card__img{min-height:160px;background:linear-gradient(135deg,var(--g1),var(--g2));display:flex;align-items:center;justify-content:center;position:relative}
-  .news-card__teamlogo{max-width:130px;max-height:95px;object-fit:contain}
+  .news-card__img{height:210px;background:linear-gradient(135deg,var(--g1),var(--g2));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .news-card__teamlogo{width:100%;height:100%;object-fit:cover;display:block}
   .news-card__tag{position:absolute;top:.8rem;right:.8rem;background:#06b6d4;color:#fff;border-radius:8px;padding:.35rem .65rem;font-size:.78rem;font-weight:800}
   .news-card__tag--gold{background:#facc15;color:#111827}
   .news-card__body{padding:1.25rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
@@ -69,13 +69,11 @@
   .news-article__sources li{margin:.45rem 0;color:#cbd5e1}
   .news-article__sources a{color:#93c5fd}
   .news-article__aside{background:#0f172a;border:1px solid rgba(250,204,21,.25);border-radius:8px;padding:1.25rem;height:max-content}
-  .news-article__aside img{max-width:120px;display:block;margin:0 auto 1rem}
+  .news-article__aside img{width:100%;max-width:100%;border-radius:8px;display:block;margin:0 auto 1rem}
   .news-article__aside h2{font-size:1.2rem;color:#fff}
   .news-article__aside a{color:#93c5fd}
   @media(max-width:760px){.generated-header__inner,.generated-footer__inner{align-items:flex-start;flex-direction:column}.news-card--featured{grid-column:auto}.news-article__layout{grid-template-columns:1fr}.generated-nav{gap:.65rem}.generated-nav a{font-size:.86rem}}
 </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7557080326106277"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -122,11 +120,11 @@
       <p>For NPL 2026 followers, the auction is the clearest checkpoint before preseason planning, overseas-player confirmations and final team combinations begin to settle.</p>
       <p>Janakpur Bolts, Sudurpaschim Royals, Chitwan Rhinos, Karnali Yaks, Kathmandu Gurkhas, Pokhara Avengers, Biratnagar Kings and Lumbini Lions all have different squad needs entering the auction window.</p>
       <p>The biggest areas to watch are powerplay batting, death bowling, wicketkeeping depth and all-rounder balance because those roles usually decide short T20 tournaments in Nepal conditions.</p>
-
+      
     </div>
     <aside class="news-article__aside">
       <div class="news-article__logo">
-        <img src="../images/npl-season-3-mega-auction.webp" alt="NPL Season 3 Mega Auction will be held on July 6, 2026">
+        <img src="../images/news/npl-season-3-mega-auction-preview.webp" alt="NPL Season 3 Mega Auction will be held on July 6, 2026">
       </div>
       <h2>More NPL News</h2>
       <ul>
