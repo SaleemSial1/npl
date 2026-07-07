@@ -356,3 +356,302 @@ body {
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
     transform: translateY(-2px);
 }
+
+/* Team squad data sections */
+.squad-data-panel,
+.confirmed-squad-panel {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(8, 47, 73, 0.82), rgba(15, 23, 42, 0.96));
+    border: 1px solid rgba(103, 232, 249, 0.28);
+    border-radius: 0.5rem;
+    box-shadow: 0 18px 42px rgba(2, 6, 23, 0.34);
+}
+
+.confirmed-squad-panel {
+    margin-top: 0;
+}
+
+.squad-data-header {
+    display: grid;
+    gap: 0.65rem;
+    margin-bottom: 1.25rem;
+}
+
+.squad-data-eyebrow {
+    color: #67e8f9;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.squad-data-title {
+    color: #f8fafc;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.confirmed-squad-panel .overview-subtitle {
+    margin: 0;
+    padding-bottom: 0;
+    color: #f8fafc;
+}
+
+.confirmed-squad-panel .overview-text {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.squad-data-copy {
+    color: #cbd5e1;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin: 0;
+    max-width: 72ch;
+}
+
+.squad-summary-grid {
+    display: grid;
+    gap: 0;
+    margin: 1.25rem 0;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: rgba(2, 6, 23, 0.3);
+}
+
+.squad-summary-item {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.squad-summary-item:last-child {
+    border-bottom: 0;
+}
+
+.summary-label {
+    color: #94a3b8;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.summary-value {
+    color: #f8fafc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.summary-value strong {
+    color: #fde68a;
+    font-weight: 800;
+}
+
+.squad-table-title {
+    color: #e0f2fe;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: 1.35rem 0 0.75rem;
+}
+
+.squad-table-wrap {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(103, 232, 249, 0.22);
+    border-radius: 0.5rem;
+    background: rgba(15, 23, 42, 0.78);
+}
+
+.responsive-data-table {
+    width: 100%;
+    min-width: 0 !important;
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.responsive-data-table thead {
+    background: rgba(14, 116, 144, 0.18);
+}
+
+.responsive-data-table th {
+    padding: 0.9rem 1rem;
+    color: #a5f3fc;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: normal;
+}
+
+.responsive-data-table td {
+    padding: 0.95rem 1rem;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    vertical-align: middle;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    border-top: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.responsive-data-table tbody tr {
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.responsive-data-table tbody tr:hover {
+    background: rgba(6, 182, 212, 0.08);
+}
+
+.responsive-data-table .player-column {
+    width: 34%;
+}
+
+.responsive-data-table .status-column {
+    width: 18%;
+}
+
+.responsive-data-table .role-column {
+    width: 24%;
+}
+
+.responsive-data-table .price-column {
+    width: 24%;
+}
+
+.status-pill,
+.price-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.85rem;
+    padding: 0.28rem 0.68rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1.2;
+    white-space: normal;
+}
+
+.status-retained {
+    color: #dcfce7;
+    background: rgba(22, 163, 74, 0.18);
+    border: 1px solid rgba(74, 222, 128, 0.32);
+}
+
+.status-auction {
+    color: #cffafe;
+    background: rgba(8, 145, 178, 0.2);
+    border: 1px solid rgba(34, 211, 238, 0.34);
+}
+
+.price-pill {
+    color: #fef3c7;
+    background: rgba(245, 158, 11, 0.16);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    font-variant-numeric: tabular-nums;
+}
+
+.muted-price {
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.squad-source-note {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 1rem 0 0;
+}
+
+@media (min-width: 768px) {
+    .squad-data-panel,
+    .confirmed-squad-panel {
+        padding: 1.5rem;
+    }
+
+    .squad-summary-grid {
+        grid-template-columns: 1.35fr 0.8fr 1fr;
+    }
+
+    .squad-summary-item {
+        border-bottom: 0;
+        border-right: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .squad-summary-item:last-child {
+        border-right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .squad-data-panel,
+    .confirmed-squad-panel {
+        padding: 1rem;
+        margin-left: -0.25rem;
+        margin-right: -0.25rem;
+    }
+
+    .squad-data-title {
+        font-size: 1.12rem;
+    }
+
+    .squad-table-wrap {
+        border: 0;
+        background: transparent;
+    }
+
+    .responsive-data-table,
+    .responsive-data-table tbody,
+    .responsive-data-table tr,
+    .responsive-data-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .responsive-data-table thead {
+        display: none;
+    }
+
+    .responsive-data-table tr {
+        padding: 0.9rem;
+        margin-bottom: 0.85rem;
+        border: 1px solid rgba(103, 232, 249, 0.2);
+        border-radius: 0.5rem;
+        background: rgba(15, 23, 42, 0.84);
+    }
+
+    .responsive-data-table tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .responsive-data-table td {
+        display: grid;
+        grid-template-columns: minmax(6.5rem, 38%) 1fr;
+        gap: 0.75rem;
+        align-items: start;
+        padding: 0.55rem 0;
+        border-top: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .responsive-data-table td:first-child {
+        border-top: 0;
+        padding-top: 0;
+        color: #f8fafc;
+        font-weight: 800;
+    }
+
+    .responsive-data-table td::before {
+        content: attr(data-label);
+        color: #94a3b8;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}
