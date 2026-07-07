@@ -8,20 +8,20 @@
 <meta content="index, follow" name="robots"/>
 <!-- SEO Meta Tags -->
 <title>NPL 2026 Teams | Nepal Premier League Squads, Captains &amp; Players List</title>
-<meta content="Explore the Nepal Premier League teams for 2026, featuring eight dynamic franchises with star captains, full squads, coaches, and tournament insights to keep fans updated on this thrilling T20 cricket event." name="description"/>
+<meta content="Updated NPL 2026 teams guide with all eight Nepal Premier League franchises, Season 3 retained-player cores, auction status, captains, coaches and playoff format." name="description"/>
 <meta content="NPL 2026 teams, Nepal Premier League squads, cricket teams Nepal, NPL captains, T20 cricket Nepal" name="keywords"/>
 <meta content="Nepal Premier League" name="author"/>
 <meta content="FcI0XnWsjvW-He8lPMA0I-pgbndhVjvFJDxlKS7I6uI" name="google-site-verification"/>
 <!-- Open Graph Meta Tags -->
 <meta content="NPL 2026 Teams | Nepal Premier League Squads, Captains &amp; Players List" property="og:title"/>
-<meta content="Explore the Nepal Premier League teams for 2026, featuring eight dynamic franchises with star captains, full squads, coaches, and tournament insights." property="og:description"/>
+<meta content="Updated guide to all eight NPL 2026 teams, retained-player cores, Season 3 auction status, captains and playoff format." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://nplcricketleague.com/teams" property="og:url">
+<meta content="https://nplcricketleague.com/teams" property="og:url"/>
 <meta content="https://nplcricketleague.com/images/npl-teams.webp" property="og:image"/>
 <!-- Twitter Card Meta Tags -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Nepal Premier League 2026 Teams: Complete Guide to Squads, Captains, and Key Players" name="twitter:title"/>
-<meta content="Explore the Nepal Premier League teams for 2026, featuring eight dynamic franchises with star captains, full squads, coaches, and tournament insights." name="twitter:description"/>
+<meta content="Updated guide to all eight NPL 2026 teams, Season 3 retained-player cores, auction status, captains and playoff format." name="twitter:description"/>
 <meta content="https://nplcricketleague.com/images/npl-teams.webp" name="twitter:image"/>
 <!-- Canonical URL -->
 <link href="https://nplcricketleague.com/teams" rel="canonical"/>
@@ -33,14 +33,31 @@
       "name": "Nepal Premier League 2026",
       "sport": "Cricket",
       "startDate": "2026-11-17",
-      "endDate": "2026-12-15",
-      "description": "Nepal Premier League 2026 teams with complete squad information, captains, and coaching staff",
-      "url": "https://nplcricketleague.com/teams"
+      "endDate": "2026-12-13",
+      "description": "Nepal Premier League 2026 teams with Season 3 retained-player cores, auction status, captains and coaching staff",
+      "url": "https://nplcricketleague.com/teams",
+      "numberOfTeams": 8,
+      "team": [
+        {"@type": "SportsTeam", "name": "Lumbini Lions"},
+        {"@type": "SportsTeam", "name": "Sudurpaschim Royals"},
+        {"@type": "SportsTeam", "name": "Biratnagar Kings"},
+        {"@type": "SportsTeam", "name": "Kathmandu Gorkhas"},
+        {"@type": "SportsTeam", "name": "Pokhara Avengers"},
+        {"@type": "SportsTeam", "name": "Karnali Yaks"},
+        {"@type": "SportsTeam", "name": "Chitwan Rhinos"},
+        {"@type": "SportsTeam", "name": "Janakpur Bolts"}
+      ]
     }
     </script>
 <link href="/styles.css" rel="stylesheet"/>
 <style>
         /* Teams-specific styles */
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         .teams-hero {
             position: relative;
             min-height: 60vh;
@@ -56,7 +73,9 @@
             z-index: 10;
             text-align: center;
             max-width: 800px;
+            width: min(100%, 800px);
             padding: 2rem 1rem;
+            overflow-wrap: anywhere;
         }
         
         .teams-hero-title {
@@ -64,6 +83,8 @@
             font-weight: bold;
             color: #06b6d4;
             margin-bottom: 1rem;
+            line-height: 1.08;
+            overflow-wrap: anywhere;
         }
         
         @media (min-width: 768px) {
@@ -76,6 +97,23 @@
             font-size: 1.5rem;
             color: #ffffff;
             margin-bottom: 1.5rem;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+        }
+
+        .teams-hero-note {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            color: #ecfeff;
+            background: rgba(8, 47, 73, 0.76);
+            border: 1px solid rgba(103, 232, 249, 0.45);
+            border-radius: 999px;
+            padding: 0.55rem 0.9rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
         }
         
         @media (min-width: 768px) {
@@ -103,61 +141,6 @@
             background: rgba(0, 0, 0, 0.4);
         }
         
-        .gradient-blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(40px);
-            opacity: 0.3;
-        }
-        
-        .blob-1 {
-            width: 300px;
-            height: 300px;
-            background: #06b6d4;
-            top: 10%;
-            left: 10%;
-        }
-        
-        .blob-2 {
-            width: 200px;
-            height: 200px;
-            background: #facc15;
-            top: 60%;
-            right: 10%;
-        }
-        
-        .blob-3 {
-            width: 250px;
-            height: 250px;
-            background: #9333ea;
-            bottom: 10%;
-            left: 20%;
-        }
-        
-        .blob-4 {
-            width: 180px;
-            height: 180px;
-            background: #10b981;
-            top: 20%;
-            right: 20%;
-        }
-        
-        .blob-5 {
-            width: 220px;
-            height: 220px;
-            background: #ef4444;
-            bottom: 30%;
-            right: 30%;
-        }
-        
-        .blob-6 {
-            width: 150px;
-            height: 150px;
-            background: #3b82f6;
-            top: 40%;
-            left: 5%;
-        }
-        
         /* Consistent section styling */
         .content-section {
             padding: 3rem 0;
@@ -173,6 +156,7 @@
         .content-container {
             max-width: 900px;
             margin: 0 auto;
+            width: 100%;
         }
         
         .intro-text {
@@ -180,6 +164,48 @@
             font-size: 1.125rem;
             line-height: 1.7;
             margin-bottom: 1.5rem;
+        }
+
+        .teams-snapshot {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .teams-snapshot {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .teams-snapshot {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .snapshot-card {
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(103, 232, 249, 0.25);
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .snapshot-value {
+            display: block;
+            color: #facc15;
+            font-size: 1.85rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .snapshot-label {
+            display: block;
+            color: #d1d5db;
+            font-size: 0.88rem;
+            margin-top: 0.45rem;
+            line-height: 1.45;
         }
         
          /* Main Content */
@@ -279,7 +305,7 @@
 
         .team-card {
             background: linear-gradient(to bottom right, #1e3a8a, #111827);
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             padding: 1.5rem;
             border: 1px solid #1e40af;
             transition: all 0.3s;
@@ -327,6 +353,99 @@
             text-align: center;
             flex-grow: 1;
         }
+
+        .team-meta {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.45rem;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .team-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 2rem;
+            padding: 0.35rem 0.65rem;
+            border-radius: 999px;
+            background: rgba(6, 182, 212, 0.12);
+            color: #cffafe;
+            border: 1px solid rgba(6, 182, 212, 0.28);
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .team-chip.gold {
+            background: rgba(250, 204, 21, 0.13);
+            border-color: rgba(250, 204, 21, 0.35);
+            color: #fef3c7;
+        }
+
+        .retained-section {
+            padding: 3rem 0;
+            background: #0f172a;
+        }
+
+        .retained-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .retained-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .retained-card {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.72), rgba(17, 24, 39, 0.95));
+            border: 1px solid rgba(6, 182, 212, 0.25);
+            border-radius: 0.5rem;
+            padding: 1.1rem;
+        }
+
+        .retained-card h3 {
+            margin: 0 0 0.35rem 0;
+            font-size: 1.08rem;
+            color: #ffffff;
+        }
+
+        .retained-count {
+            color: #facc15;
+            font-size: 0.86rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .retained-card p {
+            margin: 0.65rem 0 0 0;
+            color: #d1d5db;
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .update-band {
+            background: linear-gradient(90deg, rgba(6, 78, 59, 0.92), rgba(30, 64, 175, 0.88));
+            border: 1px solid rgba(167, 243, 208, 0.25);
+            border-radius: 0.5rem;
+            padding: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .update-band p {
+            margin: 0;
+            color: #ecfdf5;
+        }
+
+        .update-band a {
+            color: #fef3c7;
+            font-weight: 800;
+            text-decoration: underline;
+            text-underline-offset: 0.15em;
+        }
         
         h2 {
             font-size: 1.75rem;
@@ -348,6 +467,7 @@
             color: #d1d5db;
             margin-bottom: 1.5rem;
             line-height: 1.7;
+            overflow-wrap: anywhere;
         }
         
         ul {
@@ -396,7 +516,7 @@
             text-decoration: none;
             color: inherit;
             display: block;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             overflow: hidden;
             transition: transform 0.3s ease;
         }
@@ -418,10 +538,37 @@
             outline: 3px solid #06b6d4;
             outline-offset: 2px;
         }
+
+        @media (max-width: 480px) {
+            .teams-hero {
+                min-height: 70vh;
+            }
+
+            .teams-hero-title {
+                font-size: 2.15rem;
+            }
+
+            .teams-hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .teams-hero-note {
+                max-width: 100%;
+                white-space: normal;
+                text-align: center;
+            }
+
+            .content-section,
+            .teams-section,
+            .retained-section {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7557080326106277"
      crossorigin="anonymous"></script>
-</meta><style>
+<style>
 .homepage-inline-link {
     color: #10b981;
     font-weight: 600;
@@ -505,17 +652,12 @@
 <div class="teams-hero-bg"></div>
 <!-- Gradient Overlay and Blobs -->
 <div class="gradient-overlay">
-<div class="gradient-blob blob-1"></div>
-<div class="gradient-blob blob-2"></div>
-<div class="gradient-blob blob-3"></div>
-<div class="gradient-blob blob-4"></div>
-<div class="gradient-blob blob-5"></div>
-<div class="gradient-blob blob-6"></div>
 </div>
 <!-- Content -->
 <div class="teams-hero-content">
 <h1 class="teams-hero-title">NPL Teams 2026</h1>
-<p class="teams-hero-subtitle">Complete Guide to Squads, Captains &amp; Key Players.</p>
+<p class="teams-hero-subtitle">Season 3 franchises, retained cores and auction status</p>
+<div class="teams-hero-note">Updated July 6, 2026 - auction live</div>
 </div>
 </section>
 <!-- Content Section -->
@@ -523,10 +665,28 @@
 <div class="container">
 <div class="content-container">
 <p class="intro-text">
-                        The excitement for cricket in Nepal is rising as the second season of the country's top T20 league approaches. Fans are eager to follow their favorite teams as the tournament brings together young and experienced players from across the nation. It also helps local players grow and gives international coaches a chance to share their knowledge. The  (NPL) 2026 is expected to bring great matches, surprises, and new heroes for Nepali cricket.</p>
-<p>The <strong><a class="homepage-inline-link" data-homepage-interlink="true" href="/">Nepal Premier League</a> (NPL)</strong> is Nepal's main domestic T20 cricket league, organized by the Cricket Association of Nepal. It started in 2024 and quickly became popular because of its exciting matches and strong regional representation. The 2026 season, sponsored by <strong>Siddhartha Bank</strong>, promises even more entertainment and better production.</p>
-<p>Last year, <strong>Janakpur Bolts</strong> won the first NPL after a thrilling final against <strong>Sudurpaschim Royals</strong>. This season continues to promote young talent while mixing in experienced players, helping to raise the overall standard of cricket in Nepal.</p>
-<p>The 2026 NPL will feature eight city-based teams, increasing the sense of local rivalry and excitement. Matches will take place from <strong>November 17 to December 13</strong> at the <strong>Tribhuvan University International Cricket Ground</strong> in Kirtipur, Kathmandu. Fans can look forward to thrilling day-night matches under the lights.</p>
+                        Nepal Premier League 2026 is moving into Season 3 with the same eight city and province-based franchises. The retained-player window is complete, the July 6 auction is live, and teams are building around their domestic cores before the November tournament window.</p>
+<p>The <strong><a class="homepage-inline-link" data-homepage-interlink="true" href="/">Nepal Premier League</a> (NPL)</strong> is Nepal's main domestic T20 cricket league, organized by the Cricket Association of Nepal. It started in 2024 and has quickly become the main franchise platform for Nepali cricket, combining national-team regulars, emerging domestic players and overseas experience.</p>
+<p><strong>Lumbini Lions</strong> enter Season 3 as defending champions after winning the 2025 title, while <strong>Sudurpaschim Royals</strong> remain a major contender after another final run. The latest preparation phase has already reported <strong>52 retained players</strong> across the eight franchises before the auction pool is completed.</p>
+<p>The 2026 NPL is listed to run from <strong>November 17 to December 13</strong>, with all eight teams expected to play the round-robin league stage before the top four enter the playoffs.</p>
+<div class="teams-snapshot" aria-label="NPL 2026 teams snapshot">
+<div class="snapshot-card">
+<span class="snapshot-value">8</span>
+<span class="snapshot-label">Franchises in the Season 3 team list</span>
+</div>
+<div class="snapshot-card">
+<span class="snapshot-value">52</span>
+<span class="snapshot-label">Players retained before the auction</span>
+</div>
+<div class="snapshot-card">
+<span class="snapshot-value">155</span>
+<span class="snapshot-label">Shortlisted players in the auction pool</span>
+</div>
+<div class="snapshot-card">
+<span class="snapshot-value">Nov 17</span>
+<span class="snapshot-label">Listed opening date for NPL 2026</span>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -540,26 +700,18 @@
 </div>
 </div>
 <div class="section-intro">
-<p>Meet the eight competitive teams battling for glory in the Nepal Premier League 2026. Each team represents a different region of Nepal, bringing local talent and international stars together.</p>
+<p>Meet the eight teams preparing for Nepal Premier League Season 3. Each card links to the full team page; retained-player notes below reflect the latest pre-auction picture.</p>
 </div>
 <div class="teams-grid">
 <!-- Clickable Team Cards -->
-<a class="team-card-link" href="/teams/pokhara-avengers">
+<a class="team-card-link" href="/teams/lumbini-lions">
 <article class="team-card">
 <div class="team-logo">
-<img alt="Pokhara Avengers Logo" src="/images/teams/Pokhara-Avengers.png"/>
+<img alt="Lumbini Lions Logo" src="/images/teams/Lumbini-Lions.png"/>
 </div>
-<h3 class="team-name">Pokhara Avengers</h3>
-<p class="team-description">A formidable team from the beautiful lakeside city, known for their aggressive batting lineup.</p>
-</article>
-</a>
-<a class="team-card-link" href="/teams/kathmandu-gurkhas">
-<article class="team-card">
-<div class="team-logo">
-<img alt="Kathmandu Gurkhas Logo" src="/images/teams/Kathmandu-Gurkhas.png"/>
-</div>
-<h3 class="team-name">Kathmandu Gurkhas</h3>
-<p class="team-description">The capital city team with a rich history and a balanced squad of experienced players.</p>
+<h3 class="team-name">Lumbini Lions</h3>
+<p class="team-description">Defending champions with Rohit Paudel leading a retained domestic spine.</p>
+<div class="team-meta"><span class="team-chip gold">2025 Champions</span><span class="team-chip">7 retained</span></div>
 </article>
 </a>
 <a class="team-card-link" href="/teams/sudurpaschim-royals">
@@ -568,34 +720,8 @@
 <img alt="Sudurpaschim Royals Logo" src="/images/teams/Sudurpaschim-Royals.png"/>
 </div>
 <h3 class="team-name">Sudurpaschim Royals</h3>
-<p class="team-description">Representing the far-western region with a focus on developing local talent.</p>
-</article>
-</a>
-<a class="team-card-link" href="/teams/janakpur-bolts">
-<article class="team-card">
-<div class="team-logo">
-<img alt="Janakpur Bolts Logo" src="/images/teams/Janakpur-Bolts.png"/>
-</div>
-<h3 class="team-name">Janakpur Bolts</h3>
-<p class="team-description">A team with explosive power hitters, representing the cultural heartland of Nepal.</p>
-</article>
-</a>
-<a class="team-card-link" href="/teams/lumbini-lions">
-<article class="team-card">
-<div class="team-logo">
-<img alt="Lumbini Lions Logo" src="/images/teams/Lumbini-Lions.png"/>
-</div>
-<h3 class="team-name">Lumbini Lions</h3>
-<p class="team-description">From the birthplace of Buddha, this team plays with spiritual focus and determination.</p>
-</article>
-</a>
-<a class="team-card-link" href="/teams/chitwan-rhinos">
-<article class="team-card">
-<div class="team-logo">
-<img alt="Chitwan Rhinos Logo" src="/images/teams/Chitwan-Rhinos.png"/>
-</div>
-<h3 class="team-name">Chitwan Rhinos</h3>
-<p class="team-description">Named after the famous Chitwan National Park, known for their strong bowling attack.</p>
+<p class="team-description">Finalists again and built around Dipendra Singh Airee's all-round leadership.</p>
+<div class="team-meta"><span class="team-chip gold">Runner-up</span><span class="team-chip">7 retained</span></div>
 </article>
 </a>
 <a class="team-card-link" href="/teams/biratnagar-kings">
@@ -604,7 +730,28 @@
 <img alt="Biratnagar Kings Logo" src="/images/teams/Biratnagar-Kings.png"/>
 </div>
 <h3 class="team-name">Biratnagar Kings</h3>
-<p class="team-description">Industrial hub representatives with a mix of youth and experience in their squad.</p>
+<p class="team-description">A power-heavy squad retaining Sandeep Lamichhane, Lokesh Bam and Basir Ahamad.</p>
+<div class="team-meta"><span class="team-chip">6 retained</span><span class="team-chip">Spin core</span></div>
+</article>
+</a>
+<a class="team-card-link" href="/teams/kathmandu-gurkhas">
+<article class="team-card">
+<div class="team-logo">
+<img alt="Kathmandu Gorkhas Logo" src="/images/teams/Kathmandu-Gurkhas.png"/>
+</div>
+<h3 class="team-name">Kathmandu Gorkhas</h3>
+<p class="team-description">The capital side keeps Karan KC, Bhim Sharki, Shahab Alam and Rashid Khan.</p>
+<div class="team-meta"><span class="team-chip">6 retained</span><span class="team-chip">Playoff core</span></div>
+</article>
+</a>
+<a class="team-card-link" href="/teams/pokhara-avengers">
+<article class="team-card">
+<div class="team-logo">
+<img alt="Pokhara Avengers Logo" src="/images/teams/Pokhara-Avengers.png"/>
+</div>
+<h3 class="team-name">Pokhara Avengers</h3>
+<p class="team-description">Kushal Bhurtel returns as marquee, joined by Arjun Kumal and a young bowling group.</p>
+<div class="team-meta"><span class="team-chip">6 retained</span><span class="team-chip">Bhurtel leads</span></div>
 </article>
 </a>
 <a class="team-card-link" href="/teams/karnali-yaks">
@@ -613,9 +760,88 @@
 <img alt="Karnali Yaks Logo" src="/images/teams/Karnali-Yaks.png"/>
 </div>
 <h3 class="team-name">Karnali Yaks</h3>
-<p class="team-description">From the remote mountainous region, known for their resilience and never-say-die attitude.</p>
+<p class="team-description">Sompal Kami, Gulshan Jha and Nandan Yadav keep the Yaks' national-team base intact.</p>
+<div class="team-meta"><span class="team-chip">7 retained</span><span class="team-chip">Pace depth</span></div>
 </article>
 </a>
+<a class="team-card-link" href="/teams/chitwan-rhinos">
+<article class="team-card">
+<div class="team-logo">
+<img alt="Chitwan Rhinos Logo" src="/images/teams/Chitwan-Rhinos.png"/>
+</div>
+<h3 class="team-name">Chitwan Rhinos</h3>
+<p class="team-description">Kushal Malla remains marquee as Chitwan backs a seven-player retained group.</p>
+<div class="team-meta"><span class="team-chip">7 retained</span><span class="team-chip">Rebuild watch</span></div>
+</article>
+</a>
+<a class="team-card-link" href="/teams/janakpur-bolts">
+<article class="team-card">
+<div class="team-logo">
+<img alt="Janakpur Bolts Logo" src="/images/teams/Janakpur-Bolts.png"/>
+</div>
+<h3 class="team-name">Janakpur Bolts</h3>
+<p class="team-description">The inaugural champions reset after retaining only five players before the auction.</p>
+<div class="team-meta"><span class="team-chip gold">2024 Champions</span><span class="team-chip">5 retained</span></div>
+</article>
+</a>
+</div>
+</div>
+</section>
+<section class="retained-section">
+<div class="container">
+<div class="section-header">
+<div>
+<h2 class="section-title green">Season 3 Retained Players Snapshot</h2>
+<div class="title-underline"></div>
+</div>
+</div>
+<div class="section-intro">
+<p>Before the July 6 auction, the eight franchises had reported 52 retained players. This is the clearest current team-building baseline; auction buys and final squads should be checked on the live tracker as results are confirmed.</p>
+</div>
+<div class="retained-grid">
+<article class="retained-card">
+<span class="retained-count">7 retained</span>
+<h3>Lumbini Lions</h3>
+<p>Rohit Kumar Paudel, Sher Malla, Dilip Nath, Sundeep Jora, Dinesh Adhikari, Abhisesh Gautam and Tilak Bhandari.</p>
+</article>
+<article class="retained-card">
+<span class="retained-count">7 retained</span>
+<h3>Sudurpaschim Royals</h3>
+<p>Dipendra Singh Airee, Binod Bhandari, Aarif Sheikh, Ishan Pandey, Abinash Bohara, Hemant Dhami and Hikmat Mahara.</p>
+</article>
+<article class="retained-card">
+<span class="retained-count">6 retained</span>
+<h3>Biratnagar Kings</h3>
+<p>Sandeep Lamichhane, Lokesh Bam, Basir Ahamad, Narayan Joshi, Pratish GC and Subash Bhandari.</p>
+</article>
+<article class="retained-card">
+<span class="retained-count">6 retained</span>
+<h3>Kathmandu Gorkhas</h3>
+<p>Karan KC, Bhim Sharki, Mohammad Aadil Alam, Rashid Khan, Shahab Alam and Santosh Yadav.</p>
+</article>
+<article class="retained-card">
+<span class="retained-count">6 retained</span>
+<h3>Pokhara Avengers</h3>
+<p>Kushal Bhurtel, Arjun Kumal, Dinesh Kharel, Bipin Khatri, Aakash Chand and Kiran Thagunna.</p>
+</article>
+<article class="retained-card">
+<span class="retained-count">7 retained</span>
+<h3>Karnali Yaks</h3>
+<p>Sompal Kami, Gulshan Kumar Jha, Nandan Yadav, Deepak Dumre, Pawan Sarraf, Unish Bikram Singh Thakuri and Yuvraj Khatri.</p>
+</article>
+<article class="retained-card">
+<span class="retained-count">7 retained</span>
+<h3>Chitwan Rhinos</h3>
+<p>Kushal Malla, Dev Khanal, Arjun Saud, Kamal Singh Airee, Ranjeet Kumar, Deepak Bohara and Rijan Dhakal.</p>
+</article>
+<article class="retained-card">
+<span class="retained-count">5 retained</span>
+<h3>Janakpur Bolts</h3>
+<p>Anil Kumar Sah, Lalit Narayan Rajbanshi, Mayan Yadav, Aadity Mahata and Bikash Aagri.</p>
+</article>
+</div>
+<div class="update-band">
+<p><strong>Auction status:</strong> The Season 3 auction tracker is live with a 155-player shortlist from 347 registered players. Follow <a href="/auction">NPL auction updates</a> for sold players, unsold names, prices and final team squad movement.</p>
 </div>
 </div>
 </section>
@@ -631,20 +857,20 @@
 <li><strong>Qualifier 2:</strong> Loser of Qualifier 1 vs Winner of Eliminator</li>
 <li><strong>Final:</strong> Winner of Qualifier 1 vs Winner of Qualifier 2</li>
 </ul>
-<p>The league begins on <strong>November 17, 2026</strong>, and the final will be played on <strong>December 13, 2026</strong>. Key matches include <strong>Biratnagar Kings vs Pokhara Avengers</strong> on November 18. The playoffs start on December 9.</p>
+<p>The current site schedule lists the league window from <strong>November 17, 2026</strong> to <strong>December 13, 2026</strong>. Individual fixtures, venues and timings should be checked on the <a class="homepage-inline-link" href="/schedule">NPL schedule</a> page as the tournament approaches.</p>
 <!-- FAQ Section -->
 <div class="faq-section">
 <h3 class="faq-title">Frequently Asked Questions</h3>
 <h4 class="faq-question">How many teams are competing in the Nepal Premier League 2026?</h4>
 <p class="faq-answer">There are eight teams, each representing different regions of Nepal.</p>
 <h4 class="faq-question">Who are the defending champions?</h4>
-<p class="faq-answer"><strong>Janakpur Bolts</strong> are the defending champions after winning the 2024 season.</p>
+<p class="faq-answer"><strong>Lumbini Lions</strong> are the defending champions after winning the 2025 season. Janakpur Bolts remain the inaugural 2024 champions.</p>
 <h4 class="faq-question">When does the Nepal Premier League 2026 start and end?</h4>
 <p class="faq-answer">The league starts on <strong>November 17, 2026</strong>, and ends on <strong>December 13, 2026</strong>.</p>
 <h4 class="faq-question">What is the playoff format?</h4>
 <p class="faq-answer">The playoffs include Qualifier 1, Eliminator, Qualifier 2, and the Final, allowing the top four teams to fight for the trophy.</p>
-<h4 class="faq-question">Which players fetched the highest bids?</h4>
-<p class="faq-answer"><strong>Dev Khanal, Arjun Saud, Pawan Sarraf,</strong> and <strong>Mohammad Aadil Alam</strong> each received bids of 15 lakh Nepali rupees.</p>
+<h4 class="faq-question">Where can I follow the latest auction bids?</h4>
+<p class="faq-answer">The July 6 auction is being tracked live. Check the <a class="homepage-inline-link" href="/auction">auction tracker</a> for the latest sold players, prices and unsold names instead of relying on an older static bid list.</p>
 </div>
 </div>
 </div>
