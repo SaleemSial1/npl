@@ -83,7 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>`;
 }
 
-function pageShell({ title, description, canonical, body }) {
+function pageShell({ title, description, canonical, body, image }) {
+  const socialImage = image ? `${SITE_URL}/${image.replace(/^\/+/, '')}` : `${SITE_URL}/images/NPL.webp`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,11 +100,11 @@ function pageShell({ title, description, canonical, body }) {
 <meta property="og:description" content="${escapeHtml(description)}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="${escapeHtml(canonical)}">
-<meta property="og:image" content="${SITE_URL}/images/NPL.webp">
+<meta property="og:image" content="${escapeHtml(socialImage)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${escapeHtml(title)}">
 <meta name="twitter:description" content="${escapeHtml(description)}">
-<meta name="twitter:image" content="${SITE_URL}/images/NPL.webp">
+<meta name="twitter:image" content="${escapeHtml(socialImage)}">
 
 <link rel="canonical" href="${escapeHtml(canonical)}">
 <link rel="icon" type="image/png" href="/NPL Logo.png">
@@ -116,27 +117,41 @@ function pageShell({ title, description, canonical, body }) {
   .news-filter-bar{display:flex;gap:.65rem;flex-wrap:wrap;margin:0 0 1.5rem}
   .news-filter-bar a{border:1px solid rgba(6,182,212,.35);border-radius:8px;color:#e0f2fe;text-decoration:none;font-weight:700;padding:.55rem .75rem;background:rgba(17,24,39,.6)}
   .news-filter-bar a:hover{border-color:#06b6d4;color:#06b6d4}
-  .news-article__hero{background:linear-gradient(to bottom right,#111827,#1e3a8a);padding:3rem 1rem;color:#fff}
-  .news-article__hero>*{max-width:980px;margin-left:auto;margin-right:auto}
-  .news-article__hero h1{color:#06b6d4;font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:.5rem auto 1rem}
-  .news-article__hero p{color:#d1d5db;line-height:1.65}
+  .news-article__hero{background:#0A0E1A;padding:3rem 1rem 2.25rem;color:#fff;border-bottom:1px solid rgba(6,182,212,.25)}
+  .news-article__hero-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.72fr);gap:2rem;align-items:center}
+  .news-article__hero-copy{min-width:0}
+  .news-article__hero h1{color:#06b6d4;font-size:clamp(2rem,5vw,3.35rem);line-height:1.08;margin:.5rem 0 1rem;max-width:880px}
+  .news-article__hero p{color:#d1d5db;line-height:1.65;max-width:780px}
+  .news-article__hero-media{border:1px solid rgba(250,204,21,.32);border-radius:8px;background:#111827;box-shadow:0 18px 40px rgba(0,0,0,.32);overflow:hidden}
+  .news-article__hero-media img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+  .news-article__image-credit{display:block;color:#94a3b8;font-size:.78rem;line-height:1.35;padding:.7rem .85rem}
   .section__kicker{display:inline-block;color:#facc15;font-weight:800;text-transform:uppercase;margin-bottom:.5rem}
   .crumbs ol{list-style:none;display:flex;gap:.45rem;padding:0;margin:0 0 1rem;color:#93c5fd;flex-wrap:wrap}
   .crumbs a{color:#93c5fd;text-decoration:none}
   .news-article__meta{display:flex;gap:.75rem;flex-wrap:wrap;color:#e0f2fe;font-weight:800}
+  .news-article__stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1.4rem;max-width:760px}
+  .news-article__stat{border:1px solid rgba(6,182,212,.22);border-radius:8px;background:rgba(17,24,39,.85);padding:.85rem}
+  .news-article__stat strong{display:block;color:#fff;font-size:1rem}
+  .news-article__stat span{display:block;color:#94a3b8;font-size:.78rem;text-transform:uppercase;font-weight:800;margin-bottom:.25rem}
   .news-article__layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2rem;padding:3rem 1rem;max-width:1180px;margin:0 auto}
   .news-article__body{background:#111827;border:1px solid rgba(6,182,212,.22);border-radius:8px;padding:2rem}
   .news-article__body p{color:#e5e7eb;line-height:1.75;font-size:1.05rem}
-  .news-article__sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(6,182,212,.22)}
+  .news-article__lead{font-size:1.18rem!important;color:#fff!important;border-left:3px solid #facc15;padding-left:1rem;margin-bottom:1.25rem}
+  .news-article__sources{margin-top:2rem;padding:1.25rem;border:1px solid rgba(6,182,212,.22);border-radius:8px;background:#0f172a}
   .news-article__sources h2{font-size:1.15rem;color:#facc15;margin:0 0 .75rem}
   .news-article__sources ul{margin:0;padding-left:1.2rem}
   .news-article__sources li{margin:.45rem 0;color:#cbd5e1}
   .news-article__sources a{color:#93c5fd}
   .news-article__aside{background:#0f172a;border:1px solid rgba(250,204,21,.25);border-radius:8px;padding:1.25rem;height:max-content}
-  .news-article__aside img{width:100%;max-width:100%;border-radius:8px;display:block;margin:0 auto 1rem}
-  .news-article__aside h2{font-size:1.2rem;color:#fff}
-  .news-article__aside a{color:#93c5fd}
-  @media(max-width:760px){.news-article__layout{grid-template-columns:1fr}.news-filter-bar a{flex:1 1 auto;text-align:center}}
+  .news-article__aside h2{font-size:1.2rem;color:#fff;margin:0 0 .9rem}
+  .news-related-list{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;gap:.75rem}
+  .news-related-card{display:block;border:1px solid rgba(6,182,212,.18);border-radius:8px;padding:.85rem;text-decoration:none;background:#111827;color:#e5e7eb}
+  .news-related-card:hover{border-color:#06b6d4;color:#fff}
+  .news-related-card span{display:block;color:#facc15;font-size:.78rem;font-weight:800;margin-bottom:.25rem;text-transform:uppercase}
+  .news-related-card strong{display:block;font-size:.95rem;line-height:1.35}
+  .news-article__aside .btn{display:inline-flex;margin-top:.25rem}
+  @media(max-width:900px){.news-article__hero-grid,.news-article__layout{grid-template-columns:1fr}.news-article__hero-media{max-width:620px}.news-article__stats{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.news-article__stats{grid-template-columns:1fr}.news-filter-bar a{flex:1 1 auto;text-align:center}.news-article__body{padding:1.25rem}}
 </style>
 </head>
 <body>
@@ -333,6 +348,7 @@ ${JSON.stringify({
     datePublished: publishedAt,
     dateModified: modifiedAt,
     author: { '@type': 'Organization', name: 'NPL Cricket League' },
+    image: item.image ? `${SITE_URL}/${item.image.replace(/^\/+/, '')}` : `${SITE_URL}/images/NPL.webp`,
     publisher: {
       '@type': 'Organization',
       name: 'NPL Cricket League',
@@ -350,11 +366,27 @@ ${JSON.stringify({
 </script>`;
 }
 
+function wordCount(text) {
+  return String(text || '').trim().split(/\s+/).filter(Boolean).length;
+}
+
+function readingMinutes(item) {
+  const words = wordCount((item.body || []).join(' '));
+  return Math.max(1, Math.ceil(words / 220));
+}
+
+function imageCredit(item) {
+  if (!item.imageSource || !item.imageSource.name) return 'NPL Cricket League image';
+  return item.imageSource.type === 'existing-site-asset'
+    ? 'Restored NPL site image'
+    : item.imageSource.name;
+}
+
 function relatedList(current, items) {
   return items
     .filter((item) => item.slug !== current.slug)
     .slice(0, 3)
-    .map((item) => `<li><a href="${escapeHtml(item.slug)}.html">${escapeHtml(item.title)}</a></li>`)
+    .map((item) => `<li><a class="news-related-card" href="${escapeHtml(item.slug)}.html"><span>${escapeHtml(item.category)}</span><strong>${escapeHtml(item.title)}</strong></a></li>`)
     .join('\n');
 }
 
@@ -369,27 +401,44 @@ ${item.sources.map((source) => `        <li><a href="${escapeHtml(source.url)}" 
 }
 
 function articlePage(item, items) {
-  const paragraphs = item.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('\n      ');
+  const paragraphs = item.body
+    .map((paragraph, index) => `<p${index === 0 ? ' class="news-article__lead"' : ''}>${escapeHtml(paragraph)}</p>`)
+    .join('\n      ');
+  const sourceCount = Array.isArray(item.sources) ? item.sources.length : 0;
+  const articleImage = item.image || 'images/NPL.webp';
   const body = `
 <main>
 <article class="news-article">
   <header class="news-article__hero" style="--g1:${escapeHtml((item.colors || [])[0] || '#C62828')};--g2:${escapeHtml((item.colors || [])[1] || '#FFB800')};">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <ol>
-        <li><a href="../index.html">Home</a></li>
-        <li class="crumbs__sep" aria-hidden="true">›</li>
-        <li><a href="../news.html">News</a></li>
-        <li class="crumbs__sep" aria-hidden="true">›</li>
-        <li aria-current="page">${escapeHtml(item.category)}</li>
-      </ol>
-    </nav>
-    <span class="section__kicker">${escapeHtml(item.category)}</span>
-    <h1>${escapeHtml(item.title)}</h1>
-    <p>${escapeHtml(item.excerpt)}</p>
-    <div class="news-article__meta">
-      <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}</time>
-      <span>NPL 2026</span>
-      <span>Nepal Premier League</span>
+    <div class="news-article__hero-grid">
+      <div class="news-article__hero-copy">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li class="crumbs__sep" aria-hidden="true">›</li>
+            <li><a href="../news.html">News</a></li>
+            <li class="crumbs__sep" aria-hidden="true">›</li>
+            <li aria-current="page">${escapeHtml(item.category)}</li>
+          </ol>
+        </nav>
+        <span class="section__kicker">${escapeHtml(item.category)}</span>
+        <h1>${escapeHtml(item.title)}</h1>
+        <p>${escapeHtml(item.excerpt)}</p>
+        <div class="news-article__meta">
+          <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}</time>
+          <span>NPL 2026</span>
+          <span>Nepal Premier League</span>
+        </div>
+        <div class="news-article__stats" aria-label="Article details">
+          <div class="news-article__stat"><span>Reading</span><strong>${readingMinutes(item)} min</strong></div>
+          <div class="news-article__stat"><span>Sources</span><strong>${sourceCount}</strong></div>
+          <div class="news-article__stat"><span>Words</span><strong>${wordCount((item.body || []).join(' ')).toLocaleString('en-US')}+</strong></div>
+        </div>
+      </div>
+      <figure class="news-article__hero-media">
+        <img src="../${escapeHtml(articleImage)}" alt="${escapeHtml(item.title)}" loading="eager" decoding="async">
+        <figcaption class="news-article__image-credit">${escapeHtml(imageCredit(item))}</figcaption>
+      </figure>
     </div>
   </header>
 
@@ -399,11 +448,8 @@ function articlePage(item, items) {
       ${sourceList(item)}
     </div>
     <aside class="news-article__aside">
-      <div class="news-article__logo">
-        <img src="../${escapeHtml(item.image || 'images/NPL.webp')}" alt="${escapeHtml(item.title)}">
-      </div>
       <h2>More NPL News</h2>
-      <ul>
+      <ul class="news-related-list">
 ${relatedList(item, items)}
       </ul>
       <a class="btn btn--ghost" href="../news.html">All News</a>
@@ -417,6 +463,7 @@ ${articleJsonLd(item)}
     title: `${item.title} - NPL 2026 News`,
     description: item.excerpt,
     canonical: `${SITE_URL}/news/${item.slug}`,
+    image: articleImage,
     body,
     base: '../',
   });

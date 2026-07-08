@@ -13,11 +13,11 @@
 <meta property="og:description" content="Fans following the Nepal Premier League 2026 auction can track live streaming details, auction timing, shortlisted players and key franchise storylines.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://nplcricketleague.com/news/nepal-premier-league-2026-auction-live-streaming-guide">
-<meta property="og:image" content="https://nplcricketleague.com/images/NPL.webp">
+<meta property="og:image" content="https://nplcricketleague.com/images/news/nepal-premier-league-2026-auction-live-streaming-guide.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nepal Premier League 2026 Auction Live Streaming Guide and Updates - NPL 2026 News">
 <meta name="twitter:description" content="Fans following the Nepal Premier League 2026 auction can track live streaming details, auction timing, shortlisted players and key franchise storylines.">
-<meta name="twitter:image" content="https://nplcricketleague.com/images/NPL.webp">
+<meta name="twitter:image" content="https://nplcricketleague.com/images/news/nepal-premier-league-2026-auction-live-streaming-guide.webp">
 
 <link rel="canonical" href="https://nplcricketleague.com/news/nepal-premier-league-2026-auction-live-streaming-guide">
 <link rel="icon" type="image/png" href="/NPL Logo.png">
@@ -30,27 +30,41 @@
   .news-filter-bar{display:flex;gap:.65rem;flex-wrap:wrap;margin:0 0 1.5rem}
   .news-filter-bar a{border:1px solid rgba(6,182,212,.35);border-radius:8px;color:#e0f2fe;text-decoration:none;font-weight:700;padding:.55rem .75rem;background:rgba(17,24,39,.6)}
   .news-filter-bar a:hover{border-color:#06b6d4;color:#06b6d4}
-  .news-article__hero{background:linear-gradient(to bottom right,#111827,#1e3a8a);padding:3rem 1rem;color:#fff}
-  .news-article__hero>*{max-width:980px;margin-left:auto;margin-right:auto}
-  .news-article__hero h1{color:#06b6d4;font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:.5rem auto 1rem}
-  .news-article__hero p{color:#d1d5db;line-height:1.65}
+  .news-article__hero{background:#0A0E1A;padding:3rem 1rem 2.25rem;color:#fff;border-bottom:1px solid rgba(6,182,212,.25)}
+  .news-article__hero-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.72fr);gap:2rem;align-items:center}
+  .news-article__hero-copy{min-width:0}
+  .news-article__hero h1{color:#06b6d4;font-size:clamp(2rem,5vw,3.35rem);line-height:1.08;margin:.5rem 0 1rem;max-width:880px}
+  .news-article__hero p{color:#d1d5db;line-height:1.65;max-width:780px}
+  .news-article__hero-media{border:1px solid rgba(250,204,21,.32);border-radius:8px;background:#111827;box-shadow:0 18px 40px rgba(0,0,0,.32);overflow:hidden}
+  .news-article__hero-media img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+  .news-article__image-credit{display:block;color:#94a3b8;font-size:.78rem;line-height:1.35;padding:.7rem .85rem}
   .section__kicker{display:inline-block;color:#facc15;font-weight:800;text-transform:uppercase;margin-bottom:.5rem}
   .crumbs ol{list-style:none;display:flex;gap:.45rem;padding:0;margin:0 0 1rem;color:#93c5fd;flex-wrap:wrap}
   .crumbs a{color:#93c5fd;text-decoration:none}
   .news-article__meta{display:flex;gap:.75rem;flex-wrap:wrap;color:#e0f2fe;font-weight:800}
+  .news-article__stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1.4rem;max-width:760px}
+  .news-article__stat{border:1px solid rgba(6,182,212,.22);border-radius:8px;background:rgba(17,24,39,.85);padding:.85rem}
+  .news-article__stat strong{display:block;color:#fff;font-size:1rem}
+  .news-article__stat span{display:block;color:#94a3b8;font-size:.78rem;text-transform:uppercase;font-weight:800;margin-bottom:.25rem}
   .news-article__layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:2rem;padding:3rem 1rem;max-width:1180px;margin:0 auto}
   .news-article__body{background:#111827;border:1px solid rgba(6,182,212,.22);border-radius:8px;padding:2rem}
   .news-article__body p{color:#e5e7eb;line-height:1.75;font-size:1.05rem}
-  .news-article__sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(6,182,212,.22)}
+  .news-article__lead{font-size:1.18rem!important;color:#fff!important;border-left:3px solid #facc15;padding-left:1rem;margin-bottom:1.25rem}
+  .news-article__sources{margin-top:2rem;padding:1.25rem;border:1px solid rgba(6,182,212,.22);border-radius:8px;background:#0f172a}
   .news-article__sources h2{font-size:1.15rem;color:#facc15;margin:0 0 .75rem}
   .news-article__sources ul{margin:0;padding-left:1.2rem}
   .news-article__sources li{margin:.45rem 0;color:#cbd5e1}
   .news-article__sources a{color:#93c5fd}
   .news-article__aside{background:#0f172a;border:1px solid rgba(250,204,21,.25);border-radius:8px;padding:1.25rem;height:max-content}
-  .news-article__aside img{width:100%;max-width:100%;border-radius:8px;display:block;margin:0 auto 1rem}
-  .news-article__aside h2{font-size:1.2rem;color:#fff}
-  .news-article__aside a{color:#93c5fd}
-  @media(max-width:760px){.news-article__layout{grid-template-columns:1fr}.news-filter-bar a{flex:1 1 auto;text-align:center}}
+  .news-article__aside h2{font-size:1.2rem;color:#fff;margin:0 0 .9rem}
+  .news-related-list{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;gap:.75rem}
+  .news-related-card{display:block;border:1px solid rgba(6,182,212,.18);border-radius:8px;padding:.85rem;text-decoration:none;background:#111827;color:#e5e7eb}
+  .news-related-card:hover{border-color:#06b6d4;color:#fff}
+  .news-related-card span{display:block;color:#facc15;font-size:.78rem;font-weight:800;margin-bottom:.25rem;text-transform:uppercase}
+  .news-related-card strong{display:block;font-size:.95rem;line-height:1.35}
+  .news-article__aside .btn{display:inline-flex;margin-top:.25rem}
+  @media(max-width:900px){.news-article__hero-grid,.news-article__layout{grid-template-columns:1fr}.news-article__hero-media{max-width:620px}.news-article__stats{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.news-article__stats{grid-template-columns:1fr}.news-filter-bar a{flex:1 1 auto;text-align:center}.news-article__body{padding:1.25rem}}
 </style>
 </head>
 <body>
@@ -101,33 +115,46 @@
 <main>
 <article class="news-article">
   <header class="news-article__hero" style="--g1:#06b6d4;--g2:#1e3a8a;">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <ol>
-        <li><a href="../index.html">Home</a></li>
-        <li class="crumbs__sep" aria-hidden="true">›</li>
-        <li><a href="../news.html">News</a></li>
-        <li class="crumbs__sep" aria-hidden="true">›</li>
-        <li aria-current="page">Streaming</li>
-      </ol>
-    </nav>
-    <span class="section__kicker">Streaming</span>
-    <h1>Nepal Premier League 2026 Auction Live Streaming Guide and Updates</h1>
-    <p>Fans following the Nepal Premier League 2026 auction can track live streaming details, auction timing, shortlisted players and key franchise storylines.</p>
-    <div class="news-article__meta">
-      <time datetime="2026-07-06">Jul 6, 2026</time>
-      <span>NPL 2026</span>
-      <span>Nepal Premier League</span>
+    <div class="news-article__hero-grid">
+      <div class="news-article__hero-copy">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li class="crumbs__sep" aria-hidden="true">›</li>
+            <li><a href="../news.html">News</a></li>
+            <li class="crumbs__sep" aria-hidden="true">›</li>
+            <li aria-current="page">Streaming</li>
+          </ol>
+        </nav>
+        <span class="section__kicker">Streaming</span>
+        <h1>Nepal Premier League 2026 Auction Live Streaming Guide and Updates</h1>
+        <p>Fans following the Nepal Premier League 2026 auction can track live streaming details, auction timing, shortlisted players and key franchise storylines.</p>
+        <div class="news-article__meta">
+          <time datetime="2026-07-06">Jul 6, 2026</time>
+          <span>NPL 2026</span>
+          <span>Nepal Premier League</span>
+        </div>
+        <div class="news-article__stats" aria-label="Article details">
+          <div class="news-article__stat"><span>Reading</span><strong>5 min</strong></div>
+          <div class="news-article__stat"><span>Sources</span><strong>4</strong></div>
+          <div class="news-article__stat"><span>Words</span><strong>1,060+</strong></div>
+        </div>
+      </div>
+      <figure class="news-article__hero-media">
+        <img src="../images/news/nepal-premier-league-2026-auction-live-streaming-guide.webp" alt="Nepal Premier League 2026 Auction Live Streaming Guide and Updates" loading="eager" decoding="async">
+        <figcaption class="news-article__image-credit">Sportsdunia</figcaption>
+      </figure>
     </div>
   </header>
 
   <div class="news-article__layout">
     <div class="news-article__body">
-      <p>The Nepal Premier League 2026 auction has become one of the biggest live-following moments before the Season 3 tournament, and fans are looking for clear streaming and update information. The NPL 2026 auction was scheduled for July 6, with the live stream available through the official Nepal Premier League YouTube channel. The player auction began in Kathmandu with all eight franchises represented. Together, those updates give supporters two important facts: the auction is active, and fans can follow the key developments as teams build squads for the new season.</p>
+      <p class="news-article__lead">The Nepal Premier League 2026 auction has become one of the biggest live-following moments before the Season 3 tournament, and fans are looking for clear streaming and update information. The NPL 2026 auction was scheduled for July 6, with the live stream available through the official Nepal Premier League YouTube channel. The player auction began in Kathmandu with all eight franchises represented. Together, those updates give supporters two important facts: the auction is active, and fans can follow the key developments as teams build squads for the new season.</p>
       <p>The main reason the auction streaming guide matters is the scale of the player pool. The Cricket Association of Nepal screening process produced a final auction list of 155 players from 347 registrations. That list is split into three categories: five players in Category A, 27 in Category B and 123 in Category C. Those numbers create a long auction window with different layers of fan interest. Some viewers will only follow the biggest names, but serious NPL supporters will want to track Category B and Category C too because those groups often decide which franchises have enough depth for a full tournament.</p>
       <p>The latest auction guide highlighted the auction date, timing and availability of live updates, while the auction pool details gave important player-list context. Category A includes Arjun Gharti, Bibek Kumar Yadav, Aasif Sheikh, Rupesh Kumar Singh and Trit Raj Das. The base price for Category A is NPR 10 lakh, Category B starts at NPR 5 lakh and Category C starts at NPR 2 lakh. These figures matter for viewers because they explain why some bids move quickly and why some teams wait. A franchise with a smaller purse cannot simply chase every high-profile name without risking squad imbalance later.</p>
       <p>For fans watching the stream, the first thing to track is team purse pressure. Janakpur Bolts entered the auction conversation with the largest remaining purse at NPR 66.25 lakh, while Kathmandu Gurkhas had the tightest room among the widely discussed figures at NPR 34 lakh. That contrast changes how each bid should be interpreted. If Janakpur pushes early, it may be using financial strength to rebuild after releasing Aasif Sheikh. If Kathmandu waits or targets value picks, that may reflect a need to protect budget rather than a lack of ambition. Live streaming becomes more useful when viewers understand those purse dynamics.</p>
       <p>The second thing to track is role balance. A squad is not built by collecting names alone. Teams need top-order batting, middle-order hitting, wicketkeeping cover, spin options, pace bowling, all-rounders and fielding depth. Auction live coverage can sometimes focus on price tags, but the real question is whether a signing solves a cricket problem. If a team already has a strong captain and retained bowling core, it may prioritize batting support. If a team released a wicketkeeper-batter, it may need a replacement early. Every signing should be read against the team&#39;s retained list and remaining purse.</p>
-      <p>The retention cycle is central to understanding the stream. Before the Season 3 auction, 52 players were retained by teams. Retentions created different starting points for every franchise. Kathmandu kept Karan KC and several supporting players. Lumbini retained Rohit Paudel after a successful season. Sudurpaschim retained Dipendra Singh Airee. Janakpur&#39;s release of Aasif Sheikh changed the auction board dramatically because Aasif became one of the most watched Category A names. Viewers who know the retained cores can better understand why a team bids for one role and ignores another.</p>
+      <p>The retention window is central to understanding the stream. Before the Season 3 auction, 52 players were retained by teams. Retentions created different starting points for every franchise. Kathmandu kept Karan KC and several supporting players. Lumbini retained Rohit Paudel after a successful season. Sudurpaschim retained Dipendra Singh Airee. Janakpur&#39;s release of Aasif Sheikh changed the auction board dramatically because Aasif became one of the most watched Category A names. Viewers who know the retained cores can better understand why a team bids for one role and ignores another.</p>
       <p>The third thing to track is the domestic-player expansion. From the third edition of the Nepal Premier League, teams can add two more Nepali players, meaning squads will include 14 Nepali players when marquee and talent-hunt selections are included. This makes the auction more important for domestic depth. The live stream is not only about superstar bids. It also shows which franchises trust local scouting. A Category C signing at NPR 2 lakh may look small in the moment, but he can become valuable if he fills a specialist role or gives the squad a local development option.</p>
       <p>The fourth thing to track is streaming reliability and source discipline. Fans should follow official or clearly identified coverage rather than random reposts, because auctions can produce fast-moving rumors. The safest flow is to use the official Nepal Premier League YouTube stream where available, then cross-check signings through established Nepal cricket outlets and other reliable sources. This website&#39;s news feed keeps the focus on direct Nepal Premier League updates and avoids unrelated NPL meanings, other leagues or football stories that appear in broad search feeds.</p>
       <p>The live stream is also useful because the auction has cascading effects. A single expensive purchase can change the rest of the market. If a team spends heavily on a Category A player, rivals may target Category B alternatives. If a player unexpectedly stays unsold, teams may return later when roles become clearer. If one franchise fills a wicketkeeping slot, another franchise may face less competition for the next similar player. This is why live auction viewing is different from reading a final list afterward. The sequence of bids tells fans how teams adjusted under pressure.</p>
@@ -144,14 +171,11 @@
     </section>
     </div>
     <aside class="news-article__aside">
-      <div class="news-article__logo">
-        <img src="../images/news/nepal-premier-league-2026-auction-live-streaming-guide.webp" alt="Nepal Premier League 2026 Auction Live Streaming Guide and Updates">
-      </div>
       <h2>More NPL News</h2>
-      <ul>
-<li><a href="nepal-premier-league-category-c-17-players-signed-in-auction.html">Nepal Premier League Category C: 17 Players Signed in Season 3 Auction</a></li>
-<li><a href="nepal-premier-league-player-auction-begins-season-3.html">Nepal Premier League Player Auction Begins for Season 3 in Kathmandu</a></li>
-<li><a href="npl-auction-season-3-live-updates-155-players-shortlisted.html">NPL Auction Season 3 Live Updates: 155 Players Shortlisted, Aasif Sheikh Leads Category A</a></li>
+      <ul class="news-related-list">
+<li><a class="news-related-card" href="nepal-premier-league-category-c-17-players-signed-in-auction.html"><span>Auction</span><strong>Nepal Premier League Category C: 17 Players Signed in Season 3 Auction</strong></a></li>
+<li><a class="news-related-card" href="nepal-premier-league-player-auction-begins-season-3.html"><span>Auction</span><strong>Nepal Premier League Player Auction Begins for Season 3 in Kathmandu</strong></a></li>
+<li><a class="news-related-card" href="npl-auction-season-3-live-updates-155-players-shortlisted.html"><span>Auction</span><strong>NPL Season 3 Auction Closes With Aasif Sheikh as Top Buy and 155-Player Pool Settled</strong></a></li>
       </ul>
       <a class="btn btn--ghost" href="../news.html">All News</a>
     </aside>
@@ -170,6 +194,7 @@
     "@type": "Organization",
     "name": "NPL Cricket League"
   },
+  "image": "https://nplcricketleague.com/images/news/nepal-premier-league-2026-auction-live-streaming-guide.webp",
   "publisher": {
     "@type": "Organization",
     "name": "NPL Cricket League",

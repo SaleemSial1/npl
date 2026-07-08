@@ -34,6 +34,7 @@ const BANNED_NEWS_PATTERNS = [
   /the countdown is on/i,
   /there is growing excitement/i,
   /with just weeks to go/i,
+  /\bcycle\b/i,
 ];
 
 const SOURCE_NAME_PATTERNS = [
@@ -42,6 +43,10 @@ const SOURCE_NAME_PATTERNS = [
   /\bSportsdunia\b/i,
   /\bKathmandu Post\b/i,
   /\bHimalPress\b/i,
+  /\bKhabarhub\b/i,
+  /\bMakalu Khabar\b/i,
+  /\bNepal News\b/i,
+  /\bThe Rising Nepal\b/i,
 ];
 
 function articleWords(item) {
@@ -239,6 +244,30 @@ test('homepage matches section shows the next four match cards', () => {
   assert.ok(homepage.includes('const visibleMatchCards = document.querySelectorAll(\'.match-card:not([hidden])\');'), 'matches carousel must count only visible homepage match cards');
 });
 
+test('homepage adds intro after hero and FAQs at the end of main content', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+  const styles = fs.readFileSync(path.join(__dirname, '..', 'styles.css'), 'utf8');
+  const heroIndex = homepage.indexOf('<section id="hero" class="hero-section">');
+  const introIndex = homepage.indexOf('<section id="homepage-intro" class="homepage-intro-section">');
+  const matchesIndex = homepage.indexOf('<section id="matches" class="matches-section">');
+  const faqIndex = homepage.indexOf('<section id="homepage-faqs" class="homepage-faq-section">');
+  const footerIndex = homepage.indexOf('</main>');
+
+  assert.ok(heroIndex !== -1, 'homepage must include hero section');
+  assert.ok(introIndex > heroIndex, 'intro section must come after hero');
+  assert.ok(introIndex < matchesIndex, 'intro section must come before matches');
+  assert.ok(faqIndex > matchesIndex, 'FAQ section must come after main homepage content');
+  assert.ok(faqIndex < footerIndex, 'FAQ section must be inside main before footer');
+  assert.ok(homepage.includes('What is Nepal Premier League 2026?'), 'intro must explain NPL 2026');
+  assert.ok(homepage.includes('<h2 class="section-title cyan">FAQs</h2>'), 'FAQ section must use a concise FAQs heading');
+  assert.ok((homepage.match(/<details class="faq-item">/g) || []).length >= 5, 'homepage FAQ section must include at least five questions');
+  assert.ok(homepage.includes('"@type": "FAQPage"'), 'homepage must include FAQPage schema');
+  assert.ok(styles.includes('.homepage-intro-section'), 'intro section must have homepage styles');
+  assert.ok(styles.includes('.homepage-faq-section'), 'FAQ section must have homepage styles');
+});
+
 test('latest published auction batch has 900 plus words and deep sourcing', () => {
   const path = require('node:path');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);
@@ -266,39 +295,44 @@ test('NPL news writing rules are copied into this repo', () => {
   assert.ok(rules.includes('Do not use AI-generated news images'), 'rules must keep image sourcing lock');
 });
 
-test('latest deep-research articles follow NPL news writing rules', () => {
+test('all published articles follow NPL news writing rules', () => {
   const path = require('node:path');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);
 
-  for (const slug of DEEP_RESEARCH_SLUGS) {
-    const item = items.find((entry) => entry.slug === slug);
-    assert.ok(item, `${slug} must exist`);
+  for (const item of items) {
     const body = item.body.join('\n');
     const banned = BANNED_NEWS_PATTERNS.filter((pattern) => pattern.test(body)).map((pattern) => pattern.source);
     const sourceNames = SOURCE_NAME_PATTERNS.filter((pattern) => pattern.test(body)).map((pattern) => pattern.source);
 
-    assert.deepEqual(banned, [], `${slug} must not contain banned news-writing language`);
-    assert.deepEqual(sourceNames, [], `${slug} must keep source names out of body prose`);
-    assert.ok(articleWords(item) >= 900, `${slug} must stay 900+ words after editorial cleanup`);
+    assert.deepEqual(banned, [], `${item.slug} must not contain banned news-writing language`);
+    assert.deepEqual(sourceNames, [], `${item.slug} must keep source names out of body prose`);
+    assert.ok(articleWords(item) >= 900, `${item.slug} must stay 900+ words after editorial cleanup`);
+    assert.ok(Array.isArray(item.sources) && item.sources.length >= 3, `${item.slug} must keep three or more research sources`);
+    assert.ok(item.imageSource && item.imageSource.type !== 'ai-generated', `${item.slug} must not use generated news art`);
   }
 });
 
-test('generated article schema follows NPL news writing rules', () => {
+test('generated article schema and design follow NPL news writing rules', () => {
   const fs = require('node:fs');
   const path = require('node:path');
+  const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);
 
-  for (const slug of DEEP_RESEARCH_SLUGS) {
-    const html = fs.readFileSync(path.join(__dirname, '..', 'news', `${slug}.html`), 'utf8');
+  for (const item of items) {
+    const html = fs.readFileSync(path.join(__dirname, '..', 'news', `${item.slug}.html`), 'utf8');
     const jsonMatch = html.match(/<script type="application\/ld\+json">\n([\s\S]*?)\n<\/script>/);
-    assert.ok(jsonMatch, `${slug} must include JSON-LD`);
+    assert.ok(jsonMatch, `${item.slug} must include JSON-LD`);
     const schema = JSON.parse(jsonMatch[1]);
 
     assert.equal(schema['@type'], 'NewsArticle');
-    assert.notEqual(schema.datePublished, schema.dateModified, `${slug} dateModified must differ from datePublished`);
-    assert.notEqual(schema.alternativeHeadline, schema.headline, `${slug} alternativeHeadline must differ from headline`);
-    assert.equal(schema.publisher.logo.width, 1024, `${slug} publisher logo width must be set`);
-    assert.equal(schema.publisher.logo.height, 1024, `${slug} publisher logo height must be set`);
-    assert.ok(!html.includes('"@type": "FAQPage"'), `${slug} must not include FAQPage schema without visible FAQ support`);
+    assert.notEqual(schema.datePublished, schema.dateModified, `${item.slug} dateModified must differ from datePublished`);
+    assert.notEqual(schema.alternativeHeadline, schema.headline, `${item.slug} alternativeHeadline must differ from headline`);
+    assert.equal(schema.publisher.logo.width, 1024, `${item.slug} publisher logo width must be set`);
+    assert.equal(schema.publisher.logo.height, 1024, `${item.slug} publisher logo height must be set`);
+    assert.ok(!html.includes('"@type": "FAQPage"'), `${item.slug} must not include FAQPage schema without visible FAQ support`);
+    assert.ok(html.includes('class="news-article__hero-grid"'), `${item.slug} must use improved article hero layout`);
+    assert.ok(html.includes('class="news-article__hero-media"'), `${item.slug} must render the featured image in the hero`);
+    assert.ok(html.includes('class="news-article__stats"'), `${item.slug} must show article source and reading details`);
+    assert.ok(html.includes('class="news-related-card"'), `${item.slug} must use compact related-news cards`);
   }
 });
 
