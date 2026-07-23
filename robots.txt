@@ -1,5 +1,27 @@
 User-agent: *
-Crawl-delay: 2
+Allow: /
+
+# Allow Major AI & Answer Engine Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 # Allow key public assets
 Allow: /css/
@@ -17,10 +39,11 @@ Disallow: /includes/
 Disallow: /config/
 Disallow: /api/
 
-# Disallow dynamic/search pages to avoid duplicate content
-Disallow: /search/
+# Disallow dynamic URL parameters to prevent duplicate content
 Disallow: /*?sort=
 Disallow: /*?filter=
 Disallow: /*?page=
 
+# XML Sitemaps
 Sitemap: https://nplcricketleague.com/sitemap.xml
+Sitemap: https://nplcricketleague.com/news-sitemap.xml
