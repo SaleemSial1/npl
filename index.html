@@ -67,6 +67,156 @@
     <!-- CSS -->
     <!-- Note: styles.css is loaded externally. For maximum performance, critical CSS should be inlined. -->
     <link rel="stylesheet" href="styles.css">
+    <style id="homepage-teams-styles">
+    /* Homepage NPL Teams Section Inline Styles */
+    .homepage-teams-section {
+      padding: 4rem 0;
+      background: linear-gradient(to bottom, #0f172a, #111827);
+      border-top: 1px solid rgba(6, 182, 212, 0.15);
+    }
+    .homepage-teams-grid {
+      display: grid !important;
+      grid-template-columns: repeat(1, 1fr) !important;
+      gap: 1.5rem !important;
+    }
+    @media (min-width: 640px) {
+      .homepage-teams-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .homepage-teams-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+    }
+    a.homepage-team-card-link,
+    a.homepage-team-card-link:link,
+    a.homepage-team-card-link:visited,
+    a.homepage-team-card-link:hover,
+    a.homepage-team-card-link:focus,
+    a.homepage-team-card-link:active {
+      text-decoration: none !important;
+      color: inherit !important;
+      display: block !important;
+      height: 100% !important;
+      outline: none !important;
+    }
+    .homepage-team-card-link * {
+      text-decoration: none !important;
+    }
+    .homepage-team-card {
+      background: linear-gradient(to bottom right, #1e3a8a, #111827) !important;
+      border: 1px solid #1e40af !important;
+      border-radius: 0.75rem !important;
+      padding: 1.5rem 1.25rem !important;
+      text-align: center !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      height: 100% !important;
+      transition: all 0.3s ease !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+    }
+    .homepage-team-card-link:hover .homepage-team-card {
+      border-color: #06b6d4 !important;
+      transform: translateY(-5px) !important;
+      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3) !important;
+    }
+    .homepage-team-logo {
+      width: 90px !important;
+      height: 90px !important;
+      background: #ffffff !important;
+      border-radius: 50% !important;
+      padding: 8px !important;
+      margin: 0 0 1rem 0 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      transition: transform 0.3s ease !important;
+    }
+    .homepage-team-card-link:hover .homepage-team-logo {
+      transform: scale(1.08) !important;
+    }
+    .homepage-team-logo img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+    .homepage-team-name {
+      color: #ffffff !important;
+      font-size: 1.25rem !important;
+      font-weight: 800 !important;
+      margin: 0 0 0.4rem 0 !important;
+      line-height: 1.2 !important;
+      text-decoration: none !important;
+    }
+    .homepage-team-captain {
+      color: #38bdf8 !important;
+      font-size: 0.85rem !important;
+      font-weight: 700 !important;
+      margin: 0 0 0.75rem 0 !important;
+      text-decoration: none !important;
+    }
+    .homepage-team-captain span {
+      color: #ffffff !important;
+      font-weight: 800 !important;
+    }
+    .homepage-team-desc {
+      color: #d1d5db !important;
+      font-size: 0.875rem !important;
+      line-height: 1.5 !important;
+      margin: 0 0 1.25rem 0 !important;
+      text-align: center !important;
+      flex-grow: 1 !important;
+      text-decoration: none !important;
+    }
+    .homepage-team-meta {
+      display: flex !important;
+      gap: 0.45rem !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      margin: auto 0 1.25rem 0 !important;
+      width: 100% !important;
+    }
+    .homepage-team-chip {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0.3rem 0.65rem !important;
+      border-radius: 999px !important;
+      background: rgba(6, 182, 212, 0.15) !important;
+      color: #38bdf8 !important;
+      border: 1px solid rgba(6, 182, 212, 0.3) !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+    }
+    .homepage-team-chip.gold {
+      background: rgba(250, 204, 21, 0.15) !important;
+      color: #facc15 !important;
+      border-color: rgba(250, 204, 21, 0.35) !important;
+    }
+    .homepage-team-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.35rem !important;
+      color: #06b6d4 !important;
+      font-weight: 700 !important;
+      font-size: 0.9rem !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+      margin-top: auto !important;
+    }
+    .homepage-team-card-link:hover .homepage-team-btn {
+      color: #facc15 !important;
+    }
+    </style>
+    
     
     <meta name="google-site-verification" content="FcI0XnWsjvW-He8lPMA0I-pgbndhVjvFJDxlKS7I6uI" />
     

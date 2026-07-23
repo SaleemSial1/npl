@@ -2742,209 +2742,169 @@ body {
   }
 }
 
-/* Homepage NPL Teams Section Pro Max Styles */
+/* Homepage NPL Teams Section Styles - Exact Site Theme Match */
 .homepage-teams-section {
-  padding: 4.5rem 0;
-  background: linear-gradient(180deg, #0b1120 0%, #0f172a 50%, #111827 100%);
-  border-top: 1px solid rgba(6, 182, 212, 0.2);
-  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
-  position: relative;
-}
-
-.homepage-teams-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), transparent);
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #0f172a, #111827);
+  border-top: 1px solid rgba(6, 182, 212, 0.15);
 }
 
 .homepage-teams-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.75rem;
+  display: grid !important;
+  grid-template-columns: repeat(1, 1fr) !important;
+  gap: 1.5rem !important;
 }
 
 @media (min-width: 640px) {
   .homepage-teams-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (min-width: 1024px) {
   .homepage-teams-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 
-.homepage-team-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  height: 100%;
+a.homepage-team-card-link,
+a.homepage-team-card-link:link,
+a.homepage-team-card-link:visited,
+a.homepage-team-card-link:hover,
+a.homepage-team-card-link:focus,
+a.homepage-team-card-link:active {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block !important;
+  height: 100% !important;
+  outline: none !important;
+}
+
+.homepage-team-card-link * {
+  text-decoration: none !important;
 }
 
 .homepage-team-card {
-  background: linear-gradient(165deg, rgba(30, 58, 138, 0.45) 0%, rgba(15, 23, 42, 0.92) 100%);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(6, 182, 212, 0.28);
-  border-radius: 16px;
-  padding: 1.75rem 1.25rem 1.25rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-}
-
-.homepage-team-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #06b6d4, #3b82f6, #facc15);
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  background: linear-gradient(to bottom right, #1e3a8a, #111827) !important;
+  border: 1px solid #1e40af !important;
+  border-radius: 0.75rem !important;
+  padding: 1.5rem 1.25rem !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  height: 100% !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
 }
 
 .homepage-team-card-link:hover .homepage-team-card {
-  border-color: #06b6d4;
-  transform: translateY(-8px) scale(1.015);
-  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.15);
-}
-
-.homepage-team-card-link:hover .homepage-team-card::before {
-  opacity: 1;
+  border-color: #06b6d4 !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3) !important;
 }
 
 .homepage-team-logo {
-  width: 96px;
-  height: 96px;
-  background: radial-gradient(circle at center, #ffffff 70%, #f1f5f9 100%);
-  border: 3px solid rgba(6, 182, 212, 0.45);
-  border-radius: 50%;
-  padding: 10px;
-  margin-bottom: 1.1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(6, 182, 212, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 90px !important;
+  height: 90px !important;
+  background: #ffffff !important;
+  border-radius: 50% !important;
+  padding: 8px !important;
+  margin: 0 0 1rem 0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s ease !important;
 }
 
 .homepage-team-card-link:hover .homepage-team-logo {
-  transform: scale(1.1) rotate(2deg);
-  border-color: #06b6d4;
-  box-shadow: 0 12px 28px rgba(6, 182, 212, 0.4), inset 0 0 12px rgba(6, 182, 212, 0.25);
+  transform: scale(1.08) !important;
 }
 
 .homepage-team-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  width: 100 !important;
+  height: 100% !important;
+  object-fit: contain !important;
 }
 
 .homepage-team-name {
-  color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin: 0 0 0.4rem 0;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  margin: 0 0 0.4rem 0 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
 }
 
 .homepage-team-captain {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  padding: 0.3rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #cbd5e1;
-  margin-bottom: 0.85rem;
+  color: #38bdf8 !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 0.75rem 0 !important;
+  text-decoration: none !important;
 }
 
 .homepage-team-captain span {
-  color: #06b6d4;
-  font-weight: 800;
+  color: #ffffff !important;
+  font-weight: 800 !important;
 }
 
 .homepage-team-desc {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
+  color: #d1d5db !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  margin: 0 0 1.25rem 0 !important;
+  text-align: center !important;
+  flex-grow: 1 !important;
+  text-decoration: none !important;
 }
 
 .homepage-team-meta {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 1.25rem;
+  display: flex !important;
+  gap: 0.45rem !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  margin: auto 0 1.25rem 0 !important;
+  width: 100% !important;
 }
 
 .homepage-team-chip {
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(6, 182, 212, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(6, 182, 212, 0.35);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.3rem 0.65rem !important;
+  border-radius: 999px !important;
+  background: rgba(6, 182, 212, 0.15) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(6, 182, 212, 0.3) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
 }
 
 .homepage-team-chip.gold {
-  background: rgba(250, 204, 21, 0.15);
-  color: #facc15;
-  border-color: rgba(250, 204, 21, 0.45);
-  box-shadow: 0 0 10px rgba(250, 204, 21, 0.15);
+  background: rgba(250, 204, 21, 0.15) !important;
+  color: #facc15 !important;
+  border-color: rgba(250, 204, 21, 0.35) !important;
 }
 
 .homepage-team-btn {
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  background: linear-gradient(90deg, rgba(6, 182, 212, 0.15), rgba(30, 58, 138, 0.35));
-  border: 1px solid rgba(6, 182, 212, 0.35);
-  border-radius: 10px;
-  padding: 0.65rem 1rem;
-  color: #06b6d4;
-  font-weight: 800;
-  font-size: 0.88rem;
-  margin-top: auto;
-  transition: all 0.3s ease;
-}
-
-.homepage-team-btn svg {
-  transition: transform 0.3s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.35rem !important;
+  color: #06b6d4 !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+  margin-top: auto !important;
 }
 
 .homepage-team-card-link:hover .homepage-team-btn {
-  background: linear-gradient(90deg, #06b6d4, #2563eb);
-  border-color: #06b6d4;
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
-}
-
-.homepage-team-card-link:hover .homepage-team-btn svg {
-  transform: translateX(4px);
+  color: #facc15 !important;
 }
