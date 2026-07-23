@@ -172,7 +172,7 @@ test('homepage news section shows the latest generated NPL articles', () => {
   const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), [])
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 4);
+    .slice(0, 8);
   const section = homepage.match(/<section id="news" class="news-section">[\s\S]*?<\/section>/);
 
   assert.ok(section, 'homepage must include the latest news section');
@@ -190,7 +190,7 @@ test('homepage hero carousel shows the latest generated NPL news', () => {
   const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), [])
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 4);
+    .slice(0, 8);
   const heroCarousel = homepage.match(/<div class="hero-carousel-container" id="heroCarousel">[\s\S]*?<\/div>\s*<\/div>\s*<div class="carousel-controls">/);
 
   assert.ok(heroCarousel, 'homepage must include the hero carousel');
