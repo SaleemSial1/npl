@@ -138,7 +138,8 @@ function pageShell({ title, description, canonical, body, image }) {
   .news-article__body p{color:#e2e8f0;line-height:1.85;font-size:1.1rem;margin-bottom:1.75rem;letter-spacing:0.01em}
   .news-article__body a.body-link{color:#38bdf8;font-weight:600;text-decoration:underline;text-decoration-color:rgba(56,189,248,.45);text-underline-offset:4px;transition:all .2s ease}
   .news-article__body a.body-link:hover{color:#facc15;text-decoration-color:#facc15}
-  .news-article__lead{font-size:1.25rem!important;font-weight:500;color:#ffffff!important;border-left:4px solid #06b6d4;padding-left:1.25rem;margin-bottom:2rem!important;line-height:1.85!important}
+  .news-article__read-also{margin-top:2.25rem;padding:1.25rem 1.5rem;border-left:4px solid #facc15;background:rgba(15,23,42,.8);border-radius:0 10px 10px 0;font-size:1.1rem;color:#fff;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+  .news-article__read-also strong{color:#facc15;font-weight:800;margin-right:.5rem;text-transform:uppercase;letter-spacing:.05em}
   .news-article__sources{display:none!important}
   .news-article__sources h2{font-size:1.15rem;color:#facc15;margin:0 0 .75rem}
   .news-article__sources ul{margin:0;padding-left:1.2rem}
@@ -404,35 +405,35 @@ ${item.sources.map((source) => `        <li><a href="${escapeHtml(source.url)}" 
 
 const LINK_RULES = [
   {
-    targetUrl: '../auction.html',
-    regex: /\b(July 6 player auction|Season 3 player auction|NPL auction|player auction)\b/i,
-  },
-  {
-    targetUrl: '../venues.html',
-    regex: /\b(Tribhuvan University International Cricket Ground|TU Ground in Kirtipur|Kirtipur ground)\b/i,
-  },
-  {
-    targetUrl: '../schedule.html',
+    targetUrl: '/schedule.html',
     regex: /\b(official Nepal Premier League 2026 schedule|Season 3 fixture list|NPL 2026 schedule|match schedule)\b/i,
   },
   {
-    targetUrl: '../teams.html',
+    targetUrl: '/venues.html',
+    regex: /\b(Tribhuvan University International Cricket Ground|TU Ground in Kirtipur|Kirtipur ground)\b/i,
+  },
+  {
+    targetUrl: '/teams.html',
     regex: /\b(eight franchise teams|eight franchises|NPL franchise teams)\b/i,
   },
   {
-    targetUrl: '../points-table.html',
+    targetUrl: '/auction.html',
+    regex: /\b(July 6 player auction|Season 3 player auction|NPL auction|player auction)\b/i,
+  },
+  {
+    targetUrl: '/points-table.html',
     regex: /\b(playoff stage|points table|net-run-rate table)\b/i,
   },
   {
-    targetUrl: '../tickets.html',
+    targetUrl: '/tickets.html',
     regex: /\b(online ticket booking|ticket pass|ticket partners|ticketing partners)\b/i,
   },
   {
-    targetUrl: '../streaming.html',
+    targetUrl: '/streaming.html',
     regex: /\b(live high-definition television coverage|digital streaming platforms|live streaming)\b/i,
   },
   {
-    targetUrl: '../all-players.html',
+    targetUrl: '/all-players.html',
     regex: /\b(Category A all-rounder|marquee wicketkeeper-batter|domestic squad|domestic players)\b/i,
   },
 ];
@@ -440,19 +441,21 @@ const LINK_RULES = [
 function injectInternalLinks(bodyParagraphs) {
   const usedUrls = new Set();
   let totalLinks = 0;
-  const maxLinks = 4;
+  const maxTotalLinks = 4;
 
   return bodyParagraphs.map((rawParagraph, index) => {
     let pText = escapeHtml(rawParagraph);
 
-    if (totalLinks < maxLinks) {
+    if (totalLinks < maxTotalLinks) {
+      let paragraphLinked = false;
       for (const rule of LINK_RULES) {
-        if (usedUrls.has(rule.targetUrl) || totalLinks >= maxLinks) continue;
+        if (paragraphLinked || usedUrls.has(rule.targetUrl) || totalLinks >= maxTotalLinks) continue;
 
         if (rule.regex.test(pText)) {
           pText = pText.replace(rule.regex, (match) => {
             usedUrls.add(rule.targetUrl);
             totalLinks++;
+            paragraphLinked = true;
             return `<a href="${rule.targetUrl}" class="body-link">${match}</a>`;
           });
         }
@@ -463,8 +466,18 @@ function injectInternalLinks(bodyParagraphs) {
   }).join('\n      ');
 }
 
+function readAlsoBox(current, items) {
+  const otherItems = items.filter((it) => it.slug !== current.slug);
+  if (!otherItems.length) return '';
+  const chosen = otherItems[0];
+  return `<div class="news-article__read-also">
+      <strong>Read Also:</strong> <a href="/news/${escapeHtml(chosen.slug)}.html" class="body-link">${escapeHtml(chosen.title)}</a>
+    </div>`;
+}
+
 function articlePage(item, items) {
   const paragraphs = injectInternalLinks(item.body);
+  const readAlso = readAlsoBox(item, items);
   const sourceCount = Array.isArray(item.sources) ? item.sources.length : 0;
   const articleImage = item.image || 'images/NPL.webp';
   const body = `
@@ -506,6 +519,7 @@ function articlePage(item, items) {
   <div class="news-article__layout">
     <div class="news-article__body">
       ${paragraphs}
+      ${readAlso}
       ${sourceList(item)}
     </div>
     <aside class="news-article__aside">
