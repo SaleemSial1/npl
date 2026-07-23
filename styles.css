@@ -2826,7 +2826,7 @@ a.homepage-team-card-link:active {
 }
 
 .homepage-team-logo img {
-  width: 100 !important;
+  width: 100% !important;
   height: 100% !important;
   object-fit: contain !important;
 }
