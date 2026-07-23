@@ -26,14 +26,14 @@ function siteHeader() {
                 </div>
                 <nav class="main-nav">
                     <a href="/" class="nav-link">Home</a>
-                    <a href="/matches" class="nav-link">Matches</a>
-                    <a href="/teams" class="nav-link">Teams</a>
-                    <a href="/players" class="nav-link">Players</a>
-                    <a href="/news" class="nav-link active">NEWS</a>
-                    <a href="/schedule" class="nav-link">Schedule</a>
-                    <a href="/points-table" class="nav-link">Points Table</a>
-                    <a href="/tickets" class="nav-link">Tickets</a>
-                    <a href="/auction" class="nav-link">Auction</a>
+                    <a href="/matches.html" class="nav-link">Matches</a>
+                    <a href="/teams.html" class="nav-link">Teams</a>
+                    <a href="/players.html" class="nav-link">Players</a>
+                    <a href="/news.html" class="nav-link active">NEWS</a>
+                    <a href="/schedule.html" class="nav-link">Schedule</a>
+                    <a href="/points-table.html" class="nav-link">Points Table</a>
+                    <a href="/tickets.html" class="nav-link">Tickets</a>
+                    <a href="/auction.html" class="nav-link">Auction</a>
                 </nav>
             </div>
 
@@ -238,7 +238,7 @@ function renderFeature(item) {
           <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}</time>
           <span>${escapeHtml(item.category)}</span>
         </div>
-        <a class="news-card__more" href="news/${escapeHtml(item.slug)}.html">Open lead story -&gt;</a>
+        <a class="news-card__more" href="/news/${escapeHtml(item.slug)}.html">Open lead story -&gt;</a>
       </div>
     </article>`;
 }
