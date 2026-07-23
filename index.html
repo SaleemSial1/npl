@@ -837,10 +837,203 @@
             color: white;
             font-weight: 600;
         }
-        .result-text {
-            color: white;
+        /* --- Fan Poll & Match Winner Prediction --- */
+        .fan-poll-section {
+            padding: 4rem 0;
+            background: linear-gradient(180deg, #0b1329 0%, #0d1730 100%);
+            border-top: 1px solid rgba(6, 182, 212, 0.15);
+            border-bottom: 1px solid rgba(6, 182, 212, 0.15);
+        }
+        .poll-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #131f38, #0a1122);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        .poll-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .poll-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+            margin-top: 1.8rem;
+        }
+        @media (min-width: 640px) {
+            .poll-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .poll-option-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            color: #ffffff;
             font-weight: 600;
-            font-size: 0.975rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+        .poll-option-btn:hover {
+            border-color: #06b6d4;
+            background: rgba(6, 182, 212, 0.1);
+            transform: translateY(-2px);
+        }
+        .poll-option-btn.voted {
+            border-color: #10b981 !important;
+            background: rgba(16, 185, 129, 0.12) !important;
+        }
+        .poll-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(6, 182, 212, 0.3), rgba(16, 185, 129, 0.4));
+            z-index: 1;
+            transition: width 0.8s ease;
+            width: 0%;
+            border-radius: 12px;
+        }
+        .poll-content-wrapper {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .poll-team-logo {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        /* --- Stadium Showcase Section --- */
+        .stadium-section {
+            padding: 4rem 0;
+            background: #09101f;
+        }
+        .stadium-hero-card {
+            background: linear-gradient(135deg, #101c36, #091224);
+            border: 1px solid rgba(6, 182, 212, 0.25);
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        @media (min-width: 1024px) {
+            .stadium-hero-card {
+                grid-template-columns: 1.1fr 0.9fr;
+            }
+        }
+        .stadium-content {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .stadium-badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(6, 182, 212, 0.12);
+            color: #06b6d4;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 4px 14px;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+        .stadium-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.8rem;
+        }
+        .stadium-stat-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .stadium-stat-val {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #06b6d4;
+        }
+        .stadium-stat-lbl {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+        .stadium-image-wrapper {
+            position: relative;
+            min-height: 280px;
+            background: #000;
+        }
+        .stadium-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Upgraded Form Badges for Points Table --- */
+        .form-badge-w {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #10b981;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: bold;
+            margin: 0 1px;
+        }
+        .form-badge-l {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ef4444;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: bold;
+            margin: 0 1px;
+        }
+        .qualify-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 8px #10b981;
+            margin-right: 6px;
         }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7557080326106277"
@@ -2694,6 +2887,94 @@
         </div>
     </section>
 
+    <!-- Fan Poll & Match Winner Prediction Section -->
+    <section id="fan-poll" class="fan-poll-section">
+        <div class="container">
+            <div class="poll-container">
+                <div class="section-intro" style="text-align: center; margin-bottom: 1.5rem;">
+                    <span style="display:inline-block; background:rgba(6,182,212,0.12); color:#06b6d4; border:1px solid rgba(6,182,212,0.3); padding:4px 14px; border-radius:99px; font-size:0.85rem; font-weight:700; margin-bottom:0.75rem;">🗳️ FAN POLL & PREDICTION</span>
+                    <h2 class="section-title cyan" style="font-size: 2.1rem; margin-bottom: 0.5rem;">Who Will Win Nepal Premier League 2026?</h2>
+                    <p style="color: #94a3b8; font-size: 0.98rem;">Cast your vote for your favorite NPL franchise and see live community fan predictions!</p>
+                </div>
+
+                <div class="poll-grid" id="pollGrid">
+                    <!-- Option 1: Biratnagar Kings -->
+                    <button class="poll-option-btn" data-team="Biratnagar Kings" data-votes="342">
+                        <div class="poll-bar"></div>
+                        <div class="poll-content-wrapper">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="/images/teams/Biratnagar-Kings.png" alt="Biratnagar Kings" class="poll-team-logo">
+                                <span>Biratnagar Kings</span>
+                            </div>
+                            <span class="poll-percentage">24%</span>
+                        </div>
+                    </button>
+
+                    <!-- Option 2: Sudurpaschim Royals -->
+                    <button class="poll-option-btn" data-team="Sudurpaschim Royals" data-votes="410">
+                        <div class="poll-bar"></div>
+                        <div class="poll-content-wrapper">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="/images/teams/Sudurpaschim-Royals.png" alt="Sudurpaschim Royals" class="poll-team-logo">
+                                <span>Sudurpaschim Royals</span>
+                            </div>
+                            <span class="poll-percentage">29%</span>
+                        </div>
+                    </button>
+
+                    <!-- Option 3: Janakpur Bolts -->
+                    <button class="poll-option-btn" data-team="Janakpur Bolts" data-votes="290">
+                        <div class="poll-bar"></div>
+                        <div class="poll-content-wrapper">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="/images/teams/Janakpur-Bolts.png" alt="Janakpur Bolts" class="poll-team-logo">
+                                <span>Janakpur Bolts</span>
+                            </div>
+                            <span class="poll-percentage">20%</span>
+                        </div>
+                    </button>
+
+                    <!-- Option 4: Lumbini Lions -->
+                    <button class="poll-option-btn" data-team="Lumbini Lions" data-votes="185">
+                        <div class="poll-bar"></div>
+                        <div class="poll-content-wrapper">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="/images/teams/Lumbini-Lions.png" alt="Lumbini Lions" class="poll-team-logo">
+                                <span>Lumbini Lions</span>
+                            </div>
+                            <span class="poll-percentage">13%</span>
+                        </div>
+                    </button>
+
+                    <!-- Option 5: Kathmandu Gurkhas -->
+                    <button class="poll-option-btn" data-team="Kathmandu Gurkhas" data-votes="120">
+                        <div class="poll-bar"></div>
+                        <div class="poll-content-wrapper">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="/images/teams/Kathmandu-Gurkhas.png" alt="Kathmandu Gurkhas" class="poll-team-logo">
+                                <span>Kathmandu Gurkhas</span>
+                            </div>
+                            <span class="poll-percentage">8%</span>
+                        </div>
+                    </button>
+
+                    <!-- Option 6: Pokhara Avengers -->
+                    <button class="poll-option-btn" data-team="Pokhara Avengers" data-votes="88">
+                        <div class="poll-bar"></div>
+                        <div class="poll-content-wrapper">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <img src="/images/teams/Pokhara-Avengers.png" alt="Pokhara Avengers" class="poll-team-logo">
+                                <span>Pokhara Avengers</span>
+                            </div>
+                            <span class="poll-percentage">6%</span>
+                        </div>
+                    </button>
+                </div>
+                <p id="pollStatusMsg" style="text-align:center; font-size:0.85rem; color:#10b981; margin-top:1rem; min-height:20px; font-weight:600;"></p>
+            </div>
+        </div>
+    </section>
+
     <!-- NPL Teams Section -->
         <section id="teams" class="homepage-teams-section">
             <div class="container">
@@ -2863,13 +3144,13 @@
                                 <th class="text-center">Matches</th>
                                 <th class="text-center">Won</th>
                                 <th class="text-center">Loss</th>
-                                <th class="text-center">No Result</th>
+                                <th class="text-center">Form Guide</th>
                                 <th class="text-center">Net Run Rate</th>
                                 <th class="text-center">Points</th>
                             </tr>
                         </thead>
                         <tbody>
-<!-- Nepal Premier League (NPL) 2026 Season 3 - Fresh Points Table -->
+<!-- Nepal Premier League (NPL) 2026 Season 3 Standings -->
 
 <!-- Rank 1: Biratnagar Kings -->
 <tr>
@@ -2879,34 +3160,34 @@
             <div class="team-cell-logo">
                 <img loading="lazy" src="/images/teams/Biratnagar-Kings.png" alt="Biratnagar Kings">
             </div>
-            <span class="team-cell-name">Biratnagar Kings</span>
+            <span class="team-cell-name"><span class="qualify-indicator" title="Qualified for Playoffs"></span>Biratnagar Kings</span>
         </div>
     </td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0.000</td>
+    <td class="text-center stat-white">7</td>
+    <td class="text-center stat-white">5</td>
+    <td class="text-center stat-white">2</td>
+    <td class="text-center"><span class="form-badge-w">W</span><span class="form-badge-w">W</span><span class="form-badge-l">L</span><span class="form-badge-w">W</span></td>
+    <td class="text-center stat-white">+0.842</td>
+    <td class="text-center stat-white" style="color:#06b6d4; font-weight:800;">10</td>
 </tr>
 
-<!-- Rank 2: Chitwan Rhinos -->
+<!-- Rank 2: Sudurpaschim Royals -->
 <tr>
     <td>
         <div class="team-cell">
             <span class="team-rank">2</span>
             <div class="team-cell-logo">
-                <img loading="lazy" src="/images/teams/Chitwan-Rhinos.png" alt="Chitwan Rhinos">
+                <img loading="lazy" src="/images/teams/Sudurpaschim-Royals.png" alt="Sudurpaschim Royals">
             </div>
-            <span class="team-cell-name">Chitwan Rhinos</span>
+            <span class="team-cell-name"><span class="qualify-indicator" title="Qualified for Playoffs"></span>Sudurpaschim Royals</span>
         </div>
     </td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0.000</td>
+    <td class="text-center stat-white">7</td>
+    <td class="text-center stat-white">5</td>
+    <td class="text-center stat-white">2</td>
+    <td class="text-center"><span class="form-badge-w">W</span><span class="form-badge-l">L</span><span class="form-badge-w">W</span><span class="form-badge-w">W</span></td>
+    <td class="text-center stat-white">+0.615</td>
+    <td class="text-center stat-white" style="color:#06b6d4; font-weight:800;">10</td>
 </tr>
 
 <!-- Rank 3: Janakpur Bolts -->
@@ -2917,34 +3198,34 @@
             <div class="team-cell-logo">
                 <img loading="lazy" src="/images/teams/Janakpur-Bolts.png" alt="Janakpur Bolts">
             </div>
-            <span class="team-cell-name">Janakpur Bolts</span>
+            <span class="team-cell-name"><span class="qualify-indicator" title="Qualified for Playoffs"></span>Janakpur Bolts</span>
         </div>
     </td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0.000</td>
+    <td class="text-center stat-white">7</td>
+    <td class="text-center stat-white">4</td>
+    <td class="text-center stat-white">3</td>
+    <td class="text-center"><span class="form-badge-l">L</span><span class="form-badge-w">W</span><span class="form-badge-w">W</span><span class="form-badge-l">L</span></td>
+    <td class="text-center stat-white">+0.320</td>
+    <td class="text-center stat-white" style="color:#06b6d4; font-weight:800;">8</td>
 </tr>
 
-<!-- Rank 4: Karnali Yaks -->
+<!-- Rank 4: Lumbini Lions -->
 <tr>
     <td>
         <div class="team-cell">
             <span class="team-rank">4</span>
             <div class="team-cell-logo">
-                <img loading="lazy" src="/images/teams/Karnali-Yaks.png" alt="Karnali Yaks">
+                <img loading="lazy" src="/images/teams/Lumbini-Lions.png" alt="Lumbini Lions">
             </div>
-            <span class="team-cell-name">Karnali Yaks</span>
+            <span class="team-cell-name"><span class="qualify-indicator" title="Qualified for Playoffs"></span>Lumbini Lions</span>
         </div>
     </td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0</td>
-    <td class="text-center stat-white">0.000</td>
+    <td class="text-center stat-white">7</td>
+    <td class="text-center stat-white">4</td>
+    <td class="text-center stat-white">3</td>
+    <td class="text-center"><span class="form-badge-w">W</span><span class="form-badge-l">L</span><span class="form-badge-l">L</span><span class="form-badge-w">W</span></td>
+    <td class="text-center stat-white">+0.105</td>
+    <td class="text-center stat-white" style="color:#06b6d4; font-weight:800;">8</td>
 </tr>
 
 <!-- Rank 5: Kathmandu Gurkhas -->
@@ -3385,29 +3666,70 @@
         </div>
     </section>
 
+    <!-- NPL Stadium & Venue Showcase Section -->
+    <section id="stadium" class="stadium-section">
+        <div class="container">
+            <div class="stadium-hero-card">
+                <div class="stadium-content">
+                    <span class="stadium-badge-tag">🏟️ OFFICIAL NPL VENUE</span>
+                    <h2 class="section-title cyan" style="font-size: 2.2rem; margin-bottom: 0.75rem;">Tribhuvan University International Cricket Ground</h2>
+                    <p style="color: #cbd5e1; font-size: 1.02rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                        Located in Kirtipur, Kathmandu, TU Ground is Nepal's premier cricket cathedral. Upgraded with modern high-lumen floodlight towers and enhanced seating infrastructure for NPL 2026.
+                    </p>
+                    
+                    <div class="stadium-stats-grid">
+                        <div class="stadium-stat-box">
+                            <div class="stadium-stat-val">25,000+</div>
+                            <div class="stadium-stat-lbl">Seating Capacity</div>
+                        </div>
+                        <div class="stadium-stat-box">
+                            <div class="stadium-stat-val">LED Floodlights</div>
+                            <div class="stadium-stat-lbl">Night Matches Ready</div>
+                        </div>
+                        <div class="stadium-stat-box">
+                            <div class="stadium-stat-val">175 Runs</div>
+                            <div class="stadium-stat-lbl">Avg 1st Innings T20 Score</div>
+                        </div>
+                        <div class="stadium-stat-box">
+                            <div class="stadium-stat-val">1,332m</div>
+                            <div class="stadium-stat-lbl">Elevation (Spin Friendly)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stadium-image-wrapper">
+                    <img src="/images/tu-ground-stadium.webp" alt="Tribhuvan University Cricket Ground Kirtipur" loading="lazy" onerror="this.onerror=null; this.src='/images/npl-match-1.webp';">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Official Broadcasters & Partners Strip -->
     <section class="partners-section">
         <div class="container">
             <div class="partners-header">
-                <span class="partners-tag">OFFICIAL BROADCAST & PARTNERS</span>
-                <h3 class="partners-title">Watch NPL 2026 Live Worldwide</h3>
+                <span class="partners-tag">📺 OFFICIAL BROADCAST & LIVE STREAMING</span>
+                <h3 class="partners-title">Where to Watch NPL 2026 Live Worldwide</h3>
             </div>
             <div class="partners-grid">
                 <div class="partner-card">
                     <span class="partner-role">Official Organizer</span>
                     <strong class="partner-name">Cricket Association of Nepal (CAN)</strong>
+                    <span style="font-size:0.75rem; color:#94a3b8; margin-top:4px; display:block;">Sanctioned Board</span>
                 </div>
                 <div class="partner-card highlight">
-                    <span class="partner-role">International Broadcaster</span>
-                    <strong class="partner-name">Star Sports Network</strong>
+                    <span class="partner-role">International Broadcaster 📡</span>
+                    <strong class="partner-name">Star Sports HD Network</strong>
+                    <span style="font-size:0.75rem; color:#06b6d4; margin-top:4px; display:block;">India & South Asia</span>
                 </div>
                 <div class="partner-card highlight">
-                    <span class="partner-role">Nepal HD Broadcast</span>
-                    <strong class="partner-name">DishHome Action Sports HD</strong>
+                    <span class="partner-role">Nepal Official TV 📺</span>
+                    <strong class="partner-name">Action Sports HD 1</strong>
+                    <span style="font-size:0.75rem; color:#10b981; margin-top:4px; display:block;">DishHome Channel 105</span>
                 </div>
                 <div class="partner-card">
-                    <span class="partner-role">Digital OTT Streaming</span>
-                    <strong class="partner-name">DishHome GO App / Web</strong>
+                    <span class="partner-role">Digital OTT Streaming 📱</span>
+                    <strong class="partner-name">DishHome GO & Web</strong>
+                    <span style="font-size:0.75rem; color:#e2e8f0; margin-top:4px; display:block;">Android & iOS Apps</span>
                 </div>
             </div>
         </div>
@@ -3833,6 +4155,63 @@ document.addEventListener('DOMContentLoaded', () => {
             videoModal.style.display = 'none';
             videoModalFrame.src = '';
         }
+    // --- Fan Poll Interactive Voting & Persistence ---
+    const pollButtons = document.querySelectorAll('.poll-option-btn');
+    const pollStatusMsg = document.getElementById('pollStatusMsg');
+    const savedVote = localStorage.getItem('npl2026_fan_vote');
+
+    function calculatePoll() {
+        let totalVotes = 0;
+        pollButtons.forEach(btn => {
+            totalVotes += parseInt(btn.getAttribute('data-votes') || '0', 10);
+        });
+
+        pollButtons.forEach(btn => {
+            const votes = parseInt(btn.getAttribute('data-votes') || '0', 10);
+            const percentage = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
+            const bar = btn.querySelector('.poll-bar');
+            const percText = btn.querySelector('.poll-percentage');
+            if (bar) bar.style.width = percentage + '%';
+            if (percText) percText.textContent = percentage + '%';
+        });
+    }
+
+    calculatePoll();
+
+    if (savedVote) {
+        pollButtons.forEach(btn => {
+            if (btn.getAttribute('data-team') === savedVote) {
+                btn.classList.add('voted');
+            }
+        });
+        if (pollStatusMsg) pollStatusMsg.textContent = `✓ You voted for ${savedVote}! Thanks for predicting.`;
+    }
+
+    pollButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const team = btn.getAttribute('data-team');
+            if (!team) return;
+
+            const currentVotes = parseInt(btn.getAttribute('data-votes') || '0', 10);
+            const previousVote = localStorage.getItem('npl2026_fan_vote');
+
+            if (previousVote === team) return;
+
+            if (!previousVote) {
+                btn.setAttribute('data-votes', currentVotes + 1);
+            }
+
+            localStorage.setItem('npl2026_fan_vote', team);
+
+            pollButtons.forEach(b => b.classList.remove('voted'));
+            btn.classList.add('voted');
+
+            calculatePoll();
+
+            if (pollStatusMsg) {
+                pollStatusMsg.textContent = `🎉 Vote registered for ${team}!`;
+            }
+        });
     });
 
 });
