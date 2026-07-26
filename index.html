@@ -27,34 +27,68 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nplcricketleague.com">
-    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsEvent",
-      "name": "Nepal Premier League 2026 - Season 3",
-      "startDate": "2026-11-17",
-      "endDate": "2026-12-15",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "location": {
-        "@type": "Place",
-        "name": "Tribhuvan University International Cricket Ground",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Kirtipur",
-          "addressRegion": "Kathmandu",
-          "addressCountry": "NP"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://nplcricketleague.com/#organization",
+          "name": "Nepal Premier League",
+          "url": "https://nplcricketleague.com/",
+          "logo": "https://nplcricketleague.com/NPL%20Logo.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nplcricketleague.com/#website",
+          "name": "Nepal Premier League",
+          "url": "https://nplcricketleague.com/",
+          "publisher": {
+            "@id": "https://nplcricketleague.com/#organization"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://nplcricketleague.com#webpage",
+          "url": "https://nplcricketleague.com",
+          "name": "NPL 2026: Schedule, Teams, Tickets & Live Updates",
+          "description": "Nepal Premier League 2026 guide with schedule, teams, tickets, live scores, player stats, venues and news for Season 3 from November 17 to December 13.",
+          "isPartOf": {
+            "@id": "https://nplcricketleague.com/#website"
+          },
+          "publisher": {
+            "@id": "https://nplcricketleague.com/#organization"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SportsEvent",
+          "@id": "https://nplcricketleague.com#event",
+          "name": "Nepal Premier League 2026 - Season 3",
+          "startDate": "2026-11-17",
+          "endDate": "2026-12-13",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "sport": "Cricket",
+          "description": "Nepal Premier League 2026 featuring eight teams in a T20 cricket tournament.",
+          "location": {
+            "@type": "Place",
+            "name": "Tribhuvan University International Cricket Ground",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Kirtipur",
+              "addressRegion": "Kathmandu",
+              "addressCountry": "NP"
+            }
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "Cricket Association of Nepal",
+            "url": "https://www.cricketnepal.org.np/"
+          }
         }
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Cricket Association of Nepal",
-        "url": "https://nplcricketleague.com"
-      },
-      "description": "Nepal Premier League 2026 featuring 8 teams competing in T20 cricket tournament",
-      "sport": "Cricket"
+      ]
     }
     </script>
     <!-- Preload Critical Resources -->
@@ -1411,7 +1445,7 @@
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 1</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1440,14 +1474,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 2 -->
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 2</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1476,14 +1510,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 3 -->
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 3</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1512,14 +1546,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 4 -->
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 4</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1548,14 +1582,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 5 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 5</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1584,14 +1618,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 6 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 6</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1620,14 +1654,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 7 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 7</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1656,14 +1690,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 8 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 8</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1692,14 +1726,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 9 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 9</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1728,14 +1762,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 10 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 10</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1764,14 +1798,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 11 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 11</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1800,14 +1834,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 12 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 12</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1836,14 +1870,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 13 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 13</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1872,14 +1906,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 14 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 14</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1908,14 +1942,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 15 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 15</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1944,14 +1978,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 16 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 16</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -1980,14 +2014,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 17 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 17</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2016,14 +2050,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 18 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 18</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2052,14 +2086,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 19 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 19</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2088,14 +2122,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 20 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 20</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2124,14 +2158,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 21 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 21</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2160,14 +2194,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 22 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 22</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2196,14 +2230,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 23 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 23</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2232,14 +2266,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 24 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 24</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2268,14 +2302,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 25 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 25</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2304,14 +2338,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 26 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 26</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2340,14 +2374,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 27 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 27</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2376,14 +2410,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Match 28 -->
                     <div class="match-card" hidden data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Match 28</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2412,14 +2446,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Qualifier 1 -->
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Qualifier 1</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2448,14 +2482,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Eliminator -->
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Eliminator</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2484,14 +2518,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Qualifier 2 -->
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Qualifier 2</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2520,14 +2554,14 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
 
                     <!-- Final -->
                     <div class="match-card" data-status="upcoming">
                         <div class="match-header">
                             <div class="match-label">Final</div>
-                            <div class="match-status status-upcoming">COMING SOON</div>
+                            <div class="match-status status-upcoming">SCHEDULED</div>
                         </div>
                         <div class="match-teams">
                             <div class="team">
@@ -2556,7 +2590,7 @@
                             </div>
                         </div>
                         <div class="match-venue">Tribhuvan University Cricket Ground, Kirtipur</div>
-                        <div class="match-result"><div class="result-text">Coming Soon</div></div>
+                        <div class="match-result"><div class="result-text">Fixture Scheduled</div></div>
                     </div>
                 </div>
             </div>
@@ -3341,7 +3375,7 @@
                         <div class="news-content">
                             <div class="news-date">Jul 8, 2026</div>
                             <h3 class="news-title">Nepal Premier League 2026 Ticket Sales and Fan Zone Guide Announced for Kirtipur</h3>
-                            <p class="news-description">The Cricket Association of Nepal announced digital ticket booking procedures, price structures across three enclosure tiers and fan zone arrangements for all 32 Season 3 matches in Kirtipur.</p>
+                            <p class="news-description">Digital ticket booking, price tiers and fan zone plans are set for all 32 Nepal Premier League 2026 matches at Kirtipur.</p>
                             <span class="read-more">Read More -&gt;</span>
                         </div>
                     </div>
@@ -3697,7 +3731,7 @@
                     </div>
                 </div>
                 <div class="stadium-image-wrapper">
-                    <img src="/images/tu-ground-stadium.webp" alt="Tribhuvan University Cricket Ground Kirtipur" loading="lazy" onerror="this.onerror=null; this.src='/images/npl-match-1.webp';">
+                    <img src="/images/npl-venues.webp" alt="Tribhuvan University Cricket Ground Kirtipur" loading="lazy" onerror="this.onerror=null; this.src='/images/npl-match-1.webp';">
                 </div>
             </div>
         </div>

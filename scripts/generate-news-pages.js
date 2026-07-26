@@ -317,6 +317,8 @@ function archivePage(items) {
   <div class="container">
     <div class="section-intro">
       <h1 class="section-title green">Latest News</h1>
+      <p class="news-archive-meta">Follow NPL 2026 updates across team announcements, auction movement, schedule notes, ticket guidance, broadcast information, and player availability. Each story links to a dedicated page with the background fans need before match day.</p>
+      <p class="news-archive-meta">This archive is maintained as an independent fan guide, so practical details such as ticketing, streaming, and fixture information are written with verification notes where official partners or organizers may update availability.</p>
     </div>
 
     <nav class="news-filter-bar" aria-label="News categories">
