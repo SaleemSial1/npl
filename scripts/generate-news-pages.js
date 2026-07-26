@@ -83,8 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>`;
 }
 
-function pageShell({ title, description, canonical, body, image }) {
+function pageShell({ title, description, canonical, body, image, socialTitle }) {
   const socialImage = image ? `${SITE_URL}/${image.replace(/^\/+/, '')}` : `${SITE_URL}/images/NPL.webp`;
+  const displayTitle = socialTitle || title;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,13 +97,13 @@ function pageShell({ title, description, canonical, body, image }) {
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0A0E1A">
 
-<meta property="og:title" content="${escapeHtml(title)}">
+<meta property="og:title" content="${escapeHtml(displayTitle)}">
 <meta property="og:description" content="${escapeHtml(description)}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="${escapeHtml(canonical)}">
 <meta property="og:image" content="${escapeHtml(socialImage)}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${escapeHtml(title)}">
+<meta name="twitter:title" content="${escapeHtml(displayTitle)}">
 <meta name="twitter:description" content="${escapeHtml(description)}">
 <meta name="twitter:image" content="${escapeHtml(socialImage)}">
 
@@ -480,6 +481,7 @@ function articlePage(item, items) {
   const readAlso = readAlsoBox(item, items);
   const sourceCount = Array.isArray(item.sources) ? item.sources.length : 0;
   const articleImage = item.image || 'images/NPL.webp';
+  const pageTitle = item.seoTitle || `${item.title} - NPL 2026 News`;
   const body = `
 <main>
 <article class="news-article">
@@ -535,10 +537,11 @@ ${articleJsonLd(item)}
 </main>`;
 
   return pageShell({
-    title: `${item.title} - NPL 2026 News`,
+    title: pageTitle,
     description: item.excerpt,
     canonical: `${SITE_URL}/news/${item.slug}`,
     image: articleImage,
+    socialTitle: item.seoTitle || item.title,
     body,
     base: '../',
   });
