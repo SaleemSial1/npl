@@ -268,6 +268,51 @@ test('homepage adds intro after hero and FAQs at the end of main content', () =>
   assert.ok(styles.includes('.homepage-faq-section'), 'FAQ section must have homepage styles');
 });
 
+test('AdSense approval pages avoid low-value ad inventory and fake navigation', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const root = path.join(__dirname, '..');
+  const riskyPages = [
+    'about.html',
+    'contact.html',
+    'disclaimer.html',
+    'matches.html',
+    'partners.html',
+    'videos.html',
+    'players/mohammad-adil-alam.html',
+  ];
+
+  for (const relativePath of riskyPages) {
+    const html = fs.readFileSync(path.join(root, relativePath), 'utf8');
+    assert.ok(!html.includes('pagead2.googlesyndication.com'), `${relativePath} must not load AdSense on thin, legal, contact, or redirect inventory`);
+    assert.ok(!html.includes('adsbygoogle'), `${relativePath} must not include ad slots on thin, legal, contact, or redirect inventory`);
+  }
+
+  const redirectHtml = fs.readFileSync(path.join(root, 'players/mohammad-adil-alam.html'), 'utf8');
+  assert.ok(redirectHtml.includes('<meta name="robots" content="noindex, follow">'), 'redirect alias page must be noindex, follow');
+  assert.ok(redirectHtml.includes('<meta http-equiv="refresh" content="0; url=/players/mohammad-aadil-alam">'), 'redirect alias must point to the canonical player page');
+
+  const htmlFiles = [];
+  const collectHtmlFiles = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === 'node_modules' || entry.name.startsWith('.')) continue;
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        collectHtmlFiles(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith('.html')) {
+        htmlFiles.push(fullPath);
+      }
+    }
+  };
+
+  collectHtmlFiles(root);
+  for (const filePath of htmlFiles) {
+    const relativePath = path.relative(root, filePath);
+    const html = fs.readFileSync(filePath, 'utf8');
+    assert.ok(!html.includes('javascript:void(0)'), `${relativePath} must not include fake javascript:void(0) links`);
+  }
+});
+
 test('latest published auction batch has 900 plus words and deep sourcing', () => {
   const path = require('node:path');
   const items = readJson(path.join(__dirname, '..', 'data', 'news.json'), []);

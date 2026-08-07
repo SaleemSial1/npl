@@ -62,6 +62,15 @@ TEAM_SLUGS_BY_NAME = {
     "Sudurpaschim Royals": "sudurpaschim-royals",
 }
 
+SOCIAL_LINKS = {
+    "facebook": "https://facebook.com/nplcricketnepal",
+    "twitter": "https://twitter.com/nplcricketnepal",
+    "instagram": "https://instagram.com/nplcricketnepal",
+    "youtube": "https://youtube.com/@nplcricketnepal",
+}
+
+SOCIAL_ORDER = ["facebook", "twitter", "instagram", "youtube"]
+
 
 def slugify(value: str) -> str:
     value = value.lower()
@@ -571,6 +580,28 @@ def remove_view_all_players_button(soup: BeautifulSoup) -> None:
             link.decompose()
 
 
+def ensure_real_social_links(soup: BeautifulSoup) -> None:
+    for group in soup.select(".social-links, .footer-social"):
+        anchors = [anchor for anchor in group.find_all("a", class_="social-link", recursive=False)]
+        for index, anchor in enumerate(anchors):
+            href = normalize_space(anchor.get("href"))
+            if href and href != "javascript:void(0)":
+                continue
+
+            label = normalize_space(anchor.get("aria-label")).lower()
+            key = next((name for name in SOCIAL_ORDER if name in label), None)
+            if key is None and index < len(SOCIAL_ORDER):
+                key = SOCIAL_ORDER[index]
+                anchor["aria-label"] = key.title() if key != "youtube" else "YouTube"
+
+            if key is None:
+                continue
+
+            anchor["href"] = SOCIAL_LINKS[key]
+            anchor["target"] = "_blank"
+            anchor["rel"] = "noopener noreferrer"
+
+
 def render_generated_page(profile: dict[str, Any], profiles: dict[str, dict[str, Any]]) -> str:
     template_html = TEMPLATE_PATH.read_text(encoding="utf-8")
     soup = BeautifulSoup(template_html, "html.parser")
@@ -638,6 +669,7 @@ def render_generated_page(profile: dict[str, Any], profiles: dict[str, dict[str,
 
     ensure_team_link_markup(soup, profile["team_slug"])
     remove_view_all_players_button(soup)
+    ensure_real_social_links(soup)
 
     intro = soup.select_one(".intro-text")
     if intro:
@@ -671,6 +703,7 @@ def render_redirect_page(target_slug: str) -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <meta name="robots" content="noindex, follow">
     <meta http-equiv="refresh" content="0; url={target_url}">
     <link rel="canonical" href="{SITE_URL}{target_url}">
     <script>window.location.replace("{target_url}" + window.location.search + window.location.hash);</script>
@@ -710,8 +743,20 @@ def normalize_existing_profile(path: Path) -> None:
     team_slug = team_slug_from_name(team_name.get_text(" ", strip=True)) if team_name else None
     ensure_team_link_markup(soup, team_slug)
     remove_view_all_players_button(soup)
+    ensure_real_social_links(soup)
 
     path.write_text(str(soup), encoding="utf-8")
+
+
+def normalize_all_player_social_links() -> None:
+    for path in PLAYERS_DIR.glob("*.html"):
+        html = path.read_text(encoding="utf-8")
+        soup = BeautifulSoup(html, "html.parser")
+        before = str(soup)
+        ensure_real_social_links(soup)
+        after = str(soup)
+        if after != before:
+            path.write_text(after, encoding="utf-8")
 
 
 def main() -> None:
@@ -730,6 +775,8 @@ def main() -> None:
                 continue
         profile["slug"] = slug
         (PLAYERS_DIR / f"{slug}.html").write_text(render_generated_page(profile, profiles), encoding="utf-8")
+
+    normalize_all_player_social_links()
 
 
 if __name__ == "__main__":
