@@ -139,9 +139,19 @@ function pageShell({ title, description, canonical, body, image, socialTitle }) 
   .news-article__body p{color:#e2e8f0;line-height:1.85;font-size:1.1rem;margin-bottom:1.75rem;letter-spacing:0.01em}
   .news-article__body a.body-link{color:#38bdf8;font-weight:600;text-decoration:underline;text-decoration-color:rgba(56,189,248,.45);text-underline-offset:4px;transition:all .2s ease}
   .news-article__body a.body-link:hover{color:#facc15;text-decoration-color:#facc15}
+  .news-article__answer{border:1px solid rgba(56,189,248,.35);border-left:4px solid #38bdf8;border-radius:8px;background:rgba(15,23,42,.82);padding:1.2rem 1.35rem;margin:0 0 1.5rem;color:#e0f2fe;font-size:1.08rem;line-height:1.7}
+  .news-article__facts{border:1px solid rgba(250,204,21,.28);border-radius:8px;background:rgba(15,23,42,.8);padding:1.2rem 1.35rem;margin:0 0 1.8rem}
+  .news-article__facts h2,.news-article__faq h2{font-size:1.25rem;color:#facc15;margin:0 0 .9rem}
+  .news-article__facts dl{display:grid;grid-template-columns:minmax(120px,.42fr) minmax(0,1fr);gap:.75rem 1rem;margin:0}
+  .news-article__facts dt{color:#93c5fd;font-weight:800}
+  .news-article__facts dd{color:#e5e7eb;margin:0;line-height:1.55}
+  .news-article__faq{border-top:1px solid rgba(56,189,248,.2);margin-top:2rem;padding-top:1.5rem}
+  .news-article__faq-item{margin:0 0 1.25rem}
+  .news-article__faq h3{font-size:1.08rem;color:#93c5fd;margin:0 0 .45rem}
+  .news-article__faq p{font-size:1rem;margin:0;color:#dbeafe}
   .news-article__read-also{margin-top:2.25rem;padding:1.25rem 1.5rem;border-left:4px solid #facc15;background:rgba(15,23,42,.8);border-radius:0 10px 10px 0;font-size:1.1rem;color:#fff;box-shadow:0 4px 15px rgba(0,0,0,.2)}
   .news-article__read-also strong{color:#facc15;font-weight:800;margin-right:.5rem;text-transform:uppercase;letter-spacing:.05em}
-  .news-article__sources{display:none!important}
+  .news-article__sources{margin-top:2rem;border-top:1px solid rgba(148,163,184,.24);padding-top:1.25rem}
   .news-article__sources h2{font-size:1.15rem;color:#facc15;margin:0 0 .75rem}
   .news-article__sources ul{margin:0;padding-left:1.2rem}
   .news-article__sources li{margin:.45rem 0;color:#cbd5e1}
@@ -155,7 +165,7 @@ function pageShell({ title, description, canonical, body, image, socialTitle }) 
   .news-related-card strong{display:block;font-size:.95rem;line-height:1.35}
   .news-article__aside .btn{display:inline-flex;margin-top:.25rem}
   @media(max-width:900px){.news-article__hero-grid,.news-article__layout{grid-template-columns:1fr}.news-article__hero-media{max-width:620px}.news-article__stats{grid-template-columns:1fr 1fr}}
-  @media(max-width:520px){.news-article__stats{grid-template-columns:1fr}.news-filter-bar a{flex:1 1 auto;text-align:center}.news-article__body{padding:1.25rem}}
+  @media(max-width:520px){.news-article__stats{grid-template-columns:1fr}.news-filter-bar a{flex:1 1 auto;text-align:center}.news-article__body{padding:1.25rem}.news-article__facts dl{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -330,6 +340,7 @@ ${cards}
     </div>
   </div>
 </section>
+${archiveJsonLd(items)}
 </main>`;
 
   return pageShell({
@@ -338,6 +349,32 @@ ${cards}
     canonical: `${SITE_URL}/news`,
     body,
   });
+}
+
+function archiveJsonLd(items) {
+  return `<script type="application/ld+json">
+${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'NPL 2026 News - Latest Nepal Premier League Updates',
+    description: 'Latest NPL 2026 and Nepal Premier League news, auction updates, team notes, streaming guidance and verified Season 3 context.',
+    url: `${SITE_URL}/news`,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'NPL Cricket League',
+      url: `${SITE_URL}/`,
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${SITE_URL}/news/${item.slug}`,
+        name: item.title,
+      })),
+    },
+  }, null, 2)}
+</script>`;
 }
 
 function articleJsonLd(item) {
@@ -381,6 +418,16 @@ function readingMinutes(item) {
   return Math.max(1, Math.ceil(words / 220));
 }
 
+function sitemapLastmod(item) {
+  return item.modifiedAt || item.date;
+}
+
+function latestSitemapLastmod(items) {
+  return items
+    .map(sitemapLastmod)
+    .sort((a, b) => new Date(b) - new Date(a))[0] || '2026-07-06';
+}
+
 function imageCredit(item) {
   if (!item.imageSource || !item.imageSource.name) return 'NPL Cricket League image';
   return item.imageSource.type === 'existing-site-asset'
@@ -404,6 +451,50 @@ function sourceList(item) {
 ${item.sources.map((source) => `        <li><a href="${escapeHtml(source.url)}" rel="nofollow noopener" target="_blank">${escapeHtml(source.name || source.url)}</a></li>`).join('\n')}
       </ul>
     </section>`;
+}
+
+function quickAnswer(item) {
+  if (!item.answer) return '';
+  return `<div class="news-article__answer">${escapeHtml(item.answer)}</div>`;
+}
+
+function quickFacts(item) {
+  if (!Array.isArray(item.quickFacts) || !item.quickFacts.length) return '';
+  return `<section class="news-article__facts" aria-label="Quick facts">
+      <h2>Quick Facts</h2>
+      <dl>
+${item.quickFacts.map((fact) => `        <dt>${escapeHtml(fact.label)}</dt><dd>${escapeHtml(fact.value)}</dd>`).join('\n')}
+      </dl>
+    </section>`;
+}
+
+function faqSection(item) {
+  if (!Array.isArray(item.faqs) || !item.faqs.length) return '';
+  return `<section class="news-article__faq">
+      <h2>FAQs</h2>
+${item.faqs.map((faq) => `      <div class="news-article__faq-item">
+        <h3>${escapeHtml(faq.question)}</h3>
+        <p>${escapeHtml(faq.answer)}</p>
+      </div>`).join('\n')}
+    </section>`;
+}
+
+function faqJsonLd(item) {
+  if (!Array.isArray(item.faqs) || !item.faqs.length) return '';
+  return `<script type="application/ld+json">
+${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: item.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }, null, 2)}
+</script>`;
 }
 
 const LINK_RULES = [
@@ -481,9 +572,15 @@ function readAlsoBox(current, items) {
 function articlePage(item, items) {
   const paragraphs = injectInternalLinks(item.body);
   const readAlso = readAlsoBox(item, items);
+  const answer = quickAnswer(item);
+  const facts = quickFacts(item);
+  const faqs = faqSection(item);
   const sourceCount = Array.isArray(item.sources) ? item.sources.length : 0;
   const articleImage = item.image || 'images/NPL.webp';
   const pageTitle = item.seoTitle || `${item.title} - NPL 2026 News`;
+  const articleBodySections = [answer, facts, paragraphs, readAlso, faqs, sourceList(item)]
+    .filter(Boolean)
+    .join('\n      ');
   const body = `
 <main>
 <article class="news-article">
@@ -522,9 +619,7 @@ function articlePage(item, items) {
 
   <div class="news-article__layout">
     <div class="news-article__body">
-      ${paragraphs}
-      ${readAlso}
-      ${sourceList(item)}
+      ${articleBodySections}
     </div>
     <aside class="news-article__aside">
       <h2>More NPL News</h2>
@@ -536,6 +631,7 @@ ${relatedList(item, items)}
   </div>
 </article>
 ${articleJsonLd(item)}
+${faqJsonLd(item)}
 </main>`;
 
   return pageShell({
@@ -551,10 +647,10 @@ ${articleJsonLd(item)}
 
 function buildNewsSitemap(items) {
   const urls = [
-    { loc: `${SITE_URL}/news`, lastmod: items[0] ? items[0].date : '2026-07-06', priority: '0.8', changefreq: 'daily' },
+    { loc: `${SITE_URL}/news`, lastmod: latestSitemapLastmod(items), priority: '0.8', changefreq: 'daily' },
     ...items.map((item) => ({
       loc: `${SITE_URL}/news/${item.slug}`,
-      lastmod: item.date,
+      lastmod: sitemapLastmod(item),
       priority: '0.7',
       changefreq: 'weekly',
     })),
@@ -576,7 +672,7 @@ function updateMainSitemap(items) {
     .replace(/\n  <url><lastmod>[^<]+<\/lastmod><loc>https:\/\/nplcricketleague\.com\/news\/[^<]+<\/loc><priority>0\.7<\/priority><changefreq>weekly<\/changefreq><\/url>/g, '')
     .replace(/\n  <!-- NPL news articles generated by scripts\/generate-news-pages\.js -->[\s\S]*?  <!-- End NPL news articles -->/g, '');
 
-  const block = `\n  <!-- NPL news articles generated by scripts/generate-news-pages.js -->\n${items.map((item) => `  <url><lastmod>${item.date}</lastmod><loc>${SITE_URL}/news/${item.slug}</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>`).join('\n')}\n  <!-- End NPL news articles -->\n`;
+  const block = `\n  <!-- NPL news articles generated by scripts/generate-news-pages.js -->\n${items.map((item) => `  <url><lastmod>${sitemapLastmod(item)}</lastmod><loc>${SITE_URL}/news/${item.slug}</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>`).join('\n')}\n  <!-- End NPL news articles -->\n`;
   const updated = withoutGenerated.replace('\n</urlset>', `${block}</urlset>`);
   fs.writeFileSync(sitemapPath, updated);
 }

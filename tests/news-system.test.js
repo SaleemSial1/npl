@@ -373,7 +373,12 @@ test('generated article schema and design follow NPL news writing rules', () => 
     assert.notEqual(schema.alternativeHeadline, schema.headline, `${item.slug} alternativeHeadline must differ from headline`);
     assert.equal(schema.publisher.logo.width, 1024, `${item.slug} publisher logo width must be set`);
     assert.equal(schema.publisher.logo.height, 1024, `${item.slug} publisher logo height must be set`);
-    assert.ok(!html.includes('"@type": "FAQPage"'), `${item.slug} must not include FAQPage schema without visible FAQ support`);
+    if (Array.isArray(item.faqs) && item.faqs.length) {
+      assert.ok(html.includes('class="news-article__faq"'), `${item.slug} must render visible FAQ content before FAQPage schema`);
+      assert.ok(html.includes('"@type": "FAQPage"'), `${item.slug} must include FAQPage schema when visible FAQ content exists`);
+    } else {
+      assert.ok(!html.includes('"@type": "FAQPage"'), `${item.slug} must not include FAQPage schema without visible FAQ support`);
+    }
     assert.ok(html.includes('class="news-article__hero-grid"'), `${item.slug} must use improved article hero layout`);
     assert.ok(html.includes('class="news-article__hero-media"'), `${item.slug} must render the featured image in the hero`);
     assert.ok(html.includes('class="news-article__stats"'), `${item.slug} must show article source and reading details`);
