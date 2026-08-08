@@ -66,7 +66,7 @@
 }
 </script>
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="styles.css?v=1" as="style">
+    <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="/NPL Logo.png" as="image">
     
     <!-- Favicon -->
@@ -4163,6 +4163,8 @@ document.addEventListener('DOMContentLoaded', () => {
             videoModal.style.display = 'none';
             videoModalFrame.src = '';
         }
+    });
+
     // --- Fan Poll Interactive Voting & Persistence ---
     const pollButtons = document.querySelectorAll('.poll-option-btn');
     const pollStatusMsg = document.getElementById('pollStatusMsg');
