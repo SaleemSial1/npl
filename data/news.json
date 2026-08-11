@@ -6,11 +6,11 @@
     "date": "2026-08-09",
     "modifiedAt": "2026-08-11T12:15:00+05:45",
     "category": "Schedule",
-    "image": "images/news/nepal-premier-league-2026-season-3-dates.jpg",
+    "image": "images/news/npl-season-3-kirtipur-ground-preparation.jpg",
     "imageSource": {
-      "name": "Kathmandu Post CAN announcement image",
-      "url": "https://assets-cdn.kathmandupost.com/uploads/source/news/2026/third-party/thumb1-1786202351.jpg",
-      "page": "https://kathmandupost.com/sports/2026/08/08/npl-season-3-to-begin-on-october-26-final-on-november-21",
+      "name": "Kantipur Kirtipur ground preparation image",
+      "url": "https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/sports/tucricketground08072026dji0710-copy-0882026030532-watermarked.jpg",
+      "page": "https://ekantipur.com/sports/2026/08/08/en/the-wickets-of-kirtipur-and-mulpani-are-changing-shape-52-53.html",
       "discovery": "google-search",
       "type": "web-source"
     },
@@ -19,6 +19,47 @@
       "#2563eb"
     ],
     "excerpt": "Nepal Premier League Season 3 will run from October 26 to November 21, 2026, with the full match fixture list still awaiting release.",
+    "answer": "As of August 11, 2026, Nepal Premier League Season 3 is scheduled from October 26 to November 21, 2026. The full fixture list, match order, ticket windows and broadcast timings still need public release.",
+    "quickFacts": [
+      {
+        "label": "Tournament window",
+        "value": "October 26-November 21, 2026"
+      },
+      {
+        "label": "Confirmed by",
+        "value": "Cricket Association of Nepal"
+      },
+      {
+        "label": "Fixture status",
+        "value": "Full match-by-match schedule still pending"
+      },
+      {
+        "label": "Auction status",
+        "value": "Domestic auction completed on July 6, 2026"
+      },
+      {
+        "label": "Venue note",
+        "value": "Kirtipur remains the main venue to monitor while final allocation awaits fixtures"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "When will Nepal Premier League 2026 start?",
+        "answer": "Nepal Premier League Season 3 is scheduled to start on October 26, 2026."
+      },
+      {
+        "question": "When is the NPL 2026 final?",
+        "answer": "The Season 3 final is scheduled for November 21, 2026, while the full fixture list is still pending."
+      },
+      {
+        "question": "Are NPL 2026 fixtures released?",
+        "answer": "No. The tournament window is confirmed, but match order, start times, ticket windows and full fixture details still need public release."
+      },
+      {
+        "question": "Where will NPL 2026 be played?",
+        "answer": "Kirtipur remains the main venue to monitor, but final venue allocation should be treated as pending until the official fixture list is released."
+      }
+    ],
     "body": [
       "The Cricket Association of Nepal has set Nepal Premier League Season 3 for October 26 to November 21, 2026, turning the NPL 2026 calendar from a watch item into a confirmed tournament window. The announcement gives teams, broadcasters, sponsors and supporters a fixed opening date and final date for the third edition. The full fixture list still has not been released, so match order, start times, ticket windows and team-by-team dates remain pending. That distinction is the central point for fans: the tournament dates are confirmed, but the schedule is not yet a match table.",
       "The October 26 start moves the league away from the December-heavy rhythm that many fans expected after the first two seasons. It places the competition in the post-Dashain and Tihar period, a crowded part of the Nepali calendar that can affect travel, ticket demand, staffing, security planning and broadcast routines. The final is set for November 21, which gives the league a defined 27-day window. For a franchise tournament with eight teams and playoffs, that window should give organizers enough room to structure league-stage matches, rest days and knockout dates once the detailed fixture grid is made public.",
@@ -118,13 +159,13 @@
     "date": "2026-07-20",
     "modifiedAt": "2026-07-26T12:00:00+05:45",
     "category": "Teams",
-    "image": "images/pokhara-avengers-team.png",
+    "image": "images/news/ajantha-mendis-pokhara-avengers-head-coach.jpg",
     "imageSource": {
-      "name": "Existing Pokhara Avengers team site image",
-      "url": "https://nplcricketleague.com/images/pokhara-avengers-team.png",
-      "page": "https://nplcricketleague.com/teams/pokhara-avengers",
-      "discovery": "site-asset",
-      "type": "existing-site-asset"
+      "name": "Kantipur Ajantha Mendis appointment image",
+      "url": "https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/third-party/jadugar-1972026010903-watermarked.jpg",
+      "page": "https://ekantipur.com/sports/2026/07/19/en/ajantha-mendis-appointed-as-pokhara-coach-53-03.html",
+      "discovery": "google-search",
+      "type": "web-source"
     },
     "colors": [
       "#0f766e",
@@ -161,6 +202,10 @@
       {
         "name": "ESPNcricinfo Ajantha Mendis profile",
         "url": "https://www.espncricinfo.com/cricketers/ajantha-mendis-268739"
+      },
+      {
+        "name": "Kantipur Ajantha Mendis appointment report",
+        "url": "https://ekantipur.com/sports/2026/07/19/en/ajantha-mendis-appointed-as-pokhara-coach-53-03.html"
       }
     ],
     "seoTitle": "Ajantha Mendis Joins Pokhara Avengers as Coach"
@@ -170,13 +215,13 @@
     "title": "Nepal Premier League 2026 Ticket Watch: Booking Status and Fan Guide for Kirtipur",
     "date": "2026-07-08",
     "category": "Tickets",
-    "image": "images/npl-tickets.webp",
+    "image": "images/news/npl-2026-ticket-fans-tu-ground.jpg",
     "imageSource": {
-      "name": "NPL 2026 ticket sales venue guide asset",
-      "url": "https://nplcricketleague.com/images/npl-tickets.webp",
-      "page": "https://nplcricketleague.com/tickets",
-      "discovery": "site-asset",
-      "type": "existing-site-asset"
+      "name": "Kathmandu Post NPL fan crowd image",
+      "url": "https://assets-cdn.kathmandupost.com/uploads/source/news/2025/news/saj00210151120250218351000x0-1763186970.jpg",
+      "page": "https://kathmandupost.com/cricket/2025/11/15/opening-day-tickets-for-2nd-npl-season-sold-out",
+      "discovery": "google-search",
+      "type": "web-source"
     },
     "colors": [
       "#10b981",
@@ -265,13 +310,13 @@
     "title": "Nepal Premier League 2026 Schedule Watch: Dates Confirmed, Fixtures Awaited",
     "date": "2026-07-07",
     "category": "Schedule",
-    "image": "images/npl-schedule.webp",
+    "image": "images/news/npl-2026-fixture-watch-kirtipur-wicket.jpg",
     "imageSource": {
-      "name": "Existing NPL schedule site image",
-      "url": "https://nplcricketleague.com/images/npl-schedule.webp",
-      "page": "https://nplcricketleague.com/schedule",
-      "discovery": "site-asset",
-      "type": "existing-site-asset"
+      "name": "Kantipur Kirtipur wicket work image",
+      "url": "https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/sports/tucricketground08072026j2a7136-copy-0882026030519-1000x0.jpg",
+      "page": "https://ekantipur.com/sports/2026/08/08/en/the-wickets-of-kirtipur-and-mulpani-are-changing-shape-52-53.html",
+      "discovery": "google-search",
+      "type": "web-source"
     },
     "colors": [
       "#06b6d4",
@@ -308,6 +353,18 @@
       {
         "name": "Cricnepal 2026 cricket calendar report",
         "url": "https://www.cricnepal.com/nepal-cricket-calendar-2026-can"
+      },
+      {
+        "name": "The Himalayan Times NPL Season 3 date report",
+        "url": "https://thehimalayantimes.com/sports/third-nepal-premier-league-set-for-october-26-november-21"
+      },
+      {
+        "name": "The Kathmandu Post NPL Season 3 date report",
+        "url": "https://kathmandupost.com/sports/2026/08/08/npl-season-3-to-begin-on-october-26-final-on-november-21"
+      },
+      {
+        "name": "Kantipur Kirtipur and Mulpani wicket report",
+        "url": "https://ekantipur.com/sports/2026/08/08/en/the-wickets-of-kirtipur-and-mulpani-are-changing-shape-52-53.html"
       }
     ],
     "alternativeHeadline": "NPL Season 3 tournament window is confirmed but the match-by-match fixture list is still pending",
