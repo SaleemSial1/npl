@@ -4858,6 +4858,10 @@ strong,
   color: rgba(247, 251, 244, 0.72) !important;
 }
 
+.match-result {
+  display: none !important;
+}
+
 @media (min-width: 1024px) {
   .hero-section {
     min-height: 680px !important;
