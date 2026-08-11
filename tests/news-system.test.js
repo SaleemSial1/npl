@@ -113,34 +113,29 @@ test('latest NPL auction research article has web image and source links', () =>
   assert.ok(latest.body.join(' ').includes('Seventeen Category C players'));
 });
 
-test('news images use Google sources for new articles and restored site assets for old articles', () => {
+test('news images use topic-matched Google sources and unique local files', () => {
   const items = readJson(require('node:path').join(__dirname, '..', 'data', 'news.json'), []);
   const imageToSlugs = new Map();
-  const newGoogleImageSlugs = new Set([
+  const googleImageSlugs = new Set([
     'nepal-premier-league-category-c-17-players-signed-in-auction',
     'nepal-premier-league-player-auction-begins-season-3',
     'nepal-premier-league-2026-auction-live-streaming-guide',
-  ]);
-  const restoredLegacyImages = new Map([
-    ['npl-auction-season-3-live-updates-155-players-shortlisted', 'images/npl-auction.webp'],
-    ['npl-season-3-mega-auction-july-6', 'images/npl-season-3-mega-auction.webp'],
-    ['kantipur-max-to-broadcast-nepal-premier-league-2026', 'images/kantipur-max-to-broadcast-npl.webp'],
-    ['dish-home-go-app-nepal-premier-league-streaming-guide', 'images/npl-streaming.webp'],
-    ['nepal-premier-league-2026-teams-prepare-for-season-3', 'images/npl-teams.webp'],
-    ['international-stars-to-feature-in-nepal-premier-league-2026', 'images/npl-all-players.webp'],
+    'npl-auction-season-3-live-updates-155-players-shortlisted',
+    'npl-season-3-mega-auction-july-6',
+    'kantipur-max-to-broadcast-nepal-premier-league-2026',
+    'dish-home-go-app-nepal-premier-league-streaming-guide',
+    'nepal-premier-league-2026-teams-prepare-for-season-3',
+    'international-stars-to-feature-in-nepal-premier-league-2026',
   ]);
 
   for (const item of items) {
     assert.ok(item.image.startsWith('images/'), `${item.slug} must use a local image`);
     assert.ok(item.imageSource, `${item.slug} must include image source metadata`);
     assert.notEqual(item.imageSource.type, 'ai-generated', `${item.slug} image must not be AI-generated`);
-    if (newGoogleImageSlugs.has(item.slug)) {
+    if (googleImageSlugs.has(item.slug)) {
       assert.equal(item.imageSource.discovery, 'google-search', `${item.slug} image must be selected from web/Google search`);
       assert.ok(/^https?:\/\//.test(item.imageSource.url), `${item.slug} must keep the original image URL`);
-    }
-    if (restoredLegacyImages.has(item.slug)) {
-      assert.equal(item.image, restoredLegacyImages.get(item.slug), `${item.slug} must use restored old site image`);
-      assert.equal(item.imageSource.discovery, 'site-asset', `${item.slug} must use restored old site asset`);
+      assert.ok(/^https?:\/\//.test(item.imageSource.page), `${item.slug} must keep the source page URL`);
     }
     const slugs = imageToSlugs.get(item.image) || [];
     slugs.push(item.slug);
