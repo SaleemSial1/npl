@@ -244,6 +244,47 @@ test('homepage matches section shows the next four match cards', () => {
   assert.ok(homepage.includes('const visibleMatchCards = document.querySelectorAll(\'.match-card:not([hidden])\');'), 'matches carousel must count only visible homepage match cards');
 });
 
+test('core schedule pages avoid stale unreleased fixture claims', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const pages = [
+    'index.html',
+    'schedule.html',
+    'matches.html',
+    'tickets.html',
+    'fan-guide.html',
+    'teams.html',
+    'venues.html',
+    'points-table.html',
+  ];
+  const stalePatterns = [
+    /Nov 17|Nov 18|Dec 13/,
+    /December 9|December 10|December 11/,
+    /November-December/,
+    /Kathmandu won|Chitwan won|Biratnagar won/,
+    /Fixture Scheduled/,
+    /Qualified for Playoffs/,
+    /expected during/,
+    /website coming soon/,
+    /all 32 matches|host all 32/i,
+  ];
+
+  for (const page of pages) {
+    const html = fs.readFileSync(path.join(__dirname, '..', page), 'utf8');
+    assert.ok(
+      /October 26|Oct 26/.test(html),
+      `${page} must include the confirmed October 26 schedule window`,
+    );
+    assert.ok(
+      /November 21|Nov 21/.test(html),
+      `${page} must include the confirmed November 21 schedule window`,
+    );
+    for (const pattern of stalePatterns) {
+      assert.ok(!pattern.test(html), `${page} must not include stale fixture claim: ${pattern}`);
+    }
+  }
+});
+
 test('homepage adds intro after hero and FAQs at the end of main content', () => {
   const fs = require('node:fs');
   const path = require('node:path');
