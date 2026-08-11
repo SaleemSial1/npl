@@ -217,23 +217,30 @@ test('homepage hero keeps the old schedule call-to-action button', () => {
   assert.ok(!heroText[0].includes('franchises'), 'hero must not show franchises copy');
 });
 
-test('homepage matches section shows the next four match cards', () => {
+test('homepage matches section follows current schedule status cards', () => {
   const fs = require('node:fs');
   const path = require('node:path');
   const homepage = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
   const styles = fs.readFileSync(path.join(__dirname, '..', 'styles.css'), 'utf8');
   const matchesSection = homepage.match(/<section id="matches" class="matches-section">[\s\S]*?<\/section>/);
+  const scheduleLabels = ['Tournament Window', 'Opening Day', 'League Stage', 'Playoffs &amp; Final'];
 
   assert.ok(matchesSection, 'homepage must include matches section');
-  for (let matchNumber = 1; matchNumber <= 4; matchNumber += 1) {
-    assert.ok(matchesSection[0].includes(`<div class="match-label">Match ${matchNumber}</div>`), `homepage must include Match ${matchNumber}`);
-    const start = matchesSection[0].indexOf(`<!-- Match ${matchNumber} -->`);
-    const end = matchNumber < 4 ? matchesSection[0].indexOf(`<!-- Match ${matchNumber + 1} -->`, start) : matchesSection[0].indexOf(`<!-- Match 5 -->`, start);
+  for (const [index, label] of scheduleLabels.entries()) {
+    assert.ok(matchesSection[0].includes(`<div class="match-label">${label}</div>`), `homepage must include ${label}`);
+    const start = matchesSection[0].indexOf(`<!-- Schedule Card ${index + 1} -->`);
+    const end = index < scheduleLabels.length - 1
+      ? matchesSection[0].indexOf(`<!-- Schedule Card ${index + 2} -->`, start)
+      : matchesSection[0].indexOf('</div>\n            </div>\n        </div>\n    </section>', start);
     const cardHtml = matchesSection[0].slice(start, end);
     const openingDivs = (cardHtml.match(/<div\b/g) || []).length;
     const closingDivs = (cardHtml.match(/<\/div>/g) || []).length;
-    assert.equal(openingDivs, closingDivs, `Match ${matchNumber} card markup must be balanced`);
+    assert.equal(openingDivs, closingDivs, `${label} card markup must be balanced`);
   }
+  assert.ok(matchesSection[0].includes('Oct 26'), 'homepage schedule cards must show the confirmed start date');
+  assert.ok(matchesSection[0].includes('Nov 21'), 'homepage schedule cards must show the confirmed end date');
+  assert.ok(matchesSection[0].includes('Full match-by-match fixtures are still pending'), 'homepage must not imply the full fixture list is released');
+  assert.ok(!matchesSection[0].includes('<div class="match-label">Match 1</div>'), 'homepage must not show old numbered fixture cards');
   assert.ok(styles.includes('.match-card:nth-child(n+5)'), 'homepage must hide matches after the first four');
   assert.ok(!styles.includes('.match-card:nth-child(n+3)'), 'homepage must not hide Match 3 and Match 4');
   assert.ok(styles.includes('.matches-grid {\n  display: grid;'), 'homepage matches must render as a grid so all four cards are visible');
