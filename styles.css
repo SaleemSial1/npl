@@ -4925,110 +4925,179 @@ strong,
 
 
 /* ==========================================================================
-   APPLE GLASS DESIGN (GLASSMORPHISM) OVERRIDES
+   PREMIUM CLEAN GLASS THEME — NPL WEBSITE
+   Simple, elegant, Apple-inspired glassmorphism
    ========================================================================== */
 
+/* --- Design Tokens --- */
 :root {
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: blur(16px);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  --glass-hover-bg: rgba(255, 255, 255, 0.1);
+  --pg-bg:        #07090b;
+  --pg-surface:   rgba(255, 255, 255, 0.05);
+  --pg-surface-h: rgba(255, 255, 255, 0.09);
+  --pg-border:    rgba(255, 255, 255, 0.10);
+  --pg-border-h:  rgba(255, 255, 255, 0.20);
+  --pg-blur:      blur(18px) saturate(160%);
+  --pg-shadow:    0 4px 24px rgba(0,0,0,0.35);
+  --pg-shadow-h:  0 8px 40px rgba(0,0,0,0.50);
+  --pg-radius:    14px;
+  --pg-accent:    #10b981;
+  --pg-gold:      #f59e0b;
+  --pg-text:      #f1f5f9;
+  --pg-muted:     #94a3b8;
+  --pg-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 1. Global Background */
+/* --- Background --- */
+html { background: var(--pg-bg); }
+
 body {
-  background: 
-    radial-gradient(circle at 15% 50%, rgba(33, 161, 97, 0.25), transparent 35%),
-    radial-gradient(circle at 85% 30%, rgba(13, 71, 161, 0.25), transparent 35%),
-    linear-gradient(180deg, #020c09 0%, #04140f 100%) !important;
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 20%, rgba(16,185,129,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 80%, rgba(99,102,241,0.10) 0%, transparent 60%),
+    var(--pg-bg) !important;
   background-attachment: fixed !important;
-  color: #f8fafc !important;
+  color: var(--pg-text) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 
-body::before {
-  display: none !important;
-}
+body::before { display: none !important; }
 
-/* 2. Header and Navigation */
+/* --- Scrollbar --- */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--pg-bg); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+
+/* --- Header --- */
 #header, header {
-  background: rgba(2, 12, 9, 0.65) !important;
-  backdrop-filter: var(--glass-blur) !important;
-  -webkit-backdrop-filter: var(--glass-blur) !important;
-  border-bottom: 1px solid var(--glass-border) !important;
-  box-shadow: var(--glass-shadow) !important;
+  background: rgba(7, 9, 11, 0.75) !important;
+  backdrop-filter: var(--pg-blur) !important;
+  -webkit-backdrop-filter: var(--pg-blur) !important;
+  border-bottom: 1px solid var(--pg-border) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05) !important;
 }
 
-/* 3. Cards */
-.news-card, .match-card, .team-card, .player-card, .stat-card, 
-.snapshot-card, .retained-card, .hero-card, .video-card, 
-.points-table-container, .venues-grid > div, .standings-card,
+/* --- Navigation --- */
+.main-nav { flex-wrap: nowrap !important; }
+
+.nav-link {
+  color: var(--pg-muted) !important;
+  border-radius: 8px !important;
+  transition: var(--pg-transition) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #fff !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+@media (max-width: 1100px) {
+  .main-nav { flex-wrap: wrap !important; }
+  .nav-link { font-size: 0.75rem !important; padding: 0.35rem 0.4rem !important; }
+}
+
+/* --- Cards — glass surface --- */
+.news-card, .match-card, .team-card, .player-card,
+.stat-card, .snapshot-card, .retained-card,
+.hero-card, .video-card, .info-card,
+.points-table-container, .standings-card,
 .faq-question, .faq-answer {
-  background: var(--glass-bg) !important;
-  backdrop-filter: var(--glass-blur) !important;
-  -webkit-backdrop-filter: var(--glass-blur) !important;
-  border: 1px solid var(--glass-border) !important;
-  box-shadow: var(--glass-shadow) !important;
-  border-radius: 16px !important;
-  transition: all 0.3s ease !important;
-  overflow: hidden !important;
+  background: var(--pg-surface) !important;
+  backdrop-filter: var(--pg-blur) !important;
+  -webkit-backdrop-filter: var(--pg-blur) !important;
+  border: 1px solid var(--pg-border) !important;
+  border-radius: var(--pg-radius) !important;
+  box-shadow: var(--pg-shadow) !important;
+  transition: var(--pg-transition) !important;
 }
 
-.news-card:hover, .match-card:hover, .team-card:hover, 
+.news-card:hover, .match-card:hover, .team-card:hover,
 .player-card:hover, .hero-card:hover, .video-card:hover {
-  background: var(--glass-hover-bg) !important;
-  transform: translateY(-5px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4) !important;
+  background: var(--pg-surface-h) !important;
+  border-color: var(--pg-border-h) !important;
+  box-shadow: var(--pg-shadow-h) !important;
+  transform: translateY(-4px) !important;
 }
 
-/* 4. Footer */
-footer {
-  background: rgba(2, 12, 9, 0.65) !important;
-  backdrop-filter: var(--glass-blur) !important;
-  -webkit-backdrop-filter: var(--glass-blur) !important;
-  border-top: 1px solid var(--glass-border) !important;
-  position: relative;
-  z-index: 10;
-}
-
-/* 5. Inputs and Buttons */
-input, select, textarea, .search-box, .search-input {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid var(--glass-border) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
+/* --- Section headings --- */
+.section-title, h1, h2 {
   color: #fff !important;
+  letter-spacing: -0.02em !important;
 }
 
-.btn, button, .biography-btn {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid var(--glass-border) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
+.section-title.cyan, .section-title.green {
+  color: var(--pg-accent) !important;
+}
+
+.section-description, .section-intro p, .news-description {
+  color: var(--pg-muted) !important;
+}
+
+/* --- Buttons --- */
+.btn, .btn-primary, .btn-secondary, .read-more, .biography-btn {
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid var(--pg-border) !important;
   color: #fff !important;
-  transition: all 0.3s ease !important;
+  border-radius: 99px !important;
+  transition: var(--pg-transition) !important;
+  backdrop-filter: blur(10px) !important;
 }
 
-.btn:hover, button:hover, .biography-btn:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
+.btn:hover, .btn-primary:hover, .btn-secondary:hover,
+.read-more:hover, .biography-btn:hover {
+  background: rgba(255,255,255,0.14) !important;
+  border-color: var(--pg-border-h) !important;
+  transform: translateY(-2px) !important;
 }
 
-/* Image resets so they don't break the glass shape */
-.card-image, .news-image-container, .player-image-container, .team-logo {
+/* --- Inputs & Search --- */
+.search-input, input[type="text"], input[type="search"] {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid var(--pg-border) !important;
+  border-radius: 99px !important;
+  color: #fff !important;
+  backdrop-filter: blur(10px) !important;
+  transition: var(--pg-transition) !important;
+}
+
+.search-input:focus, input[type="text"]:focus {
+  border-color: var(--pg-accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.15) !important;
+}
+
+/* --- News card typography --- */
+.news-title, .card-title {
+  color: #fff !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+
+.news-date, .card-tag {
+  color: var(--pg-muted) !important;
+  font-size: 0.78rem !important;
+}
+
+/* --- Footer --- */
+footer, #footer {
+  background: rgba(7,9,11,0.90) !important;
+  backdrop-filter: var(--pg-blur) !important;
+  -webkit-backdrop-filter: var(--pg-blur) !important;
+  border-top: 1px solid var(--pg-border) !important;
+}
+
+footer a, #footer a { color: var(--pg-muted) !important; }
+footer a:hover, #footer a:hover { color: #fff !important; }
+
+/* --- Image containers — transparent on glass --- */
+.card-image, .news-image-container,
+.player-image-container, .team-logo {
   background: transparent !important;
 }
 
-
-/* Fix for header navigation overlapping */
-.main-nav {
-  flex-wrap: wrap !important;
-  justify-content: flex-end !important;
-}
-
-@media (max-width: 1100px) and (min-width: 768px) {
-  .nav-link, .mobile-nav .nav-link {
-    font-size: 0.75rem !important;
-    padding: 0.4rem 0.3rem !important;
-  }
+/* --- Focus ring --- */
+:focus-visible {
+  outline: 2px solid var(--pg-accent) !important;
+  outline-offset: 3px !important;
 }
