@@ -4922,3 +4922,99 @@ strong,
 @media (max-width: 1023px) {
   .main-nav.active { max-height: calc(100dvh - 80px); overflow-y: auto; }
 }
+
+
+/* ==========================================================================
+   APPLE GLASS DESIGN (GLASSMORPHISM) OVERRIDES
+   ========================================================================== */
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(16px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --glass-hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* 1. Global Background */
+body {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(33, 161, 97, 0.25), transparent 35%),
+    radial-gradient(circle at 85% 30%, rgba(13, 71, 161, 0.25), transparent 35%),
+    linear-gradient(180deg, #020c09 0%, #04140f 100%) !important;
+  background-attachment: fixed !important;
+  color: #f8fafc !important;
+}
+
+body::before {
+  display: none !important;
+}
+
+/* 2. Header and Navigation */
+#header, header {
+  background: rgba(2, 12, 9, 0.65) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+}
+
+/* 3. Cards */
+.news-card, .match-card, .team-card, .player-card, .stat-card, 
+.snapshot-card, .retained-card, .hero-card, .video-card, 
+.points-table-container, .venues-grid > div, .standings-card,
+.faq-question, .faq-answer {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+}
+
+.news-card:hover, .match-card:hover, .team-card:hover, 
+.player-card:hover, .hero-card:hover, .video-card:hover {
+  background: var(--glass-hover-bg) !important;
+  transform: translateY(-5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 4. Footer */
+footer {
+  background: rgba(2, 12, 9, 0.65) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border-top: 1px solid var(--glass-border) !important;
+  position: relative;
+  z-index: 10;
+}
+
+/* 5. Inputs and Buttons */
+input, select, textarea, .search-box, .search-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  color: #fff !important;
+}
+
+.btn, button, .biography-btn {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn:hover, button:hover, .biography-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Image resets so they don't break the glass shape */
+.card-image, .news-image-container, .player-image-container, .team-logo {
+  background: transparent !important;
+}
