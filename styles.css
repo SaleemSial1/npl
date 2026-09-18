@@ -5243,8 +5243,8 @@ footer a:hover, #footer a:hover { color: #fff !important; }
 
 /* ── Stats Banner ── */
 .npl-stats-banner {
-  border-top: 1px solid rgba(255,255,255,0.06) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  
+  
   background: rgba(255,255,255,0.02) !important;
   padding: 1.5rem 0 !important;
 }
@@ -5333,7 +5333,7 @@ footer a:hover, #footer a:hover { color: #fff !important; }
 .homepage-faq-section,
 .homepage-intro-section {
   padding: 4rem 0 !important;
-  border-top: 1px solid rgba(255,255,255,0.05) !important;
+  
 }
 
 .section-header,
@@ -5408,7 +5408,7 @@ footer a:hover, #footer a:hover { color: #fff !important; }
   justify-content: space-between !important;
   align-items: center !important;
   padding: 0.85rem 1.25rem !important;
-  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  
 }
 
 .intro-panel-row:last-child { border-bottom: none !important; }
@@ -5438,6 +5438,6 @@ footer a:hover, #footer a:hover { color: #fff !important; }
 @media (max-width: 767px) {
   .hero-section { padding: 6rem 1rem 3rem !important; min-height: unset !important; }
   .stats-banner-grid { gap: 0 !important; flex-wrap: wrap !important; }
-  .stat-banner-card { min-width: 50% !important; border-bottom: 1px solid rgba(255,255,255,0.06) !important; }
+  .stat-banner-card { min-width: 50% !important;  }
   .quick-actions-grid { grid-template-columns: 1fr !important; }
 }
