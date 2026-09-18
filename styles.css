@@ -208,7 +208,7 @@ body {
   right: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #9ca3af;
+  color: #cbd5e1;
 }
 
 
@@ -1173,7 +1173,7 @@ body {
 }
 
 .intro-panel-row span {
-  color: #9ca3af;
+  color: #cbd5e1;
   font-size: 0.9rem;
 }
 
@@ -1489,7 +1489,7 @@ body {
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.5rem;
-  color: #9ca3af;
+  color: #cbd5e1;
   flex-wrap: wrap;
 }
 
@@ -1737,7 +1737,7 @@ body {
 }
 
 .news-description {
-  color: #9ca3af;
+  color: #cbd5e1;
   font-size: 0.875rem;
   margin-bottom: 1rem;
   display: -webkit-box;
@@ -2034,7 +2034,7 @@ body {
 }
 
 .stat-label {
-  color: #9ca3af;
+  color: #cbd5e1;
   font-size: 0.75rem;
   margin-top: 0.25rem;
 }
@@ -2152,7 +2152,7 @@ body {
 }
 
 .performer-team-name {
-  color: #9ca3af;
+  color: #cbd5e1;
   font-size: 0.875rem;
 }
 
@@ -2181,7 +2181,7 @@ body {
 }
 
 .performer-stat-label {
-  color: #9ca3af;
+  color: #cbd5e1;
   font-size: 0.75rem;
 }
 
@@ -2308,7 +2308,7 @@ body {
     .footer-description {
         font-size: 0.875rem;
         line-height: 1.5;
-        color: #9ca3af;
+        color: #cbd5e1;
         margin-bottom: 1rem;
     }
 
@@ -2389,7 +2389,7 @@ body {
     }
 
     .footer-link {
-        color: #9ca3af;
+        color: #cbd5e1;
         text-decoration: none;
         font-size: 0.875rem;
         transition: all 0.3s ease;
@@ -2429,7 +2429,7 @@ body {
 
     .newsletter-text {
         font-size: 0.875rem;
-        color: #9ca3af;
+        color: #cbd5e1;
         margin-bottom: 0.5rem;
     }
 
@@ -2462,7 +2462,7 @@ body {
     }
 
     .newsletter-input::placeholder {
-        color: #9ca3af;
+        color: #cbd5e1;
     }
 
     .newsletter-btn {
@@ -2487,7 +2487,7 @@ body {
 
     .download-text {
         font-size: 0.875rem;
-        color: #9ca3af;
+        color: #cbd5e1;
         margin-bottom: 0.75rem;
     }
 
@@ -2611,7 +2611,7 @@ body {
 
     .footer-copyright p {
         font-size: 0.875rem;
-        color: #9ca3af;
+        color: #cbd5e1;
         margin: 0;
     }
 
@@ -2621,7 +2621,7 @@ body {
     }
 
     .legal-link {
-        color: #9ca3af;
+        color: #cbd5e1;
         text-decoration: none;
         font-size: 0.75rem;
         transition: color 0.3s ease;

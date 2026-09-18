@@ -21,7 +21,7 @@ function siteHeader() {
             <div class="header-left">
                 <div style="display:flex; align-items:center; justify-content:center; padding:10px;">
                     <a href="/" style="display:inline-block;">
-                        <img src="/NPL Logo.png" alt="NPL Logo" style="width:100px; height:auto; object-fit:contain; display:block;">
+                        <img src="/NPL Logo.png" alt="NPL Logo" width="100" height="37" style="width:100px; height:auto; object-fit:contain; display:block;">
                     </a>
                 </div>
                 <nav class="main-nav">
@@ -135,7 +135,7 @@ function pageShell({ title, description, canonical, body, image, socialTitle }) 
   .news-article__hero p{color:#d1d5db;line-height:1.65;max-width:780px}
   .news-article__hero-media{border:1px solid rgba(250,204,21,.32);border-radius:8px;background:#111827;box-shadow:0 18px 40px rgba(0,0,0,.32);overflow:hidden}
   .news-article__hero-media img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
-  .news-article__image-credit{display:block;color:#94a3b8;font-size:.78rem;line-height:1.35;padding:.7rem .85rem}
+  .news-article__image-credit{display:block;color:#cbd5e1;font-size:.78rem;line-height:1.35;padding:.7rem .85rem}
   .section__kicker{display:inline-block;color:#facc15;font-weight:800;text-transform:uppercase;margin-bottom:.5rem}
   .crumbs ol{list-style:none;display:flex;gap:.45rem;padding:0;margin:0 0 1rem;color:#93c5fd;flex-wrap:wrap}
   .crumbs a{color:#93c5fd;text-decoration:none}
@@ -194,7 +194,7 @@ function newsArtwork(item, base = '') {
   const colors = item.colors || ['#C62828', '#FFB800'];
   const image = item.image ? `${base}${item.image}` : `${base}images/NPL.webp`;
   return `<div class="news-card__img" style="--g1:${escapeHtml(colors[0])};--g2:${escapeHtml(colors[1])};">
-        <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" class="news-card__teamlogo">
+        <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" width="96" height="96" class="news-card__teamlogo">
         <span class="news-card__tag${item.category === 'Draft' ? ' news-card__tag--gold' : ''}">${escapeHtml(item.category)}</span>
       </div>`;
 }
@@ -206,7 +206,7 @@ function renderCard(item, index, anchor = '') {
   return `                <a href="/news/${escapeHtml(item.slug)}.html" class="news-card-link"${id}>
                     <div class="news-card" data-category="${escapeHtml(category)}">
                         <div class="news-image-container">
-                            <img src="/${escapeHtml(image)}" alt="${escapeHtml(item.title)}" class="news-image" loading="lazy" decoding="async">
+                            <img src="/${escapeHtml(image)}" alt="${escapeHtml(item.title)}" width="400" height="250" class="news-image" loading="lazy" decoding="async">
                         </div>
                         <div class="news-content">
                             <div class="news-date">${escapeHtml(formatDate(item.date))}</div>
@@ -224,7 +224,7 @@ function renderHomepageCard(item) {
   return `                <a href="/news/${escapeHtml(item.slug)}.html" class="news-card-link">
                     <div class="news-card" data-category="${escapeHtml(category)}">
                         <div class="news-image-container">
-                            <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" class="news-image" loading="lazy" decoding="async">
+                            <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" width="400" height="250" class="news-image" loading="lazy" decoding="async">
                         </div>
                         <div class="news-content">
                             <div class="news-date">${escapeHtml(formatDate(item.date))}</div>
@@ -241,7 +241,7 @@ function renderHeroNewsCard(item, index) {
   const stem = path.parse(item.image || '').name;
   const responsiveBase = `images/news/responsive/${stem}`;
   const responsive = [480, 800].every(width => fs.existsSync(path.join(ROOT_DIR, `${responsiveBase}-${width}.webp`)));
-  const imageMarkup = `<img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" loading="${index === 0 ? 'eager' : 'lazy'}" fetchpriority="${index === 0 ? 'high' : 'low'}" decoding="async">`;
+  const imageMarkup = `<img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" width="800" height="500" loading="${index === 0 ? 'eager' : 'lazy'}" fetchpriority="${index === 0 ? 'high' : 'low'}" decoding="async">`;
   return `                            <a href="/news/${escapeHtml(item.slug)}.html" class="hero-card hero-card--news">
                                 <span class="card-tag">${escapeHtml(item.category || 'Latest News')} - ${escapeHtml(formatDate(item.date))}</span>
                                 <h4 class="card-title">${escapeHtml(item.title)}</h4>
@@ -255,7 +255,7 @@ function renderFeature(item) {
   if (!item) return '';
   const image = item.image || 'images/NPL.webp';
   return `<article class="news-hero__feature" aria-label="Featured NPL story">
-      <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}">
+      <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" width="800" height="500">
       <div class="news-hero__feature-body">
         <span class="news-hero__label">Latest Auction Tracker</span>
         <h2>${escapeHtml(item.title)}</h2>
@@ -626,7 +626,7 @@ function articlePage(item, items) {
         </div>
       </div>
       <figure class="news-article__hero-media">
-        <img src="../${escapeHtml(articleImage)}" alt="${escapeHtml(item.title)}" loading="eager" decoding="async">
+        <img src="../${escapeHtml(articleImage)}" alt="${escapeHtml(item.title)}" width="800" height="500" loading="eager" decoding="async">
         <figcaption class="news-article__image-credit">${escapeHtml(imageCredit(item))}</figcaption>
       </figure>
     </div>
