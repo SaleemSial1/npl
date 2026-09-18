@@ -5441,3 +5441,36 @@ footer a:hover, #footer a:hover { color: #fff !important; }
   .stat-banner-card { min-width: 50% !important;  }
   .quick-actions-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ==========================================================================
+   SECTION BACKGROUND RESET — All sections same transparent background
+   ========================================================================== */
+.hero-section,
+.homepage-intro-section,
+.npl-stats-banner,
+.quick-actions-section,
+.matches-section,
+.points-table-section,
+.news-section,
+.performers-section,
+.tournament-overview-section,
+.stadium-section,
+.partners-section,
+.homepage-faq-section,
+.highlights-section,
+.standings-section,
+.fan-poll-section {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any pseudo-element overlays on sections */
+.homepage-intro-section::before,
+.homepage-faq-section::before,
+.npl-stats-banner::before,
+.tournament-overview-section::before,
+.stadium-section::before,
+.partners-section::before {
+  display: none !important;
+}
