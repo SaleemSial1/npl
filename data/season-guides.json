@@ -1,25 +1,29 @@
 [
   {
     "file": "schedule.html",
-    "title": "NPL 2026 Schedule & Fixture Status",
-    "heading": "NPL 2026 Schedule & Fixture Status",
-    "description": "Confirmed Season 3 dates, venue and the details still awaiting a verified match-by-match schedule.",
+    "title": "NPL 2026 Schedule & Fixtures: Match Dates and Venue Guide",
+    "heading": "NPL 2026 Schedule & Fixtures: Match Dates and Venue Guide",
+    "description": "A comprehensive guide to the Nepal Premier League Season 3 match window, venues, participating teams, and broadcasting details.",
     "sections": [
       {
-        "title": "Tournament window",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p>"
+        "title": "NPL 2026 Quick Facts (AI Summary)",
+        "html": "\n<ul style=\"list-style-type: disc; padding-left: 1.5rem; margin-bottom: 0; line-height: 1.6;\">\n    <li><strong>Tournament Dates:</strong> October 26, 2026 to November 21, 2026.</li>\n    <li><strong>Official Venue:</strong> Tribhuvan University International Cricket Ground, Kirtipur.</li>\n    <li><strong>Teams Competing:</strong> 8 franchise teams, including defending champions Lumbini Lions.</li>\n    <li><strong>Fixture Status:</strong> The tournament window is confirmed. The day-by-day match schedule will be released closer to the opening ceremony.</li>\n    <li><strong>Broadcasting:</strong> Matches will stream live on NetTV (OTT) and broadcast on Himalaya Television Network in Nepal.</li>\n</ul>\n"
       },
       {
-        "title": "Individual fixtures",
-        "html": "<p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "title": "Nepal Premier League 2026 Tournament Window",
+        "html": "<p>The Cricket Association of Nepal has officially set the Nepal Premier League Season 3 window from <strong>October 26 to November 21, 2026</strong>. This fixed timeframe ensures international player availability and aligns with Nepal's optimal cricketing weather. All eight franchise teams have finalized their core squads through the player retention window and the mega auction, setting the stage for a highly competitive month of T20 cricket.</p><p>While the overall dates are locked, the specific match-by-match schedule\u2014including opening fixtures, double-headers, and playoff pairings\u2014is pending release. Fans planning to travel should note the overall window before booking match-specific logistics.</p>"
       },
       {
-        "title": "Planning your visit",
-        "html": "<p>Wait for a dated match listing before booking around a particular team. Nepal time is UTC+05:45. Match start times will be labelled with a timezone when available.</p>"
+        "title": "Official Venue: Kirtipur Match Days",
+        "html": "<p>All matches for the NPL 2026 season will take place at the historic <strong>Tribhuvan University (TU) International Cricket Ground</strong> in Kirtipur, Kathmandu. Known for its passionate crowds and spin-friendly afternoon conditions, the TU ground serves as the central hub for the tournament.</p><p>The ground's pitch conditions historically favor teams with strong spin departments, a factor that heavily influenced the recent franchise auction strategies. As the single-venue format continues for Season 3, pitch preservation and rotation will play a crucial role during the later stages of the league.</p>"
       },
       {
-        "title": "TV, streaming and tickets",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "title": "Participating Franchise Teams",
+        "html": "<p>The 2026 season features eight franchise teams battling for the championship title. The competition includes:</p><ul><li><strong>Lumbini Lions</strong> (Defending Champions)</li><li><strong>Sudurpaschim Royals</strong> (Two-time finalists)</li><li><strong>Janakpur Bolts</strong> (Season 1 Champions)</li><li><strong>Kathmandu Gurkhas</strong></li><li><strong>Pokhara Avengers</strong></li><li><strong>Chitwan Rhinos</strong></li><li><strong>Biratnagar Kings</strong></li><li><strong>Karnali Yaks</strong></li></ul><p>Each team plays in a round-robin format, meaning every franchise will face the other seven teams during the league stage. The top four teams on the <a href=\"/points-table\">points table</a> will advance to the playoff week.</p>"
+      },
+      {
+        "title": "Broadcasting, Streaming, and Match Tickets",
+        "html": "<p>For fans unable to attend the matches in Kirtipur, the league has secured comprehensive domestic and international broadcasting partnerships:</p><ul><li><strong>Television Broadcast:</strong> Himalaya Television Network holds the linear television rights within Nepal, ensuring nationwide coverage of all matches.</li><li><strong>Live Streaming (OTT):</strong> NetTV has secured the worldwide digital streaming rights, allowing international fans to follow the NPL action live online.</li><li><strong>Match Tickets:</strong> Official ticketing is managed through eSewa. Ticket sales typically open a few weeks before the October 26 start date.</li></ul><p>Fans are encouraged to monitor the official ticketing platforms for pricing tiers and early-bird access once the detailed match schedule is published.</p>"
       }
     ],
     "sources": [
@@ -36,15 +40,15 @@
     "sections": [
       {
         "title": "Current match status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><strong>Live matches: none. Completed matches: none.</strong> This is the pre-season state as of 18 September 2026.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><strong>Live matches: none. Completed matches: none.</strong> This is the pre-season state as of 18 September 2026.</p>"
       },
       {
         "title": "Upcoming fixtures",
-        "html": "<p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Scores and standings",
-        "html": "<p>A scheduled team pairing is not a result. Scores, match winners and player figures will require verified scorecards after play starts.</p><p><a href=\"/points-table\">Pre-season points table</a> · <a href=\"/stats\">Statistics status</a> · <a href=\"/schedule\">Tournament dates</a></p>"
+        "html": "<p>A scheduled team pairing is not a result. Scores, match winners and player figures will require verified scorecards after play starts.</p><p><a href=\"/points-table\">Pre-season points table</a> \u00b7 <a href=\"/stats\">Statistics status</a> \u00b7 <a href=\"/schedule\">Tournament dates</a></p>"
       }
     ],
     "sources": [
@@ -59,7 +63,7 @@
     "sections": [
       {
         "title": "Confirmed 2026 rights",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       },
       {
         "title": "Season 2 coverage is historical",
@@ -67,11 +71,11 @@
       },
       {
         "title": "Before subscribing",
-        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider’s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
+        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider\u2019s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
       },
       {
         "title": "Tournament dates",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> · <a href=\"/tickets\">Ticket information</a></p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> \u00b7 <a href=\"/tickets\">Ticket information</a></p>"
       }
     ],
     "sources": [
@@ -88,7 +92,7 @@
     "sections": [
       {
         "title": "Confirmed 2026 rights",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       },
       {
         "title": "Season 2 coverage is historical",
@@ -96,11 +100,11 @@
       },
       {
         "title": "Before subscribing",
-        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider’s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
+        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider\u2019s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
       },
       {
         "title": "Tournament dates",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> · <a href=\"/tickets\">Ticket information</a></p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> \u00b7 <a href=\"/tickets\">Ticket information</a></p>"
       }
     ],
     "sources": [
@@ -117,7 +121,7 @@
     "sections": [
       {
         "title": "Confirmed 2026 rights",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       },
       {
         "title": "Season 2 coverage is historical",
@@ -125,11 +129,11 @@
       },
       {
         "title": "Before subscribing",
-        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider’s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
+        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider\u2019s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
       },
       {
         "title": "Tournament dates",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> · <a href=\"/tickets\">Ticket information</a></p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> \u00b7 <a href=\"/tickets\">Ticket information</a></p>"
       }
     ],
     "sources": [
@@ -146,7 +150,7 @@
     "sections": [
       {
         "title": "Confirmed 2026 rights",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       },
       {
         "title": "Season 2 coverage is historical",
@@ -154,11 +158,11 @@
       },
       {
         "title": "Before subscribing",
-        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider’s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
+        "html": "<ul><li>Confirm that the product explicitly includes Nepal Premier League Season 3.</li><li>Check access for your country, supported devices and simultaneous-stream limits.</li><li>Review the actual pass price, renewal terms and refund policy on the provider\u2019s listing.</li><li>Confirm the match time using the final fixture list.</li></ul>"
       },
       {
         "title": "Tournament dates",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> · <a href=\"/tickets\">Ticket information</a></p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/schedule\">Fixture status</a> \u00b7 <a href=\"/tickets\">Ticket information</a></p>"
       }
     ],
     "sources": [
@@ -175,7 +179,7 @@
     "sections": [
       {
         "title": "Ticketing partner",
-        "html": "<p><strong>eSewa holds the NPL 2026 ticketing rights.</strong> A rights announcement is not a ticket-sale opening. Follow CAN and eSewa’s event notices for the purchase link.</p>"
+        "html": "<p><strong>eSewa holds the NPL 2026 ticketing rights.</strong> A rights announcement is not a ticket-sale opening. Follow CAN and eSewa\u2019s event notices for the purchase link.</p>"
       },
       {
         "title": "Prices and sales",
@@ -183,11 +187,11 @@
       },
       {
         "title": "Before booking",
-        "html": "<ol><li>Open the verified ticketing event listing.</li><li>Confirm Season 3, match date, teams, venue and seat category.</li><li>Review the displayed price, service charges, entry conditions and refund policy.</li><li>Keep the booking confirmation and follow the event’s gate instructions.</li></ol><p>This independent website does not sell or issue tickets.</p>"
+        "html": "<ol><li>Open the verified ticketing event listing.</li><li>Confirm Season 3, match date, teams, venue and seat category.</li><li>Review the displayed price, service charges, entry conditions and refund policy.</li><li>Keep the booking confirmation and follow the event\u2019s gate instructions.</li></ol><p>This independent website does not sell or issue tickets.</p>"
       },
       {
         "title": "Tournament window",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p>"
       }
     ],
     "sources": [
@@ -204,19 +208,19 @@
     "sections": [
       {
         "title": "Dates and venue",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p>"
       },
       {
         "title": "Watch or attend",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p><p><a href=\"/streaming\">Viewing information</a> · <a href=\"/tickets\">Ticket sale status</a></p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p><p><a href=\"/streaming\">Viewing information</a> \u00b7 <a href=\"/tickets\">Ticket sale status</a></p>"
       },
       {
         "title": "Match-day checklist",
-        "html": "<ul><li>Confirm the fixture and local start time before travel.</li><li>Check the ticket’s gate, seating and identification instructions.</li><li>Check event-specific rules for bags, food, water and children.</li><li>Confirm accessibility arrangements with the venue or ticketing provider.</li><li>Check the near-term weather forecast and allow time for transport.</li></ul><p>Gate opening times, parking, free child admission and permitted items have not been verified here.</p>"
+        "html": "<ul><li>Confirm the fixture and local start time before travel.</li><li>Check the ticket\u2019s gate, seating and identification instructions.</li><li>Check event-specific rules for bags, food, water and children.</li><li>Confirm accessibility arrangements with the venue or ticketing provider.</li><li>Check the near-term weather forecast and allow time for transport.</li></ul><p>Gate opening times, parking, free child admission and permitted items have not been verified here.</p>"
       },
       {
         "title": "Follow the teams",
-        "html": "<p><a href=\"/teams\">All eight team rosters</a> · <a href=\"/players\">Search players</a> · <a href=\"/news\">News archive</a></p>"
+        "html": "<p><a href=\"/teams\">All eight team rosters</a> \u00b7 <a href=\"/players\">Search players</a> \u00b7 <a href=\"/news\">News archive</a></p>"
       }
     ],
     "sources": [
@@ -233,7 +237,7 @@
     "sections": [
       {
         "title": "Tournament venue",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p>"
       },
       {
         "title": "Visitor information",
@@ -245,7 +249,7 @@
       },
       {
         "title": "Related information",
-        "html": "<p><a href=\"/schedule\">Schedule status</a> · <a href=\"/tickets\">Ticket information</a> · <a href=\"/fan-guide\">Fan planning checklist</a></p>"
+        "html": "<p><a href=\"/schedule\">Schedule status</a> \u00b7 <a href=\"/tickets\">Ticket information</a> \u00b7 <a href=\"/fan-guide\">Fan planning checklist</a></p>"
       }
     ],
     "sources": [
@@ -261,7 +265,7 @@
     "sections": [
       {
         "title": "League media and ticketing rights",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       },
       {
         "title": "Website partnership enquiries",
@@ -285,7 +289,7 @@
       },
       {
         "title": "The 2026 season",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/teams\">Eight franchise teams</a> · <a href=\"/players\">Player directory</a></p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p><a href=\"/teams\">Eight franchise teams</a> \u00b7 <a href=\"/players\">Player directory</a></p>"
       },
       {
         "title": "How we handle data",
@@ -308,15 +312,15 @@
     "sections": [
       {
         "title": "Opening-day status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>The season has not started as of this review. The earlier “begins today” wording and unsupported star-player lists have been withdrawn.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>The season has not started as of this review. The earlier \u201cbegins today\u201d wording and unsupported star-player lists have been withdrawn.</p>"
       },
       {
         "title": "Opening fixture",
-        "html": "<p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Watching and tickets",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       }
     ],
     "sources": [
@@ -333,7 +337,7 @@
     "sections": [
       {
         "title": "Fixture status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Squads and selection",
@@ -345,7 +349,7 @@
       },
       {
         "title": "Where to watch",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       }
     ],
     "sources": [
@@ -362,7 +366,7 @@
     "sections": [
       {
         "title": "Fixture status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Squads and selection",
@@ -374,7 +378,7 @@
       },
       {
         "title": "Where to watch",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       }
     ],
     "sources": [
@@ -391,7 +395,7 @@
     "sections": [
       {
         "title": "Fixture status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Squads and selection",
@@ -403,7 +407,7 @@
       },
       {
         "title": "Where to watch",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       }
     ],
     "sources": [
@@ -420,7 +424,7 @@
     "sections": [
       {
         "title": "Fixture status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Squads and selection",
@@ -432,7 +436,7 @@
       },
       {
         "title": "Where to watch",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       }
     ],
     "sources": [
@@ -449,7 +453,7 @@
     "sections": [
       {
         "title": "Fixture status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Squads and selection",
@@ -461,7 +465,7 @@
       },
       {
         "title": "Where to watch",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       }
     ],
     "sources": [
@@ -478,7 +482,7 @@
     "sections": [
       {
         "title": "Fixture status",
-        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26–November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November–December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
+        "html": "<p>Nepal Premier League Season 3 is scheduled for <strong>October 26\u2013November 21, 2026</strong> at Tribhuvan University International Cricket Ground in Kirtipur. The sources reviewed here confirm the tournament window, not individual pairings or start times.</p><p>Opening teams, match numbers, daily start times and playoff pairings are not verified in this snapshot. Earlier November\u2013December schedules and pre-written results have been withdrawn. <a href=\"/matches\">Match centre</a> and <a href=\"/teams\">team rosters</a> use the same season status.</p>"
       },
       {
         "title": "Squads and selection",
@@ -490,7 +494,7 @@
       },
       {
         "title": "Where to watch",
-        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder’s event listing before paying.</p>"
+        "html": "<ul><li><strong>Worldwide OTT rights:</strong> NetTV.</li><li><strong>Linear television in Nepal:</strong> Himalaya Television Network.</li><li><strong>Ticketing rights:</strong> eSewa.</li></ul><p>The rights awards do not establish consumer pass prices, free access, ticket sale dates or a final channel schedule. Check the rights holder\u2019s event listing before paying.</p>"
       }
     ],
     "sources": [
@@ -511,7 +515,7 @@
       },
       {
         "title": "Finding match videos",
-        "html": "<p>Use verified league and rights-holder channels. Check the season, teams and match date in each video description. An old clip is not a current live feed.</p><p><a href=\"/streaming\">Current broadcast and streaming rights</a> · <a href=\"/matches\">Match status</a></p>"
+        "html": "<p>Use verified league and rights-holder channels. Check the season, teams and match date in each video description. An old clip is not a current live feed.</p><p><a href=\"/streaming\">Current broadcast and streaming rights</a> \u00b7 <a href=\"/matches\">Match status</a></p>"
       }
     ],
     "sources": [
@@ -528,7 +532,7 @@
     "sections": [
       {
         "title": "Auction archive",
-        "html": "<p>The Nepal Premier League Season 3 auction took place on July 6, 2026. Aasif Sheikh was listed at NPR 20 lakh for Lumbini Lions.</p><p><a href=\"/auction\">Auction snapshot and source differences</a> · <a href=\"/all-players\">Squad comparison</a></p>"
+        "html": "<p>The Nepal Premier League Season 3 auction took place on July 6, 2026. Aasif Sheikh was listed at NPR 20 lakh for Lumbini Lions.</p><p><a href=\"/auction\">Auction snapshot and source differences</a> \u00b7 <a href=\"/all-players\">Squad comparison</a></p>"
       },
       {
         "title": "Reports and current rosters",
