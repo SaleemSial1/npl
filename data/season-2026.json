@@ -746,14 +746,13 @@
       "slug": "dilsad-ali",
       "name": "Dilsad Ali",
       "team": "biratnagar-kings",
-      "status": "Conflicting auction reports",
+      "status": "Auction listing",
       "sources": [
         "auction"
       ],
-      "role": "Wicketkeeper",
+      "role": "Wicketkeeper-batter",
       "priceLakh": 5,
-      "sourceProfile": "https://www.cricnepal.com/player/dilsad-ali-309",
-      "note": "The tracker lists a sale, but the auction-day timeline says unsold. Awaiting reconciliation."
+      "sourceProfile": "https://www.cricnepal.com/player/dilsad-ali-309"
     },
     {
       "slug": "dinesh-adhikari",
