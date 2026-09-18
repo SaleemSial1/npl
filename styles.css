@@ -5474,3 +5474,170 @@ footer a:hover, #footer a:hover { color: #fff !important; }
 .partners-section::before {
   display: none !important;
 }
+
+
+/* ==========================================================================
+   LIGHT COLOR SCHEME — Clean, premium light mode
+   ========================================================================== */
+
+:root {
+  --pg-bg:        #f5f7fa;
+  --pg-surface:   rgba(255, 255, 255, 0.75);
+  --pg-surface-h: rgba(255, 255, 255, 0.95);
+  --pg-border:    rgba(0, 0, 0, 0.08);
+  --pg-border-h:  rgba(16, 185, 129, 0.35);
+  --pg-blur:      blur(20px) saturate(180%);
+  --pg-shadow:    0 2px 16px rgba(0,0,0,0.08);
+  --pg-shadow-h:  0 8px 32px rgba(0,0,0,0.14);
+  --pg-radius:    14px;
+  --pg-accent:    #059669;
+  --pg-gold:      #d97706;
+  --pg-text:      #111827;
+  --pg-muted:     #6b7280;
+  --pg-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Light Background --- */
+html { background: var(--pg-bg); }
+
+body {
+  background:
+    radial-gradient(ellipse 70% 50% at 10% 10%, rgba(16,185,129,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 90% 90%, rgba(99,102,241,0.06) 0%, transparent 60%),
+    #f5f7fa !important;
+  background-attachment: fixed !important;
+  color: var(--pg-text) !important;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.25); }
+
+/* --- Header --- */
+#header, header {
+  background: rgba(245, 247, 250, 0.80) !important;
+  border-bottom: 1px solid var(--pg-border) !important;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.07) !important;
+}
+
+/* --- Nav links --- */
+.nav-link {
+  color: #374151 !important;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--pg-accent) !important;
+  background: rgba(5,150,105,0.08) !important;
+}
+
+/* --- Cards --- */
+.news-card, .match-card, .team-card, .player-card,
+.stat-card, .snapshot-card, .retained-card,
+.hero-card, .video-card, .info-card,
+.points-table-container, .standings-card,
+.faq-question, .faq-answer,
+.quick-action-card,
+.stat-banner-card,
+.homepage-intro-panel {
+  background: var(--pg-surface) !important;
+  border: 1px solid var(--pg-border) !important;
+  box-shadow: var(--pg-shadow) !important;
+  color: var(--pg-text) !important;
+}
+
+.news-card:hover, .match-card:hover, .team-card:hover,
+.player-card:hover, .hero-card:hover, .video-card:hover,
+.quick-action-card:hover {
+  background: var(--pg-surface-h) !important;
+  border-color: var(--pg-border-h) !important;
+  box-shadow: var(--pg-shadow-h) !important;
+}
+
+/* --- Section headings --- */
+.section-title, h1, h2, h3, h4, h5 {
+  color: var(--pg-text) !important;
+}
+.section-title.cyan, .section-title.green, .section-kicker, .card-tag, .news-date {
+  color: var(--pg-accent) !important;
+}
+.section-description, .section-intro p, .news-description,
+.hero-subtitle, .hero-description, .action-info p,
+.stat-label, .intro-panel-row span, .pg-muted {
+  color: var(--pg-muted) !important;
+}
+
+/* --- Hero --- */
+.hero-title       { color: var(--pg-text) !important; }
+.hero-subheading  { color: var(--pg-accent) !important; }
+
+/* --- Buttons --- */
+.btn-primary {
+  background: var(--pg-accent) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(5,150,105,0.25) !important;
+}
+.btn-primary:hover {
+  background: #047857 !important;
+  box-shadow: 0 6px 20px rgba(5,150,105,0.35) !important;
+}
+.btn, .btn-primary, .btn-secondary, .read-more, .biography-btn {
+  color: var(--pg-text) !important;
+  background: rgba(0,0,0,0.05) !important;
+  border-color: var(--pg-border) !important;
+}
+.btn-primary { color: #fff !important; background: var(--pg-accent) !important; }
+
+/* --- Search Input --- */
+.search-input, input[type='text'], input[type='search'] {
+  background: rgba(255,255,255,0.9) !important;
+  border-color: var(--pg-border) !important;
+  color: var(--pg-text) !important;
+}
+.search-input:focus, input[type='text']:focus {
+  border-color: var(--pg-accent) !important;
+  box-shadow: 0 0 0 3px rgba(5,150,105,0.15) !important;
+}
+
+/* --- News card text --- */
+.news-title, .card-title {
+  color: var(--pg-text) !important;
+}
+
+/* --- Intro panel rows --- */
+.intro-panel-row strong { color: var(--pg-text) !important; }
+
+/* --- FAQ --- */
+.faq-question { color: var(--pg-text) !important; }
+.faq-answer   { color: var(--pg-muted) !important; }
+
+/* --- Footer --- */
+footer, #footer {
+  background: #e8ecf0 !important;
+  border-top: 1px solid var(--pg-border) !important;
+}
+footer a, #footer a       { color: var(--pg-muted) !important; }
+footer a:hover, #footer a:hover { color: var(--pg-text) !important; }
+footer p, #footer p, .footer-copyright { color: var(--pg-muted) !important; }
+
+/* --- Focus ring --- */
+:focus-visible { outline-color: var(--pg-accent) !important; }
+
+/* --- Table styling --- */
+table th { color: var(--pg-accent) !important; }
+table td, table th { border-color: var(--pg-border) !important; color: var(--pg-text) !important; }
+table tbody tr:hover { background: rgba(0,0,0,0.03) !important; }
+
+/* --- Menu toggle --- */
+.menu-toggle { color: var(--pg-text) !important; background: transparent !important; border: none !important; }
+.social-link  { color: var(--pg-muted) !important; }
+.social-link:hover { color: var(--pg-accent) !important; }
+
+/* --- Search results dropdown --- */
+.site-search-results {
+  background: #fff !important;
+  color: var(--pg-text) !important;
+  border-color: var(--pg-border) !important;
+  box-shadow: var(--pg-shadow-h) !important;
+}
+.site-search-results a { color: var(--pg-text) !important; }
+.site-search-results a:hover { background: rgba(5,150,105,0.08) !important; }
