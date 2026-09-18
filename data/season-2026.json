@@ -1,0 +1,1988 @@
+{
+  "checkedAt": "2026-09-18",
+  "season": 2026,
+  "startDate": "2026-10-26",
+  "endDate": "2026-11-21",
+  "sources": {
+    "retentions": "https://kathmandupost.com/sports/2026/06/20/52-players-retained-by-teams-for-npl-season-3",
+    "pokhara-retentions": "https://www.cricnepal.com/pokhara-avengers-retain-bhurtel-as-they-seek-npl-turnaround",
+    "auction": "https://www.cricnepal.com/auction/npl-auction-season-3",
+    "auction-report": "https://english.khabarhub.com/2026/07/557344/",
+    "auction-day": "https://kathmandupost.com/cricket/2026/07/07/lumbini-lions-land-aasif-sheikh-at-npl-season-3-auction",
+    "dates": "https://kathmandupost.com/sports/2026/08/08/npl-season-3-to-begin-on-october-26-final-on-november-21",
+    "rights": "https://go.cricnepal.com/npl-media-ticketing-rights",
+    "rights-confirmation": "https://en.himalpress.com/npl-ott-rights-sold-for-rs-180-4-million/",
+    "harmeet": "https://english.khabarhub.com/2026/08/562341/",
+    "harmeet-confirmation": "https://ekantipur.com/sports/2026/08/08/harmit-to-captain-janakpur-bolts-47-32.html",
+    "saif": "https://ekantipur.com/sports/2026/08/09/saif-ali-zaib-returns-to-sudurpaschim-royals-13-43.html",
+    "warner": "https://kathmandupost.com/cricket/2026/09/16/npl-gets-bigger-with-david-warner-s-announcement-by-kathmandu-gorkhas",
+    "kathmandu-signings": "https://kathmandupost.com/cricket/2026/09/10/kathmandu-gorkhas-continue-partnership-with-shikhar-insurance",
+    "bharat": "https://english.onlinekhabar.com/ks-bharat-play-kathmandu-gorkhas.html",
+    "asalanka": "https://www.cricnepal.com/charith-asalanka-biratnagar-kings-npl",
+    "asalanka-confirmation": "https://theannapurnaexpress.com/story/67192/",
+    "raza": "https://go.cricnepal.com/sikandar-raza-chitwan-rhinos-npl",
+    "neesham": "https://go.cricnepal.com/jimmy-neesham-returns-janakpur-bolts",
+    "shakib": "https://go.cricnepal.com/shakib-al-hasan-pokhara-avengers-npl",
+    "pokhara-coach": "https://kathmandupost.com/cricket/2026/07/29/shakib-mendis-lead-star-studded-foreign-signings-as-npl-season-3-hype-builds"
+  },
+  "notes": [
+    "The tracker currently lists 53 sold players, while its auction-day timeline and the July 7 Kathmandu Post report say 37. Khabarhub reports 52. These totals are not reconciled; player rows are attributed to the tracker snapshot, not presented as an official final squad.",
+    "Dilsad Ali and Sahil Patel appear sold in the tracker but unsold in the auction-day timeline. Their listings require confirmation.",
+    "Overseas coverage includes only signings verified in the linked reports. Omission is not evidence that a player has no contract. Match availability and final playing XIs remain separate announcements."
+  ],
+  "teams": [
+    {
+      "slug": "lumbini-lions",
+      "name": "Lumbini Lions",
+      "logo": "/images/teams/Lumbini-Lions.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 44,
+      "remainingPurseLakh": 5.25,
+      "captain": null,
+      "coach": null,
+      "note": "Lumbini Lions won the 2025 title."
+    },
+    {
+      "slug": "sudurpaschim-royals",
+      "name": "Sudurpaschim Royals",
+      "logo": "/images/teams/Sudurpaschim-Royals.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 26,
+      "remainingPurseLakh": 16.5,
+      "captain": null,
+      "coach": null,
+      "note": ""
+    },
+    {
+      "slug": "biratnagar-kings",
+      "name": "Biratnagar Kings",
+      "logo": "/images/teams/Biratnagar-Kings.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 37.25,
+      "remainingPurseLakh": 14.25,
+      "captain": null,
+      "coach": null,
+      "note": ""
+    },
+    {
+      "slug": "kathmandu-gurkhas",
+      "name": "Kathmandu Gorkhas",
+      "logo": "/images/teams/Kathmandu-Gurkhas.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 17,
+      "remainingPurseLakh": 17,
+      "captain": null,
+      "coach": null,
+      "note": ""
+    },
+    {
+      "slug": "pokhara-avengers",
+      "name": "Pokhara Avengers",
+      "logo": "/images/teams/Pokhara-Avengers.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 26.75,
+      "remainingPurseLakh": 18.75,
+      "captain": null,
+      "coach": "Ajantha Mendis",
+      "note": ""
+    },
+    {
+      "slug": "karnali-yaks",
+      "name": "Karnali Yaks",
+      "logo": "/images/teams/Karnali-Yaks.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 26,
+      "remainingPurseLakh": 16,
+      "captain": null,
+      "coach": null,
+      "note": ""
+    },
+    {
+      "slug": "chitwan-rhinos",
+      "name": "Chitwan Rhinos",
+      "logo": "/images/teams/Chitwan-Rhinos.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 26,
+      "remainingPurseLakh": 16,
+      "captain": null,
+      "coach": null,
+      "note": ""
+    },
+    {
+      "slug": "janakpur-bolts",
+      "name": "Janakpur Bolts",
+      "logo": "/images/teams/Janakpur-Bolts.png",
+      "sources": [
+        "retentions",
+        "auction",
+        "auction-report"
+      ],
+      "auctionSpendLakh": 41.25,
+      "remainingPurseLakh": 25,
+      "captain": "Harmeet Singh",
+      "coach": null,
+      "note": "Janakpur Bolts won the inaugural title in 2024."
+    }
+  ],
+  "players": [
+    {
+      "slug": "aadil-khan",
+      "name": "Aadil Khan",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "aaditya-mahata",
+      "name": "Aadity Mahata",
+      "team": "janakpur-bolts",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "aakash-chand",
+      "name": "Aakash Chand",
+      "team": "pokhara-avengers",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report",
+        "pokhara-retentions"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "aakash-tripathi",
+      "name": "Aakash Tripathi",
+      "team": "lumbini-lions",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/aakash-tripathi-762"
+    },
+    {
+      "slug": "aarif-sheikh",
+      "name": "Aarif Sheikh",
+      "team": "sudurpaschim-royals",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "aashutosh-pandey",
+      "name": "Aashutosh Pandey",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": null,
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/aashutosh-pandey-2425"
+    },
+    {
+      "slug": "aasif-sheikh",
+      "name": "Aasif Sheikh",
+      "team": "lumbini-lions",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 20,
+      "sourceProfile": "https://www.cricnepal.com/player/aasif-sheikh-760"
+    },
+    {
+      "slug": "abhisekh-tiwari",
+      "name": "Abhisekh Tiwari",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/abhishek-tiwari-559"
+    },
+    {
+      "slug": "abhishesh-gautam",
+      "name": "Abhisesh Gautam",
+      "team": "lumbini-lions",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "abinash-bohara",
+      "name": "Abinash Bohara",
+      "team": "sudurpaschim-royals",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "adam-rossington",
+      "name": "Adam Rossington",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "ajay-chauhan",
+      "name": "Ajay Chauhan",
+      "team": "lumbini-lions",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/ajay-chauhan-308"
+    },
+    {
+      "slug": "alpesh-ramjani",
+      "name": "Alpesh Ramjani",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "amar-rautela",
+      "name": "Amar Singh Rautela",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowling allrounder",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/amar-routela-1446"
+    },
+    {
+      "slug": "anil-kharel",
+      "name": "Anil Kharel",
+      "team": "sudurpaschim-royals",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/anil-kharel-1456"
+    },
+    {
+      "slug": "anil-sah",
+      "name": "Anil Kumar Sah",
+      "team": "janakpur-bolts",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "aprajit-poudel",
+      "name": "Aprajit Poudel",
+      "team": "biratnagar-kings",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/aprajit-poudel-098"
+    },
+    {
+      "slug": "arjun-gharti",
+      "name": "Arjun Gharti",
+      "team": "pokhara-avengers",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 15,
+      "sourceProfile": "https://www.cricnepal.com/player/arjun-gharti-1438"
+    },
+    {
+      "slug": "arjun-kumal",
+      "name": "Arjun Kumal",
+      "team": "pokhara-avengers",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report",
+        "pokhara-retentions"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "arjun-saud",
+      "name": "Arjun Saud",
+      "team": "chitwan-rhinos",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "arniko-prasad-yadav",
+      "name": "Arniko Prasad Yadav",
+      "team": "lumbini-lions",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batting Allrounder",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/arniko-yadav-970"
+    },
+    {
+      "slug": "ashok-dhami",
+      "name": "Ashok Dhami",
+      "team": "chitwan-rhinos",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/ashok-dhami-550"
+    },
+    {
+      "slug": "ayub-chand",
+      "name": "Ayub Chand",
+      "team": "sudurpaschim-royals",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": null,
+      "priceLakh": 2
+    },
+    {
+      "slug": "basant-karki",
+      "name": "Basant Karki",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "basant-raj-joshi",
+      "name": "Basant Raj Joshi",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "basir-ahamad",
+      "name": "Basir Ahamad",
+      "team": "biratnagar-kings",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "ben-charlesworth",
+      "name": "Ben Charlesworth",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "ben-cutting",
+      "name": "Ben Cutting",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "bhim-sharki",
+      "name": "Bhim Sharki",
+      "team": "kathmandu-gurkhas",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "bhojraj-bhatta",
+      "name": "Bhojraj Bhatta",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "bibek-kumar-rana-magar",
+      "name": "Bibek Kumar Rana Magar",
+      "team": "pokhara-avengers",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 2.75,
+      "sourceProfile": "https://www.cricnepal.com/player/bibek-magar-1399"
+    },
+    {
+      "slug": "bibek-yadav",
+      "name": "Bibek Kumar Yadav",
+      "team": "chitwan-rhinos",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 15,
+      "sourceProfile": "https://www.cricnepal.com/player/bibek-yadav-756"
+    },
+    {
+      "slug": "bikash-aagri",
+      "name": "Bikash Aagri",
+      "team": "janakpur-bolts",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "binod-bhandari",
+      "name": "Binod Bhandari",
+      "team": "sudurpaschim-royals",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "bipin-acharya",
+      "name": "Bipin Acharya",
+      "team": "pokhara-avengers",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-acharya-1386"
+    },
+    {
+      "slug": "bipin-khatri",
+      "name": "Bipin Khatri",
+      "team": "pokhara-avengers",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report",
+        "pokhara-retentions"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "bipin-sharma",
+      "name": "Bipin Prasad Sharma",
+      "team": "karnali-yaks",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-sharma-314"
+    },
+    {
+      "slug": "bipin-rawal",
+      "name": "Bipin Rawal",
+      "team": "chitwan-rhinos",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-rawal-749"
+    },
+    {
+      "slug": "bishal-patel",
+      "name": "Bishal Kumar Patel",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowling allrounder",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/bishal-patel-1381"
+    },
+    {
+      "slug": "bishal-susling",
+      "name": "Bishal Susling",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/bishal-shusling-1377"
+    },
+    {
+      "slug": "charith-asalanka",
+      "name": "Charith Asalanka",
+      "team": "biratnagar-kings",
+      "status": "Overseas signing",
+      "sources": [
+        "asalanka",
+        "asalanka-confirmation"
+      ],
+      "role": "Batter",
+      "priceLakh": null
+    },
+    {
+      "slug": "chris-lynn",
+      "name": "Chris Lynn",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "darcy-short",
+      "name": "D'Arcy Short",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "daniel-douthwaite",
+      "name": "Daniel Douthwaite",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "david-warner",
+      "name": "David Warner",
+      "team": "kathmandu-gurkhas",
+      "status": "Overseas signing",
+      "sources": [
+        "warner"
+      ],
+      "role": "Batter",
+      "priceLakh": null
+    },
+    {
+      "slug": "dawid-malan",
+      "name": "Dawid Malan",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "dayanand-mandal",
+      "name": "Dayanand Mandal",
+      "team": "kathmandu-gurkhas",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/dayanand-mandal-099"
+    },
+    {
+      "slug": "deepak-bohara",
+      "name": "Deepak Bohara",
+      "team": "chitwan-rhinos",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "deepak-dumre",
+      "name": "Deepak Dumre",
+      "team": "karnali-yaks",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "dev-khanal",
+      "name": "Dev Khanal",
+      "team": "chitwan-rhinos",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "dev-shah",
+      "name": "Dev Shah",
+      "team": "kathmandu-gurkhas",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": null,
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/dev-shah-1360"
+    },
+    {
+      "slug": "dilip-nath",
+      "name": "Dilip Nath",
+      "team": "lumbini-lions",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "dilsad-ali",
+      "name": "Dilsad Ali",
+      "team": "biratnagar-kings",
+      "status": "Conflicting auction reports",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/dilsad-ali-309",
+      "note": "The tracker lists a sale, but the auction-day timeline says unsold. Awaiting reconciliation."
+    },
+    {
+      "slug": "dinesh-adhikari",
+      "name": "Dinesh Adhikari",
+      "team": "lumbini-lions",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "dinesh-kharel",
+      "name": "Dinesh Kharel",
+      "team": "pokhara-avengers",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report",
+        "pokhara-retentions"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "dipak-bohara",
+      "name": "Dipak Bohara",
+      "team": "sudurpaschim-royals",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 10,
+      "sourceProfile": "https://www.cricnepal.com/player/dipak-bohara-1380"
+    },
+    {
+      "slug": "dipendra-rawat",
+      "name": "Dipendra Rawat",
+      "team": "karnali-yaks",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/dipendra-rawat-1363"
+    },
+    {
+      "slug": "dipendra-singh-airee",
+      "name": "Dipendra Singh Airee",
+      "team": "sudurpaschim-royals",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "dipesh-kandel",
+      "name": "Dipesh Kandel",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "diwan-pun",
+      "name": "Diwan Pun",
+      "team": "karnali-yaks",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/diwan-pun-1341"
+    },
+    {
+      "slug": "durgesh-gupta",
+      "name": "Durgesh Gupta",
+      "team": "lumbini-lions",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/durgesh-gupta-1338"
+    },
+    {
+      "slug": "faf-du-plessis",
+      "name": "Faf du Plessis",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "gautam-kc",
+      "name": "Gautam KC",
+      "team": "chitwan-rhinos",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/gautam-kc-1345"
+    },
+    {
+      "slug": "george-munsey",
+      "name": "George Munsey",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "gerhard-erasmus",
+      "name": "Gerhard Erasmus",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "gulbadin-naib",
+      "name": "Gulbadin Naib",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "gulshan-jha",
+      "name": "Gulshan Kumar Jha",
+      "team": "karnali-yaks",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "harmeet-singh",
+      "name": "Harmeet Singh",
+      "team": "janakpur-bolts",
+      "status": "Overseas signing",
+      "sources": [
+        "harmeet",
+        "harmeet-confirmation"
+      ],
+      "role": "All-rounder",
+      "priceLakh": null
+    },
+    {
+      "slug": "hemant-dhami",
+      "name": "Hemant Dhami",
+      "team": "sudurpaschim-royals",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "hikmat-mahara",
+      "name": "Hikmat Mahara",
+      "team": "sudurpaschim-royals",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "hussain-talat",
+      "name": "Hussain Talat",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "imran-sheikh",
+      "name": "Imran Shekh",
+      "team": "biratnagar-kings",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/imran-sheikh-816"
+    },
+    {
+      "slug": "ishan-pandey",
+      "name": "Ishan Pandey",
+      "team": "sudurpaschim-royals",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "james-neesham",
+      "name": "James Neesham",
+      "team": "janakpur-bolts",
+      "status": "Overseas signing",
+      "sources": [
+        "neesham"
+      ],
+      "role": "All-rounder",
+      "priceLakh": null
+    },
+    {
+      "slug": "jaykishan-kolsawala",
+      "name": "Jaykishan Kolsawala",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "john-simpson",
+      "name": "John Simpson",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "josh-brown",
+      "name": "Josh Brown",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "ks-bharat",
+      "name": "KS Bharat",
+      "team": "kathmandu-gurkhas",
+      "status": "Overseas signing",
+      "sources": [
+        "bharat",
+        "kathmandu-signings"
+      ],
+      "role": "Wicketkeeper-batter",
+      "priceLakh": null
+    },
+    {
+      "slug": "kamal-singh-airee",
+      "name": "Kamal Singh Airee",
+      "team": "chitwan-rhinos",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "karan-kc",
+      "name": "Karan KC",
+      "team": "kathmandu-gurkhas",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "kiran-kumar-thagunna",
+      "name": "Kiran Kumar Thagunna",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null,
+      "aliasOf": "kiran-thagunna"
+    },
+    {
+      "slug": "kiran-thagunna",
+      "name": "Kiran Thagunna",
+      "team": "pokhara-avengers",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report",
+        "pokhara-retentions"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "kishore-mahato",
+      "name": "Kishor Mahato",
+      "team": "lumbini-lions",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 10,
+      "sourceProfile": "https://www.cricnepal.com/player/kishore-mahato-1277"
+    },
+    {
+      "slug": "krishna-poudel",
+      "name": "Krishna Paudel",
+      "team": "kathmandu-gurkhas",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": null,
+      "priceLakh": 2
+    },
+    {
+      "slug": "kushal-bhurtel",
+      "name": "Kushal Bhurtel",
+      "team": "pokhara-avengers",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report",
+        "pokhara-retentions"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "kushal-malla",
+      "name": "Kushal Malla",
+      "team": "chitwan-rhinos",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "lahiru-milantha",
+      "name": "Lahiru Milantha",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "lalit-rajbanshi",
+      "name": "Lalit Narayan Rajbanshi",
+      "team": "janakpur-bolts",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "lokesh-bam",
+      "name": "Lokesh Bam",
+      "team": "biratnagar-kings",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": "Wicketkeeper-batter",
+      "priceLakh": null
+    },
+    {
+      "slug": "marchant-de-lange",
+      "name": "Marchant de Lange",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "mark-watt",
+      "name": "Mark Watt",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "martin-guptill",
+      "name": "Martin Guptill",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "mausam-dhakal",
+      "name": "Mausam Dhakal",
+      "team": "chitwan-rhinos",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 3,
+      "sourceProfile": "https://www.cricnepal.com/player/shyam-dhakal-1251"
+    },
+    {
+      "slug": "max-odowd",
+      "name": "Max O'Dowd",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "mayan-yadav",
+      "name": "Mayan Yadav",
+      "team": "janakpur-bolts",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "michael-levitt",
+      "name": "Michael Levitt",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "milan-bohara",
+      "name": "Milan Bohara",
+      "team": "sudurpaschim-royals",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/milan-bohara-755"
+    },
+    {
+      "slug": "mohammad-aadil-alam",
+      "name": "Mohammad Aadil Alam",
+      "team": "kathmandu-gurkhas",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "mohammad-adil-alam",
+      "name": "Mohammad Adil Alam",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null,
+      "aliasOf": "mohammad-aadil-alam"
+    },
+    {
+      "slug": "najibullah-zadran",
+      "name": "Najibullah Zadran",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "nandan-yadav",
+      "name": "Nandan Yadav",
+      "team": "karnali-yaks",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "narayan-joshi",
+      "name": "Narayan Joshi",
+      "team": "biratnagar-kings",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "naren-bhatta",
+      "name": "Naren Bhatta",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "naren-saud",
+      "name": "Naren Saud",
+      "team": "biratnagar-kings",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/narendra-saud-754"
+    },
+    {
+      "slug": "pawan-sarraf",
+      "name": "Pawan Sarraf",
+      "team": "karnali-yaks",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "prajwal-thapa",
+      "name": "Prajwal Thapa",
+      "team": "biratnagar-kings",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/prajjwol-thapa-811"
+    },
+    {
+      "slug": "prashiddha-jaishi",
+      "name": "Prashiddha Jaishi",
+      "team": "kathmandu-gurkhas",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/prashiddha-jaishi-003"
+    },
+    {
+      "slug": "pratik-pokharel",
+      "name": "Pratik Pokharel",
+      "team": "pokhara-avengers",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/pratik-pokhrel-556"
+    },
+    {
+      "slug": "pratik-shrestha",
+      "name": "Pratik Shrestha",
+      "team": "biratnagar-kings",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/pratik-shrestha-829"
+    },
+    {
+      "slug": "pratish-gc",
+      "name": "Pratish GC",
+      "team": "biratnagar-kings",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": "Left-arm fast bowler",
+      "priceLakh": null
+    },
+    {
+      "slug": "priyank-panchal",
+      "name": "Priyank Panchal",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "ranjeet-kumar",
+      "name": "Ranjeet Kumar",
+      "team": "chitwan-rhinos",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "rashid-khan",
+      "name": "Rashid Khan",
+      "team": "kathmandu-gurkhas",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "ravi-bopara",
+      "name": "Ravi Bopara",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "raymon-reifer",
+      "name": "Raymon Reifer",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "ricardo-vasconcelos",
+      "name": "Ricardo Vasconcelos",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "rijan-dhakal",
+      "name": "Rijan Dhakal",
+      "team": "chitwan-rhinos",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "rit-gautam",
+      "name": "Rit Gautam",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 4.25,
+      "sourceProfile": "https://www.cricnepal.com/player/rit-gautam-1133"
+    },
+    {
+      "slug": "rohit-paudel",
+      "name": "Rohit Kumar Paudel",
+      "team": "lumbini-lions",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "rupesh-singh",
+      "name": "Rupesh Kumar Singh",
+      "team": "biratnagar-kings",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 15,
+      "sourceProfile": "https://www.cricnepal.com/player/rupesh-singh-1118"
+    },
+    {
+      "slug": "sachin-bhatta",
+      "name": "Sachin Bhatta",
+      "team": "sudurpaschim-royals",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/sachin-bhatt-085"
+    },
+    {
+      "slug": "sachin-sharma",
+      "name": "Sachin Sharma",
+      "team": "karnali-yaks",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/sachin-sharma-774"
+    },
+    {
+      "slug": "sagar-dhakal",
+      "name": "Sagar Dhakal",
+      "team": "pokhara-avengers",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report",
+        "pokhara-retentions"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sahan-arachchige",
+      "name": "Sahan Arachchige",
+      "team": "kathmandu-gurkhas",
+      "status": "Overseas signing",
+      "sources": [
+        "kathmandu-signings"
+      ],
+      "role": "All-rounder",
+      "priceLakh": null
+    },
+    {
+      "slug": "sahil-patel",
+      "name": "Sahil Patel",
+      "team": "kathmandu-gurkhas",
+      "status": "Conflicting auction reports",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 5,
+      "sourceProfile": "https://www.cricnepal.com/player/sahil-patel-078",
+      "note": "The tracker lists a sale, but the auction-day timeline says unsold. Awaiting reconciliation."
+    },
+    {
+      "slug": "saif-ali-zaib",
+      "name": "Saif Ali Zaib",
+      "team": "sudurpaschim-royals",
+      "status": "Overseas signing",
+      "sources": [
+        "saif"
+      ],
+      "role": "All-rounder",
+      "priceLakh": null
+    },
+    {
+      "slug": "salahuddin-khan",
+      "name": "Salahuddin Khan",
+      "team": "chitwan-rhinos",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": null,
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/salahuddin-khan-091"
+    },
+    {
+      "slug": "sam-heazlett",
+      "name": "Sam Heazlett",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sandeep-chhetri",
+      "name": "Sandeep Chhetri",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sandeep-lamichhane",
+      "name": "Sandeep Lamichhane",
+      "team": "biratnagar-kings",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": "Right-arm leg-break bowler",
+      "priceLakh": null
+    },
+    {
+      "slug": "santosh-karki",
+      "name": "Santosh Karki",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 3,
+      "sourceProfile": "https://www.cricnepal.com/player/santosh-karki-1080"
+    },
+    {
+      "slug": "santosh-yadav",
+      "name": "Santosh Yadav",
+      "team": "kathmandu-gurkhas",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "saurav-khanal",
+      "name": "Saurav Khanal",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "shahab-alam",
+      "name": "Shahab Alam",
+      "team": "kathmandu-gurkhas",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "shakib-al-hasan",
+      "name": "Shakib Al Hasan",
+      "team": "pokhara-avengers",
+      "status": "Overseas signing",
+      "sources": [
+        "shakib",
+        "pokhara-coach"
+      ],
+      "role": "All-rounder",
+      "priceLakh": null
+    },
+    {
+      "slug": "shankar-rana",
+      "name": "Shankar Rana",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sher-malla",
+      "name": "Sher Malla",
+      "team": "lumbini-lions",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "shrawan-kisku",
+      "name": "Shrawan Kisku",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "shubh-kansakar",
+      "name": "Shubh Kansakar",
+      "team": "karnali-yaks",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 10,
+      "sourceProfile": "https://www.cricnepal.com/player/shubh-kansakar-987"
+    },
+    {
+      "slug": "shubham-ranjane",
+      "name": "Shubham Ranjane",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sikandar-raza",
+      "name": "Sikandar Raza",
+      "team": "chitwan-rhinos",
+      "status": "Overseas signing",
+      "sources": [
+        "raza"
+      ],
+      "role": "All-rounder",
+      "priceLakh": null
+    },
+    {
+      "slug": "sohail-tanvir",
+      "name": "Sohail Tanvir",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sompal-kami",
+      "name": "Sompal Kami",
+      "team": "karnali-yaks",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sonu-devkota",
+      "name": "Sonu Devkota",
+      "team": "kathmandu-gurkhas",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/sonu-devkota-1037"
+    },
+    {
+      "slug": "stephen-eskinazi",
+      "name": "Stephen Eskinazi",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "subash-bhandari",
+      "name": "Subash Bhandari",
+      "team": "biratnagar-kings",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sudip-aryal",
+      "name": "Sudip Aryal",
+      "team": "pokhara-avengers",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 3,
+      "sourceProfile": "https://www.cricnepal.com/player/sudip-aryal-800"
+    },
+    {
+      "slug": "sujan-thapaliya",
+      "name": "Sujan Thapaliya",
+      "team": "biratnagar-kings",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Allrounder",
+      "priceLakh": 4.25,
+      "sourceProfile": "https://www.cricnepal.com/player/sujan-thapaliya-635"
+    },
+    {
+      "slug": "sumit-maharjan",
+      "name": "Sumit Maharjan",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sundeep-jora",
+      "name": "Sundeep Jora",
+      "team": "lumbini-lions",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "sunny-bk",
+      "name": "Sunny BK",
+      "team": "pokhara-avengers",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": null,
+      "priceLakh": 2
+    },
+    {
+      "slug": "surya-tamang",
+      "name": "Surya Tamang",
+      "team": "karnali-yaks",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Bowler",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/surya-tamang-1017"
+    },
+    {
+      "slug": "suryanshu-koirala",
+      "name": "Suryanshu Koirala",
+      "team": "kathmandu-gurkhas",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/suryanshu-koirala-547"
+    },
+    {
+      "slug": "tek-rawat",
+      "name": "Tek Rawat",
+      "team": "sudurpaschim-royals",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Wicketkeeper",
+      "priceLakh": 2,
+      "sourceProfile": "https://www.cricnepal.com/player/tek-rawat-282"
+    },
+    {
+      "slug": "thomas-draca",
+      "name": "Thomas Draca",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "tilak-bhandari",
+      "name": "Tilak Bhandari",
+      "team": "lumbini-lions",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "trit-raj-das",
+      "name": "Trit Raj Das",
+      "team": "janakpur-bolts",
+      "status": "Auction listing",
+      "sources": [
+        "auction"
+      ],
+      "role": "Batter",
+      "priceLakh": 15,
+      "sourceProfile": "https://www.cricnepal.com/player/trit-raj-das-994"
+    },
+    {
+      "slug": "tul-b-thapa",
+      "name": "Tul B Thapa",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null,
+      "aliasOf": "tul-thapa"
+    },
+    {
+      "slug": "tul-thapa",
+      "name": "Tul Thapa",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "unish-thakuri",
+      "name": "Unish Bikram Singh Thakuri",
+      "team": "karnali-yaks",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "uttam-magar",
+      "name": "Uttam Magar",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "wayne-parnell",
+      "name": "Wayne Parnell",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "will-bosisto",
+      "name": "Will Bosisto",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "yuvraj-khatri",
+      "name": "Yuvraj Khatri",
+      "team": "karnali-yaks",
+      "status": "Retained",
+      "sources": [
+        "retentions",
+        "auction-report"
+      ],
+      "role": null,
+      "priceLakh": null
+    },
+    {
+      "slug": "zeeshan-maqsood",
+      "name": "Zeeshan Maqsood",
+      "team": null,
+      "status": "Season 3 unverified",
+      "sources": [],
+      "role": null,
+      "priceLakh": null
+    }
+  ]
+}
