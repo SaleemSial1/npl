@@ -5018,3 +5018,17 @@ input, select, textarea, .search-box, .search-input {
 .card-image, .news-image-container, .player-image-container, .team-logo {
   background: transparent !important;
 }
+
+
+/* Fix for header navigation overlapping */
+.main-nav {
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+  .nav-link, .mobile-nav .nav-link {
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.3rem !important;
+  }
+}
