@@ -20,6 +20,7 @@ RewriteRule ^ /%1 [R=301,L,QSA]
 # Root section pages that share names with real directories.
 RewriteRule ^teams/?$ /teams.html [L]
 RewriteRule ^players/?$ /players.html [L]
+RewriteRule ^news/?$ /news.html [L]
 
 # Serve clean URLs for files that actually exist as .html.
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f

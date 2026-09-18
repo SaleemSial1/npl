@@ -319,20 +319,10 @@
                 </div>
             </div>
             <div class="footer-newsletter">
-                <h3 class="column-title">Stay Updated</h3>
-                <p class="newsletter-text">Get the latest news and updates delivered to your inbox</p>
-                <form class="newsletter-form">
-                    <div class="input-group">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-                        <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"></line>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-            </div>
+<h3 class="column-title">Stay Updated</h3>
+<p class="newsletter-text">Follow the latest Nepal Premier League stories in our news hub.</p>
+<a class="legal-link" href="/news">Browse Latest NPL News →</a>
+</div>
         </div>
 
 
@@ -354,11 +344,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.querySelector('.main-nav');
   if (menuToggle && mainNav) {
+    mainNav.id = 'main-navigation';
+    menuToggle.setAttribute('aria-controls', mainNav.id);
+    menuToggle.setAttribute('aria-expanded', 'false');
     menuToggle.addEventListener('click', function () {
-      mainNav.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(mainNav.classList.toggle('active')));
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.focus();
+      }
     });
   }
 });
 </script>
+<script src="/scripts/site-search.js" defer></script>
 </body>
 </html>

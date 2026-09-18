@@ -68,7 +68,7 @@ function slugify(value) {
 }
 
 function displayAmount(value) {
-  if (value == null || value === '') return '-';
+  if (value == null || value === '' || value === '-') return '-';
   return `${String(value).replace(/\.00$/, '')} lakh`;
 }
 
@@ -95,7 +95,7 @@ async function fetchText(url) {
 
 function updateTag(title) {
   const text = title.toLowerCase();
-  if (text.includes('unsold') && text.includes('sold')) return 'Mixed update';
+  if (/\bunsold\b/.test(text) && /\bsold\b/.test(text)) return 'Mixed update';
   if (text.includes('unsold')) return 'Unsold';
   if (text.includes('sold') || text.includes(' to ')) return text.includes('category') ? 'Category update' : 'Sold';
   if (text.includes('break')) return 'Break';
@@ -106,7 +106,7 @@ function updateTag(title) {
 }
 
 function updateSummary(title) {
-  if (/unsold/i.test(title) && /sold/i.test(title)) return `${title}.`;
+  if (/\bunsold\b/i.test(title) && /\bsold\b/i.test(title)) return `${title}.`;
   if (/unsold/i.test(title)) return `${title} in the latest NPL Auction Season 3 round.`;
   if (/sold| to /i.test(title)) return `${title} in the latest NPL Auction Season 3 update.`;
   return `${title}.`;
@@ -218,6 +218,8 @@ function normalizeTeam(name) {
     Yaks: 'Karnali Yaks',
     Karnali: 'Karnali Yaks',
     Pokhara: 'Pokhara Avengers',
+    Avengers: 'Pokhara Avengers',
+    'Sudurpashim Royals': 'Sudurpaschim Royals',
     Lumbini: 'Lumbini Lions',
   };
   if (aliases[name]) return aliases[name];
@@ -234,79 +236,66 @@ function cleanPlayerName(name) {
 
 function parseRowsFromTimeline(updates) {
   const rows = [];
-  const pushRow = (row) => {
-    const player = cleanPlayerName(row.player);
-    if (!player || player.length < 3) return;
-    rows.push({
-      player,
-      role: '-',
-      category: row.category || '-',
-      base: '-',
-      price: row.price || '-',
-      status: row.status,
-      team: row.team ? normalizeTeam(row.team.trim()) : '-',
-    });
+  const pushRow = (player, status, team = '-', price = '-', category = '-') => {
+    player = cleanPlayerName(player);
+    // Reject commentary, counts and mixed clauses instead of turning them into players.
+    if (!/^[A-Za-z][A-Za-z .'-]{2,}$/.test(player) || /\b(sold|unsold|players|went|goes|teams)\b/i.test(player)) return;
+    const normalizedTeam = team === '-' ? '-' : normalizeTeam(team.trim());
+    if (status === 'Sold' && !TEAM_ORDER.includes(normalizedTeam)) return;
+    rows.push({ player, role: '-', category, base: '-', price, status, team: normalizedTeam });
   };
 
   for (const update of updates) {
-    const title = update.title;
-
-    let match = title.match(/^(.+?) sold for ([\d.]+) lakh to (.+)$/i);
-    if (match) {
-      pushRow({ player: match[1], price: match[2], team: match[3], status: 'Sold' });
+    const category = update.title.match(/^Category\s*\(([A-Z])\)/i)?.[1] || '-';
+    const title = update.title.replace(/^Category\s*\([A-Z]\):?\s*/i, '')
+      .replace(/^The Big fish!\s*/i, '')
+      .replace(/, two team neck and neck, /i, ' ').trim();
+    // A list ending in "went/goes unsold" applies to each named player, not numeric totals.
+    if (!/\bsold\b/i.test(title) && /\b(?:(?:went|goes)\s+)?unsold$/i.test(title)) {
+      title.replace(/\s+(?:(?:went|goes)\s+)?unsold$/i, '').split(',')
+        .forEach(name => pushRow(name.trim(), 'Unsold', '-', '-', category));
       continue;
     }
-
-    match = title.match(/^(.+?) sold to (.+?)(?:,|\s+-)\s*(?:NPR\s*)?([\d.]+)(?:\s*lakh)?$/i);
-    if (match) {
-      pushRow({ player: match[1], team: match[2], price: match[3], status: 'Sold' });
-      continue;
-    }
-
-    match = title.match(/^(.+?) to (.+?),\s*([\d.]+)\s*lakh$/i);
-    if (match) {
-      pushRow({ player: match[1], team: match[2], price: match[3], status: 'Sold' });
-      continue;
-    }
-
-    match = title.match(/^(.+?) sold for (.+)$/i);
-    if (match && /royals|bolts|kings|rhinos|yaks|gorkhas|gurkhas|pokhara|lumbini/i.test(match[2])) {
-      pushRow({ player: match[1], team: match[2], price: '2', status: 'Sold' });
-      continue;
-    }
-
-    const soldPattern = /(?:^|,\s*)([A-Z][A-Za-z .]+?) sold to ([A-Za-z ]+?)(?:,|\s+-|$)\s*(?:NPR\s*)?([\d.]+)?/gi;
-    while ((match = soldPattern.exec(title))) {
-      pushRow({ player: match[1], team: match[2], price: match[3] || '-', status: 'Sold' });
-    }
-
-    if (/went unsold/i.test(title)) {
-      const names = title.replace(/went unsold.*/i, '').split(',');
-      names.forEach((name) => pushRow({ player: name, status: 'Unsold' }));
-    }
-
-    const unsoldPattern = /(?:^|,\s*)([A-Z][A-Za-z .]+?) unsold/gi;
-    while ((match = unsoldPattern.exec(title))) {
-      pushRow({ player: match[1], status: 'Unsold' });
+    const clauses = title.split(/,\s*(?=[A-Za-z][A-Za-z .'-]+?\s+(?:sold|unsold)\b)/);
+    for (const clause of clauses) {
+      let match = clause.match(/^(.+?) sold for ([\d.]+) lakhs? to (.+)$/i);
+      if (match) {
+        pushRow(match[1], 'Sold', match[3], match[2], category);
+        continue;
+      }
+      match = clause.match(/^(.+?) (?:sold to|goes to|to) (.+?)(?:(?:,|\s+-|\s+for)\s*(?:NPR\s*)?([\d.]+)(?:\s+lakhs?(?:\s+rupees)?)?)?$/i);
+      if (match) {
+        pushRow(match[1], 'Sold', match[2], match[3] || '-', category);
+        continue;
+      }
+      match = clause.match(/^(.+?) sold for (.+)$/i);
+      if (match) {
+        pushRow(match[1], 'Sold', match[2], '-', category);
+        continue;
+      }
+      match = clause.match(/^(.+?) unsold$/i);
+      if (match) pushRow(match[1], 'Unsold', '-', '-', category);
     }
   }
-
   return rows;
 }
 
 function mergeRows(primaryRows, timelineRows) {
   const merged = new Map();
-  const keyFor = (row) => `${row.player.toLowerCase()}|${row.status}`;
+  const keyFor = row => row.player.toLowerCase();
+  // Timeline is newest first: a resale must supersede an earlier unsold round.
   for (const row of timelineRows) {
-    merged.set(keyFor(row), row);
+    if (!merged.has(keyFor(row))) merged.set(keyFor(row), row);
   }
   for (const row of primaryRows) {
     const key = keyFor(row);
     const existing = merged.get(key);
+    if (existing && existing.status !== row.status) continue;
+    const sameTeam = !existing || row.team === '-' || existing.team === '-' || row.team === existing.team;
     merged.set(key, {
       ...existing,
       ...row,
-      price: row.price !== '-' ? row.price : existing?.price || '-',
+      price: row.price !== '-' ? row.price : (sameTeam ? existing?.price : null) || '-',
       team: row.team !== '-' ? row.team : existing?.team || '-',
     });
   }
@@ -323,11 +312,7 @@ function parseCounts(html, rows) {
       total: Number(match[3]),
     };
   }
-  return {
-    sold: rows.filter((row) => row.status === 'Sold').length,
-    unsold: rows.filter((row) => row.status === 'Unsold').length,
-    total: 155,
-  };
+  throw new Error('Auction totals missing from source; refusing to publish inferred counts');
 }
 
 function latestUpdateTime(updates) {
@@ -340,7 +325,7 @@ function latestIsoTime(updates) {
 
 function buildFeed(updates) {
   return {
-    status: 'Live auction updates',
+    status: 'Auction snapshot',
     orderLabel: `Timeline - ${updates.length} updates - Newest first`,
     updatedAt: latestIsoTime(updates),
     updatedAtLabel: latestUpdateTime(updates),
@@ -398,7 +383,7 @@ function resultUnsoldRows(unsoldRows, counts) {
     row.player,
     row.category,
     row.role,
-    'Live tracker',
+    'Saved tracker',
     row.status,
   ]));
   visible.push(rowHtml(['Tracker total', '-', '-', 'Latest snapshot', `${counts.unsold} unsold listed`]));
@@ -421,9 +406,9 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
   const latestTitle = feed.updates[0]?.title || 'Auction update';
   const latestTime = feed.updatedAtLabel;
 
-  html = html.replace(/<span class="status-pill">[\s\S]*?<\/span>/, '<span class="status-pill">Auction live</span>');
-  html = html.replace(/"eventStatus": "https:\/\/schema\.org\/[^"]+"/, '"eventStatus": "https://schema.org/EventInProgress"');
-  html = html.replace(/<li><span>Status:<\/span>[\s\S]*?<\/li>/, '<li><span>Status:</span> Auction live</li>');
+  html = html.replace(/<span class="status-pill">[\s\S]*?<\/span>/, '<span class="status-pill">Auction snapshot</span>');
+  html = html.replace(/\s*"eventStatus": "https:\/\/schema\.org\/[^"]+",/, '');
+  html = html.replace(/<li><span>Status:<\/span>[\s\S]*?<\/li>/, '<li><span>Status:</span> Auction snapshot</li>');
 
   html = replaceOrThrow(
     html,
@@ -467,7 +452,7 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
   html = replaceOrThrow(
     html,
     /<tr><td>Season 3 auction pool<\/td><td>155<\/td><td>[\s\S]*?<\/td><td>[\s\S]*?<\/td><\/tr>/,
-    rowHtml(['Season 3 auction pool', counts.total, 'Live bidding', `${counts.sold} sold, ${counts.unsold} unsold listed`]),
+    rowHtml(['Season 3 auction pool', counts.total, 'Saved snapshot', `${counts.sold} sold, ${counts.unsold} unsold listed`]),
     'all players row',
   );
 
@@ -486,7 +471,7 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
   html = replaceOrThrow(
     html,
     /(<section class="result-section" id="players-sold"[\s\S]*?<tbody>\n)[\s\S]*?(\n<\/tbody>)/,
-    `$1${soldRows.map((row) => rowHtml([row.player, row.team, displayAmount(row.price), row.status, 'Live tracker'])).join('\n')}$2`,
+    `$1${soldRows.map((row) => rowHtml([row.player, row.team, displayAmount(row.price), row.status, 'Saved tracker'])).join('\n')}$2`,
     'sold section table',
   );
   html = replaceOrThrow(
@@ -523,12 +508,12 @@ function updateAuctionHtml({ teams, rows, counts, feed }) {
       `${team.squad} / 16`,
       teamBuys(team.name, soldRows),
       displayAmount(team.left),
-      'Live',
+      'Snapshot',
     ])).join('\n')}$2`,
     'team squad table',
   );
 
-  fs.writeFileSync(AUCTION_HTML, html);
+  return html;
 }
 
 async function run() {
@@ -542,8 +527,12 @@ async function run() {
   const counts = parseCounts(trackerHtml, rows);
   const feed = buildFeed(updates);
 
-  fs.writeFileSync(LIVE_FEED_JSON, `${JSON.stringify(feed, null, 2)}\n`);
-  updateAuctionHtml({ teams, rows, counts, feed });
+  // Complete parsing and template validation before touching either output.
+  const html = updateAuctionHtml({ teams, rows, counts, feed });
+  fs.writeFileSync(`${AUCTION_HTML}.tmp`, html);
+  fs.writeFileSync(`${LIVE_FEED_JSON}.tmp`, `${JSON.stringify(feed, null, 2)}\n`);
+  fs.renameSync(`${AUCTION_HTML}.tmp`, AUCTION_HTML);
+  fs.renameSync(`${LIVE_FEED_JSON}.tmp`, LIVE_FEED_JSON);
 
   console.log(`Synced ${updates.length} timeline updates, ${counts.sold} sold, ${counts.unsold} unsold, ${teams.length} teams`);
 }
@@ -560,4 +549,8 @@ module.exports = {
   parseTeamCards,
   parsePlayerRows,
   parseCounts,
+  parseRowsFromTimeline,
+  mergeRows,
+  displayAmount,
+  buildFeed,
 };

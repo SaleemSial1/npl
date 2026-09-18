@@ -86,7 +86,6 @@
           "@id": "https://nplcricketleague.com/auction#auction-event",
           "name": "Nepal Premier League 2026 Auction",
           "startDate": "2026-07-06",
-          "eventStatus": "https://schema.org/EventInProgress",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "location": {
             "@type": "Place",
@@ -383,12 +382,13 @@
 
     .live-feed {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 0.85rem;
         margin-top: 0.6rem;
     }
 
     .live-timeline {
+        min-width: 0;
         background: var(--auction-card);
         border: 1px solid var(--auction-line);
         border-radius: 8px;
@@ -398,6 +398,7 @@
 
     .live-timeline__top {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
@@ -1029,7 +1030,7 @@
 </div>
 </div>
 <aside class="auction-summary" aria-label="Auction summary">
-<span class="status-pill">Auction live</span>
+<span class="status-pill">Auction snapshot</span>
 <div class="summary-metric">
 <span>Date</span>
 <strong>July 6, 2026</strong>
@@ -1064,18 +1065,19 @@
 <section aria-labelledby="live-updates-title">
 <div class="section-head">
 <div>
-<div class="section-eyebrow">Live coverage</div>
+<div class="section-eyebrow">Auction-day coverage</div>
 <div class="section-title-row">
 <h2 class="section-title" id="live-updates-title">NPL Auction Season 3 live updates</h2>
-<span class="live-title-button">Live</span>
+<span class="live-title-button" id="liveFeedStatus">Auction snapshot</span>
 </div>
-<p class="section-note">Follow the latest NPL Auction Season 3 live updates, including sold players, unsold players, team squads and major bidding moves as new auction details are published.</p>
+<p class="section-note">Browse the saved auction-day timeline. These entries are historical snapshots; the last source update is shown below.</p>
 </div>
 </div>
 <div class="live-feed" data-live-auction-feed="/data/npl-auction-live.json">
 <div class="live-timeline">
 <div class="live-timeline__top">
 <h3>Timeline</h3>
+<p>Last source update: <time id="liveFeedUpdated" datetime="2026-07-06T22:30:00+05:45">6 July 2026, 10:30 pm Nepal time</time></p>
 <span id="liveFeedOrder">Newest first</span>
 </div>
 <div class="live-timeline__list" id="liveTimelineList">
@@ -1183,13 +1185,13 @@
 </thead>
 <tbody>
 <tr><td>Bibek Kumar Yadav</td><td>Chitwan Rhinos</td><td>15 lakh</td><td>Sold</td></tr>
-<tr><td>Dipak Bohara, two team neck and neck,</td><td>Sudurpashim Royals</td><td>10 lakh</td><td>Sold</td></tr>
+<tr><td>Dipak Bohara</td><td>Sudurpaschim Royals</td><td>10 lakh</td><td>Sold</td></tr>
 <tr><td>Shubh Kansakar</td><td>Karnali Yaks</td><td>10 lakh</td><td>Sold</td></tr>
 <tr><td>Amar Singh Routela</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
 <tr><td>Bishal Kumar Patel</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
 <tr><td>Anil Kharel</td><td>Sudurpaschim Royals</td><td>5 lakh</td><td>Sold</td></tr>
-<tr><td>Amar Singh Routela unsold, Abhishek Tiwari</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
-<tr><td>Sahil Patel unsold, Bipin Prasad Sharma</td><td>Karnali Yaks</td><td>5 lakh</td><td>Sold</td></tr>
+<tr><td>Abhishek Tiwari</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
+<tr><td>Bipin Prasad Sharma</td><td>Karnali Yaks</td><td>5 lakh</td><td>Sold</td></tr>
 <tr><td>Rit Gautam</td><td>Janakpur Bolts</td><td>4.25 lakh</td><td>Sold</td></tr>
 <tr><td>Sujan Thapaliya</td><td>Biratnagar Kings</td><td>4.25 lakh</td><td>Sold</td></tr>
 </tbody>
@@ -1204,13 +1206,13 @@
 </thead>
 <tbody>
 <tr><td>Amar Singh Routela</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
-<tr><td>Dipak Bohara, two team neck and neck,</td><td>Sudurpashim Royals</td><td>10 lakh</td><td>Sold</td></tr>
+<tr><td>Dipak Bohara</td><td>Sudurpaschim Royals</td><td>10 lakh</td><td>Sold</td></tr>
 <tr><td>Shubh Kansakar</td><td>Karnali Yaks</td><td>10 lakh</td><td>Sold</td></tr>
 <tr><td>Bibek Kumar Yadav</td><td>Chitwan Rhinos</td><td>15 lakh</td><td>Sold</td></tr>
 <tr><td>Bishal Kumar Patel</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
 <tr><td>Anil Kharel</td><td>Sudurpaschim Royals</td><td>5 lakh</td><td>Sold</td></tr>
-<tr><td>Amar Singh Routela unsold, Abhishek Tiwari</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
-<tr><td>Sahil Patel unsold, Bipin Prasad Sharma</td><td>Karnali Yaks</td><td>5 lakh</td><td>Sold</td></tr>
+<tr><td>Abhishek Tiwari</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td></tr>
+<tr><td>Bipin Prasad Sharma</td><td>Karnali Yaks</td><td>5 lakh</td><td>Sold</td></tr>
 <tr><td>Krishna Paudel</td><td>Kathmandu Gorkhas</td><td>2 lakh</td><td>Sold</td></tr>
 <tr><td>Bishal Susling Rai</td><td>Janakpur Bolts</td><td>2 lakh</td><td>Sold</td></tr>
 </tbody>
@@ -1224,12 +1226,9 @@
 <tr><th>Player</th><th>Category</th><th>Status</th><th>Update</th></tr>
 </thead>
 <tbody>
-<tr><td>37 players sold</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
-<tr><td>118</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
-<tr><td>Dilsad Ali goes</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
+<tr><td>Dilsad Ali</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
 <tr><td>Amit Shrestha</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
 <tr><td>Anuj Kumar Chanara</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
-<tr><td>Anuj Kumar Chanara went</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
 <tr><td>Dipesh Kandel</td><td>-</td><td>Unsold</td><td>Listed on auction tracker</td></tr>
 <tr><td>Tracker total</td><td>-</td><td>102 unsold</td><td>Synced from auction tracker</td></tr>
 </tbody>
@@ -1243,7 +1242,7 @@
 <tr><th>Pool</th><th>Players</th><th>Status</th><th>Update</th></tr>
 </thead>
 <tbody>
-<tr><td>Season 3 auction pool</td><td>155</td><td>Live bidding</td><td>53 sold, 102 unsold listed</td></tr>
+<tr><td>Season 3 auction pool</td><td>155</td><td>Saved snapshot</td><td>53 sold, 102 unsold listed</td></tr>
 </tbody>
 </table>
 </div>
@@ -1266,34 +1265,34 @@
 <tr><th>Player</th><th>Team</th><th>Price</th><th>Status</th><th>Update time</th></tr>
 </thead>
 <tbody>
-<tr><td>Amar Singh Routela</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Dipak Bohara, two team neck and neck,</td><td>Sudurpashim Royals</td><td>10 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Shubh Kansakar</td><td>Karnali Yaks</td><td>10 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Bibek Kumar Yadav</td><td>Chitwan Rhinos</td><td>15 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Bishal Kumar Patel</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Anil Kharel</td><td>Sudurpaschim Royals</td><td>5 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Amar Singh Routela unsold, Abhishek Tiwari</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Sahil Patel unsold, Bipin Prasad Sharma</td><td>Karnali Yaks</td><td>5 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Krishna Paudel</td><td>Kathmandu Gorkhas</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Bishal Susling Rai</td><td>Janakpur Bolts</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Gautam KC</td><td>Chitwan Rhinos</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Pratik Shrestha</td><td>Biratnagar Kings</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Aashutosh Pandey</td><td>Janakpur Bolts</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Sonu Devkota</td><td>Kathmandu Gorkhas</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Mausam Dhakal</td><td>Chitwan Rhinos</td><td>3 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Rit Gautam</td><td>Janakpur Bolts</td><td>4.25 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Dayandand Mandal</td><td>Kathmandu Gorkhas</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Bipin Rawal</td><td>Chitwan Rhinos</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Aprajit Paudel</td><td>Biratnagar Kings</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Surya Tamang</td><td>Karnali Yaks</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Santosh Karki</td><td>Janakpur Bolts</td><td>3 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Ashok Dhami</td><td>Chitwan Rhinos</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Sujan Thapaliya</td><td>Biratnagar Kings</td><td>4.25 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Ayub Chand</td><td>Sudurpaschim Royals</td><td>- lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Sudip Aryal</td><td>Pokhara Avengers</td><td>3 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Bibek Kumar Rana Magar</td><td>Pokhara Avengers</td><td>2.75 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Sunny BK</td><td>Pokhara Avengers</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
-<tr><td>Sachin Bhatta</td><td>Sudurpaschim Royals</td><td>2 lakh</td><td>Sold</td><td>Live tracker</td></tr>
+<tr><td>Amar Singh Routela</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Dipak Bohara</td><td>Sudurpaschim Royals</td><td>10 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Shubh Kansakar</td><td>Karnali Yaks</td><td>10 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Bibek Kumar Yadav</td><td>Chitwan Rhinos</td><td>15 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Bishal Kumar Patel</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Anil Kharel</td><td>Sudurpaschim Royals</td><td>5 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Abhishek Tiwari</td><td>Janakpur Bolts</td><td>5 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Bipin Prasad Sharma</td><td>Karnali Yaks</td><td>5 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Krishna Paudel</td><td>Kathmandu Gorkhas</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Bishal Susling Rai</td><td>Janakpur Bolts</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Gautam KC</td><td>Chitwan Rhinos</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Pratik Shrestha</td><td>Biratnagar Kings</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Aashutosh Pandey</td><td>Janakpur Bolts</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Sonu Devkota</td><td>Kathmandu Gorkhas</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Mausam Dhakal</td><td>Chitwan Rhinos</td><td>3 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Rit Gautam</td><td>Janakpur Bolts</td><td>4.25 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Dayandand Mandal</td><td>Kathmandu Gorkhas</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Bipin Rawal</td><td>Chitwan Rhinos</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Aprajit Paudel</td><td>Biratnagar Kings</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Surya Tamang</td><td>Karnali Yaks</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Santosh Karki</td><td>Janakpur Bolts</td><td>3 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Ashok Dhami</td><td>Chitwan Rhinos</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Sujan Thapaliya</td><td>Biratnagar Kings</td><td>4.25 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Ayub Chand</td><td>Sudurpaschim Royals</td><td>-</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Sudip Aryal</td><td>Pokhara Avengers</td><td>3 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Bibek Kumar Rana Magar</td><td>Pokhara Avengers</td><td>2.75 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Sunny BK</td><td>Pokhara Avengers</td><td>2 lakh</td><td>Sold</td><td>Saved tracker</td></tr>
+<tr><td>Sachin Bhatta</td><td>Sudurpaschim Royals</td><td>-</td><td>Sold</td><td>Saved tracker</td></tr>
 </tbody>
 </table>
 </div>
@@ -1316,13 +1315,10 @@
 <tr><th>Player</th><th>Category</th><th>Role</th><th>Auction round</th><th>Status</th></tr>
 </thead>
 <tbody>
-<tr><td>37 players sold</td><td>-</td><td>-</td><td>Live tracker</td><td>Unsold</td></tr>
-<tr><td>118</td><td>-</td><td>-</td><td>Live tracker</td><td>Unsold</td></tr>
-<tr><td>Dilsad Ali goes</td><td>-</td><td>-</td><td>Live tracker</td><td>Unsold</td></tr>
-<tr><td>Amit Shrestha</td><td>-</td><td>-</td><td>Live tracker</td><td>Unsold</td></tr>
-<tr><td>Anuj Kumar Chanara</td><td>-</td><td>-</td><td>Live tracker</td><td>Unsold</td></tr>
-<tr><td>Anuj Kumar Chanara went</td><td>-</td><td>-</td><td>Live tracker</td><td>Unsold</td></tr>
-<tr><td>Dipesh Kandel</td><td>-</td><td>-</td><td>Live tracker</td><td>Unsold</td></tr>
+<tr><td>Dilsad Ali</td><td>-</td><td>-</td><td>Saved tracker</td><td>Unsold</td></tr>
+<tr><td>Amit Shrestha</td><td>-</td><td>-</td><td>Saved tracker</td><td>Unsold</td></tr>
+<tr><td>Anuj Kumar Chanara</td><td>-</td><td>-</td><td>Saved tracker</td><td>Unsold</td></tr>
+<tr><td>Dipesh Kandel</td><td>-</td><td>-</td><td>Saved tracker</td><td>Unsold</td></tr>
 <tr><td>Tracker total</td><td>-</td><td>-</td><td>Latest snapshot</td><td>102 unsold listed</td></tr>
 </tbody>
 </table>
@@ -1345,14 +1341,14 @@
 <tr><th>Team</th><th>Squad status</th><th>Players bought</th><th>Purse left</th><th>Update status</th></tr>
 </thead>
 <tbody>
-<tr><td>Lumbini Lions</td><td>6 / 16</td><td>Awaiting update</td><td>5.25 lakh</td><td>Live</td></tr>
-<tr><td>Sudurpaschim Royals</td><td>6 / 16</td><td>Anil Kharel, Ayub Chand, Sachin Bhatta</td><td>16.5 lakh</td><td>Live</td></tr>
-<tr><td>Biratnagar Kings</td><td>8 / 16</td><td>Pratik Shrestha, Aprajit Paudel, Sujan Thapaliya</td><td>14.25 lakh</td><td>Live</td></tr>
-<tr><td>Kathmandu Gorkhas</td><td>7 / 16</td><td>Krishna Paudel, Sonu Devkota, Dayandand Mandal</td><td>17 lakh</td><td>Live</td></tr>
-<tr><td>Pokhara Avengers</td><td>6 / 16</td><td>Sudip Aryal, Bibek Kumar Rana Magar, Sunny BK</td><td>18.75 lakh</td><td>Live</td></tr>
-<tr><td>Karnali Yaks</td><td>6 / 16</td><td>Shubh Kansakar, Sahil Patel unsold, Bipin Prasad Sharma, Surya Tamang</td><td>16 lakh</td><td>Live</td></tr>
-<tr><td>Chitwan Rhinos</td><td>6 / 16</td><td>Bibek Kumar Yadav, Gautam KC, Mausam Dhakal, Bipin Rawal, Ashok Dhami</td><td>16 lakh</td><td>Live</td></tr>
-<tr><td>Janakpur Bolts</td><td>8 / 16</td><td>Amar Singh Routela, Bishal Kumar Patel, Amar Singh Routela unsold, Abhishek Tiwari, Bishal Susling Rai, Aashutosh Pandey, Rit Gautam, Santosh Karki</td><td>25 lakh</td><td>Live</td></tr>
+<tr><td>Lumbini Lions</td><td>6 / 16</td><td>Awaiting update</td><td>5.25 lakh</td><td>Snapshot</td></tr>
+<tr><td>Sudurpaschim Royals</td><td>6 / 16</td><td>Anil Kharel, Ayub Chand, Sachin Bhatta</td><td>16.5 lakh</td><td>Snapshot</td></tr>
+<tr><td>Biratnagar Kings</td><td>8 / 16</td><td>Pratik Shrestha, Aprajit Paudel, Sujan Thapaliya</td><td>14.25 lakh</td><td>Snapshot</td></tr>
+<tr><td>Kathmandu Gorkhas</td><td>7 / 16</td><td>Krishna Paudel, Sonu Devkota, Dayandand Mandal</td><td>17 lakh</td><td>Snapshot</td></tr>
+<tr><td>Pokhara Avengers</td><td>6 / 16</td><td>Sudip Aryal, Bibek Kumar Rana Magar, Sunny BK</td><td>18.75 lakh</td><td>Snapshot</td></tr>
+<tr><td>Karnali Yaks</td><td>6 / 16</td><td>Shubh Kansakar, Bipin Prasad Sharma, Surya Tamang</td><td>16 lakh</td><td>Snapshot</td></tr>
+<tr><td>Chitwan Rhinos</td><td>6 / 16</td><td>Bibek Kumar Yadav, Gautam KC, Mausam Dhakal, Bipin Rawal, Ashok Dhami</td><td>16 lakh</td><td>Snapshot</td></tr>
+<tr><td>Janakpur Bolts</td><td>8 / 16</td><td>Amar Singh Routela, Bishal Kumar Patel, Abhishek Tiwari, Bishal Susling Rai, Aashutosh Pandey, Rit Gautam, Santosh Karki</td><td>25 lakh</td><td>Snapshot</td></tr>
 </tbody>
 </table>
 </div>
@@ -1379,7 +1375,7 @@
 <li><span>Shortlist:</span> 155 in auction pool</li>
 <li><span>Categories:</span> 5 A, 27 B, 123 C</li>
 <li><span>Stream:</span> NPL YouTube from 3:45 PM</li>
-<li><span>Status:</span> Auction live</li>
+<li><span>Status:</span> Auction snapshot</li>
 </ul>
 </aside>
 </section>
@@ -1453,11 +1449,11 @@
 </article>
 <article class="faq-card">
 <h3>Are sold players confirmed yet?</h3>
-<p>No. Sold players, auction prices and unsold names should be added only after official confirmation.</p>
+<p>The saved tracker lists sold players above. A dash means the price was not available in the source entry; the timeline and tracker totals may reflect different update times.</p>
 </article>
 <article class="faq-card">
 <h3>Which team has the biggest remaining purse?</h3>
-<p>Janakpur Bolts currently show the largest pre-auction remaining purse at 66.25 lakh.</p>
+<p>The team purse cards above show the balances from the saved tracker snapshot. Refer to the snapshot date before treating these figures as current.</p>
 </article>
 </div>
 </section>
@@ -1545,20 +1541,10 @@
                 </div>
             </div>
             <div class="footer-newsletter">
-                <h3 class="column-title">Stay Updated</h3>
-                <p class="newsletter-text">Get the latest news and updates delivered to your inbox</p>
-                <form class="newsletter-form">
-                    <div class="input-group">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-                        <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"></line>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-            </div>
+<h3 class="column-title">Stay Updated</h3>
+<p class="newsletter-text">Follow the latest Nepal Premier League stories in our news hub.</p>
+<a class="legal-link" href="/news">Browse Latest NPL News →</a>
+</div>
         </div>
 
 
@@ -1576,6 +1562,27 @@
     </div>
 </footer>
 <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.querySelector('.main-nav');
+    if (menuToggle && mainNav) {
+        mainNav.id = 'main-navigation';
+        menuToggle.setAttribute('aria-controls', mainNav.id);
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.addEventListener('click', () => {
+            const open = mainNav.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+                menuToggle.focus();
+            }
+        });
+    }
+
     const liveFeedRoot = document.querySelector('[data-live-auction-feed]');
     const liveTimelineList = document.getElementById('liveTimelineList');
     const liveFeedCount = document.getElementById('liveFeedCount');
@@ -1588,6 +1595,8 @@
         const date = new Date(value);
         if (Number.isNaN(date.getTime())) return value;
         return date.toLocaleString('en-US', {
+            timeZone: 'Asia/Kathmandu',
+            year: 'numeric',
             month: 'short',
             day: 'numeric',
             hour: 'numeric',
@@ -1598,12 +1607,15 @@
     function renderLiveUpdates(feed) {
         const updates = Array.isArray(feed.updates) ? feed.updates : [];
         if (liveFeedCount) liveFeedCount.textContent = String(updates.length);
-        if (liveFeedUpdated) liveFeedUpdated.textContent = feed.updatedAtLabel || formatLiveDate(feed.updatedAt);
+        if (liveFeedUpdated) {
+            liveFeedUpdated.textContent = `${formatLiveDate(feed.updatedAt)} Nepal time`;
+            liveFeedUpdated.dateTime = feed.updatedAt || '';
+        }
         if (liveFeedOrder) liveFeedOrder.textContent = feed.orderLabel || 'Newest first';
-        if (liveFeedStatus) liveFeedStatus.textContent = feed.status || 'Live feed ready';
+        if (liveFeedStatus) liveFeedStatus.textContent = 'Auction snapshot';
 
         if (!updates.length) {
-            liveTimelineList.innerHTML = '<div class="empty-state"><div><span class="empty-state__mark">0</span><h3>No live updates yet</h3><p>Add updates to the live feed JSON and they will appear here automatically.</p></div></div>';
+            liveTimelineList.innerHTML = '<div class="empty-state"><div><span class="empty-state__mark">0</span><h3>No live updates yet</h3><p>No auction updates are available yet. Please check back later.</p></div></div>';
             return;
         }
 
@@ -1649,7 +1661,9 @@
             renderLiveUpdates(await response.json());
         } catch (error) {
             if (liveFeedStatus) liveFeedStatus.textContent = 'Feed unavailable';
-            liveTimelineList.innerHTML = '<div class="empty-state"><div><span class="empty-state__mark">!</span><h3>Live feed unavailable</h3><p>The page is still usable. Check the data feed path or update it before the next deploy.</p></div></div>';
+            if (!liveTimelineList.querySelector('.live-update')) {
+                liveTimelineList.innerHTML = '<div class="empty-state"><div><h3>Timeline unavailable</h3><p>Please try again later. The saved player and team tables remain available below.</p></div></div>';
+            }
         }
     }
 
@@ -1667,5 +1681,6 @@
     window.setInterval(loadLiveFeed, 60000);
 </script>
 <script src="/scripts/cookie-consent.js"></script>
+<script src="/scripts/site-search.js" defer></script>
 </body>
 </html>

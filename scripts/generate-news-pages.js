@@ -75,8 +75,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.querySelector('.main-nav');
   if (menuToggle && mainNav) {
+    mainNav.id = 'main-navigation';
+    menuToggle.setAttribute('aria-controls', mainNav.id);
+    menuToggle.setAttribute('aria-expanded', 'false');
     menuToggle.addEventListener('click', function () {
-      mainNav.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(mainNav.classList.toggle('active')));
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.focus();
+      }
     });
   }
 });
@@ -174,6 +184,7 @@ ${siteHeader()}
 ${body}
 ${siteFooter()}
 ${pageScript()}
+<script src="/scripts/site-search.js" defer></script>
 </body>
 </html>
 `;
@@ -225,13 +236,17 @@ function renderHomepageCard(item) {
                 </a>`;
 }
 
-function renderHeroNewsCard(item) {
+function renderHeroNewsCard(item, index) {
   const image = item.image ? `/${item.image}` : '/images/NPL.webp';
+  const stem = path.parse(item.image || '').name;
+  const responsiveBase = `images/news/responsive/${stem}`;
+  const responsive = [480, 800].every(width => fs.existsSync(path.join(ROOT_DIR, `${responsiveBase}-${width}.webp`)));
+  const imageMarkup = `<img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" loading="${index === 0 ? 'eager' : 'lazy'}" fetchpriority="${index === 0 ? 'high' : 'low'}" decoding="async">`;
   return `                            <a href="/news/${escapeHtml(item.slug)}.html" class="hero-card hero-card--news">
                                 <span class="card-tag">${escapeHtml(item.category || 'Latest News')} - ${escapeHtml(formatDate(item.date))}</span>
                                 <h4 class="card-title">${escapeHtml(item.title)}</h4>
                                 <div class="card-image">
-                                    <img src="${escapeHtml(image)}" alt="${escapeHtml(item.title)}" loading="eager" decoding="async">
+                                    ${responsive ? `<picture><source type="image/webp" srcset="/${escapeHtml(responsiveBase)}-480.webp 480w, /${escapeHtml(responsiveBase)}-800.webp 800w" sizes="(max-width: 767px) 90vw, 520px">${imageMarkup}</picture>` : imageMarkup}
                                 </div>
                             </a>`;
 }

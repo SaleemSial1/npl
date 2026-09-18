@@ -4,6 +4,9 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
+    "build": "npm run news:generate && npm run search:generate",
+    "preview": "node scripts/serve.js",
+    "search:generate": "node scripts/generate-search-index.js",
     "auction:sync": "node scripts/sync-auction-live.js",
     "news:fetch": "node scripts/fetch-npl-news.js",
     "news:generate": "node scripts/generate-news-pages.js",
