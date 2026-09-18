@@ -41,6 +41,8 @@ function generate() {
    section('Overseas signings',ps.some(p=>p.status==='Overseas signing')?rosterTable(ps.filter(p=>p.status==='Overseas signing'),t.name+' overseas signings'):'<p>No overseas signing has been verified for this team in this snapshot. This does not mean the team has made none.</p>')+
    section('Season 3 statistics','<p>The 2026 tournament has not started as of this review. Runs, wickets, averages and win rates will need verified scorecards after matches begin.</p>')+
    sources([...t.sources,...ps.flatMap(p=>p.sources),...(t.coach?['pokhara-coach']:[]),'dates']);
+  if (fs.existsSync(`teams/${t.slug}.html`) && fs.readFileSync(`teams/${t.slug}.html`, "utf8").includes("team-hero")) { continue; }
+  if (fs.existsSync(`teams/${t.slug}.html`) && fs.readFileSync(`teams/${t.slug}.html`, "utf8").includes("team-hero")) { continue; }
   shell(`teams/${t.slug}.html`,`${t.name} NPL 2026 Squad & Player Status`,intro,body,{entity:{'@type':'SportsTeam',name:t.name,sport:'Cricket'}});
  }
  for (const p of season.players) {
