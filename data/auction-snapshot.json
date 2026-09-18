@@ -1,0 +1,1557 @@
+{
+  "checkedAt": "2026-09-18",
+  "source": "https://www.cricnepal.com/auction/npl-auction-season-3",
+  "status": "completed",
+  "players": [
+    {
+      "name": "Aadil Khan",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/aadil-khan-1465"
+    },
+    {
+      "name": "Aakash Tripathi",
+      "role": "Batter",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Lumbini Lions",
+      "sourceProfile": "https://www.cricnepal.com/player/aakash-tripathi-762"
+    },
+    {
+      "name": "Aakil Khan",
+      "role": "AR",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/aakil-khan-2424"
+    },
+    {
+      "name": "Aarif Khan",
+      "role": "BAT",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/arif-khan-2423"
+    },
+    {
+      "name": "Aashik Baitha",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/aashik-baitha-2176"
+    },
+    {
+      "name": "Aashish Luhar",
+      "role": "WK",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/aashish-luhar-553"
+    },
+    {
+      "name": "Aashutosh Ghiraiya",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/aashutosh-ghiraiya-1426"
+    },
+    {
+      "name": "Aashutosh Pandey",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/aashutosh-pandey-2425"
+    },
+    {
+      "name": "Aasif Sheikh",
+      "role": "WK",
+      "category": "A",
+      "baseLakh": 15,
+      "priceLakh": 20,
+      "status": "sold",
+      "team": "Lumbini Lions",
+      "sourceProfile": "https://www.cricnepal.com/player/aasif-sheikh-760"
+    },
+    {
+      "name": "Aayushman Bam",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/aayushman-bam-962"
+    },
+    {
+      "name": "Abhay Yadav",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/abhay-yadav-009"
+    },
+    {
+      "name": "Abhisekh Tiwari",
+      "role": "Allrounder",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/abhishek-tiwari-559"
+    },
+    {
+      "name": "Abhishek Pal",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/abhishek-pal-2187"
+    },
+    {
+      "name": "Afrudin Rain",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/afrudin-rain-095"
+    },
+    {
+      "name": "Ajay Chauhan",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Lumbini Lions",
+      "sourceProfile": "https://www.cricnepal.com/player/ajay-chauhan-308"
+    },
+    {
+      "name": "Aman Jain",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/aman-jain-2426"
+    },
+    {
+      "name": "Amar Mishra",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/amar-mishra-077"
+    },
+    {
+      "name": "Amar Singh Rautela",
+      "role": "Bowling allrounder",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/amar-routela-1446"
+    },
+    {
+      "name": "Amit Shrestha",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/amit-shrestha-1444"
+    },
+    {
+      "name": "Anil Kharel",
+      "role": "Bowler",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Sudurpaschim Royals",
+      "sourceProfile": "https://www.cricnepal.com/player/anil-kharel-1456"
+    },
+    {
+      "name": "Ankit Subedi",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/ankit-subedi-1450"
+    },
+    {
+      "name": "Anuj Kumar Chanara",
+      "role": "BOWL",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/anuj-chanara-1430"
+    },
+    {
+      "name": "Anuj Kumar Chauhan",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/anuj-chauhan-2388"
+    },
+    {
+      "name": "Aprajit Poudel",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/aprajit-poudel-098"
+    },
+    {
+      "name": "Arjun Gharti",
+      "role": "Wicketkeeper",
+      "category": "A",
+      "baseLakh": 10,
+      "priceLakh": 15,
+      "status": "sold",
+      "team": "Pokhara Avengers",
+      "sourceProfile": "https://www.cricnepal.com/player/arjun-gharti-1438"
+    },
+    {
+      "name": "Arniko Prasad Yadav",
+      "role": "Batting Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Lumbini Lions",
+      "sourceProfile": "https://www.cricnepal.com/player/arniko-yadav-970"
+    },
+    {
+      "name": "Ashok Dhami",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Chitwan Rhinos",
+      "sourceProfile": "https://www.cricnepal.com/player/ashok-dhami-550"
+    },
+    {
+      "name": "Avinash Karn",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/avinash-karn-2055"
+    },
+    {
+      "name": "Ayub Chand",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Sudurpaschim Royals",
+      "sourceProfile": null
+    },
+    {
+      "name": "Ayush Neupane",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Basant Khatri",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/basant-khatri-1411"
+    },
+    {
+      "name": "Bhulawan Sahani",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/bhulawan-sahani-2056"
+    },
+    {
+      "name": "Bhuwan Karki",
+      "role": "Bowler",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/bhuvan-karki-1403"
+    },
+    {
+      "name": "Bibek Kumar Rana Magar",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2.75,
+      "status": "sold",
+      "team": "Pokhara Avengers",
+      "sourceProfile": "https://www.cricnepal.com/player/bibek-magar-1399"
+    },
+    {
+      "name": "Bibek Kumar Yadav",
+      "role": "Allrounder",
+      "category": "A",
+      "baseLakh": 10,
+      "priceLakh": 15,
+      "status": "sold",
+      "team": "Chitwan Rhinos",
+      "sourceProfile": "https://www.cricnepal.com/player/bibek-yadav-756"
+    },
+    {
+      "name": "Biparshan KC",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/biparshan-kc-090"
+    },
+    {
+      "name": "Bipin Acharya",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Pokhara Avengers",
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-acharya-1386"
+    },
+    {
+      "name": "Bipin Bikram Shahi",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-shahi-964"
+    },
+    {
+      "name": "Bipin Kumar Mahato",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-mahato-739"
+    },
+    {
+      "name": "Bipin Prasad Sharma",
+      "role": "Bowler",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Karnali Yaks",
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-sharma-314"
+    },
+    {
+      "name": "Bipin Rawal",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Chitwan Rhinos",
+      "sourceProfile": "https://www.cricnepal.com/player/bipin-rawal-749"
+    },
+    {
+      "name": "Bishal Kumar Patel",
+      "role": "Bowling allrounder",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/bishal-patel-1381"
+    },
+    {
+      "name": "Bishal Susling",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/bishal-shusling-1377"
+    },
+    {
+      "name": "Chandan Ram",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/chandan-ram-283"
+    },
+    {
+      "name": "Cibrin Shrestha",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/cibrin-shrestha-548"
+    },
+    {
+      "name": "Darsh Sonar",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/darsh-sonar-074"
+    },
+    {
+      "name": "Dayanand Mandal",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Kathmandu Gorkhas",
+      "sourceProfile": "https://www.cricnepal.com/player/dayanand-mandal-099"
+    },
+    {
+      "name": "Deepak Serala",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/deepak-serala-094"
+    },
+    {
+      "name": "Dev Shah",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Kathmandu Gorkhas",
+      "sourceProfile": "https://www.cricnepal.com/player/dev-shah-1360"
+    },
+    {
+      "name": "Dilsad Ali",
+      "role": "Wicketkeeper",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/dilsad-ali-309"
+    },
+    {
+      "name": "Dinesh Bohara Chettri",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Dipak Bohara",
+      "role": "Wicketkeeper",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 10,
+      "status": "sold",
+      "team": "Sudurpaschim Royals",
+      "sourceProfile": "https://www.cricnepal.com/player/dipak-bohara-1380"
+    },
+    {
+      "name": "Dipendra Rawat",
+      "role": "Allrounder",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Karnali Yaks",
+      "sourceProfile": "https://www.cricnepal.com/player/dipendra-rawat-1363"
+    },
+    {
+      "name": "Dipendra Thapa",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/dipendra-thapa-1337"
+    },
+    {
+      "name": "Dipesh Prasad Kandel",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/dipesh-kandel-1348"
+    },
+    {
+      "name": "Dipesh Sapkota",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Dipesh Shrestha",
+      "role": "Allrounder",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/dipesh-shrestha-1335"
+    },
+    {
+      "name": "Diwan Pun",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Karnali Yaks",
+      "sourceProfile": "https://www.cricnepal.com/player/diwan-pun-1341"
+    },
+    {
+      "name": "Diwas Kunwar",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Durgesh Gupta",
+      "role": "Bowler",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Lumbini Lions",
+      "sourceProfile": "https://www.cricnepal.com/player/durgesh-gupta-1338"
+    },
+    {
+      "name": "Firdosh Ansari",
+      "role": "Bowling allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/firdosh-ansari-1339"
+    },
+    {
+      "name": "Gautam KC",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Chitwan Rhinos",
+      "sourceProfile": "https://www.cricnepal.com/player/gautam-kc-1345"
+    },
+    {
+      "name": "Hari Shankar Sah",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/harishankar-sah-1313"
+    },
+    {
+      "name": "Himal Bista",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Himanshu Dutta",
+      "role": "Wicketkeeper",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/himanshu-dutta-1315"
+    },
+    {
+      "name": "Imran Shekh",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/imran-sheikh-816"
+    },
+    {
+      "name": "Jitendra Singh Thakuri",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/jitendra-thakuri-1300"
+    },
+    {
+      "name": "Joy Thapa",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/joy-thapa-011"
+    },
+    {
+      "name": "Kamal Gupta",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/kamal-gupta-089"
+    },
+    {
+      "name": "Kamal Pariyar",
+      "role": "Bowling allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/kamal-pariyar-967"
+    },
+    {
+      "name": "Khadak Bahadur Bohara",
+      "role": "Top-order batter",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/khadak-bohara-1284"
+    },
+    {
+      "name": "Kishor Mahato",
+      "role": "Bowler",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 10,
+      "status": "sold",
+      "team": "Lumbini Lions",
+      "sourceProfile": "https://www.cricnepal.com/player/kishore-mahato-1277"
+    },
+    {
+      "name": "Krishna Paudel",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Kathmandu Gorkhas",
+      "sourceProfile": null
+    },
+    {
+      "name": "Lokendra Bahadur Chand",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/lokendra-chand-975"
+    },
+    {
+      "name": "Mahesh Bhar",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Manoj Yadav",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Mausam Dhakal",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 3,
+      "status": "sold",
+      "team": "Chitwan Rhinos",
+      "sourceProfile": "https://www.cricnepal.com/player/shyam-dhakal-1251"
+    },
+    {
+      "name": "Milan Bohara",
+      "role": "Allrounder",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Sudurpaschim Royals",
+      "sourceProfile": "https://www.cricnepal.com/player/milan-bohara-755"
+    },
+    {
+      "name": "Mohammad Husen Gaddi",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Nar Bahadur Sarki",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/nar-sarki-796"
+    },
+    {
+      "name": "Naren Bhatta",
+      "role": "BAT",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/naren-bhatta-558"
+    },
+    {
+      "name": "Naren Saud",
+      "role": "Bowler",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/narendra-saud-754"
+    },
+    {
+      "name": "Natarajan Kumar Sah",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Navin Kumar Yadav",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/nabin-yadav-969"
+    },
+    {
+      "name": "Nikhil Kumar Singh",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/nikhil-singh-1211"
+    },
+    {
+      "name": "Niraj Kumar Yadav",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/niraj-kumar-yadav-122"
+    },
+    {
+      "name": "Nirmal Gurung",
+      "role": "Bowling allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/nirmal-gurung-797"
+    },
+    {
+      "name": "Nischal Kshetri",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/nischal-kshetri-087"
+    },
+    {
+      "name": "Nitesh Patel",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/nitesh-patel-1684"
+    },
+    {
+      "name": "Pappu Yadav",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/pappu-yadav-1622"
+    },
+    {
+      "name": "Parimarjan Yadav",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/parimarjan-yadav-010"
+    },
+    {
+      "name": "Pawan Bahadur Thapa",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/pawan-thapa-2172"
+    },
+    {
+      "name": "Pawan Karki",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/pawan-karki-2049"
+    },
+    {
+      "name": "Pradeep Paswan",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/pradip-paswan-814"
+    },
+    {
+      "name": "Prajwal Thapa",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/prajjwol-thapa-811"
+    },
+    {
+      "name": "Prakash Bista",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/prakash-bista-1185"
+    },
+    {
+      "name": "Prakash Jaisi",
+      "role": "Bowler",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/prakash-jaishi-1192"
+    },
+    {
+      "name": "Prakash Karki",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/prakash-karki-1189"
+    },
+    {
+      "name": "Prakash KC",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/prakash-kc-1188"
+    },
+    {
+      "name": "Prashiddha Jaishi",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Kathmandu Gorkhas",
+      "sourceProfile": "https://www.cricnepal.com/player/prashiddha-jaishi-003"
+    },
+    {
+      "name": "Pratik Pokharel",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Pokhara Avengers",
+      "sourceProfile": "https://www.cricnepal.com/player/pratik-pokhrel-556"
+    },
+    {
+      "name": "Pratik Shrestha",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/pratik-shrestha-829"
+    },
+    {
+      "name": "Rabindra Jung Shahi",
+      "role": "Allrounder",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/rabindra-shahi-1168"
+    },
+    {
+      "name": "Raju Rijal",
+      "role": "WK",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/raju-rijal-1146"
+    },
+    {
+      "name": "Ramesh Kurmi",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/ramesh-kurmi-280"
+    },
+    {
+      "name": "Ranbir Yadav",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/ranvir-yadav-2391"
+    },
+    {
+      "name": "Ravi Kumar Sah",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/ravi-sah-1134"
+    },
+    {
+      "name": "Ringzin Lama",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/ringzin-lama-2174"
+    },
+    {
+      "name": "Rit Gautam",
+      "role": "BAT",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 4.25,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/rit-gautam-1133"
+    },
+    {
+      "name": "Rohan BK",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/rohan-bk-1136"
+    },
+    {
+      "name": "Rohit Chand",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/rohit-chand-083"
+    },
+    {
+      "name": "Roshan Bishwakarma",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/roshan-bishwakarma-1119"
+    },
+    {
+      "name": "Rupesh Kumar Singh",
+      "role": "Allrounder",
+      "category": "A",
+      "baseLakh": 10,
+      "priceLakh": 15,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/rupesh-singh-1118"
+    },
+    {
+      "name": "Sachin Bhatta",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Sudurpaschim Royals",
+      "sourceProfile": "https://www.cricnepal.com/player/sachin-bhatt-085"
+    },
+    {
+      "name": "Sachin Sharma",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Karnali Yaks",
+      "sourceProfile": "https://www.cricnepal.com/player/sachin-sharma-774"
+    },
+    {
+      "name": "Sahil Patel",
+      "role": "Wicketkeeper",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 5,
+      "status": "sold",
+      "team": "Kathmandu Gorkhas",
+      "sourceProfile": "https://www.cricnepal.com/player/sahil-patel-078"
+    },
+    {
+      "name": "Salahuddin Khan",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Chitwan Rhinos",
+      "sourceProfile": "https://www.cricnepal.com/player/salahuddin-khan-091"
+    },
+    {
+      "name": "Sameer Ali",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sameer-ali-1629"
+    },
+    {
+      "name": "Sameer Bist",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Sameer Kandel",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sameer-kandel-1097"
+    },
+    {
+      "name": "Sandeep Khattri Chhetri",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Santosh Karki",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 3,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/santosh-karki-1080"
+    },
+    {
+      "name": "Saugat Dhakal",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/saugat-dhakal-1612"
+    },
+    {
+      "name": "Shakib Haque",
+      "role": "Wicketkeeper",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/shakib-haque-057"
+    },
+    {
+      "name": "Shankar Rana",
+      "role": "Batter",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/shankar-rana-1049"
+    },
+    {
+      "name": "Shardul Sum Bhatta",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Shivam Tiwari",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/shivam-tiwari-2173"
+    },
+    {
+      "name": "Shrawan Kisku",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Shubh Kansakar",
+      "role": "Batter",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": 10,
+      "status": "sold",
+      "team": "Karnali Yaks",
+      "sourceProfile": "https://www.cricnepal.com/player/shubh-kansakar-987"
+    },
+    {
+      "name": "Shushil Bahadur Rawal",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sushil-rawal-006"
+    },
+    {
+      "name": "Sonu Ansari",
+      "role": "Batter",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sonu-ansari-1034"
+    },
+    {
+      "name": "Sonu Devkota",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Kathmandu Gorkhas",
+      "sourceProfile": "https://www.cricnepal.com/player/sonu-devkota-1037"
+    },
+    {
+      "name": "Subham Khanal",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/shubham-khanal-005"
+    },
+    {
+      "name": "Sudip Aryal",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 3,
+      "status": "sold",
+      "team": "Pokhara Avengers",
+      "sourceProfile": "https://www.cricnepal.com/player/sudip-aryal-800"
+    },
+    {
+      "name": "Sujan Thapaliya",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 4.25,
+      "status": "sold",
+      "team": "Biratnagar Kings",
+      "sourceProfile": "https://www.cricnepal.com/player/sujan-thapaliya-635"
+    },
+    {
+      "name": "Suman Shrestha",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/suman-shrestha-2171"
+    },
+    {
+      "name": "Sumit Maharjan",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sumit-maharjan-1010"
+    },
+    {
+      "name": "Sunam Gautam",
+      "role": "Batter",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sunam-gautam-1013"
+    },
+    {
+      "name": "Suni Gautam",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Sunil Dhamala",
+      "role": "Batter",
+      "category": "B",
+      "baseLakh": 5,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sunil-dhamala-1022"
+    },
+    {
+      "name": "Sunny BK",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Pokhara Avengers",
+      "sourceProfile": null
+    },
+    {
+      "name": "Suraj Prasad Kurmi",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/suraj-kurmi-1008"
+    },
+    {
+      "name": "Surya Tamang",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Karnali Yaks",
+      "sourceProfile": "https://www.cricnepal.com/player/surya-tamang-1017"
+    },
+    {
+      "name": "Suryanshu Koirala",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Kathmandu Gorkhas",
+      "sourceProfile": "https://www.cricnepal.com/player/suryanshu-koirala-547"
+    },
+    {
+      "name": "Sushant Singh",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/sushant-thapa-1011"
+    },
+    {
+      "name": "Suwash Ayer",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/suwash-ayer-991"
+    },
+    {
+      "name": "Symon Roy",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Tek Rawat",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": 2,
+      "status": "sold",
+      "team": "Sudurpaschim Royals",
+      "sourceProfile": "https://www.cricnepal.com/player/tek-rawat-282"
+    },
+    {
+      "name": "Travis Jaishi",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Trit Raj Das",
+      "role": "Batter",
+      "category": "A",
+      "baseLakh": 10,
+      "priceLakh": 15,
+      "status": "sold",
+      "team": "Janakpur Bolts",
+      "sourceProfile": "https://www.cricnepal.com/player/trit-raj-das-994"
+    },
+    {
+      "name": "Tul Bahadur Thapa",
+      "role": "Bowler",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/tul-bahadur-thapa-999"
+    },
+    {
+      "name": "Tul Bahadur Thapa Magar",
+      "role": null,
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": null
+    },
+    {
+      "name": "Uttam Rangu Thapa Magar",
+      "role": "Wicketkeeper",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/uttam-magar-808"
+    },
+    {
+      "name": "Vansh Chhetri",
+      "role": "Allrounder",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/vansh-chhetri-080"
+    },
+    {
+      "name": "Yogesh Bahadur Bhat Chhetri",
+      "role": "Batter",
+      "category": "C",
+      "baseLakh": 2,
+      "priceLakh": null,
+      "status": "unsold",
+      "team": null,
+      "sourceProfile": "https://www.cricnepal.com/player/yogesh-bhatt-990"
+    }
+  ]
+}

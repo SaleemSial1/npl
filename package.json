@@ -4,7 +4,7 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "build": "npm run news:generate && npm run search:generate",
+    "build": "npm run season:generate && npm run news:generate && npm run search:generate && npm run sitemap:generate",
     "preview": "node scripts/serve.js",
     "search:generate": "node scripts/generate-search-index.js",
     "auction:sync": "node scripts/sync-auction-live.js",
@@ -12,6 +12,8 @@
     "news:generate": "node scripts/generate-news-pages.js",
     "news:validate": "node scripts/validate-news-system.js",
     "test": "node --test",
-    "test:all": "node --test"
+    "test:all": "node --test",
+    "season:generate": "node scripts/generate-season-pages.js",
+    "sitemap:generate": "node scripts/generate-sitemap.js"
   }
 }

@@ -593,7 +593,8 @@ function articlePage(item, items) {
   const sourceCount = Array.isArray(item.sources) ? item.sources.length : 0;
   const articleImage = item.image || 'images/NPL.webp';
   const pageTitle = item.seoTitle || `${item.title} - NPL 2026 News`;
-  const articleBodySections = [answer, facts, paragraphs, readAlso, faqs, sourceList(item)]
+  const reviewNote = item.reviewNote ? `<aside class="news-article__answer" aria-label="Editorial review"><strong>Editorial review — ${escapeHtml(item.reviewedAt || '')}</strong><p>${escapeHtml(item.reviewNote)}</p>${item.currentGuide ? `<a href="${escapeHtml(item.currentGuide)}">Current season information</a>` : ''}</aside>` : '';
+  const articleBodySections = [reviewNote, answer, facts, paragraphs, readAlso, faqs, sourceList(item)]
     .filter(Boolean)
     .join('\n      ');
   const body = `
