@@ -10,6 +10,8 @@ const {
   loadNews,
 } = require('./news-utils');
 
+const stylesHref = '/styles.css?v=20260919-audit';
+
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
@@ -120,7 +122,7 @@ function pageShell({ title, description, canonical, body, image, socialTitle }) 
 <link rel="canonical" href="${escapeHtml(canonical)}">
 <link rel="icon" type="image/png" href="/NPL Logo.png">
 
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="${stylesHref}">
 <style>
   .main-content{padding-top:4rem}
   @media(min-width:768px){.main-content{padding-top:5rem}}
