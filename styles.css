@@ -5772,14 +5772,16 @@ table tbody tr:hover { background: rgba(0,0,0,0.03) !important; }
    ========================================================================== */
 
 :root {
-  --npl-clean-bg: #ffffff;
-  --npl-clean-ink: #111111;
-  --npl-clean-muted: #5f6670;
-  --npl-clean-soft: #f7f7f7;
-  --npl-clean-line: #e7e7e7;
-  --npl-clean-accent: #c41230;
-  --npl-clean-accent-dark: #930d22;
-  --npl-clean-green: #0f6b46;
+  --npl-clean-bg: #fbfaf7;
+  --npl-clean-surface: #ffffff;
+  --npl-clean-ink: #151515;
+  --npl-clean-muted: #5c6470;
+  --npl-clean-soft: #f3f1ec;
+  --npl-clean-line: #e6e1d8;
+  --npl-clean-accent: #b5122b;
+  --npl-clean-accent-dark: #7f0d20;
+  --npl-clean-green: #155f45;
+  --npl-clean-focus: #d9ad43;
   --npl-clean-max: 1160px;
 }
 
@@ -5807,7 +5809,7 @@ body::after,
 
 #header,
 header {
-  background: rgba(255, 255, 255, 0.96) !important;
+  background: rgba(251, 250, 247, 0.96) !important;
   border-bottom: 1px solid var(--npl-clean-line) !important;
   box-shadow: none !important;
   backdrop-filter: blur(12px) !important;
@@ -5846,7 +5848,7 @@ footer img[alt="NPL Logo"] {
 }
 
 .main-nav.active {
-  background: #ffffff !important;
+  background: var(--npl-clean-bg) !important;
   border-bottom: 1px solid var(--npl-clean-line) !important;
   box-shadow: none !important;
 }
@@ -5861,7 +5863,7 @@ input[type="text"],
 input[type="search"],
 select,
 textarea {
-  background: #ffffff !important;
+  background: var(--npl-clean-surface) !important;
   border: 1px solid var(--npl-clean-line) !important;
   border-radius: 4px !important;
   color: var(--npl-clean-ink) !important;
@@ -5871,6 +5873,16 @@ textarea {
 .search-input::placeholder,
 .search-icon {
   color: #8a8f98 !important;
+}
+
+.search-input:focus,
+input[type="text"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--npl-clean-accent) !important;
+  outline: 2px solid rgba(181, 18, 43, .16) !important;
+  outline-offset: 2px !important;
 }
 
 .hero-section,
@@ -5886,7 +5898,7 @@ textarea {
 .quick-actions-section,
 main,
 .main-content {
-  background: #ffffff !important;
+  background: var(--npl-clean-bg) !important;
   background-image: none !important;
   border: 0 !important;
   box-shadow: none !important;
@@ -5956,6 +5968,10 @@ a,
   color: var(--npl-clean-accent) !important;
 }
 
+a:hover {
+  color: var(--npl-clean-accent-dark) !important;
+}
+
 .news-card,
 .match-card,
 .team-card,
@@ -5985,6 +6001,16 @@ a,
   border-radius: 0 !important;
   box-shadow: none !important;
   color: var(--npl-clean-ink) !important;
+}
+
+.site-search-results {
+  background: var(--npl-clean-surface) !important;
+  border: 1px solid var(--npl-clean-line) !important;
+  padding: .75rem !important;
+}
+
+.site-search-results a:hover {
+  background: var(--npl-clean-soft) !important;
 }
 
 .news-card,
@@ -6073,7 +6099,7 @@ hr {
 }
 
 table {
-  background: #ffffff !important;
+  background: var(--npl-clean-surface) !important;
   border-collapse: collapse !important;
 }
 
@@ -6094,7 +6120,7 @@ table tbody tr:hover {
 
 footer,
 #footer {
-  background: #111111 !important;
+  background: #151515 !important;
   background-image: none !important;
   border-top: 0 !important;
   box-shadow: none !important;
@@ -6129,6 +6155,16 @@ footer a:hover,
 
 .menu-toggle,
 .menu-toggle svg {
+  color: var(--npl-clean-ink) !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--npl-clean-focus) !important;
+  outline-offset: 3px !important;
+}
+
+::selection {
+  background: rgba(181, 18, 43, .16) !important;
   color: var(--npl-clean-ink) !important;
 }
 

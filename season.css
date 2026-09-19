@@ -106,3 +106,44 @@
   border-radius:0!important;
   box-shadow:none!important;
 }
+
+/* Harmonized UX palette. */
+.season-main {
+  background:var(--npl-clean-bg,#fbfaf7)!important;
+  color:var(--npl-clean-ink,#151515)!important;
+}
+.season-hero h1,
+.season-panel h2,
+.season-card h2,
+.season-main th,
+.season-main td {
+  color:var(--npl-clean-ink,#151515)!important;
+}
+.season-hero p,
+.season-panel p,
+.season-card p,
+.season-breadcrumb,
+.season-main caption {
+  color:var(--npl-clean-muted,#5c6470)!important;
+}
+.season-main a,
+.season-eyebrow,
+.season-date,
+.season-chip,
+.season-main thead th {
+  color:var(--npl-clean-accent,#b5122b)!important;
+}
+.season-panel,
+.season-main th,
+.season-main td {
+  border-color:var(--npl-clean-line,#e6e1d8)!important;
+}
+.season-main tbody tr:hover {
+  background:var(--npl-clean-soft,#f3f1ec)!important;
+}
+.season-tabs button,
+.season-filters input,
+.season-filters select {
+  background:var(--npl-clean-surface,#ffffff)!important;
+  border-color:var(--npl-clean-line,#e6e1d8)!important;
+}

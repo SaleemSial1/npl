@@ -575,3 +575,44 @@ body {
     border-radius: 0 !important;
     box-shadow: none !important;
 }
+
+/* Harmonized UX palette. */
+body {
+    background: var(--npl-clean-bg, #fbfaf7) !important;
+    color: var(--npl-clean-ink, #151515) !important;
+}
+
+.section-title,
+.player-name,
+.sidebar-title,
+.faq-question,
+.coach-name,
+.fact-value {
+    color: var(--npl-clean-ink, #151515) !important;
+}
+
+.intro-card p,
+.fact-label,
+.coach-title,
+.coach-bio,
+.faq-answer,
+.player-role {
+    color: var(--npl-clean-muted, #5c6470) !important;
+}
+
+.back-btn,
+.fact-value a,
+.player-card a {
+    color: var(--npl-clean-accent, #b5122b) !important;
+}
+
+.intro-card,
+.sidebar-card,
+.player-card,
+.faq-item {
+    border-color: var(--npl-clean-line, #e6e1d8) !important;
+}
+
+.title-underline {
+    background: var(--npl-clean-accent, #b5122b) !important;
+}
