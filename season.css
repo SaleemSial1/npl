@@ -9,3 +9,100 @@
 .season-main .team-card-name {color:#111827!important}
 .season-main .key-fact-label,
 .season-main .team-card-tag {color:#526174!important}
+
+/* Clean redesign layer for generated season, squad, auction and stats pages. */
+.season-main {
+  background:#ffffff!important;
+  color:#111111!important;
+  padding:6.25rem 0 4rem!important;
+}
+.season-main .container {
+  max-width:1160px!important;
+}
+.season-breadcrumb {
+  color:#6b7280!important;
+  gap:.45rem!important;
+}
+.season-main a {
+  color:#c41230!important;
+}
+.season-hero {
+  max-width:900px!important;
+  padding:2rem 0 3rem!important;
+}
+.season-hero h1 {
+  color:#111111!important;
+  font-size:clamp(2.25rem,7vw,5rem)!important;
+  line-height:.98!important;
+  letter-spacing:0!important;
+}
+.season-hero p,
+.season-panel p,
+.season-card p {
+  color:#5f6670!important;
+}
+.season-eyebrow,
+.season-date,
+.season-chip {
+  color:#c41230!important;
+  background:transparent!important;
+  letter-spacing:0!important;
+}
+.season-panel,
+.season-card,
+.season-notice {
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:1.2rem 0!important;
+}
+.season-panel {
+  border-top:1px solid #e7e7e7!important;
+  margin:0!important;
+}
+.season-panel h2,
+.season-card h2 {
+  color:#111111!important;
+  font-size:clamp(1.55rem,3vw,2.35rem)!important;
+  line-height:1.08!important;
+  letter-spacing:0!important;
+}
+.season-notice {
+  border-left:2px solid #c41230!important;
+  padding-left:1rem!important;
+}
+.season-tabs button,
+.season-filters input,
+.season-filters select {
+  background:#ffffff!important;
+  border:1px solid #e7e7e7!important;
+  border-radius:4px!important;
+  color:#111111!important;
+  box-shadow:none!important;
+}
+.season-tabs button[aria-selected=true] {
+  background:#111111!important;
+  border-color:#111111!important;
+  color:#ffffff!important;
+}
+.season-main th,
+.season-main td {
+  border-bottom:1px solid #e7e7e7!important;
+  color:#111111!important;
+}
+.season-main thead th {
+  color:#c41230!important;
+}
+.season-main tbody tr:hover {
+  background:#f7f7f7!important;
+}
+.season-main .schedule-intro,
+.season-main .key-fact,
+.season-main .schedule-content-section,
+.season-main .faq-item-schedule {
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}

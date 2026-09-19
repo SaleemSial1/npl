@@ -489,3 +489,89 @@ body {
 .title-underline {
     background: linear-gradient(90deg, var(--vip-gold, #ddb140), var(--vip-emerald, #15a66a)) !important;
 }
+
+/* Simple premium team-page redesign. Loaded after the legacy team theme. */
+body {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+
+.main-layout-container,
+.main-content,
+.sidebar {
+    background: transparent !important;
+    color: #111111 !important;
+}
+
+.main-layout-container {
+    padding-top: 5.5rem !important;
+    padding-bottom: 4rem !important;
+}
+
+.sidebar-card,
+.intro-card,
+.player-card,
+.faq-item,
+.coach-card,
+.facts-card {
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #111111 !important;
+}
+
+.intro-card,
+.sidebar-card,
+.player-card,
+.faq-item {
+    border-top: 1px solid #e7e7e7 !important;
+    padding: 1.2rem 0 !important;
+}
+
+.player-card:hover {
+    border-color: #e7e7e7 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.section-title,
+.player-name,
+.sidebar-title,
+.faq-question,
+.coach-name,
+.fact-value {
+    color: #111111 !important;
+    letter-spacing: 0 !important;
+}
+
+.intro-card p,
+.fact-label,
+.coach-title,
+.coach-bio,
+.faq-answer,
+.player-role {
+    color: #5f6670 !important;
+}
+
+.back-btn,
+.fact-value a,
+.player-card a {
+    color: #c41230 !important;
+}
+
+.title-underline {
+    width: 4rem !important;
+    height: 2px !important;
+    background: #c41230 !important;
+    border-radius: 0 !important;
+}
+
+.team-logo,
+.player-image,
+.player-photo {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}

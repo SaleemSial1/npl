@@ -7,7 +7,8 @@ const read = file => fs.readFileSync(path.join(root,file),'utf8');
 const write = (file,text) => fs.writeFileSync(path.join(root,file),text);
 const header = read('templates/site-header.html');
 const footer = read('templates/site-footer.html');
-const stylesHref = '/styles.css?v=20260919-audit';
+const stylesHref = '/styles.css?v=20260919-clean';
+const seasonStylesHref = '/season.css?v=20260919-clean';
 const checked = '18 September 2026';
 const windowText = 'October 26–November 21, 2026';
 const teamFor = p => season.teams.find(t => t.slug === p.team);
@@ -23,7 +24,7 @@ function shell(file,title,description,body,{noindex=false,entity=null,canonical=
  write(file,`<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}"><meta name="robots" content="${noindex?'noindex, follow':'index, follow'}"><link rel="canonical" href="${esc(url)}"><link rel="icon" href="/NPL Logo.png" type="image/png">
 <meta name="google-site-verification" content="FcI0XnWsjvW-He8lPMA0I-pgbndhVjvFJDxlKS7I6uI"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:type" content="website"><meta property="og:image" content="https://nplcricketleague.com/images/NPL.webp"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="${stylesHref}"><link rel="stylesheet" href="/season.css"><script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>
+<link rel="stylesheet" href="${stylesHref}"><link rel="stylesheet" href="${seasonStylesHref}"><script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXJZYNV100"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-WXJZYNV100');</script>
 </head><body>${header}<main class="season-main" id="main"><div class="container"><nav class="season-breadcrumb" aria-label="Breadcrumb">${link('/','Home')} / ${link('/teams','Teams')} / ${link('/players','Players')} / ${link('/stats','Stats')}</nav>${body}</div></main>${footer}<script src="/scripts/season-ui.js" defer></script><script src="/scripts/cookie-consent.js"></script><script src="/scripts/site-search.js" defer></script></body></html>\n`);
 }
