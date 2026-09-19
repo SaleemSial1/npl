@@ -10,7 +10,7 @@ const {
   loadNews,
 } = require('./news-utils');
 
-const stylesHref = '/styles.css?v=20260919-ux';
+const stylesHref = '/styles.css?v=20260919-sports';
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });

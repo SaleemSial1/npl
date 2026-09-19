@@ -6189,3 +6189,342 @@ footer a:hover,
     font-size: clamp(1.55rem, 9vw, 2.4rem) !important;
   }
 }
+
+/* ==========================================================================
+   UI UX PRO MAX SPORTS REDESIGN
+   Direction: sports team/news site, red matchday palette, strong editorial type,
+   accessible contrast, responsive tables, and clear interactive feedback.
+   ========================================================================== */
+
+:root {
+  --npl-sport-bg: #fef2f2;
+  --npl-sport-surface: #ffffff;
+  --npl-sport-ink: #450a0a;
+  --npl-sport-heading: #121212;
+  --npl-sport-muted: #475569;
+  --npl-sport-red: #dc2626;
+  --npl-sport-red-dark: #991b1b;
+  --npl-sport-red-soft: #fee2e2;
+  --npl-sport-line: #fecaca;
+  --npl-sport-night: #160707;
+  --npl-sport-gold: #fbbf24;
+  --npl-sport-shadow: 0 14px 34px rgba(69, 10, 10, .12);
+}
+
+html,
+body {
+  background:
+    linear-gradient(180deg, rgba(220, 38, 38, .08) 0, rgba(254, 242, 242, 0) 360px),
+    var(--npl-sport-bg) !important;
+  color: var(--npl-sport-ink) !important;
+}
+
+#header,
+header {
+  background: rgba(22, 7, 7, .96) !important;
+  border-bottom: 3px solid var(--npl-sport-red) !important;
+  color: #ffffff !important;
+  z-index: 1000 !important;
+}
+
+#header img[alt="NPL Logo"] {
+  background: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 5px !important;
+}
+
+.nav-link,
+.menu-toggle,
+.menu-toggle svg {
+  color: #ffffff !important;
+}
+
+.nav-link {
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--npl-sport-gold) !important;
+}
+
+.main-nav.active {
+  background: var(--npl-sport-night) !important;
+  border-bottom: 3px solid var(--npl-sport-red) !important;
+}
+
+.search-input,
+#header input[type="text"],
+#header input[type="search"] {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,255,255,.22) !important;
+  color: #ffffff !important;
+}
+
+#header .search-input::placeholder,
+#header .search-icon {
+  color: rgba(255,255,255,.74) !important;
+}
+
+.hero-section,
+.section,
+.teams-section,
+.players-section,
+.matches-section,
+.news-section,
+.homepage-teams-section,
+.homepage-intro,
+.stats-section,
+.points-table-section,
+.quick-actions-section,
+main,
+.main-content {
+  background: transparent !important;
+}
+
+.hero-section,
+.season-main,
+.main-content {
+  padding-top: clamp(6rem, 9vw, 8rem) !important;
+}
+
+.hero-title,
+h1,
+.section-title,
+h2 {
+  color: var(--npl-sport-heading) !important;
+  text-transform: uppercase !important;
+}
+
+.hero-subheading,
+.section-kicker,
+.season-eyebrow,
+.card-tag,
+.news-date {
+  color: var(--npl-sport-red) !important;
+  font-weight: 800 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+}
+
+p,
+li,
+.section-description,
+.hero-description,
+.news-description,
+.stat-label,
+.faq-answer {
+  color: var(--npl-sport-muted) !important;
+}
+
+a,
+.season-main a {
+  color: var(--npl-sport-red-dark) !important;
+}
+
+a:hover,
+.season-main a:hover {
+  color: var(--npl-sport-red) !important;
+}
+
+.news-card,
+.match-card,
+.team-card,
+.player-card,
+.quick-action-card,
+.hero-card,
+.video-card,
+.info-card,
+.stat-card,
+.snapshot-card,
+.retained-card,
+.points-table-container,
+.standings-card,
+.homepage-intro-panel,
+.intro-panel-row,
+.season-panel,
+.season-card,
+.sidebar-card,
+.intro-card,
+.faq-question,
+.faq-answer,
+.stat-banner-card {
+  background: var(--npl-sport-surface) !important;
+  border: 1px solid var(--npl-sport-line) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 1px 0 rgba(69, 10, 10, .05) !important;
+  color: var(--npl-sport-ink) !important;
+}
+
+.news-card,
+.match-card,
+.team-card,
+.player-card,
+.quick-action-card,
+.hero-card {
+  padding: 1.25rem !important;
+}
+
+.news-card:hover,
+.match-card:hover,
+.team-card:hover,
+.player-card:hover,
+.quick-action-card:hover,
+.hero-card:hover,
+.video-card:hover {
+  border-color: var(--npl-sport-red) !important;
+  box-shadow: var(--npl-sport-shadow) !important;
+  transform: translateY(-2px) !important;
+}
+
+.news-title,
+.card-title,
+.team-name,
+.player-name,
+.stat-value,
+.action-info h4,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--npl-sport-heading) !important;
+}
+
+.btn,
+.btn-primary,
+.btn-secondary,
+.read-more,
+.biography-btn {
+  min-height: 44px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease !important;
+}
+
+.btn-primary,
+.read-more,
+.biography-btn {
+  background: var(--npl-sport-red) !important;
+  border-color: var(--npl-sport-red) !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary {
+  background: #ffffff !important;
+  border-color: var(--npl-sport-red) !important;
+  color: var(--npl-sport-red-dark) !important;
+}
+
+.btn-primary:hover,
+.read-more:hover,
+.biography-btn:hover {
+  background: var(--npl-sport-red-dark) !important;
+  border-color: var(--npl-sport-red-dark) !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary:hover {
+  background: var(--npl-sport-red-soft) !important;
+}
+
+.season-table-wrap,
+.table-container,
+.points-table-container {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+table {
+  background: var(--npl-sport-surface) !important;
+}
+
+table th {
+  background: var(--npl-sport-night) !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+}
+
+table td,
+table th {
+  border-color: var(--npl-sport-line) !important;
+}
+
+table tbody tr:hover {
+  background: #fff1f1 !important;
+}
+
+.season-tabs button,
+.season-filters input,
+.season-filters select,
+select,
+textarea,
+input[type="text"],
+input[type="search"] {
+  background: #ffffff !important;
+  border: 1px solid var(--npl-sport-line) !important;
+  color: var(--npl-sport-ink) !important;
+  min-height: 44px !important;
+}
+
+.season-tabs button[aria-selected="true"],
+.season-tabs button[aria-selected=true] {
+  background: var(--npl-sport-red) !important;
+  border-color: var(--npl-sport-red) !important;
+  color: #ffffff !important;
+}
+
+.site-search-results {
+  background: #ffffff !important;
+  border: 1px solid var(--npl-sport-line) !important;
+  box-shadow: var(--npl-sport-shadow) !important;
+}
+
+.title-underline,
+.section-divider,
+hr {
+  background: var(--npl-sport-red) !important;
+}
+
+footer,
+#footer {
+  background: var(--npl-sport-night) !important;
+  border-top: 4px solid var(--npl-sport-red) !important;
+}
+
+footer img[alt="NPL Logo"] {
+  background: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 5px !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--npl-sport-gold) !important;
+  outline-offset: 3px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .news-card,
+  .match-card,
+  .team-card,
+  .player-card,
+  .quick-action-card,
+  .hero-card,
+  .season-panel,
+  .season-card {
+    border-radius: 8px !important;
+    padding: 1rem !important;
+  }
+}

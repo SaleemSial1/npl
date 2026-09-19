@@ -147,3 +147,56 @@
   background:var(--npl-clean-surface,#ffffff)!important;
   border-color:var(--npl-clean-line,#f2c9c9)!important;
 }
+
+/* UI UX Pro Max sports-site pass. */
+.season-main {
+  background:transparent!important;
+  color:var(--npl-sport-ink,#450a0a)!important;
+}
+.season-hero h1,
+.season-panel h2,
+.season-card h2,
+.season-main th,
+.season-main td {
+  color:var(--npl-sport-heading,#121212)!important;
+}
+.season-panel,
+.season-card,
+.season-notice,
+.schedule-intro,
+.schedule-content-section,
+.key-fact,
+.broadcast-card,
+.faq-item-schedule {
+  background:var(--npl-sport-surface,#ffffff)!important;
+  border:1px solid var(--npl-sport-line,#fecaca)!important;
+  border-radius:10px!important;
+  box-shadow:0 1px 0 rgba(69,10,10,.05)!important;
+}
+.season-panel,
+.season-card,
+.schedule-content-section,
+.schedule-intro,
+.faq-item-schedule {
+  padding:1.25rem!important;
+  margin-bottom:1rem!important;
+}
+.season-notice {
+  border-left:4px solid var(--npl-sport-red,#dc2626)!important;
+}
+.season-main a,
+.season-eyebrow,
+.season-date,
+.season-chip,
+.season-main thead th {
+  color:var(--npl-sport-red-dark,#991b1b)!important;
+}
+.season-tabs button[aria-selected=true] {
+  background:var(--npl-sport-red,#dc2626)!important;
+  border-color:var(--npl-sport-red,#dc2626)!important;
+  color:#fff!important;
+}
+.season-main thead th {
+  background:var(--npl-sport-night,#160707)!important;
+  color:#fff!important;
+}
