@@ -578,8 +578,9 @@ body {
 
 /* Harmonized UX palette. */
 body {
-    background: var(--npl-clean-bg, #fbfaf7) !important;
-    color: var(--npl-clean-ink, #151515) !important;
+    background: var(--npl-clean-bg, #fff7f7) !important;
+    color: var(--npl-clean-ink, #450a0a) !important;
+    font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
 
 .section-title,
@@ -588,7 +589,15 @@ body {
 .faq-question,
 .coach-name,
 .fact-value {
-    color: var(--npl-clean-ink, #151515) !important;
+    color: var(--npl-clean-ink, #450a0a) !important;
+    font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.section-title,
+.sidebar-title {
+    color: var(--npl-clean-heading, #18181b) !important;
+    font-family: "Bebas Neue", "Source Sans 3", sans-serif !important;
+    line-height: 1.02 !important;
 }
 
 .intro-card p,
@@ -603,16 +612,16 @@ body {
 .back-btn,
 .fact-value a,
 .player-card a {
-    color: var(--npl-clean-accent, #b5122b) !important;
+    color: var(--npl-clean-accent, #dc2626) !important;
 }
 
 .intro-card,
 .sidebar-card,
 .player-card,
 .faq-item {
-    border-color: var(--npl-clean-line, #e6e1d8) !important;
+    border-color: var(--npl-clean-line, #f2c9c9) !important;
 }
 
 .title-underline {
-    background: var(--npl-clean-accent, #b5122b) !important;
+    background: var(--npl-clean-accent, #dc2626) !important;
 }
