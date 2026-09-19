@@ -2,8 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const AUCTION_HTML = path.join(ROOT_DIR, 'auction.html');
-const LIVE_FEED_JSON = path.join(ROOT_DIR, 'data', 'npl-auction-live.json');
+const RESEARCH_DIR = path.join(ROOT_DIR, '.auction-cache');
 
 const LIVE_URL = 'https://www.cricnepal.com/npl-auction-season-3-live';
 const TRACKER_URL = 'https://www.cricnepal.com/auction/npl-auction-season-3';
@@ -333,208 +332,25 @@ function buildFeed(updates) {
   };
 }
 
-function rowHtml(cells) {
-  return `<tr>${cells.map((cell) => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`;
-}
-
-function renderTeamCards(teams) {
-  return teams.map((team) => {
-    const progress = Math.min(100, Math.round((team.squad / 16) * 10000) / 100);
-    return `<article class="tracker-card">
-<div class="tracker-card__top">
-<img alt="${escapeHtml(team.name)} logo" class="tracker-card__logo" src="${escapeHtml(team.logo)}"/>
-<div><span class="tracker-card__city">${escapeHtml(team.city)}</span><span class="tracker-card__name">${escapeHtml(team.name)}</span></div>
-</div>
-<div class="squad-progress"><div class="squad-progress__label"><span>Squad</span><span>${team.squad} / 16</span></div><div class="progress-track"><div class="progress-fill" style="width: ${progress}%;"></div></div></div>
-<div class="purse-row"><div class="purse-box"><span class="purse-label">Spent</span><strong class="purse-value">${escapeHtml(displayAmount(team.spent))}</strong></div><div class="purse-box"><span class="purse-label">Left</span><strong class="purse-value">${escapeHtml(displayAmount(team.left))}</strong></div></div>
-</article>`;
-  }).join('\n');
-}
-
-function teamBuys(teamName, soldRows) {
-  return soldRows
-    .filter((row) => row.team === teamName)
-    .map((row) => row.player)
-    .join(', ') || 'Awaiting update';
-}
-
-function compactSoldRows(soldRows) {
-  return soldRows.slice(0, 10).map((row) => rowHtml([
-    row.player,
-    row.team,
-    displayAmount(row.price),
-    row.status,
-  ])).join('\n');
-}
-
-function compactUnsoldRows(unsoldRows, counts) {
-  const visible = unsoldRows.slice(0, 8).map((row) => rowHtml([
-    row.player,
-    row.category,
-    row.status,
-    'Listed on auction tracker',
-  ]));
-  visible.push(rowHtml(['Tracker total', '-', `${counts.unsold} unsold`, 'Synced from auction tracker']));
-  return visible.join('\n');
-}
-
-function resultUnsoldRows(unsoldRows, counts) {
-  const visible = unsoldRows.map((row) => rowHtml([
-    row.player,
-    row.category,
-    row.role,
-    'Saved tracker',
-    row.status,
-  ]));
-  visible.push(rowHtml(['Tracker total', '-', '-', 'Latest snapshot', `${counts.unsold} unsold listed`]));
-  return visible.join('\n');
-}
-
-function replaceOrThrow(html, pattern, replacement, label) {
-  if (!pattern.test(html)) throw new Error(`Could not update ${label}`);
-  return html.replace(pattern, replacement);
-}
-
-function updateAuctionHtml({ teams, rows, counts, feed }) {
-  let html = fs.readFileSync(AUCTION_HTML, 'utf8');
-  const soldRows = rows.filter((row) => row.status === 'Sold');
-  const unsoldRows = rows.filter((row) => row.status === 'Unsold');
-  const topBuys = [...soldRows]
-    .filter((row) => Number(row.price) > 0)
-    .sort((a, b) => Number(b.price) - Number(a.price))
-    .slice(0, 10);
-  const latestTitle = feed.updates[0]?.title || 'Auction update';
-  const latestTime = feed.updatedAtLabel;
-
-  html = html.replace(/<span class="status-pill">[\s\S]*?<\/span>/, '<span class="status-pill">Auction snapshot</span>');
-  html = html.replace(/\s*"eventStatus": "https:\/\/schema\.org\/[^"]+",/, '');
-  html = html.replace(/<li><span>Status:<\/span>[\s\S]*?<\/li>/, '<li><span>Status:</span> Auction snapshot</li>');
-
-  html = replaceOrThrow(
-    html,
-    /<p class="section-note">(Latest synced snapshot from auction day:|Latest snapshot:)[\s\S]*?<\/p>/,
-    `<p class="section-note">Latest snapshot: ${counts.sold} sold, ${counts.unsold} unsold and ${counts.total} players in the NPL Season 3 auction pool.</p>`,
-    'team purse note',
-  );
-
-  html = replaceOrThrow(
-    html,
-    /<div class="team-grid">[\s\S]*?<\/article>\n<\/div>\n<p class="source-note">[\s\S]*?<\/p>/,
-    `<div class="team-grid">\n${renderTeamCards(teams)}\n</div>\n<p class="source-note">Purse and player-pool figures follow the auction tracker. Latest timeline update: ${escapeHtml(latestTitle)} (${escapeHtml(latestTime)}).</p>`,
-    'team grid',
-  );
-
-  html = replaceOrThrow(
-    html,
-    /<p class="section-note">Latest snapshot:[\s\S]*?<\/p>/,
-    `<p class="section-note">Latest snapshot: ${counts.sold} sold players, ${counts.unsold} unsold listed on the auction tracker, and ${counts.total} players in the Season 3 auction pool.</p>`,
-    'player board note',
-  );
-
-  html = replaceOrThrow(
-    html,
-    /(<div class="tab-panel is-active" id="top-buys">[\s\S]*?<tbody>\n)[\s\S]*?(\n<\/tbody>)/,
-    `$1${topBuys.map((row) => rowHtml([row.player, row.team, displayAmount(row.price), row.status])).join('\n')}$2`,
-    'top buys tab',
-  );
-  html = replaceOrThrow(
-    html,
-    /(<div class="tab-panel" id="sold">[\s\S]*?<tbody>\n)[\s\S]*?(\n<\/tbody>)/,
-    `$1${compactSoldRows(soldRows)}$2`,
-    'sold tab',
-  );
-  html = replaceOrThrow(
-    html,
-    /(<div class="tab-panel" id="unsold">[\s\S]*?<tbody>\n)[\s\S]*?(\n<\/tbody>)/,
-    `$1${compactUnsoldRows(unsoldRows, counts)}$2`,
-    'unsold tab',
-  );
-  html = replaceOrThrow(
-    html,
-    /<tr><td>Season 3 auction pool<\/td><td>155<\/td><td>[\s\S]*?<\/td><td>[\s\S]*?<\/td><\/tr>/,
-    rowHtml(['Season 3 auction pool', counts.total, 'Saved snapshot', `${counts.sold} sold, ${counts.unsold} unsold listed`]),
-    'all players row',
-  );
-
-  html = replaceOrThrow(
-    html,
-    /<p class="section-note">Confirmed sold players,[\s\S]*?<\/p>/,
-    `<p class="section-note">Confirmed sold players, winning franchises and auction prices from the NPL Season 3 live auction tracker.</p>`,
-    'sold section note',
-  );
-  html = replaceOrThrow(
-    html,
-    /<p class="result-summary">The Season 3 auction is tracking[\s\S]*?<\/p>/,
-    `<p class="result-summary">The Season 3 auction is tracking a ${counts.total}-player shortlist from the wider 347-player registration pool. This table follows the latest auction tracker updates.</p>`,
-    'sold section summary',
-  );
-  html = replaceOrThrow(
-    html,
-    /(<section class="result-section" id="players-sold"[\s\S]*?<tbody>\n)[\s\S]*?(\n<\/tbody>)/,
-    `$1${soldRows.map((row) => rowHtml([row.player, row.team, displayAmount(row.price), row.status, 'Saved tracker'])).join('\n')}$2`,
-    'sold section table',
-  );
-  html = replaceOrThrow(
-    html,
-    /<p class="result-note">(Latest sold update tracked:|Latest live update:)[\s\S]*?<\/p>/,
-    `<p class="result-note">Latest live update: ${escapeHtml(latestTitle)} (${escapeHtml(latestTime)}).</p>`,
-    'sold latest note',
-  );
-
-  html = replaceOrThrow(
-    html,
-    /<p class="result-summary">The live auction tracker (lists|currently lists)[\s\S]*?<\/p>/,
-    `<p class="result-summary">The live auction tracker currently lists ${counts.unsold} unsold players. Names below follow the public auction table.</p>`,
-    'unsold summary',
-  );
-  html = replaceOrThrow(
-    html,
-    /(<section class="result-section" id="unsold-list"[\s\S]*?<tbody>\n)[\s\S]*?(\n<\/tbody>)/,
-    `$1${resultUnsoldRows(unsoldRows, counts)}$2`,
-    'unsold table',
-  );
-
-  html = replaceOrThrow(
-    html,
-    /<p class="result-summary">All eight franchises (are being updated|show current auction buys)[\s\S]*?<\/p>/,
-    `<p class="result-summary">All eight franchises show current auction buys, spending and remaining purse from the tracker.</p>`,
-    'team squad summary',
-  );
-  html = replaceOrThrow(
-    html,
-    /(<section class="result-section" id="team-squads"[\s\S]*?<tbody>\n)[\s\S]*?(\n<\/tbody>)/,
-    `$1${teams.map((team) => rowHtml([
-      team.name,
-      `${team.squad} / 16`,
-      teamBuys(team.name, soldRows),
-      displayAmount(team.left),
-      'Snapshot',
-    ])).join('\n')}$2`,
-    'team squad table',
-  );
-
-  return html;
-}
-
+// Extraction only: the public tracker and timeline disagree. Never promote
+// either source to the reviewed roster or overwrite generated page templates.
 async function run() {
   const [liveHtml, trackerHtml] = await Promise.all([
-    fetchText(LIVE_URL),
-    fetchText(TRACKER_URL),
+    fetchText(LIVE_URL), fetchText(TRACKER_URL),
   ]);
   const updates = parseTimeline(liveHtml);
-  const teams = parseTeamCards(trackerHtml);
-  const rows = mergeRows(parsePlayerRows(trackerHtml), parseRowsFromTimeline(updates));
-  const counts = parseCounts(trackerHtml, rows);
-  const feed = buildFeed(updates);
-
-  // Complete parsing and template validation before touching either output.
-  const html = updateAuctionHtml({ teams, rows, counts, feed });
-  fs.writeFileSync(`${AUCTION_HTML}.tmp`, html);
-  fs.writeFileSync(`${LIVE_FEED_JSON}.tmp`, `${JSON.stringify(feed, null, 2)}\n`);
-  fs.renameSync(`${AUCTION_HTML}.tmp`, AUCTION_HTML);
-  fs.renameSync(`${LIVE_FEED_JSON}.tmp`, LIVE_FEED_JSON);
-
-  console.log(`Synced ${updates.length} timeline updates, ${counts.sold} sold, ${counts.unsold} unsold, ${teams.length} teams`);
+  const counts = parseCounts(trackerHtml);
+  const candidate = {
+    fetchedAt: new Date().toISOString(),
+    sources: { timeline: LIVE_URL, tracker: TRACKER_URL },
+    counts, feed: buildFeed(updates),
+    publicationStatus: 'Research only; reconcile against reviewed season and auction data before publishing',
+  };
+  fs.mkdirSync(RESEARCH_DIR, { recursive: true });
+  fs.writeFileSync(path.join(RESEARCH_DIR, 'tracker.html'), trackerHtml);
+  fs.writeFileSync(path.join(RESEARCH_DIR, 'timeline.html'), liveHtml);
+  fs.writeFileSync(path.join(RESEARCH_DIR, 'candidate.json'), JSON.stringify(candidate, null, 2) + '\n');
+  console.log(`Saved auction research to .auction-cache (${counts.total} tracker records). No public files changed.`);
 }
 
 if (require.main === module) {

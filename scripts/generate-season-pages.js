@@ -42,7 +42,6 @@ function generate() {
    section('Season 3 statistics','<p>The 2026 tournament has not started as of this review. Runs, wickets, averages and win rates will need verified scorecards after matches begin.</p>')+
    sources([...t.sources,...ps.flatMap(p=>p.sources),...(t.coach?['pokhara-coach']:[]),'dates']);
   if (fs.existsSync(`teams/${t.slug}.html`) && fs.readFileSync(`teams/${t.slug}.html`, "utf8").includes("team-hero")) { continue; }
-  if (fs.existsSync(`teams/${t.slug}.html`) && fs.readFileSync(`teams/${t.slug}.html`, "utf8").includes("team-hero")) { continue; }
   shell(`teams/${t.slug}.html`,`${t.name} NPL 2026 Squad & Player Status`,intro,body,{entity:{'@type':'SportsTeam',name:t.name,sport:'Cricket'}});
  }
  for (const p of season.players) {
@@ -99,7 +98,11 @@ function generateAuction() {
 }
 function generateGuides() {
  const guides=require('../data/season-guides.json');
- for(const g of guides) shell(g.file,g.title,g.description,hero(g.heading,g.description)+g.sections.map(s=>section(s.title,s.html)).join('')+sources(g.sources||['dates']),{noindex:g.noindex||false});
+ for(const g of guides) {
+  const customTemplate=path.join(root,'templates','season',g.file);
+  if(fs.existsSync(customTemplate)) { write(g.file,fs.readFileSync(customTemplate,'utf8')); continue; }
+  shell(g.file,g.title,g.description,hero(g.heading,g.description)+g.sections.map(s=>section(s.title,s.html)).join('')+sources(g.sources||['dates']),{noindex:g.noindex||false});
+ }
  const standings=season.teams.slice().sort((a,b)=>a.name.localeCompare(b.name));
  shell('points-table.html','NPL 2026 Points Table | Pre-season Standings','All eight NPL teams before the first Season 3 match. No rankings or net run rates have been established.',hero('NPL 2026 Points Table','Pre-season: teams are listed alphabetically, not ranked. No Season 3 matches have been played as of this review.')+table(['Team','Played','Won','Lost','No result','Points','NRR'],standings.map(t=>[link('/teams/'+t.slug,t.name),'0','0','0','0','0','—']),'Pre-season standings — not a ranking')+section('Standings availability','<p>Net run rate is unavailable until matches are played. Results, standings and qualification will be updated from verified scorecards after the tournament begins.</p><p><a href="/schedule">Schedule status</a> · <a href="/stats">Player statistics status</a></p>')+sources(['dates']));
 }
